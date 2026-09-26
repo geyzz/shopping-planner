@@ -11,8 +11,8 @@ export default function HomePage() {
   const [searchText, setSearchText] = useState('');
   const [showOptionsMenu, setShowOptionsMenu] = useState(false);
   const [notes, setNotes] = useState([]);
+  const [name, setName] = useState('');
 
-  const name = 'Geyz';
   const numOfNotes = notes.length;
 
   // Fetch lists from Supabase whenever Home mounts (e.g. navigating back from another tab)
@@ -31,6 +31,34 @@ export default function HomePage() {
       if (data) setNotes(data);
     };
 
+    fetchLists();
+  }, []);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+
+      if (session?.user?.user_metadata?.first_name) {
+        setName(session.user.user_metadata.first_name);
+      }
+    };
+
+    const fetchLists = async () => {
+      const { data, error } = await supabase
+        .from('lists')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) {
+        console.log('Error fetching lists:', error.message);
+        return;
+      }
+      if (data) setNotes(data);
+    };
+
+    fetchUser();
     fetchLists();
   }, []);
 
@@ -97,7 +125,7 @@ export default function HomePage() {
 
   return (
     <View style={styles.screen}>
-      <Text style={styles.logo}>Logo Name</Text>
+      <Text style={styles.logo}>Plan_.ed</Text>
 
       <View style={styles.greetingRow}>
         <Text style={styles.greetingText}>

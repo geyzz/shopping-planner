@@ -108,7 +108,7 @@ export default function CalendarPage() {
 
   return (
     <View style={styles.screen}>
-      <Text style={styles.logo}>Logo Name</Text>
+      <Text style={styles.logo}>Plan_.ed</Text>
 
       <View style={styles.headerRow}>
         <View style={styles.monthYearWrapper}>

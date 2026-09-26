@@ -1,7 +1,9 @@
-import { useRouter } from 'expo-router';
-import { View, Text, Pressable, ScrollView, StyleSheet } from 'react-native';
+import { supabase } from '@/lib/supabase';
+import { borderRadius, colors, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
-import { colors, spacing, typography, borderRadius } from '@/theme/theme';
+import { useRouter } from 'expo-router';
+import { useEffect, useState } from 'react';
+import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 const PROFILE_SETTINGS = [
   { id: 'edit_profile', label: 'Edit Profile', icon: 'user', path: '/screens/edit_profile' },
@@ -16,24 +18,37 @@ const GENERAL_SETTINGS = [
 
 export default function ProfilePage() {
   const router = useRouter();
-
-  const name = 'Geyz';
+  const [name, setName] = useState('');
 
   const handleBack = () => {
     if (router.canGoBack()) {
       router.back();
     } else {
-      router.replace('/screens/home');
+      router.replace('/screens/settings');
     }
   };
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+
+      if (session?.user?.user_metadata?.first_name) {
+        setName(session.user.user_metadata.first_name);
+      }
+    };
+
+    fetchUser();
+  }, []);
 
   const handleNavigate = (path) => {
     router.push(path);
   };
 
-  const handleLogout = () => {
-    // TODO: clear auth/session state once auth is wired up.
-    router.replace('/screens/login');
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    router.replace('/auth/login');
   };
 
   const goToTab = (pathname) => {
@@ -107,7 +122,7 @@ export default function ProfilePage() {
           <Feather name="home" size={24} color={colors.textSecondary} />
           <Text style={styles.navLabel}>Home</Text>
         </Pressable>
-        <Pressable style={styles.navItem} onPress={() => goToTab('/screens/profile')}>
+        <Pressable style={styles.navItem} onPress={() => goToTab('/screens/settings')}>
           <Feather name="user" size={24} color={colors.navy} />
           <Text style={styles.navLabel}>Profile</Text>
         </Pressable>
