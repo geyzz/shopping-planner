@@ -1,8 +1,9 @@
-import { useState } from 'react';
-import { View, Text, TextInput, Pressable, StyleSheet } from 'react-native';
-import { Link, useRouter } from 'expo-router';
-import { colors, spacing, typography, borderRadius } from '@/theme/theme';
+import { supabase } from '@/lib/supabase';
+import { borderRadius, colors, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
+import { Link, useRouter } from 'expo-router';
+import { useState } from 'react';
+import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -10,6 +11,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [emailError, setEmailError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const validateEmail = (value) => {
     setEmail(value);
@@ -23,14 +25,22 @@ export default function LoginPage() {
     }
   };
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (!email || !password) {
       setEmailError('Email and password are required');
       return;
     }
     if (emailError) return;
-    // TODO: connect to database later
-    console.log('Logging in with', email, password);
+
+    setLoading(true);
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    setLoading(false);
+
+    if (error) {
+      setEmailError(error.message);
+      return;
+    }
+
     router.replace('/screens/home');
   };
 
@@ -61,12 +71,12 @@ export default function LoginPage() {
             secureTextEntry={!showPassword}
           />
           <Pressable onPress={() => setShowPassword(!showPassword)}>
-            <Feather name={showPassword ? 'eye' : 'eye-off'} size={20} color={colors.navy} />          
+            <Feather name={showPassword ? 'eye' : 'eye-off'} size={20} color={colors.navy} />
           </Pressable>
         </View>
 
-        <Pressable style={styles.button} onPress={handleLogin}>
-          <Text style={styles.buttonText}>Log In</Text>
+        <Pressable style={styles.button} onPress={handleLogin} disabled={loading}>
+          <Text style={styles.buttonText}>{loading ? 'Logging in...' : 'Log In'}</Text>
         </Pressable>
 
         <Text style={styles.footerText}>Don't have an account?</Text>

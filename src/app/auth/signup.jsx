@@ -1,8 +1,9 @@
-import { useState } from 'react';
-import { View, Text, TextInput, Pressable, StyleSheet } from 'react-native';
-import { useRouter } from 'expo-router';
+import { supabase } from '@/lib/supabase';
+import { borderRadius, colors, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
-import { colors, spacing, typography, borderRadius } from '@/theme/theme';
+import { useRouter } from 'expo-router';
+import { useState } from 'react';
+import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function SignupPage() {
   const router = useRouter();
@@ -16,6 +17,7 @@ export default function SignupPage() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [emailError, setEmailError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const validateEmail = (value) => {
     setEmail(value);
@@ -29,30 +31,44 @@ export default function SignupPage() {
     }
   };
 
-const handleSignup = () => {
-  if (!firstName || !lastName || !email || !password || !confirmPassword) {
-    setEmailError('All fields are required');
-    return;
-  }
-  if (emailError) return;
-  if (password !== confirmPassword) {
-    setEmailError('Passwords do not match');
-    return;
-  }
-  if (!agreedToTerms) {
-    setEmailError('You must agree to the terms and policies');
-    return;
-  }
-  // TODO: connect to database later
-  console.log('Signing up', firstName, lastName, email, password);
-  router.replace('/auth/login');
-};
+  const handleSignup = async () => {
+    if (!firstName || !lastName || !email || !password || !confirmPassword) {
+      setEmailError('All fields are required');
+      return;
+    }
+    if (emailError) return;
+    if (password !== confirmPassword) {
+      setEmailError('Passwords do not match');
+      return;
+    }
+    if (!agreedToTerms) {
+      setEmailError('You must agree to the terms and policies');
+      return;
+    }
+
+    setLoading(true);
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: { first_name: firstName, last_name: lastName },
+      },
+    });
+    setLoading(false);
+
+    if (error) {
+      setEmailError(error.message);
+      return;
+    }
+
+    router.replace('/auth/login');
+  };
 
   return (
     <View style={styles.screen}>
-          <Pressable style={styles.backButton} onPress={() => router.back()}>
-              <Feather name="arrow-left" size={24} color={colors.navy} />
-          </Pressable>
+      <Pressable style={styles.backButton} onPress={() => router.back()}>
+        <Feather name="arrow-left" size={24} color={colors.navy} />
+      </Pressable>
 
       <View style={styles.box}>
         <Text style={styles.title}>Sign Up</Text>
@@ -124,8 +140,8 @@ const handleSignup = () => {
           <Text style={styles.checkboxLabel}>Agree to terms and policies</Text>
         </Pressable>
 
-        <Pressable style={styles.button} onPress={handleSignup}>
-          <Text style={styles.buttonText}>Sign Up</Text>
+        <Pressable style={styles.button} onPress={handleSignup} disabled={loading}>
+          <Text style={styles.buttonText}>{loading ? 'Signing up...' : 'Sign Up'}</Text>
         </Pressable>
       </View>
     </View>

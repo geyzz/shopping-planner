@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
-import { View, Text, TextInput, Pressable, ScrollView, StyleSheet, Platform } from 'react-native';
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { supabase } from '@/lib/supabase';
+import { borderRadius, colors, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { colors, spacing, typography, borderRadius } from '@/theme/theme';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useEffect, useState } from 'react';
+import { Alert, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 const REMINDER_TYPES = [
   { id: 'gift', label: 'Gift', icon: 'gift' },
@@ -26,6 +27,7 @@ export default function CreateEditPage() {
   const [noteId, setNoteId] = useState(null);
   const [originalDateCreated, setOriginalDateCreated] = useState(null);
   const [title, setTitle] = useState('');
+  const [saving, setSaving] = useState(false);
 
   const [reminderExpanded, setReminderExpanded] = useState(false);
   const [selectedReminderType, setSelectedReminderType] = useState(null);
@@ -41,19 +43,20 @@ export default function CreateEditPage() {
   const [costExpanded, setCostExpanded] = useState(false);
   const [budget, setBudget] = useState('');
 
-  // If we arrived here from Home with an existing note, pre-fill the form.
   useEffect(() => {
     if (!list) return;
     try {
       const parsed = JSON.parse(list);
       setNoteId(parsed.id ?? null);
-      setOriginalDateCreated(parsed.dateCreated ?? null);
+      setOriginalDateCreated(parsed.created_at ?? parsed.dateCreated ?? null);
       setTitle(parsed.title ?? '');
-      setSelectedReminderType(parsed.reminderType ?? null);
-      setReminderDate(parsed.reminderDate ? new Date(parsed.reminderDate) : null);
-      setSelectedLocation(parsed.location ?? null);
-      setShoppingItems(parsed.shoppingItems ?? []);
-      setBudget(parsed.budget ?? '');
+
+      const details = parsed.details ?? parsed;
+      setSelectedReminderType(details.reminderType ?? null);
+      setReminderDate(details.reminderDate ? new Date(details.reminderDate) : null);
+      setSelectedLocation(details.location ?? null);
+      setShoppingItems(details.shoppingItems ?? []);
+      setBudget(details.budget ?? '');
     } catch (e) {
       console.warn('Failed to parse list param', e);
     }
@@ -92,8 +95,6 @@ export default function CreateEditPage() {
   const totalCost = shoppingItems.reduce((sum, item) => sum + (parseFloat(item.price) || 0), 0);
   const remainingBudget = (parseFloat(budget) || 0) - totalCost;
 
-  // Back just pops one screen — goes to wherever you actually came from,
-  // not always straight to Home.
   const handleBack = () => {
     if (router.canGoBack()) {
       router.back();
@@ -102,30 +103,55 @@ export default function CreateEditPage() {
     }
   };
 
-  // Save sends the note back to Home via the newList param (in-memory only
-  // for now — no persistent storage until notesStore is wired back in).
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!title.trim()) {
       handleBack();
       return;
     }
 
-    const noteToSave = {
-      id: noteId ?? Date.now().toString(),
-      title: title.trim(),
+    setSaving(true);
+
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
+
+    if (!session) {
+      setSaving(false);
+      Alert.alert('Not signed in', 'Please log in again before saving.');
+      return;
+    }
+
+    const details = {
       reminderType: selectedReminderType,
       reminderDate: reminderDate ? reminderDate.toISOString() : null,
       location: selectedLocation,
       shoppingItems,
       budget,
       totalCost,
-      dateCreated: noteId ? originalDateCreated : new Date().toISOString(),
     };
 
-    router.replace({
-      pathname: '/screens/home',
-      params: { newList: JSON.stringify(noteToSave) },
-    });
+    let error;
+
+    if (noteId) {
+      ({ error } = await supabase
+        .from('lists')
+        .update({ title: title.trim(), details })
+        .eq('id', noteId));
+    } else {
+      ({ error } = await supabase
+        .from('lists')
+        .insert({ title: title.trim(), details, user_id: session.user.id }));
+    }
+
+    setSaving(false);
+
+    if (error) {
+      console.log('Error saving list:', error.message);
+      Alert.alert('Save failed', error.message);
+      return;
+    }
+
+    router.replace('/screens/home');
   };
 
   return (
@@ -141,13 +167,12 @@ export default function CreateEditPage() {
           value={title}
           onChangeText={setTitle}
         />
-        <Pressable style={styles.saveButton} onPress={handleSave}>
-          <Text style={styles.saveButtonText}>Save</Text>
+        <Pressable style={styles.saveButton} onPress={handleSave} disabled={saving}>
+          <Text style={styles.saveButtonText}>{saving ? 'Saving...' : 'Save'}</Text>
         </Pressable>
       </View>
 
       <ScrollView contentContainerStyle={styles.scrollContent}>
-        {/* Reminder section */}
         <View style={styles.section}>
           <Pressable
             style={styles.sectionHeader}
@@ -219,7 +244,6 @@ export default function CreateEditPage() {
           )}
         </View>
 
-        {/* Location section */}
         <View style={styles.section}>
           <Pressable
             style={styles.sectionHeader}
@@ -261,7 +285,6 @@ export default function CreateEditPage() {
           )}
         </View>
 
-        {/* Shopping List section */}
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Shopping List</Text>
 
@@ -291,7 +314,6 @@ export default function CreateEditPage() {
           ))}
         </View>
 
-        {/* Cost Estimation section */}
         <View style={styles.section}>
           <Pressable
             style={styles.sectionHeader}

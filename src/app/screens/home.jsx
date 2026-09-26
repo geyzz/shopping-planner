@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
-import { View, Text, TextInput, Pressable, StyleSheet, Modal, FlatList } from 'react-native';
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { supabase } from '@/lib/supabase'; // adjust this path to wherever your Supabase client file lives
+import { borderRadius, colors, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
-import { colors, spacing, typography, borderRadius } from '@/theme/theme';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useEffect, useState } from 'react';
+import { FlatList, Modal, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function HomePage() {
   const router = useRouter();
@@ -14,29 +15,24 @@ export default function HomePage() {
   const name = 'Geyz';
   const numOfNotes = notes.length;
 
-  // Whenever Create/Edit sends back a newList param, merge it into the list.
-  // In-memory only for now — no persistent storage.
+  // Fetch lists from Supabase whenever Home mounts (e.g. navigating back from another tab)
   useEffect(() => {
-    if (!newList) return;
+    const fetchLists = async () => {
+      const { data, error } = await supabase
+        .from('lists')
+        .select('*')
+        .order('created_at', { ascending: false });
 
-    try {
-      const parsed = JSON.parse(newList);
+      if (error) {
+        console.log('Error fetching lists:', error.message);
+        return;
+      }
 
-      setNotes((prev) => {
-        const existingIndex = prev.findIndex((item) => item.id === parsed.id);
-        if (existingIndex !== -1) {
-          const updated = [...prev];
-          updated[existingIndex] = parsed;
-          return updated;
-        }
-        return [parsed, ...prev];
-      });
+      if (data) setNotes(data);
+    };
 
-      router.setParams({ newList: undefined });
-    } catch (e) {
-      console.warn('Failed to parse newList param', e);
-    }
-  }, [newList]);
+    fetchLists();
+  }, []);
 
   const filteredNotes = notes.filter((note) =>
     note.title.toLowerCase().includes(searchText.toLowerCase())
@@ -59,6 +55,13 @@ export default function HomePage() {
     });
   };
 
+  const handleViewNote = (note) => {
+    router.push({
+      pathname: '/screens/view_list',
+      params: { list: JSON.stringify(note) },
+    });
+  };
+
   const goToTab = (pathname) => {
     router.replace(pathname);
   };
@@ -70,21 +73,26 @@ export default function HomePage() {
   };
 
   const renderNote = ({ item }) => (
-    <View style={styles.noteCard}>
-      <View style={styles.notePreview}>
-        <Feather name="file-text" size={22} color={colors.navy} />
+    <Pressable style={styles.noteCard} onPress={() => handleViewNote(item)}>
+      <View style={styles.viewRibbon}>
+        <Text style={styles.viewRibbonText}>View</Text>
       </View>
+
+      <View style={styles.notePreview}>
+        <Feather name="image" size={32} color={colors.border} />
+      </View>
+
       <Text style={styles.noteTitle} numberOfLines={1}>
         {item.title}
       </Text>
       <Text style={styles.noteDate} numberOfLines={1}>
-        {formatDate(item.dateCreated)}
+        {formatDate(item.created_at)}
       </Text>
+
       <Pressable style={styles.editButton} onPress={() => handleOpenNote(item)}>
-        <Feather name="edit-2" size={14} color={colors.navy} />
-        <Text style={styles.editButtonText}>Edit</Text>
+        <Text style={styles.editButtonText}>Edit List</Text>
       </Pressable>
-    </View>
+    </Pressable>
   );
 
   return (
@@ -182,6 +190,75 @@ export default function HomePage() {
           <Text style={styles.navLabel}>Calendar</Text>
         </Pressable>
       </View>
+    </View>
+  );
+}
+
+function ShapedNoteCard({ children, style, cardColor, borderColor, ribbonColor }) {
+  const [size, setSize] = useState(null);
+
+  const onLayout = (e) => {
+    const { width, height } = e.nativeEvent.layout;
+    if (!size || size.width !== width || size.height !== height) {
+      setSize({ width, height });
+    }
+  };
+
+  // Angle of the diagonal cut, so the "View" text can rotate to match it
+  const angle = size
+    ? Math.atan2(size.height * 0.43, size.width * 0.39) * (180 / Math.PI)
+    : 45;
+
+  return (
+    <View style={style} onLayout={onLayout}>
+      {size && (
+        <Svg
+          width={size.width}
+          height={size.height}
+          style={StyleSheet.absoluteFillObject}
+        >
+          {/* Card body: clip-path: polygon(61% 0, 100% 43%, 100% 100%, 0 100%, 0 0) */}
+          <Polygon
+            points={`
+              ${size.width * 0.61},0
+              ${size.width},${size.height * 0.43}
+              ${size.width},${size.height}
+              0,${size.height}
+              0,0
+            `}
+            fill={cardColor}
+            stroke={borderColor}
+            strokeWidth={1}
+          />
+          {/* Ribbon flap: clip-path: polygon(63% 0, 83% 0, 100% 11%, 100% 25%) */}
+          <Polygon
+            points={`
+              ${size.width * 0.63},0
+              ${size.width * 0.83},0
+              ${size.width},${size.height * 0.11}
+              ${size.width},${size.height * 0.25}
+            `}
+            fill={ribbonColor}
+          />
+        </Svg>
+      )}
+
+      {size && (
+        <Text
+          style={[
+            styles.ribbonLabel,
+            {
+              top: size.height * 0.06,
+              right: size.width * 0.02,
+              transform: [{ rotate: `${angle}deg` }],
+            },
+          ]}
+        >
+          View
+        </Text>
+      )}
+
+      {children}
     </View>
   );
 }
@@ -293,43 +370,62 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius.md,
     padding: spacing.sm,
     marginBottom: spacing.sm,
+    alignItems: 'center',
+    overflow: 'hidden',
+  },
+  viewRibbon: {
+    position: 'absolute',
+    top: 10,
+    right: -28,
+    backgroundColor: colors.gold,
+    paddingVertical: 3,
+    width: 100,
+    alignItems: 'center',
+    transform: [{ rotate: '45deg' }],
+  },
+  viewRibbonText: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: colors.navy,
   },
   notePreview: {
-    height: 70,
+    width: '100%',
+    aspectRatio: 1,
     borderRadius: borderRadius.sm ?? 4,
     backgroundColor: colors.background,
     borderWidth: 1,
     borderColor: colors.border,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: spacing.sm / 2,
+    marginBottom: spacing.sm,
   },
   noteTitle: {
     ...typography.label,
-    fontSize: 14,
+    fontSize: 15,
     color: colors.navy,
     fontWeight: '700',
+    textAlign: 'center',
   },
   noteDate: {
     fontSize: 12,
     color: colors.textSecondary,
     marginTop: 2,
+    marginBottom: spacing.sm,
+    textAlign: 'center',
   },
   editButton: {
-    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: 1,
-    borderColor: colors.border,
+    backgroundColor: colors.gold,
     borderRadius: borderRadius.md,
     paddingVertical: spacing.sm / 2,
-    marginTop: spacing.sm,
+    paddingHorizontal: spacing.md,
+    width: '100%',
   },
   editButtonText: {
-    fontSize: 12,
+    fontSize: 13,
     color: colors.navy,
-    fontWeight: '600',
-    marginLeft: 4,
+    fontWeight: '700',
   },
   addButton: {
     position: 'absolute',
