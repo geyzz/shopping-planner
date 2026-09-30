@@ -1,5 +1,6 @@
 import { supabase } from '@/lib/supabase'; // adjust this path to wherever your Supabase client file lives
-import { borderRadius, colors, spacing, typography } from '@/theme/theme';
+import { useAppTheme } from '@/theme/ThemeContext';
+import { borderRadius, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
@@ -39,6 +40,8 @@ const collectStrings = (value, out = []) => {
 const getItemTexts = (note) => collectStrings(note.details);
 
 export default function HomePage() {
+  const { colors } = useAppTheme();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const router = useRouter();
   const [searchText, setSearchText] = useState('');
   const [showOptionsMenu, setShowOptionsMenu] = useState(false);
@@ -274,7 +277,7 @@ export default function HomePage() {
             hitSlop={8}
             style={[styles.deleteButton, selectedIds.length === 0 && styles.deleteButtonDisabled]}
           >
-            <Feather name="trash-2" size={18} color={colors.white} />
+            <Feather name="trash-2" size={18} color="#FFFFFF" />
           </Pressable>
         </View>
       ) : (
@@ -387,7 +390,7 @@ export default function HomePage() {
           data={visibleNotes}
           keyExtractor={(item) => String(item.id)}
           renderItem={renderNote}
-          extraData={{ selectMode, selectedIds }}
+          extraData={{ selectMode, selectedIds, colors }}
           numColumns={2}
           columnWrapperStyle={styles.notesRow}
           contentContainerStyle={styles.notesList}
@@ -397,7 +400,7 @@ export default function HomePage() {
 
       {!selectMode && (
         <Pressable style={styles.addButton} onPress={() => router.push('/screens/create_edit')}>
-          <Feather name="plus" size={26} color={colors.white} />
+          <Feather name="plus" size={26} color="#FFFFFF" />
         </Pressable>
       )}
 
@@ -419,267 +422,268 @@ export default function HomePage() {
   );
 }
 
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    backgroundColor: colors.background,
-    paddingHorizontal: spacing.md,
-    paddingTop: spacing.lg,
-  },
-  logo: {
-    ...typography.heading,
-    color: colors.navy,
-  },
-  greetingRow: {
-    alignItems: 'flex-start',
-    marginTop: spacing.md,
-  },
-  greetingText: {
-    ...typography.label,
-    color: colors.text,
-  },
-  toolbarRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    marginTop: spacing.lg,
-  },
-  optionsButton: {
-    marginLeft: spacing.sm,
-    marginRight: spacing.sm,
-  },
-  modalOverlay: {
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.1)',
-  },
-  optionsMenu: {
-    position: 'absolute',
-    top: 110,
-    right: spacing.md + spacing.sm,
-    backgroundColor: colors.white,
-    borderRadius: borderRadius.md,
-    borderWidth: 1,
-    borderColor: colors.border,
-    paddingVertical: spacing.sm / 2,
-    minWidth: 170,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.15,
-    shadowRadius: 6,
-    elevation: 4,
-  },
-  optionsMenuItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: spacing.sm,
-    paddingHorizontal: spacing.sm,
-  },
-  optionsMenuItemText: {
-    ...typography.label,
-    fontSize: 14,
-    color: colors.text,
-    marginLeft: spacing.sm,
-  },
-  optionsMenuDivider: {
-    height: 1,
-    backgroundColor: colors.border,
-    marginHorizontal: spacing.sm,
-  },
-  sortSectionLabel: {
-    fontSize: 11,
-    fontWeight: '700',
-    color: colors.textSecondary,
-    textTransform: 'uppercase',
-    paddingHorizontal: spacing.sm,
-    paddingTop: spacing.sm,
-  },
-  sortActiveText: {
-    color: colors.navy,
-    fontWeight: '700',
-  },
-  sortDoneText: {
-    color: colors.navy,
-    fontWeight: '700',
-    marginLeft: 0,
-  },
-  searchWrapper: {
-    width: '60%',
-    flexDirection: 'row',
-    alignItems: 'center',
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: borderRadius.md,
-    paddingHorizontal: spacing.sm,
-  },
-  searchIcon: {
-    marginRight: spacing.sm / 2,
-  },
-  searchInput: {
-    flex: 1,
-    paddingVertical: spacing.md - 6,
-    fontSize: 14,
-    color: colors.text,
-  },
-  selectBar: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    marginTop: spacing.lg,
-    paddingVertical: spacing.sm,
-  },
-  selectBarAction: {
-    fontSize: 14,
-    fontWeight: '700',
-    color: colors.navy,
-  },
-  selectBarCount: {
-    fontSize: 14,
-    color: colors.text,
-  },
-  deleteButton: {
-    width: 38,
-    height: 38,
-    borderRadius: 19,
-    backgroundColor: '#D64545',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  deleteButtonDisabled: {
-    opacity: 0.4,
-  },
-  emptyState: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  emptyStateText: {
-    ...typography.label,
-    color: colors.textSecondary,
-  },
-  notesList: {
-    paddingTop: spacing.md,
-    paddingBottom: 160,
-  },
-  notesRow: {
-    justifyContent: 'space-between',
-  },
-  noteCard: {
-    width: '48%',
-    backgroundColor: colors.white,
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: borderRadius.md,
-    padding: spacing.sm,
-    marginBottom: spacing.sm,
-    alignItems: 'center',
-    overflow: 'hidden',
-  },
-  noteCardSelected: {
-    borderColor: colors.navy,
-    borderWidth: 2,
-  },
-  checkbox: {
-    position: 'absolute',
-    top: 8,
-    left: 8,
-    zIndex: 2,
-    width: 22,
-    height: 22,
-    borderRadius: 11,
-    borderWidth: 2,
-    borderColor: colors.navy,
-    backgroundColor: colors.white,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  checkboxChecked: {
-    backgroundColor: colors.navy,
-  },
-  viewRibbon: {
-    position: 'absolute',
-    top: 10,
-    right: -28,
-    zIndex: 1,
-    backgroundColor: colors.gold,
-    paddingVertical: 3,
-    width: 100,
-    alignItems: 'center',
-    transform: [{ rotate: '45deg' }],
-  },
-  viewRibbonText: {
-    fontSize: 11,
-    fontWeight: '700',
-    color: colors.navy,
-  },
-  notePreview: {
-    width: '100%',
-    aspectRatio: 1,
-    borderRadius: borderRadius.sm ?? 4,
-    backgroundColor: colors.background,
-    borderWidth: 1,
-    borderColor: colors.border,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: spacing.sm,
-  },
-  noteTitle: {
-    ...typography.label,
-    fontSize: 15,
-    color: colors.navy,
-    fontWeight: '700',
-    textAlign: 'center',
-  },
-  noteDate: {
-    fontSize: 12,
-    color: colors.textSecondary,
-    marginTop: 2,
-    marginBottom: spacing.sm,
-    textAlign: 'center',
-  },
-  editButton: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: colors.gold,
-    borderRadius: borderRadius.md,
-    paddingVertical: spacing.sm / 2,
-    paddingHorizontal: spacing.md,
-    width: '100%',
-  },
-  editButtonText: {
-    fontSize: 13,
-    color: colors.navy,
-    fontWeight: '700',
-  },
-  addButton: {
-    position: 'absolute',
-    right: spacing.md,
-    bottom: 90,
-    width: 56,
-    height: 56,
-    borderRadius: 28,
-    backgroundColor: colors.navy,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  bottomNav: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    backgroundColor: colors.white,
-    borderTopWidth: 1,
-    borderTopColor: colors.border,
-    paddingVertical: spacing.sm,
-    paddingBottom: spacing.md,
-  },
-  navItem: {
-    alignItems: 'center',
-  },
-  navLabel: {
-    fontSize: 11,
-    color: colors.textSecondary,
-    marginTop: 2,
-  },
-});
+const makeStyles = (colors) =>
+  StyleSheet.create({
+    screen: {
+      flex: 1,
+      backgroundColor: colors.background,
+      paddingHorizontal: spacing.md,
+      paddingTop: spacing.lg,
+    },
+    logo: {
+      ...typography.heading,
+      color: colors.navy,
+    },
+    greetingRow: {
+      alignItems: 'flex-start',
+      marginTop: spacing.md,
+    },
+    greetingText: {
+      ...typography.label,
+      color: colors.text,
+    },
+    toolbarRow: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'flex-end',
+      marginTop: spacing.lg,
+    },
+    optionsButton: {
+      marginLeft: spacing.sm,
+      marginRight: spacing.sm,
+    },
+    modalOverlay: {
+      flex: 1,
+      backgroundColor: 'rgba(0,0,0,0.1)',
+    },
+    optionsMenu: {
+      position: 'absolute',
+      top: 110,
+      right: spacing.md + spacing.sm,
+      backgroundColor: colors.white,
+      borderRadius: borderRadius.md,
+      borderWidth: 1,
+      borderColor: colors.border,
+      paddingVertical: spacing.sm / 2,
+      minWidth: 170,
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.15,
+      shadowRadius: 6,
+      elevation: 4,
+    },
+    optionsMenuItem: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      paddingVertical: spacing.sm,
+      paddingHorizontal: spacing.sm,
+    },
+    optionsMenuItemText: {
+      ...typography.label,
+      fontSize: 14,
+      color: colors.text,
+      marginLeft: spacing.sm,
+    },
+    optionsMenuDivider: {
+      height: 1,
+      backgroundColor: colors.border,
+      marginHorizontal: spacing.sm,
+    },
+    sortSectionLabel: {
+      fontSize: 11,
+      fontWeight: '700',
+      color: colors.textSecondary,
+      textTransform: 'uppercase',
+      paddingHorizontal: spacing.sm,
+      paddingTop: spacing.sm,
+    },
+    sortActiveText: {
+      color: colors.navy,
+      fontWeight: '700',
+    },
+    sortDoneText: {
+      color: colors.navy,
+      fontWeight: '700',
+      marginLeft: 0,
+    },
+    searchWrapper: {
+      width: '60%',
+      flexDirection: 'row',
+      alignItems: 'center',
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: borderRadius.md,
+      paddingHorizontal: spacing.sm,
+    },
+    searchIcon: {
+      marginRight: spacing.sm / 2,
+    },
+    searchInput: {
+      flex: 1,
+      paddingVertical: spacing.md - 6,
+      fontSize: 14,
+      color: colors.text,
+    },
+    selectBar: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      marginTop: spacing.lg,
+      paddingVertical: spacing.sm,
+    },
+    selectBarAction: {
+      fontSize: 14,
+      fontWeight: '700',
+      color: colors.navy,
+    },
+    selectBarCount: {
+      fontSize: 14,
+      color: colors.text,
+    },
+    deleteButton: {
+      width: 38,
+      height: 38,
+      borderRadius: 19,
+      backgroundColor: '#D64545',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    deleteButtonDisabled: {
+      opacity: 0.4,
+    },
+    emptyState: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    emptyStateText: {
+      ...typography.label,
+      color: colors.textSecondary,
+    },
+    notesList: {
+      paddingTop: spacing.md,
+      paddingBottom: 160,
+    },
+    notesRow: {
+      justifyContent: 'space-between',
+    },
+    noteCard: {
+      width: '48%',
+      backgroundColor: colors.white,
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: borderRadius.md,
+      padding: spacing.sm,
+      marginBottom: spacing.sm,
+      alignItems: 'center',
+      overflow: 'hidden',
+    },
+    noteCardSelected: {
+      borderColor: colors.navy,
+      borderWidth: 2,
+    },
+    checkbox: {
+      position: 'absolute',
+      top: 8,
+      left: 8,
+      zIndex: 2,
+      width: 22,
+      height: 22,
+      borderRadius: 11,
+      borderWidth: 2,
+      borderColor: colors.navy,
+      backgroundColor: colors.white,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    checkboxChecked: {
+      backgroundColor: colors.navy,
+    },
+    viewRibbon: {
+      position: 'absolute',
+      top: 10,
+      right: -28,
+      zIndex: 1,
+      backgroundColor: colors.gold,
+      paddingVertical: 3,
+      width: 100,
+      alignItems: 'center',
+      transform: [{ rotate: '45deg' }],
+    },
+    viewRibbonText: {
+      fontSize: 11,
+      fontWeight: '700',
+      color: '#0B1B3F',
+    },
+    notePreview: {
+      width: '100%',
+      aspectRatio: 1,
+      borderRadius: borderRadius.sm ?? 4,
+      backgroundColor: colors.background,
+      borderWidth: 1,
+      borderColor: colors.border,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginBottom: spacing.sm,
+    },
+    noteTitle: {
+      ...typography.label,
+      fontSize: 15,
+      color: colors.navy,
+      fontWeight: '700',
+      textAlign: 'center',
+    },
+    noteDate: {
+      fontSize: 12,
+      color: colors.textSecondary,
+      marginTop: 2,
+      marginBottom: spacing.sm,
+      textAlign: 'center',
+    },
+    editButton: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: colors.gold,
+      borderRadius: borderRadius.md,
+      paddingVertical: spacing.sm / 2,
+      paddingHorizontal: spacing.md,
+      width: '100%',
+    },
+    editButtonText: {
+      fontSize: 13,
+      color: '#0B1B3F',
+      fontWeight: '700',
+    },
+    addButton: {
+      position: 'absolute',
+      right: spacing.md,
+      bottom: 90,
+      width: 56,
+      height: 56,
+      borderRadius: 28,
+      backgroundColor: colors.navy,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    bottomNav: {
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      right: 0,
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      backgroundColor: colors.white,
+      borderTopWidth: 1,
+      borderTopColor: colors.border,
+      paddingVertical: spacing.sm,
+      paddingBottom: spacing.md,
+    },
+    navItem: {
+      alignItems: 'center',
+    },
+    navLabel: {
+      fontSize: 11,
+      color: colors.textSecondary,
+      marginTop: 2,
+    },
+  });

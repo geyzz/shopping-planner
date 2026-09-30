@@ -1,21 +1,30 @@
+import { ThemeProvider as AppThemeProvider, useAppTheme } from '@/theme/ThemeContext';
 import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-import { useColorScheme } from 'react-native';
 
 SplashScreen.preventAutoHideAsync();
 
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
+function ThemedStack() {
+  // Adjust to whatever your context exposes (isDark, theme, resolvedScheme, etc.)
+  const { isDark } = useAppTheme();
 
+  return (
+    <ThemeProvider value={isDark ? DarkTheme : DefaultTheme}>
+      <Stack screenOptions={{ headerShown: false }} />
+    </ThemeProvider>
+  );
+}
+
+export default function RootLayout() {
   useEffect(() => {
     SplashScreen.hideAsync();
   }, []);
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack screenOptions={{ headerShown: false }} />
-    </ThemeProvider>
+    <AppThemeProvider>
+      <ThemedStack />
+    </AppThemeProvider>
   );
 }

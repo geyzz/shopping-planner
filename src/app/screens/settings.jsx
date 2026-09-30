@@ -1,8 +1,9 @@
 import { supabase } from '@/lib/supabase';
-import { borderRadius, colors, spacing, typography } from '@/theme/theme';
+import { useAppTheme } from '@/theme/ThemeContext';
+import { borderRadius, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 const PROFILE_SETTINGS = [
@@ -12,12 +13,14 @@ const PROFILE_SETTINGS = [
 
 const GENERAL_SETTINGS = [
   { id: 'notifications', label: 'Notifications', icon: 'bell', path: '/screens/notifications' },
-  { id: 'appearance', label: 'Appearance', icon: 'sun', path: '/screens/appearance' },
+  { id: 'appearance', label: 'Appearance', icon: 'sun', path: '/screens/settings_screen/appearance' },
   { id: 'about', label: 'About', icon: 'info', path: '/screens/about' },
 ];
 
 export default function ProfilePage() {
   const router = useRouter();
+  const { colors } = useAppTheme();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const [name, setName] = useState('');
 
   const handleBack = () => {
@@ -135,130 +138,131 @@ export default function ProfilePage() {
   );
 }
 
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    backgroundColor: colors.background,
-  },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: spacing.md,
-    paddingTop: spacing.lg,
-    paddingBottom: spacing.sm,
-  },
-  backButton: {
-    width: 32,
-  },
-  headerTitle: {
-    ...typography.heading,
-    fontSize: 18,
-    color: colors.navy,
-    textAlign: 'center',
-    flex: 1,
-  },
-  headerSpacer: {
-    width: 32,
-  },
-  scrollContent: {
-    paddingHorizontal: spacing.md,
-    paddingBottom: 160,
-  },
-  avatarSection: {
-    alignItems: 'center',
-    marginTop: spacing.lg,
-    marginBottom: spacing.lg,
-  },
-  avatarCircle: {
-    width: 88,
-    height: 88,
-    borderRadius: 44,
-    backgroundColor: colors.background,
-    borderWidth: 2,
-    borderColor: colors.gold,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: spacing.sm,
-  },
-  nameText: {
-    ...typography.heading,
-    fontSize: 18,
-    color: colors.navy,
-  },
-  section: {
-    marginTop: spacing.lg,
-  },
-  sectionTitle: {
-    ...typography.label,
-    fontSize: 14,
-    color: colors.navy,
-    fontWeight: '700',
-    marginBottom: spacing.sm,
-  },
-  sectionCard: {
-    backgroundColor: colors.white,
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: borderRadius.md,
-    overflow: 'hidden',
-  },
-  settingRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingVertical: spacing.md - 4,
-    paddingHorizontal: spacing.md - 4,
-  },
-  settingRowLeft: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  settingLabel: {
-    fontSize: 14,
-    color: colors.text,
-    marginLeft: spacing.sm,
-  },
-  divider: {
-    height: 1,
-    backgroundColor: colors.border,
-    marginLeft: spacing.md - 4,
-  },
-  logoutButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 1,
-    borderColor: colors.error,
-    borderRadius: borderRadius.md,
-    paddingVertical: spacing.md - 4,
-    marginTop: spacing.lg,
-  },
-  logoutButtonText: {
-    color: colors.error,
-    fontWeight: '700',
-    fontSize: 14,
-    marginLeft: spacing.sm,
-  },
-  bottomNav: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    backgroundColor: colors.white,
-    borderTopWidth: 1,
-    borderTopColor: colors.border,
-    paddingVertical: spacing.sm,
-    paddingBottom: spacing.md,
-  },
-  navItem: {
-    alignItems: 'center',
-  },
-  navLabel: {
-    fontSize: 11,
-    color: colors.textSecondary,
-    marginTop: 2,
-  },
-});
+const makeStyles = (colors) =>
+  StyleSheet.create({
+    screen: {
+      flex: 1,
+      backgroundColor: colors.background,
+    },
+    header: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      paddingHorizontal: spacing.md,
+      paddingTop: spacing.lg,
+      paddingBottom: spacing.sm,
+    },
+    backButton: {
+      width: 32,
+    },
+    headerTitle: {
+      ...typography.heading,
+      fontSize: 18,
+      color: colors.navy,
+      textAlign: 'center',
+      flex: 1,
+    },
+    headerSpacer: {
+      width: 32,
+    },
+    scrollContent: {
+      paddingHorizontal: spacing.md,
+      paddingBottom: 160,
+    },
+    avatarSection: {
+      alignItems: 'center',
+      marginTop: spacing.lg,
+      marginBottom: spacing.lg,
+    },
+    avatarCircle: {
+      width: 88,
+      height: 88,
+      borderRadius: 44,
+      backgroundColor: colors.background,
+      borderWidth: 2,
+      borderColor: colors.gold,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginBottom: spacing.sm,
+    },
+    nameText: {
+      ...typography.heading,
+      fontSize: 18,
+      color: colors.navy,
+    },
+    section: {
+      marginTop: spacing.lg,
+    },
+    sectionTitle: {
+      ...typography.label,
+      fontSize: 14,
+      color: colors.navy,
+      fontWeight: '700',
+      marginBottom: spacing.sm,
+    },
+    sectionCard: {
+      backgroundColor: colors.white,
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: borderRadius.md,
+      overflow: 'hidden',
+    },
+    settingRow: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      paddingVertical: spacing.md - 4,
+      paddingHorizontal: spacing.md - 4,
+    },
+    settingRowLeft: {
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    settingLabel: {
+      fontSize: 14,
+      color: colors.text,
+      marginLeft: spacing.sm,
+    },
+    divider: {
+      height: 1,
+      backgroundColor: colors.border,
+      marginLeft: spacing.md - 4,
+    },
+    logoutButton: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderWidth: 1,
+      borderColor: colors.error,
+      borderRadius: borderRadius.md,
+      paddingVertical: spacing.md - 4,
+      marginTop: spacing.lg,
+    },
+    logoutButtonText: {
+      color: colors.error,
+      fontWeight: '700',
+      fontSize: 14,
+      marginLeft: spacing.sm,
+    },
+    bottomNav: {
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      right: 0,
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      backgroundColor: colors.white,
+      borderTopWidth: 1,
+      borderTopColor: colors.border,
+      paddingVertical: spacing.sm,
+      paddingBottom: spacing.md,
+    },
+    navItem: {
+      alignItems: 'center',
+    },
+    navLabel: {
+      fontSize: 11,
+      color: colors.textSecondary,
+      marginTop: 2,
+    },
+  });

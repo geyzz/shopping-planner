@@ -4,6 +4,7 @@ export const colors = {
   navy: '#1B2A4A',
   navyLight: '#2C3E5F',
   gold: '#D4AF37',
+  onGold: '#1B2A4A', // text/icons that sit on gold, same in light and dark
   white: '#FFFFFF',
   background: '#FFFFFF',
   text: '#1B2A4A',

@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabase';
+import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, colors, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
