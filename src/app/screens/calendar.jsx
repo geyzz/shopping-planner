@@ -1,8 +1,8 @@
 import { supabase } from '@/lib/supabase';
 import { borderRadius, colors, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
-import { useEffect, useMemo, useState } from 'react';
+import { useFocusEffect, useRouter } from 'expo-router';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 
 const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -19,6 +19,33 @@ function isSameDay(a, b) {
   );
 }
 
+// Collect every text value from any JSON / array / object
+const collectStrings = (value, out = []) => {
+  if (value == null) return out;
+  if (typeof value === 'string') {
+    const t = value.trim();
+    if (t.startsWith('[') || t.startsWith('{')) {
+      try {
+        collectStrings(JSON.parse(t), out);
+        return out;
+      } catch {}
+    }
+    if (t) out.push(t);
+  } else if (Array.isArray(value)) {
+    value.forEach((v) => collectStrings(v, out));
+  } else if (typeof value === 'object') {
+    Object.values(value).forEach((v) => collectStrings(v, out));
+  }
+  return out;
+};
+
+const getItemTexts = (note) => collectStrings(note.details);
+
+// True if the list title or any item text contains the (lowercase) query
+const matchesQuery = (item, query) =>
+  (item.title ?? '').toLowerCase().includes(query) ||
+  getItemTexts(item).some((text) => text.toLowerCase().includes(query));
+
 export default function CalendarPage() {
   const router = useRouter();
   const [searchText, setSearchText] = useState('');
@@ -26,25 +53,54 @@ export default function CalendarPage() {
   const [selectedDate, setSelectedDate] = useState(new Date()); // controls which day's lists show below
   const [lists, setLists] = useState([]);
 
+  const query = searchText.trim().toLowerCase();
+
+  // Reload lists every time this screen gains focus
+  useFocusEffect(
+    useCallback(() => {
+      const fetchLists = async () => {
+        const { data, error } = await supabase
+          .from('lists')
+          .select('*')
+          .order('created_at', { ascending: false });
+
+        if (error) {
+          console.log('Error fetching lists:', error.message);
+          return;
+        }
+        if (data) setLists(data);
+      };
+
+      fetchLists();
+    }, [])
+  );
+
+  // When searching, jump the calendar to the date of a matching list
   useEffect(() => {
-    const fetchLists = async () => {
-      const { data, error } = await supabase
-        .from('lists')
-        .select('*')
-        .order('created_at', { ascending: false });
+    if (!query) return;
 
-      if (error) {
-        console.log('Error fetching lists:', error.message);
-        return;
-      }
-      if (data) setLists(data);
-    };
+    const matchDates = lists
+      .filter((item) => item.details?.reminderDate && matchesQuery(item, query))
+      .map((item) => new Date(item.details.reminderDate))
+      .filter((d) => !isNaN(d));
 
-    fetchLists();
-  }, []);
+    if (matchDates.length === 0) return;
+
+    // Already on a day that has a match? Stay put while the user keeps typing
+    if (matchDates.some((d) => isSameDay(d, selectedDate))) return;
+
+    // Otherwise jump to the match closest to today
+    const today = new Date();
+    matchDates.sort((a, b) => Math.abs(a - today) - Math.abs(b - today));
+    const target = matchDates[0];
+
+    setSelectedDate(target);
+    setViewDate(new Date(target.getFullYear(), target.getMonth(), 1));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchText, lists]);
 
   // Build the grid of days for the currently viewed month, padded with
-  // leading/trailing blanks so weekdays line up correctly.
+  // leading blanks so weekdays line up correctly.
   const calendarDays = useMemo(() => {
     const year = viewDate.getFullYear();
     const month = viewDate.getMonth();
@@ -78,8 +134,8 @@ export default function CalendarPage() {
       return isSameDay(new Date(reminderDate), date);
     });
 
-  const filteredListsForSelectedDate = listsForDate(selectedDate).filter((item) =>
-    item.title.toLowerCase().includes(searchText.toLowerCase())
+  const filteredListsForSelectedDate = listsForDate(selectedDate).filter(
+    (item) => !query || matchesQuery(item, query)
   );
 
   const handleViewList = (item) => {
@@ -127,7 +183,7 @@ export default function CalendarPage() {
           <Feather name="search" size={16} color={colors.placeholder} style={styles.searchIcon} />
           <TextInput
             style={styles.searchInput}
-            placeholder="Search"
+            placeholder="Search title or items"
             placeholderTextColor={colors.placeholder}
             value={searchText}
             onChangeText={setSearchText}
@@ -151,7 +207,10 @@ export default function CalendarPage() {
 
           const today = isSameDay(date, new Date());
           const selected = isSameDay(date, selectedDate);
-          const hasLists = listsForDate(date).length > 0;
+          const listsOnDay = listsForDate(date);
+          const hasLists = listsOnDay.length > 0;
+          // While searching, mark every day that has a matching list
+          const isMatch = !!query && listsOnDay.some((item) => matchesQuery(item, query));
 
           return (
             <Pressable
@@ -162,14 +221,16 @@ export default function CalendarPage() {
               <View
                 style={[
                   styles.dayCircle,
+                  isMatch && styles.dayCircleMatch,
                   selected && styles.dayCircleSelected,
-                  today && !selected && styles.dayCircleToday,
+                  today && styles.dayCircleToday,
                 ]}
               >
                 <Text
                   style={[
                     styles.dayText,
-                    (selected || today) && styles.dayTextHighlighted,
+                    isMatch && styles.dayTextMatch,
+                    selected && styles.dayTextHighlighted,
                   ]}
                 >
                   {date.getDate()}
@@ -186,12 +247,14 @@ export default function CalendarPage() {
 
         {filteredListsForSelectedDate.length === 0 ? (
           <View style={styles.emptyState}>
-            <Text style={styles.emptyStateText}>No lists for this day</Text>
+            <Text style={styles.emptyStateText}>
+              {query ? 'No matching lists for this day' : 'No lists for this day'}
+            </Text>
           </View>
         ) : (
           <FlatList
             data={filteredListsForSelectedDate}
-            keyExtractor={(item) => item.id}
+            keyExtractor={(item) => String(item.id)}
             renderItem={renderListItem}
             contentContainerStyle={styles.listContent}
             showsVerticalScrollIndicator={false}
@@ -291,9 +354,10 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.sm / 2,
   },
   dayCircle: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
+    width: 34,
+    height: 34,
+    borderRadius: 17,
+    overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -301,12 +365,19 @@ const styles = StyleSheet.create({
     backgroundColor: colors.navy,
   },
   dayCircleToday: {
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.gold,
+  },
+  dayCircleMatch: {
+    backgroundColor: colors.gold,
   },
   dayText: {
     fontSize: 13,
     color: colors.text,
+  },
+  dayTextMatch: {
+    color: colors.navy,
+    fontWeight: '700',
   },
   dayTextHighlighted: {
     color: colors.white,
