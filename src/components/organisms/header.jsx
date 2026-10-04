@@ -7,6 +7,7 @@ import { Pressable, TextInput as RNTextInput, StyleSheet, Text, View } from 'rea
 export default function Header({
   title,
   onBack,
+  hideBack = false,
   editableTitle,
   onTitleChange,
   rightAction,
@@ -16,9 +17,11 @@ export default function Header({
 
   return (
     <View style={styles.header}>
-      <Pressable style={styles.backButton} onPress={onBack}>
-        <Feather name="arrow-left" size={24} color={colors.navy} />
-      </Pressable>
+      {!hideBack && (
+        <Pressable style={styles.backButton} onPress={onBack}>
+          <Feather name="arrow-left" size={24} color={colors.navy} />
+        </Pressable>
+      )}
 
       {editableTitle ? (
         <RNTextInput

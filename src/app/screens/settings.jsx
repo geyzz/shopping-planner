@@ -1,6 +1,5 @@
 import SettingsRow from '@/components/molecules/settings_row';
 import BottomNavigation from '@/components/organisms/bottom_nav';
-import Header from '@/components/organisms/header';
 import ProfileSummary from '@/components/organisms/profile_summary';
 import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
@@ -18,7 +17,7 @@ const PROFILE_SETTINGS = [
 const GENERAL_SETTINGS = [
   { id: 'notifications', label: 'Notifications', icon: 'bell', path: '/screens/notifications' },
   { id: 'appearance', label: 'Appearance', icon: 'sun', path: '/screens/settings_screen/appearance' },
-  { id: 'about', label: 'About', icon: 'info', path: '/screens/about' },
+  { id: 'about', label: 'About', icon: 'info', path: '/screens/settings_screen/about' },
 ];
 
 export default function ProfilePage() {
@@ -63,7 +62,6 @@ export default function ProfilePage() {
 
   return (
     <View style={styles.screen}>
-      <Header title="Settings" onBack={handleBack} />
 
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <ProfileSummary name={name} avatarUrl={avatarUrl} />
@@ -113,6 +111,7 @@ const makeStyles = (colors) =>
   StyleSheet.create({
     screen: {
       flex: 1,
+      paddingTop: spacing.xxl,
       backgroundColor: colors.background,
     },
     scrollContent: {
