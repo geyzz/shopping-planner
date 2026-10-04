@@ -32,7 +32,7 @@ export function useMalls() {
   return malls;
 }
 
-// Items matching `query`, each with the shops that sell it.
+// Items matching `query`, each with the shops that sell it and the lowest estimated price.
 // When `mallSlug` is given, only items sold in that mall are returned,
 // and `shops` lists only the shops in that mall.
 export async function searchItems(query, mallSlug) {
@@ -41,7 +41,7 @@ export async function searchItems(query, mallSlug) {
 
   const { data, error } = await supabase
     .from('items')
-    .select('id, name, shop_items(shops(name, mall_shops(malls(slug))))')
+    .select('id, name, shop_items(price, shops(name, mall_shops(malls(slug))))')
     .ilike('name', `%${q}%`)
     .limit(12);
 
@@ -52,16 +52,22 @@ export async function searchItems(query, mallSlug) {
 
   return (data ?? [])
     .map((item) => {
-      const shops = (item.shop_items ?? [])
-        .map((si) => si.shops)
-        .filter(Boolean)
+      const offers = (item.shop_items ?? [])
+        .filter((si) => si.shops)
         .filter(
-          (shop) =>
-            !mallSlug || (shop.mall_shops ?? []).some((ms) => ms.malls?.slug === mallSlug)
-        )
-        .map((shop) => shop.name);
+          (si) =>
+            !mallSlug || (si.shops.mall_shops ?? []).some((ms) => ms.malls?.slug === mallSlug)
+        );
 
-      return { id: item.id, name: item.name, shops };
+      const shops = offers.map((si) => si.shops.name);
+
+      // Estimated price = the lowest price among these shops (null if none is priced)
+      const prices = offers
+        .map((si) => parseFloat(si.price))
+        .filter((p) => !Number.isNaN(p));
+      const price = prices.length ? Math.min(...prices) : null;
+
+      return { id: item.id, name: item.name, shops, price };
     })
     .filter((item) => !mallSlug || item.shops.length > 0)
     .slice(0, 6);
@@ -107,4 +113,30 @@ export async function getMallRecommendations(itemNames) {
       missing: names.filter((n) => !m.items.includes(n)),
     }))
     .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+}
+
+// Lowest known price for each item name, for example { Pillow: 700 }.
+// Names with no price are left out. Returns null if the lookup fails.
+export async function getItemPrices(itemNames) {
+  const names = [...new Set(itemNames.map((n) => n.trim()).filter(Boolean))];
+  if (!names.length) return {};
+
+  const { data, error } = await supabase
+    .from('items')
+    .select('name, shop_items(price)')
+    .in('name', names);
+
+  if (error) {
+    console.log('Error loading item prices:', error.message);
+    return null;
+  }
+
+  const prices = {};
+  (data ?? []).forEach((item) => {
+    const values = (item.shop_items ?? [])
+      .map((si) => parseFloat(si.price))
+      .filter((p) => !Number.isNaN(p));
+    if (values.length) prices[item.name] = Math.min(...values);
+  });
+  return prices;
 }

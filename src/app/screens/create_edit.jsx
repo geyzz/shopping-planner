@@ -3,7 +3,7 @@ import Header from '@/components/organisms/header';
 import LocationSection from '@/components/organisms/location_section';
 import ReminderSection from '@/components/organisms/reminder_section';
 import ShoppingList from '@/components/organisms/shopping_list';
-import { getMallRecommendations } from '@/lib/mall_data';
+import { getItemPrices, getMallRecommendations } from '@/lib/mall_data';
 import { MALL_IMAGES } from '@/lib/mall_image';
 import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
@@ -96,10 +96,51 @@ export default function CreateEditPage() {
     };
   }, [itemNamesKey]);
 
-  const handleAddItem = (name, shops = []) => {
+  // Fill in estimated prices for items that don't have one yet: items typed without
+  // picking a suggestion, and lists saved before prices existed. A price the user
+  // already typed (anything above 0) is left alone.
+  const unpricedKey = shoppingItems
+    .filter((i) => i.estimatedPrice === undefined)
+    .map((i) => i.name)
+    .join('|');
+
+  useEffect(() => {
+    if (!unpricedKey) return;
+    let cancelled = false;
+
+    getItemPrices(unpricedKey.split('|')).then((prices) => {
+      if (cancelled || !prices) return;
+      setShoppingItems((prev) =>
+        prev.map((item) => {
+          if (item.estimatedPrice !== undefined) return item;
+          const estimate = prices[item.name] ?? null;
+          const untouched = !(parseFloat(item.price) > 0);
+          return {
+            ...item,
+            estimatedPrice: estimate,
+            price: estimate != null && untouched ? String(estimate) : item.price,
+          };
+        })
+      );
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [unpricedKey]);
+
+  // `estimate` is the lowest known shop price. It becomes the starting price,
+  // and the user can still type their own in Cost Estimation.
+  const handleAddItem = (name, shops = [], estimate = null) => {
     setShoppingItems([
       ...shoppingItems,
-      { id: Date.now().toString(), name, price: '0', shops },
+      {
+        id: Date.now().toString(),
+        name,
+        price: estimate != null ? String(estimate) : '0',
+        estimatedPrice: estimate,
+        shops,
+      },
     ]);
   };
 
@@ -110,6 +151,17 @@ export default function CreateEditPage() {
   const handleItemPriceChange = (id, value) => {
     setShoppingItems(
       shoppingItems.map((item) => (item.id === id ? { ...item, price: value } : item))
+    );
+  };
+
+  // Put an edited price back to the estimate
+  const handleResetItemPrice = (id) => {
+    setShoppingItems(
+      shoppingItems.map((item) =>
+        item.id === id && item.estimatedPrice != null
+          ? { ...item, price: String(item.estimatedPrice) }
+          : item
+      )
     );
   };
 
@@ -226,6 +278,7 @@ export default function CreateEditPage() {
           editable
           onChangeBudget={setBudget}
           onChangeItemPrice={handleItemPriceChange}
+          onResetItemPrice={handleResetItemPrice}
           collapsible
           boxed={false}
           expanded={costExpanded}

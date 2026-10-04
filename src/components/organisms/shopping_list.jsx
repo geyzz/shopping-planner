@@ -13,6 +13,12 @@ const formatShops = (shops = []) => {
   return shops.length > 3 ? `${shown} +${shops.length - 3}` : shown;
 };
 
+const formatPrice = (value) => {
+  if (value == null) return '';
+  if (value === 0) return 'Free';
+  return `₱${String(Math.round(value)).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
+};
+
 export default function ShoppingList({
   items = [],
   onAdd,
@@ -52,13 +58,13 @@ export default function ShoppingList({
     const name = newItemText.trim();
     if (!name) return;
     const match = suggestions.find((s) => s.name.toLowerCase() === name.toLowerCase());
-    onAdd?.(name, match?.shops ?? []);
+    onAdd?.(name, match?.shops ?? [], match?.price ?? null);
     setNewItemText('');
     setSuggestions([]);
   };
 
   const handlePickSuggestion = (suggestion) => {
-    onAdd?.(suggestion.name, suggestion.shops);
+    onAdd?.(suggestion.name, suggestion.shops, suggestion.price);
     setNewItemText('');
     setSuggestions([]);
   };
@@ -138,7 +144,14 @@ export default function ShoppingList({
               style={[styles.suggestionRow, index === suggestions.length - 1 && styles.suggestionLast]}
               onPress={() => handlePickSuggestion(s)}
             >
-              <Text style={styles.suggestionName}>{s.name}</Text>
+              <View style={styles.suggestionTop}>
+                <Text style={styles.suggestionName} numberOfLines={1}>
+                  {s.name}
+                </Text>
+                {s.price != null && (
+                  <Text style={styles.suggestionPrice}>{formatPrice(s.price)}</Text>
+                )}
+              </View>
               {s.shops.length > 0 && (
                 <Text style={styles.suggestionShops} numberOfLines={1}>
                   {formatShops(s.shops)}
@@ -225,10 +238,22 @@ const makeStyles = (colors) =>
     suggestionLast: {
       borderBottomWidth: 0,
     },
+    suggestionTop: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    },
     suggestionName: {
+      flex: 1,
       fontSize: 14,
       color: colors.text,
       fontWeight: '600',
+    },
+    suggestionPrice: {
+      marginLeft: spacing.sm,
+      fontSize: 14,
+      color: colors.navy,
+      fontWeight: '700',
     },
     suggestionShops: {
       fontSize: 12,
