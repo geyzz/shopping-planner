@@ -4,14 +4,21 @@ import { spacing } from '@/theme/theme';
 import { useMemo } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function ItemRow({ name, checked, showCheckbox, onToggle }) {
+export default function ItemRow({ name, subtitle, checked, showCheckbox, onToggle }) {
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
 
   return (
     <View style={styles.row}>
       {showCheckbox && <Checkbox checked={checked} onToggle={onToggle} />}
-      <Text style={[styles.text, checked && styles.textChecked]}>{name}</Text>
+      <View style={styles.textWrapper}>
+        <Text style={[styles.text, checked && styles.textChecked]}>{name}</Text>
+        {!!subtitle && (
+          <Text style={styles.subtitle} numberOfLines={1}>
+            {subtitle}
+          </Text>
+        )}
+      </View>
     </View>
   );
 }
@@ -25,13 +32,21 @@ const makeStyles = (colors) =>
       borderBottomWidth: 1,
       borderBottomColor: colors.border,
     },
+    textWrapper: {
+      flex: 1,
+      marginLeft: spacing.sm,
+    },
     text: {
       fontSize: 14,
       color: colors.text,
-      marginLeft: spacing.sm,
     },
     textChecked: {
       color: colors.textSecondary,
       textDecorationLine: 'line-through',
+    },
+    subtitle: {
+      fontSize: 12,
+      color: colors.textSecondary,
+      marginTop: 2,
     },
   });

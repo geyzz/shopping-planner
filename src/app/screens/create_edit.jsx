@@ -3,6 +3,8 @@ import Header from '@/components/organisms/header';
 import LocationSection from '@/components/organisms/location_section';
 import ReminderSection from '@/components/organisms/reminder_section';
 import ShoppingList from '@/components/organisms/shopping_list';
+import { getMallRecommendations } from '@/lib/mall_data';
+import { MALL_IMAGES } from '@/lib/mall_image';
 import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { spacing } from '@/theme/theme';
@@ -22,7 +24,7 @@ const LOCATIONS = [
   { id: 'marquee_mall', name: 'Marquee Mall' },
   { id: 'nepo_mall', name: 'Nepo Mall' },
   { id: 'newpoint_mall', name: 'Newpoint Mall' },
-];
+].map((m) => ({ ...m, image: MALL_IMAGES[m.id] }));
 
 export default function CreateEditPage() {
   const router = useRouter();
@@ -43,10 +45,12 @@ export default function CreateEditPage() {
   const [selectedLocation, setSelectedLocation] = useState(null);
 
   const [shoppingItems, setShoppingItems] = useState([]);
+  const [recommendations, setRecommendations] = useState({});
 
   const [costExpanded, setCostExpanded] = useState(false);
   const [budget, setBudget] = useState('');
 
+  // Load an existing list when editing
   useEffect(() => {
     if (!list) return;
     try {
@@ -66,10 +70,36 @@ export default function CreateEditPage() {
     }
   }, [list]);
 
-  const handleAddItem = (name) => {
+  // Mall recommendations based on the shopping items
+  const itemNamesKey = shoppingItems.map((i) => i.name).join('|');
+
+  useEffect(() => {
+    let cancelled = false;
+
+    if (!shoppingItems.length) {
+      setRecommendations({});
+      return;
+    }
+
+    getMallRecommendations(shoppingItems.map((i) => i.name)).then((result) => {
+      if (cancelled) return;
+      const best = result[0]?.count ?? 0;
+      const map = {};
+      result.forEach((r) => {
+        map[r.slug] = { ...r, best: best > 0 && r.count === best };
+      });
+      setRecommendations(map);
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [itemNamesKey]);
+
+  const handleAddItem = (name, shops = []) => {
     setShoppingItems([
       ...shoppingItems,
-      { id: Date.now().toString(), name, price: '0' },
+      { id: Date.now().toString(), name, price: '0', shops },
     ]);
   };
 
@@ -123,10 +153,16 @@ export default function CreateEditPage() {
     let error;
 
     if (noteId) {
-      ({ error } = await supabase
+      const { data: updated, error: updateError } = await supabase
         .from('lists')
         .update({ title: title.trim(), details })
-        .eq('id', noteId));
+        .eq('id', noteId)
+        .select('id');
+
+      error = updateError;
+      if (!error && (!updated || updated.length === 0)) {
+        error = { message: 'No row was updated. Check the update policy on the lists table.' };
+      }
     } else {
       ({ error } = await supabase
         .from('lists')
@@ -171,6 +207,7 @@ export default function CreateEditPage() {
 
         <LocationSection
           locations={LOCATIONS}
+          recommendations={recommendations}
           value={selectedLocation}
           onChange={setSelectedLocation}
           expanded={locationExpanded}

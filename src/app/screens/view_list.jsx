@@ -3,6 +3,7 @@ import Header from '@/components/organisms/header';
 import LocationSection from '@/components/organisms/location_section';
 import ReminderSection from '@/components/organisms/reminder_section';
 import ShoppingList from '@/components/organisms/shopping_list';
+import { MALL_IMAGES } from '@/lib/mall_image';
 import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { spacing } from '@/theme/theme';
@@ -23,7 +24,7 @@ const LOCATIONS = [
   { id: 'marquee_mall', name: 'Marquee Mall' },
   { id: 'nepo_mall', name: 'Nepo Mall' },
   { id: 'newpoint_mall', name: 'Newpoint Mall' },
-];
+].map((m) => ({ ...m, image: MALL_IMAGES[m.id] }));
 
 export default function ViewListPage() {
   const router = useRouter();

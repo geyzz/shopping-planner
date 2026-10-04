@@ -1,27 +1,66 @@
 import ItemRow from '@/components/molecules/item_row';
 import SectionHeader from '@/components/molecules/section_header';
+import { searchItems } from '@/lib/mall_data';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+
+const formatShops = (shops = []) => {
+  if (!shops.length) return '';
+  const shown = shops.slice(0, 3).join(', ');
+  return shops.length > 3 ? `${shown} +${shops.length - 3}` : shown;
+};
 
 export default function ShoppingList({
   items = [],
   onAdd,
   onDelete,
   onToggle,
+  mallSlug = null,
   readOnly = false,
 }) {
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [newItemText, setNewItemText] = useState('');
+  const [suggestions, setSuggestions] = useState([]);
+
+  // Look up matching items from the database while typing
+  useEffect(() => {
+    if (readOnly) return;
+
+    const q = newItemText.trim();
+    if (q.length < 2) {
+      setSuggestions([]);
+      return;
+    }
+
+    let cancelled = false;
+    const timer = setTimeout(async () => {
+      const results = await searchItems(q, mallSlug);
+      if (!cancelled) setSuggestions(results);
+    }, 250);
+
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [newItemText, mallSlug, readOnly]);
 
   const handleAdd = () => {
     const name = newItemText.trim();
     if (!name) return;
-    onAdd?.(name);
+    const match = suggestions.find((s) => s.name.toLowerCase() === name.toLowerCase());
+    onAdd?.(name, match?.shops ?? []);
     setNewItemText('');
+    setSuggestions([]);
+  };
+
+  const handlePickSuggestion = (suggestion) => {
+    onAdd?.(suggestion.name, suggestion.shops);
+    setNewItemText('');
+    setSuggestions([]);
   };
 
   if (readOnly) {
@@ -40,6 +79,7 @@ export default function ShoppingList({
               <ItemRow
                 key={item.id}
                 name={item.name}
+                subtitle={formatShops(item.shops)}
                 checked={!!item.checked}
                 showCheckbox
                 onToggle={() => onToggle?.(item.id)}
@@ -57,6 +97,7 @@ export default function ShoppingList({
                   <ItemRow
                     key={item.id}
                     name={item.name}
+                    subtitle={formatShops(item.shops)}
                     checked={!!item.checked}
                     showCheckbox
                     onToggle={() => onToggle?.(item.id)}
@@ -89,9 +130,35 @@ export default function ShoppingList({
         </Pressable>
       </View>
 
+      {suggestions.length > 0 && (
+        <View style={styles.suggestionBox}>
+          {suggestions.map((s, index) => (
+            <Pressable
+              key={s.id}
+              style={[styles.suggestionRow, index === suggestions.length - 1 && styles.suggestionLast]}
+              onPress={() => handlePickSuggestion(s)}
+            >
+              <Text style={styles.suggestionName}>{s.name}</Text>
+              {s.shops.length > 0 && (
+                <Text style={styles.suggestionShops} numberOfLines={1}>
+                  {formatShops(s.shops)}
+                </Text>
+              )}
+            </Pressable>
+          ))}
+        </View>
+      )}
+
       {items.map((item) => (
         <View key={item.id} style={styles.itemRow}>
-          <Text style={styles.itemText}>{item.name}</Text>
+          <View style={styles.itemTextWrapper}>
+            <Text style={styles.itemText}>{item.name}</Text>
+            {item.shops?.length > 0 && (
+              <Text style={styles.itemShops} numberOfLines={1}>
+                {formatShops(item.shops)}
+              </Text>
+            )}
+          </View>
           <Pressable
             accessibilityRole="button"
             accessibilityLabel={`Delete ${item.name}`}
@@ -141,6 +208,33 @@ const makeStyles = (colors) =>
       fontWeight: '600',
       fontSize: 14,
     },
+    suggestionBox: {
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: borderRadius.md,
+      backgroundColor: colors.white,
+      marginTop: spacing.sm,
+      overflow: 'hidden',
+    },
+    suggestionRow: {
+      paddingVertical: spacing.sm,
+      paddingHorizontal: spacing.md - 4,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.border,
+    },
+    suggestionLast: {
+      borderBottomWidth: 0,
+    },
+    suggestionName: {
+      fontSize: 14,
+      color: colors.text,
+      fontWeight: '600',
+    },
+    suggestionShops: {
+      fontSize: 12,
+      color: colors.textSecondary,
+      marginTop: 2,
+    },
     itemRow: {
       flexDirection: 'row',
       alignItems: 'center',
@@ -149,10 +243,17 @@ const makeStyles = (colors) =>
       borderBottomColor: colors.border,
       paddingVertical: spacing.sm,
     },
-    itemText: {
+    itemTextWrapper: {
       flex: 1,
+    },
+    itemText: {
       fontSize: 14,
       color: colors.text,
+    },
+    itemShops: {
+      fontSize: 12,
+      color: colors.textSecondary,
+      marginTop: 2,
     },
     checkedDivider: {
       flexDirection: 'row',

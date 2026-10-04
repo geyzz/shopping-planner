@@ -4,7 +4,8 @@ import { borderRadius, spacing } from '@/theme/theme';
 import { useMemo } from 'react';
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 
-export default function LocationCard({ image, address, selected, onSelect, size }) {
+
+export default function LocationCard({ image, address, selected, onSelect, size, recommended, badge }) {
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors, size), [colors, size]);
   const selectable = size === 'small';
@@ -18,7 +19,10 @@ export default function LocationCard({ image, address, selected, onSelect, size 
       accessibilityState={{ selected: !!selected }}
     >
       {image ? (
-        <Image source={{ uri: image }} style={styles.preview} />
+        <Image
+          source={typeof image === 'string' ? { uri: image } : image}
+          style={styles.preview}
+        />
       ) : (
         <View style={styles.preview} />
       )}
@@ -29,12 +33,31 @@ export default function LocationCard({ image, address, selected, onSelect, size 
           {address}
         </Text>
       </View>
+      {badge ? (
+        <Text
+          numberOfLines={1}
+          style={[styles.badge, recommended && styles.badgeBest]}
+        >
+          {recommended ? `★ Best · ${badge}` : badge}
+        </Text>
+      ) : null}
     </Pressable>
   );
 }
 
 const makeStyles = (colors, size) =>
   StyleSheet.create({
+    badge: {
+      fontSize: 11,
+      color: colors.text,
+      opacity: 0.7,
+      marginTop: 2,
+    },
+    badgeBest: {
+      color: colors.gold,
+      fontWeight: '700',
+      opacity: 1,
+    },
     card: {
       width: size === 'small' ? 110 : '100%',
       marginRight: size === 'small' ? spacing.sm : 0,
