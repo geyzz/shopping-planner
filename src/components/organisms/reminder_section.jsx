@@ -1,18 +1,12 @@
 import Tag from '@/components/atoms/tag';
 import DateField from '@/components/molecules/date_field';
+import SectionHeader from '@/components/molecules/section_header';
+import SetTime from '@/components/molecules/set_time';
 import { useAppTheme } from '@/theme/ThemeContext';
-import { spacing, typography } from '@/theme/theme';
-import { Feather } from '@expo/vector-icons';
+import { spacing } from '@/theme/theme';
 import { useMemo } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-// types:        [{ id, label, icon }]
-// type:         selected type id or null
-// onTypeChange: (id | null) => void
-// date:         Date or null
-// onDateChange: (Date) => void
-// expanded / onToggle: held by the screen, same as the other sections
-// readOnly:     view screen. Shows the chosen type and date, nothing if no type.
 export default function ReminderSection({
   types = [],
   type = null,
@@ -32,25 +26,28 @@ export default function ReminderSection({
 
     return (
       <View style={styles.section}>
-        <Text style={[styles.sectionTitle, styles.sectionTitleStatic]}>Reminder</Text>
+        <SectionHeader title="Reminder" />
         <View style={styles.displayRow}>
           <Tag label={selected.label} icon={selected.icon} selected />
-          {date && <DateField value={date} editable={false} />}
         </View>
+        {date && (
+          <View style={styles.dateTimeRow}>
+            <DateField value={date} editable={false} />
+            <SetTime value={date} editable={false} />
+          </View>
+        )}
       </View>
     );
   }
 
   return (
     <View style={styles.section}>
-      <Pressable style={styles.sectionHeader} onPress={onToggle}>
-        <Text style={styles.sectionTitle}>Reminder</Text>
-        <Feather
-          name={expanded ? 'chevron-up' : 'chevron-down'}
-          size={20}
-          color={colors.navy}
-        />
-      </Pressable>
+      <SectionHeader
+        title="Reminder"
+        collapsible
+        expanded={expanded}
+        onToggle={onToggle}
+      />
 
       {expanded && (
         <View style={styles.sectionBody}>
@@ -66,7 +63,10 @@ export default function ReminderSection({
             ))}
           </View>
 
-          <DateField value={date} editable onChange={onDateChange} />
+          <View style={styles.dateTimeRow}>
+            <DateField value={date} editable onChange={onDateChange} />
+            <SetTime value={date} editable onChange={onDateChange} />
+          </View>
         </View>
       )}
     </View>
@@ -78,20 +78,6 @@ const makeStyles = (colors) =>
     section: {
       marginTop: spacing.lg,
     },
-    sectionHeader: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-    },
-    sectionTitle: {
-      ...typography.label,
-      fontSize: 16,
-      color: colors.navy,
-      fontWeight: '700',
-    },
-    sectionTitleStatic: {
-      marginBottom: spacing.sm,
-    },
     sectionBody: {
       marginTop: spacing.sm,
     },
@@ -102,5 +88,10 @@ const makeStyles = (colors) =>
     displayRow: {
       flexDirection: 'row',
       alignItems: 'center',
+    },
+    dateTimeRow: {
+      flexDirection: 'row',
+      gap: spacing.sm / 2,
+      marginTop: spacing.sm / 2,
     },
   });

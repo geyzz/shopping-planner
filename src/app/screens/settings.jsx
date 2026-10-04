@@ -6,13 +6,13 @@ import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
-import { useEffect, useMemo, useState } from 'react';
+import { useFocusEffect, useRouter } from 'expo-router';
+import { useCallback, useMemo, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 const PROFILE_SETTINGS = [
-  { id: 'edit_profile', label: 'Edit Profile', icon: 'user', path: '/screens/edit_profile' },
-  { id: 'change_password', label: 'Change Password', icon: 'lock', path: '/screens/change_password' },
+  { id: 'edit_profile', label: 'Edit Profile', icon: 'user', path: '/screens/settings_screen/edit_profile' },
+  { id: 'change_password', label: 'Change Password', icon: 'lock', path: '/screens/settings_screen/change_pass' },
 ];
 
 const GENERAL_SETTINGS = [
@@ -26,6 +26,7 @@ export default function ProfilePage() {
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [name, setName] = useState('');
+  const [avatarUrl, setAvatarUrl] = useState(null);
 
   const handleBack = () => {
     if (router.canGoBack()) {
@@ -35,19 +36,21 @@ export default function ProfilePage() {
     }
   };
 
-  useEffect(() => {
-    const fetchUser = async () => {
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
+  useFocusEffect(
+    useCallback(() => {
+      const fetchUser = async () => {
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
 
-      if (session?.user?.user_metadata?.first_name) {
-        setName(session.user.user_metadata.first_name);
-      }
-    };
+        const meta = user?.user_metadata;
+        setName(meta?.first_name ?? '');
+        setAvatarUrl(meta?.avatar_url ?? null);
+      };
 
-    fetchUser();
-  }, []);
+      fetchUser();
+    }, [])
+  );
 
   const handleNavigate = (path) => {
     router.push(path);
@@ -63,7 +66,7 @@ export default function ProfilePage() {
       <Header title="Settings" onBack={handleBack} />
 
       <ScrollView contentContainerStyle={styles.scrollContent}>
-        <ProfileSummary name={name} />
+        <ProfileSummary name={name} avatarUrl={avatarUrl} />
 
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Profile Settings</Text>
@@ -111,7 +114,6 @@ const makeStyles = (colors) =>
     screen: {
       flex: 1,
       backgroundColor: colors.background,
-      paddingTop: spacing.md,
     },
     scrollContent: {
       paddingHorizontal: spacing.md,

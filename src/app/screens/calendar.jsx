@@ -139,7 +139,12 @@ export default function CalendarPage() {
 
   return (
     <View style={styles.screen}>
-      <AppLogo />
+      <View style={styles.logoRow}>
+        <AppLogo />
+        <Pressable onPress={() => router.push('/screens/notif')}>
+          <Feather name="bell" size={22} color={colors.navy} />
+        </Pressable>
+      </View>
 
       <View style={{ marginTop: spacing.md }}>
         <CalendarView
@@ -195,6 +200,11 @@ const makeStyles = (colors) =>
       backgroundColor: colors.background,
       paddingHorizontal: spacing.md,
       paddingTop: spacing.xl,
+    },
+    logoRow: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
     },
     searchWrapper: {
       flex: 1,

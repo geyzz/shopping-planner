@@ -147,11 +147,12 @@ const makeStyles = (colors) =>
       paddingVertical: spacing.sm / 2,
     },
     dayCircle: {
-      width: 32,
-      height: 32,
-      borderRadius: 16,
-      justifyContent: 'center',
-      alignItems: 'center',
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    overflow: 'hidden',
+    justifyContent: 'center',
+    alignItems: 'center',
     },
     dayCircleSelected: {
       backgroundColor: colors.navy,

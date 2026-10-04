@@ -4,13 +4,13 @@ import { spacing, typography } from '@/theme/theme';
 import { useMemo } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function ProfileSummary({ name }) {
+export default function ProfileSummary({ name, avatarUrl }) {
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
 
   return (
     <View style={styles.container}>
-      <Avatar />
+      <Avatar image={avatarUrl} />
       <Text style={styles.name}>{name}</Text>
     </View>
   );

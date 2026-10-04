@@ -12,7 +12,7 @@ import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
 //   active true:      highlighted (navy, bold)
 //   active false:     icon is dimmed, so a row can show a selected state
 // top: distance from the top of the screen
-export default function MenuDropdown({ visible, onClose, sections = [], top = 110 }) {
+export default function MenuDropdown({ visible, onClose, sections = [], top = 110, right = spacing.md + spacing.sm }) {
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
 
@@ -22,7 +22,7 @@ export default function MenuDropdown({ visible, onClose, sections = [], top = 11
   return (
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
       <Pressable style={styles.overlay} onPress={onClose}>
-        <Pressable style={[styles.menu, { top }]} onPress={() => {}}>
+        <Pressable style={[styles.menu, { top, right }]} onPress={() => {}}>
           {sections.map((section, index) => (
             <View key={section.title ?? index}>
               {index > 0 && <View style={styles.divider} />}

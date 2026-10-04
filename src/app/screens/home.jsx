@@ -9,8 +9,15 @@ import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useMemo, useState } from 'react';
-import { Alert, Pressable, StyleSheet, Text, View } from 'react-native';
+import { useCallback, useMemo, useRef, useState } from 'react';
+import {
+  Alert,
+  Pressable,
+  StyleSheet,
+  Text,
+  useWindowDimensions,
+  View,
+} from 'react-native';
 
 const SORT_FIELDS = [
   { key: 'created_at', label: 'Date created' },
@@ -44,9 +51,11 @@ const collectStrings = (value, out = []) => {
 const getItemTexts = (note) => collectStrings(note.details);
 
 export default function HomePage() {
-  const { colors } = useAppTheme();
+  const { colors, isDark } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const router = useRouter();
+  const { width: screenWidth } = useWindowDimensions();
+
   const [searchText, setSearchText] = useState('');
   const [showOptionsMenu, setShowOptionsMenu] = useState(false);
   const [showSortMenu, setShowSortMenu] = useState(false);
@@ -59,7 +68,17 @@ export default function HomePage() {
   const [selectMode, setSelectMode] = useState(false);
   const [selectedIds, setSelectedIds] = useState([]);
 
+  const optionsButtonRef = useRef(null);
+  const [menuPos, setMenuPos] = useState({ top: 110, right: 24 });
+
   const numOfNotes = notes.length;
+
+  const openOptionsMenu = () => {
+    optionsButtonRef.current?.measureInWindow((x, y, w, h) => {
+      setMenuPos({ top: y + h + 4, right: screenWidth - (x + w) });
+      setShowOptionsMenu(true);
+    });
+  };
 
   useFocusEffect(
     useCallback(() => {
@@ -202,6 +221,7 @@ export default function HomePage() {
 
   const renderNote = ({ item }) => {
     const isSelected = selectedIds.includes(item.id);
+    const shoppingItems = item.details?.shoppingItems ?? [];
 
     return (
       <Pressable
@@ -219,7 +239,24 @@ export default function HomePage() {
         )}
 
         <View style={styles.notePreview}>
-          <Feather name="image" size={32} color={colors.border} />
+          {shoppingItems.length === 0 ? (
+            <Feather name="file-text" size={32} color={colors.border} />
+          ) : (
+            <View style={styles.previewList}>
+              {shoppingItems.slice(0, 4).map((shopItem) => (
+                <Text
+                  key={shopItem.id}
+                  style={[styles.previewItem, shopItem.checked && styles.previewItemDone]}
+                  numberOfLines={1}
+                >
+                  • {shopItem.name}
+                </Text>
+              ))}
+              {shoppingItems.length > 4 && (
+                <Text style={styles.previewMore}>+{shoppingItems.length - 4} more</Text>
+              )}
+            </View>
+          )}
         </View>
 
         <Text style={styles.noteTitle} numberOfLines={1}>
@@ -240,7 +277,12 @@ export default function HomePage() {
 
   return (
     <View style={styles.screen}>
-      <AppLogo />
+      <View style={styles.logoRow}>
+        <AppLogo />
+        <Pressable onPress={() => router.push('/screens/notif')}>
+          <Feather name="bell" size={22} color={colors.navy} />
+        </Pressable>
+      </View>
 
       <GreetingBanner name={name} totalCount={numOfNotes} />
 
@@ -276,7 +318,11 @@ export default function HomePage() {
             />
           </View>
 
-          <Pressable style={styles.optionsButton} onPress={() => setShowOptionsMenu(true)}>
+          <Pressable
+            ref={optionsButtonRef}
+            style={styles.optionsButton}
+            onPress={openOptionsMenu}
+          >
             <Feather name="more-vertical" size={22} color={colors.navy} />
           </Pressable>
         </View>
@@ -285,6 +331,8 @@ export default function HomePage() {
       <MenuDropdown
         visible={showOptionsMenu}
         onClose={() => setShowOptionsMenu(false)}
+        top={menuPos.top}
+        right={menuPos.right}
         sections={[
           {
             items: [
@@ -298,6 +346,8 @@ export default function HomePage() {
       <MenuDropdown
         visible={showSortMenu}
         onClose={() => setShowSortMenu(false)}
+        top={menuPos.top}
+        right={menuPos.right}
         sections={[
           {
             title: 'Sort by',
@@ -334,7 +384,7 @@ export default function HomePage() {
 
       {!selectMode && (
         <Pressable style={styles.addButton} onPress={() => router.push('/screens/create_edit')}>
-          <Feather name="plus" size={26} color="#FFFFFF" />
+          <Feather name="plus" size={26} color={isDark ? '#1B2A4A' : '#FFFFFF'} />
         </Pressable>
       )}
 
@@ -350,6 +400,11 @@ const makeStyles = (colors) =>
       backgroundColor: colors.background,
       paddingHorizontal: spacing.md,
       paddingTop: spacing.xl,
+    },
+    logoRow: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
     },
     toolbarRow: {
       flexDirection: 'row',
@@ -449,7 +504,25 @@ const makeStyles = (colors) =>
       borderColor: colors.border,
       justifyContent: 'center',
       alignItems: 'center',
+      padding: spacing.sm,
       marginBottom: spacing.sm,
+    },
+    previewList: {
+      alignSelf: 'stretch',
+    },
+    previewItem: {
+      fontSize: 12,
+      color: colors.text,
+      marginBottom: 3,
+    },
+    previewItemDone: {
+      textDecorationLine: 'line-through',
+      color: colors.textSecondary,
+    },
+    previewMore: {
+      fontSize: 11,
+      color: colors.textSecondary,
+      marginTop: 2,
     },
     noteTitle: {
       ...typography.label,
