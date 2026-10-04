@@ -1,10 +1,16 @@
-import { supabase } from '@/lib/supabase'; // adjust this path to wherever your Supabase client file lives
+import AppLogo from '@/components/atoms/app_logo';
+import SearchBar from '@/components/molecules/search_bar';
+import BottomNavigation from '@/components/organisms/bottom_nav';
+import GreetingBanner from '@/components/organisms/greeting_banner';
+import ListGrid from '@/components/organisms/list_grid';
+import MenuDropdown from '@/components/organisms/menu_dropdown';
+import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
-import { Alert, FlatList, Modal, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, Pressable, StyleSheet, Text, View } from 'react-native';
 
 const SORT_FIELDS = [
   { key: 'created_at', label: 'Date created' },
@@ -16,7 +22,6 @@ const SORT_DIRECTIONS = [
   { key: 'asc', label: 'Ascending', icon: 'arrow-up' },
 ];
 
-// Collect every text value from any JSON / array / object
 const collectStrings = (value, out = []) => {
   if (value == null) return out;
   if (typeof value === 'string') {
@@ -36,7 +41,6 @@ const collectStrings = (value, out = []) => {
   return out;
 };
 
-// Searchable text: items from list_items + anything inside the details column
 const getItemTexts = (note) => collectStrings(note.details);
 
 export default function HomePage() {
@@ -49,17 +53,14 @@ export default function HomePage() {
   const [notes, setNotes] = useState([]);
   const [name, setName] = useState('');
 
-  // Sort state
   const [sortField, setSortField] = useState('created_at');
   const [sortDirection, setSortDirection] = useState('desc');
 
-  // Select state
   const [selectMode, setSelectMode] = useState(false);
   const [selectedIds, setSelectedIds] = useState([]);
 
   const numOfNotes = notes.length;
 
-  // Fetch user + lists + items every time Home gains focus
   useFocusEffect(
     useCallback(() => {
       const load = async () => {
@@ -86,7 +87,6 @@ export default function HomePage() {
   const visibleNotes = useMemo(() => {
     const query = searchText.trim().toLowerCase();
 
-    // Search matches the list title OR any item inside the list
     const filtered = !query
       ? notes
       : notes.filter(
@@ -95,7 +95,6 @@ export default function HomePage() {
             getItemTexts(note).some((text) => text.toLowerCase().includes(query))
         );
 
-    // Never-opened lists fall back to their created date
     const getTime = (note) => {
       const value =
         sortField === 'last_opened_at'
@@ -109,7 +108,6 @@ export default function HomePage() {
     );
   }, [notes, searchText, sortField, sortDirection]);
 
-  // ---------- Select helpers ----------
   const enterSelectMode = () => {
     setShowOptionsMenu(false);
     setSelectedIds([]);
@@ -163,14 +161,11 @@ export default function HomePage() {
     );
   };
 
-  // ---------- Sort helpers ----------
   const openSortMenu = () => {
     setShowOptionsMenu(false);
     setShowSortMenu(true);
   };
 
-  // ---------- Navigation ----------
-  // Record "last opened" (optimistically in state, then in Supabase)
   const markOpened = async (note) => {
     const now = new Date().toISOString();
     setNotes((prev) => prev.map((n) => (n.id === note.id ? { ...n, last_opened_at: now } : n)));
@@ -197,10 +192,6 @@ export default function HomePage() {
       pathname: '/screens/view_list',
       params: { list: JSON.stringify(note) },
     });
-  };
-
-  const goToTab = (pathname) => {
-    router.replace(pathname);
   };
 
   const formatDate = (isoString) => {
@@ -249,15 +240,9 @@ export default function HomePage() {
 
   return (
     <View style={styles.screen}>
-      <Text style={styles.logo}>Plan_.ed</Text>
+      <AppLogo />
 
-      <View style={styles.greetingRow}>
-        <Text style={styles.greetingText}>
-          Hello {name}
-          {'\n'}
-          Your total notes are {numOfNotes}
-        </Text>
-      </View>
+      <GreetingBanner name={name} totalCount={numOfNotes} />
 
       {selectMode ? (
         <View style={styles.selectBar}>
@@ -283,13 +268,11 @@ export default function HomePage() {
       ) : (
         <View style={styles.toolbarRow}>
           <View style={styles.searchWrapper}>
-            <Feather name="search" size={18} color={colors.placeholder} style={styles.searchIcon} />
-            <TextInput
-              style={styles.searchInput}
-              placeholder="Search title or items"
-              placeholderTextColor={colors.placeholder}
+            <SearchBar
               value={searchText}
               onChangeText={setSearchText}
+              placeholder="Search"
+              compact
             />
           </View>
 
@@ -299,104 +282,55 @@ export default function HomePage() {
         </View>
       )}
 
-      {/* Options menu (Sort / Select) */}
-      <Modal
+      <MenuDropdown
         visible={showOptionsMenu}
-        transparent
-        animationType="fade"
-        onRequestClose={() => setShowOptionsMenu(false)}
-      >
-        <Pressable style={styles.modalOverlay} onPress={() => setShowOptionsMenu(false)}>
-          <View style={styles.optionsMenu}>
-            <Pressable style={styles.optionsMenuItem} onPress={openSortMenu}>
-              <Feather name="sliders" size={16} color={colors.text} />
-              <Text style={styles.optionsMenuItemText}>Sort</Text>
-            </Pressable>
-            <View style={styles.optionsMenuDivider} />
-            <Pressable style={styles.optionsMenuItem} onPress={enterSelectMode}>
-              <Feather name="check-square" size={16} color={colors.text} />
-              <Text style={styles.optionsMenuItemText}>Select</Text>
-            </Pressable>
-          </View>
-        </Pressable>
-      </Modal>
+        onClose={() => setShowOptionsMenu(false)}
+        sections={[
+          {
+            items: [
+              { key: 'sort', label: 'Sort', icon: 'sliders', onPress: openSortMenu },
+              { key: 'select', label: 'Select', icon: 'check-square', onPress: enterSelectMode },
+            ],
+          },
+        ]}
+      />
 
-      {/* Sort menu */}
-      <Modal
+      <MenuDropdown
         visible={showSortMenu}
-        transparent
-        animationType="fade"
-        onRequestClose={() => setShowSortMenu(false)}
-      >
-        <Pressable style={styles.modalOverlay} onPress={() => setShowSortMenu(false)}>
-          <Pressable style={styles.optionsMenu} onPress={() => {}}>
-            <Text style={styles.sortSectionLabel}>Sort by</Text>
-            {SORT_FIELDS.map((field) => (
-              <Pressable
-                key={field.key}
-                style={styles.optionsMenuItem}
-                onPress={() => setSortField(field.key)}
-              >
-                <Feather
-                  name={sortField === field.key ? 'check' : 'circle'}
-                  size={16}
-                  color={sortField === field.key ? colors.navy : colors.border}
-                />
-                <Text style={styles.optionsMenuItemText}>{field.label}</Text>
-              </Pressable>
-            ))}
+        onClose={() => setShowSortMenu(false)}
+        sections={[
+          {
+            title: 'Sort by',
+            items: SORT_FIELDS.map((field) => ({
+              key: field.key,
+              label: field.label,
+              icon: sortField === field.key ? 'check' : 'circle',
+              active: sortField === field.key,
+              onPress: () => setSortField(field.key),
+            })),
+          },
+          {
+            title: 'Order',
+            items: SORT_DIRECTIONS.map((dir) => ({
+              key: dir.key,
+              label: dir.label,
+              icon: dir.icon,
+              active: sortDirection === dir.key,
+              onPress: () => setSortDirection(dir.key),
+            })),
+          },
+          {
+            items: [{ key: 'done', label: 'Done', onPress: () => setShowSortMenu(false) }],
+          },
+        ]}
+      />
 
-            <View style={styles.optionsMenuDivider} />
-
-            <Text style={styles.sortSectionLabel}>Order</Text>
-            {SORT_DIRECTIONS.map((dir) => (
-              <Pressable
-                key={dir.key}
-                style={styles.optionsMenuItem}
-                onPress={() => setSortDirection(dir.key)}
-              >
-                <Feather
-                  name={dir.icon}
-                  size={16}
-                  color={sortDirection === dir.key ? colors.navy : colors.border}
-                />
-                <Text
-                  style={[
-                    styles.optionsMenuItemText,
-                    sortDirection === dir.key && styles.sortActiveText,
-                  ]}
-                >
-                  {dir.label}
-                </Text>
-              </Pressable>
-            ))}
-
-            <View style={styles.optionsMenuDivider} />
-            <Pressable style={styles.optionsMenuItem} onPress={() => setShowSortMenu(false)}>
-              <Text style={[styles.optionsMenuItemText, styles.sortDoneText]}>Done</Text>
-            </Pressable>
-          </Pressable>
-        </Pressable>
-      </Modal>
-
-      {visibleNotes.length === 0 ? (
-        <View style={styles.emptyState}>
-          <Text style={styles.emptyStateText}>
-            {searchText.trim() ? 'No matching notes' : 'No notes yet'}
-          </Text>
-        </View>
-      ) : (
-        <FlatList
-          data={visibleNotes}
-          keyExtractor={(item) => String(item.id)}
-          renderItem={renderNote}
-          extraData={{ selectMode, selectedIds, colors }}
-          numColumns={2}
-          columnWrapperStyle={styles.notesRow}
-          contentContainerStyle={styles.notesList}
-          showsVerticalScrollIndicator={false}
-        />
-      )}
+      <ListGrid
+        data={visibleNotes}
+        keyExtractor={(item) => String(item.id)}
+        renderItem={renderNote}
+        emptyText={searchText.trim() ? 'No matching notes' : 'No notes yet'}
+      />
 
       {!selectMode && (
         <Pressable style={styles.addButton} onPress={() => router.push('/screens/create_edit')}>
@@ -404,20 +338,7 @@ export default function HomePage() {
         </Pressable>
       )}
 
-      <View style={styles.bottomNav}>
-        <Pressable style={styles.navItem} onPress={() => goToTab('/screens/home')}>
-          <Feather name="home" size={24} color={colors.navy} />
-          <Text style={styles.navLabel}>Home</Text>
-        </Pressable>
-        <Pressable style={styles.navItem} onPress={() => goToTab('/screens/settings')}>
-          <Feather name="user" size={24} color={colors.textSecondary} />
-          <Text style={styles.navLabel}>Profile</Text>
-        </Pressable>
-        <Pressable style={styles.navItem} onPress={() => goToTab('/screens/calendar')}>
-          <Feather name="calendar" size={24} color={colors.textSecondary} />
-          <Text style={styles.navLabel}>Calendar</Text>
-        </Pressable>
-      </View>
+      <BottomNavigation activeTab="home" onTabPress={(path) => router.replace(path)} />
     </View>
   );
 }
@@ -428,101 +349,21 @@ const makeStyles = (colors) =>
       flex: 1,
       backgroundColor: colors.background,
       paddingHorizontal: spacing.md,
-      paddingTop: spacing.lg,
-    },
-    logo: {
-      ...typography.heading,
-      color: colors.navy,
-    },
-    greetingRow: {
-      alignItems: 'flex-start',
-      marginTop: spacing.md,
-    },
-    greetingText: {
-      ...typography.label,
-      color: colors.text,
+      paddingTop: spacing.xl,
     },
     toolbarRow: {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'flex-end',
       marginTop: spacing.lg,
+      marginBottom: spacing.md,
+    },
+    searchWrapper: {
+      width: '50%',
+      minWidth: 0,
     },
     optionsButton: {
       marginLeft: spacing.sm,
-      marginRight: spacing.sm,
-    },
-    modalOverlay: {
-      flex: 1,
-      backgroundColor: 'rgba(0,0,0,0.1)',
-    },
-    optionsMenu: {
-      position: 'absolute',
-      top: 110,
-      right: spacing.md + spacing.sm,
-      backgroundColor: colors.white,
-      borderRadius: borderRadius.md,
-      borderWidth: 1,
-      borderColor: colors.border,
-      paddingVertical: spacing.sm / 2,
-      minWidth: 170,
-      shadowColor: '#000',
-      shadowOffset: { width: 0, height: 2 },
-      shadowOpacity: 0.15,
-      shadowRadius: 6,
-      elevation: 4,
-    },
-    optionsMenuItem: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      paddingVertical: spacing.sm,
-      paddingHorizontal: spacing.sm,
-    },
-    optionsMenuItemText: {
-      ...typography.label,
-      fontSize: 14,
-      color: colors.text,
-      marginLeft: spacing.sm,
-    },
-    optionsMenuDivider: {
-      height: 1,
-      backgroundColor: colors.border,
-      marginHorizontal: spacing.sm,
-    },
-    sortSectionLabel: {
-      fontSize: 11,
-      fontWeight: '700',
-      color: colors.textSecondary,
-      textTransform: 'uppercase',
-      paddingHorizontal: spacing.sm,
-      paddingTop: spacing.sm,
-    },
-    sortActiveText: {
-      color: colors.navy,
-      fontWeight: '700',
-    },
-    sortDoneText: {
-      color: colors.navy,
-      fontWeight: '700',
-      marginLeft: 0,
-    },
-    searchWrapper: {
-      width: '60%',
-      flexDirection: 'row',
-      alignItems: 'center',
-      borderWidth: 1,
-      borderColor: colors.border,
-      borderRadius: borderRadius.md,
-      paddingHorizontal: spacing.sm,
-    },
-    searchIcon: {
-      marginRight: spacing.sm / 2,
-    },
-    searchInput: {
-      flex: 1,
-      paddingVertical: spacing.md - 6,
-      fontSize: 14,
-      color: colors.text,
     },
     selectBar: {
       flexDirection: 'row',
@@ -550,22 +391,6 @@ const makeStyles = (colors) =>
     },
     deleteButtonDisabled: {
       opacity: 0.4,
-    },
-    emptyState: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    emptyStateText: {
-      ...typography.label,
-      color: colors.textSecondary,
-    },
-    notesList: {
-      paddingTop: spacing.md,
-      paddingBottom: 160,
-    },
-    notesRow: {
-      justifyContent: 'space-between',
     },
     noteCard: {
       width: '48%',
@@ -664,26 +489,5 @@ const makeStyles = (colors) =>
       backgroundColor: colors.navy,
       justifyContent: 'center',
       alignItems: 'center',
-    },
-    bottomNav: {
-      position: 'absolute',
-      bottom: 0,
-      left: 0,
-      right: 0,
-      flexDirection: 'row',
-      justifyContent: 'space-around',
-      backgroundColor: colors.white,
-      borderTopWidth: 1,
-      borderTopColor: colors.border,
-      paddingVertical: spacing.sm,
-      paddingBottom: spacing.md,
-    },
-    navItem: {
-      alignItems: 'center',
-    },
-    navLabel: {
-      fontSize: 11,
-      color: colors.textSecondary,
-      marginTop: 2,
     },
   });

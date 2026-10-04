@@ -1,5 +1,6 @@
+import Header from '@/components/organisms/header';
 import { useAppTheme } from '@/theme/ThemeContext';
-import { borderRadius, spacing, typography } from '@/theme/theme';
+import { borderRadius, spacing } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useMemo } from 'react';
@@ -18,13 +19,7 @@ export default function AppearancePage() {
 
   return (
     <View style={styles.screen}>
-      <View style={styles.headerRow}>
-        <Pressable onPress={() => router.back()} hitSlop={10} style={styles.backButton}>
-          <Feather name="chevron-left" size={26} color={colors.navy} />
-        </Pressable>
-        <Text style={styles.title}>Appearance</Text>
-        <View style={styles.backButton} />
-      </View>
+      <Header title="Appearance" onBack={() => router.back()} />
 
       <Text style={styles.sectionLabel}>Theme</Text>
 
@@ -53,7 +48,6 @@ export default function AppearancePage() {
         );
       })}
 
-      {/* Live preview */}
       <Text style={styles.sectionLabel}>Preview</Text>
       <View style={styles.previewCard}>
         <View style={styles.previewImage}>
@@ -75,21 +69,6 @@ const makeStyles = (colors) =>
       flex: 1,
       backgroundColor: colors.background,
       paddingHorizontal: spacing.md,
-      paddingTop: spacing.lg,
-    },
-    headerRow: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      marginBottom: spacing.md,
-    },
-    backButton: {
-      width: 32,
-    },
-    title: {
-      ...typography.heading,
-      fontSize: 20,
-      color: colors.navy,
     },
     sectionLabel: {
       fontSize: 12,
