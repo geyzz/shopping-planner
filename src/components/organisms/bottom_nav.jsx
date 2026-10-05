@@ -24,7 +24,11 @@ export default function BottomNavigation({ activeTab, onTabPress }) {
           <Pressable
             key={tab.key}
             style={styles.navItem}
-            onPress={() => onTabPress(tab.path)}
+            hitSlop={8}
+            onPress={() => {
+              if (isActive) return;
+              onTabPress(tab.path);
+            }}
           >
             <Feather
               name={tab.icon}

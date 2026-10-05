@@ -3,7 +3,7 @@ import { supabase } from '@/lib/supabase';
 import { Redirect } from 'expo-router';
 import { useEffect, useState } from 'react';
 
-const MIN_LOADING_MS = 1200; // keep the loading screen up long enough to be seen
+const MIN_LOADING_MS = 350; // brief branded splash without sluggish delay
 
 export default function Index() {
   const [target, setTarget] = useState(null);

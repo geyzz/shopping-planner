@@ -30,10 +30,17 @@ function ThemedStack() {
         <Stack
           screenOptions={{
             headerShown: false,
-            animation: 'fade',
+            animation: 'slide_from_right',
+            animationDuration: 200,
             contentStyle: { backgroundColor: colors.background },
           }}
-        />
+        >
+          <Stack.Screen name="index" options={{ animation: 'none' }} />
+          <Stack.Screen name="auth/login" options={{ animation: 'none' }} />
+          <Stack.Screen name="screens/home" options={{ animation: 'none' }} />
+          <Stack.Screen name="screens/calendar" options={{ animation: 'none' }} />
+          <Stack.Screen name="screens/settings" options={{ animation: 'none' }} />
+        </Stack>
       </ThemeProvider>
     </View>
   );
