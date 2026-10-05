@@ -3,7 +3,13 @@ import { spacing } from '@/theme/theme';
 import { useMemo } from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 
-export default function ListGrid({ data, renderItem, keyExtractor, emptyText }) {
+export default function ListGrid({
+  data,
+  renderItem,
+  keyExtractor,
+  emptyText,
+  bottomPadding = spacing.xl,
+}) {
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
 
@@ -22,7 +28,7 @@ export default function ListGrid({ data, renderItem, keyExtractor, emptyText }) 
       renderItem={renderItem}
       numColumns={2}
       columnWrapperStyle={styles.row}
-      contentContainerStyle={styles.list}
+      contentContainerStyle={[styles.list, { paddingBottom: bottomPadding }]}
       showsVerticalScrollIndicator={false}
     />
   );

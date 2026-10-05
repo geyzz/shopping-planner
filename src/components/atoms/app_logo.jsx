@@ -1,19 +1,38 @@
 import { useAppTheme } from '@/theme/ThemeContext';
-import { typography } from '@/theme/theme';
 import { useMemo } from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { Image, StyleSheet, View } from 'react-native';
 
-export default function AppLogo() {
-  const { colors } = useAppTheme();
-  const styles = useMemo(() => makeStyles(colors), [colors]);
+const LOGO_LIGHT = require('../../../assets/images/plan_ed_logo.png');
+const LOGO_DARK = require('../../../assets/images/plan_ed_logo_dark.png');
+const ASPECT_RATIO = 967 / 241;
 
-  return <Text style={styles.logo}>Plan_.ed</Text>;
+export default function AppLogo({ height, size = 36, width, style }) {
+  const { isDark } = useAppTheme();
+  const logoHeight = height ?? size;
+  const logoWidth = width ?? Math.round(logoHeight * ASPECT_RATIO);
+
+  const styles = useMemo(() => makeStyles(logoWidth, logoHeight), [logoWidth, logoHeight]);
+
+  return (
+    <View style={[styles.container, style]}>
+      <Image
+        source={isDark ? LOGO_DARK : LOGO_LIGHT}
+        style={styles.image}
+        resizeMode="contain"
+        accessibilityRole="image"
+        accessibilityLabel="Plan_.ed"
+      />
+    </View>
+  );
 }
 
-const makeStyles = (colors) =>
+const makeStyles = (width, height) =>
   StyleSheet.create({
-    logo: {
-      ...typography.heading,
-      color: colors.navy,
+    container: {
+      justifyContent: 'center',
+    },
+    image: {
+      width,
+      height,
     },
   });

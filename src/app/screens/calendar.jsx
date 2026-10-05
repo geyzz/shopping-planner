@@ -9,6 +9,7 @@ import { Feather } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 function isSameDay(a, b) {
   return (
@@ -47,6 +48,7 @@ export default function CalendarPage() {
   const router = useRouter();
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
+  const insets = useSafeAreaInsets();
 
   const [searchText, setSearchText] = useState('');
   const [viewDate, setViewDate] = useState(new Date());
@@ -139,9 +141,9 @@ export default function CalendarPage() {
 
   return (
     <View style={styles.screen}>
-      <View style={styles.logoRow}>
+      <View style={[styles.logoRow, { marginTop: insets.top + spacing.sm }]}>
         <AppLogo />
-        <Pressable onPress={() => router.push('/screens/notif')}>
+        <Pressable onPress={() => router.push('/screens/notif')} hitSlop={8}>
           <Feather name="bell" size={22} color={colors.navy} />
         </Pressable>
       </View>
@@ -199,12 +201,22 @@ const makeStyles = (colors) =>
       flex: 1,
       backgroundColor: colors.background,
       paddingHorizontal: spacing.md,
-      paddingTop: spacing.xl,
     },
     logoRow: {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
+      paddingHorizontal: spacing.md,
+      paddingVertical: spacing.sm,
+      backgroundColor: colors.white,
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: borderRadius.lg,
+      elevation: 8,
+      shadowColor: '#000',
+      shadowOpacity: 0.15,
+      shadowRadius: 10,
+      shadowOffset: { width: 0, height: 4 },
     },
     searchWrapper: {
       flex: 1,

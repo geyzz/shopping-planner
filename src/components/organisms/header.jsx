@@ -1,8 +1,9 @@
 import { useAppTheme } from '@/theme/ThemeContext';
-import { spacing, typography } from '@/theme/theme';
+import { borderRadius, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
 import { useMemo } from 'react';
 import { Pressable, TextInput as RNTextInput, StyleSheet, Text, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function Header({
   title,
@@ -13,10 +14,11 @@ export default function Header({
   rightAction,
 }) {
   const { colors } = useAppTheme();
+  const insets = useSafeAreaInsets();
   const styles = useMemo(() => makeStyles(colors), [colors]);
 
   return (
-    <View style={styles.header}>
+    <View style={[styles.header, { marginTop: insets.top + spacing.sm }]}>
       {!hideBack && (
         <Pressable style={styles.backButton} onPress={onBack}>
           <Feather name="arrow-left" size={24} color={colors.navy} />
@@ -47,9 +49,19 @@ const makeStyles = (colors) =>
     header: {
       flexDirection: 'row',
       alignItems: 'center',
+      marginHorizontal: spacing.md,
+      marginBottom: spacing.sm,
       paddingHorizontal: spacing.md,
-      paddingTop: spacing.lg,
-      paddingBottom: spacing.sm,
+      paddingVertical: spacing.sm,
+      backgroundColor: colors.white,
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: borderRadius.lg,
+      elevation: 8,
+      shadowColor: '#000',
+      shadowOpacity: 0.15,
+      shadowRadius: 10,
+      shadowOffset: { width: 0, height: 4 },
     },
     backButton: {
       marginRight: spacing.sm,

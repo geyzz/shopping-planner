@@ -18,6 +18,9 @@ export default function EditProfilePage() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [avatarUri, setAvatarUri] = useState(null);
+  const [avatarBase64, setAvatarBase64] = useState(null);
+  const [savedAvatar, setSavedAvatar] = useState(null);
+  const [avatarChanged, setAvatarChanged] = useState(false);
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
@@ -27,9 +30,12 @@ export default function EditProfilePage() {
       } = await supabase.auth.getSession();
 
       if (session?.user?.user_metadata) {
-        setFirstName(session.user.user_metadata.first_name ?? '');
-        setLastName(session.user.user_metadata.last_name ?? '');
-        setAvatarUri(session.user.user_metadata.avatar_url ?? null);
+        const meta = session.user.user_metadata;
+        setFirstName(meta.first_name ?? '');
+        setLastName(meta.last_name ?? '');
+        const url = meta.avatar_url?.startsWith('http') ? meta.avatar_url : null;
+        setSavedAvatar(url);
+        setAvatarUri(url);
       }
     };
 
@@ -44,14 +50,18 @@ export default function EditProfilePage() {
     }
 
     const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      mediaTypes: ['images'],
       allowsEditing: true,
       aspect: [1, 1],
       quality: 0.7,
+      base64: true,
     });
 
     if (!result.canceled) {
-      setAvatarUri(result.assets[0].uri);
+      const asset = result.assets[0];
+      setAvatarUri(asset.uri);
+      setAvatarBase64(asset.base64 ?? null);
+      setAvatarChanged(true);
     }
   };
 
@@ -66,30 +76,33 @@ export default function EditProfilePage() {
   const handleSave = async () => {
     setSaving(true);
 
-    let avatarUrl = avatarUri;
+    let avatarUrl = savedAvatar;
+    let uploadError = null;
 
-    // Only upload when it's a freshly picked local file
-    if (avatarUri && !avatarUri.startsWith('http')) {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      const path = `${user.id}/avatar.jpg`;
+    if (avatarChanged) {
+      try {
+        if (!avatarBase64) throw new Error('Could not read the picked photo. Try picking it again.');
 
-      const response = await fetch(avatarUri);
-      const buffer = await response.arrayBuffer();
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+        const path = `${user.id}/avatar.jpg`;
 
-      const { error: uploadError } = await supabase.storage
-        .from('avatars')
-        .upload(path, buffer, { contentType: 'image/jpeg', upsert: true });
+        const binary = atob(avatarBase64);
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
 
-      if (uploadError) {
-        setSaving(false);
-        Alert.alert('Upload failed', uploadError.message);
-        return;
+        const { error } = await supabase.storage
+          .from('avatars')
+          .upload(path, bytes.buffer, { contentType: 'image/jpeg', upsert: true });
+        if (error) throw error;
+
+        const { data } = supabase.storage.from('avatars').getPublicUrl(path);
+        avatarUrl = `${data.publicUrl}?t=${Date.now()}`;
+      } catch (e) {
+        console.log('avatar upload error:', JSON.stringify(e), e?.message);
+        uploadError = e?.message ?? 'Unknown upload error';
       }
-
-      const { data } = supabase.storage.from('avatars').getPublicUrl(path);
-      avatarUrl = `${data.publicUrl}?t=${Date.now()}`;
     }
 
     const { error } = await supabase.auth.updateUser({
@@ -104,6 +117,11 @@ export default function EditProfilePage() {
 
     if (error) {
       Alert.alert('Save failed', error.message);
+      return;
+    }
+
+    if (uploadError) {
+      Alert.alert('Name saved, photo not uploaded', uploadError);
       return;
     }
 

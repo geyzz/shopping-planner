@@ -36,6 +36,7 @@ const makeStyles = (colors) =>
     greetingText: {
       ...typography.label,
       color: colors.text,
-      alignItems: 'center'
+      alignItems: 'center',
+      fontSize: 20
     },
   });

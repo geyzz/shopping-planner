@@ -10,7 +10,14 @@ import { useAppTheme } from '@/theme/ThemeContext';
 import { spacing } from '@/theme/theme';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
-import { Alert, Pressable, ScrollView, StyleSheet, Text } from 'react-native';
+import {
+  Alert,
+  KeyboardAvoidingView,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+} from 'react-native';
 
 const REMINDER_TYPES = [
   { id: 'gift', label: 'Gift', icon: 'gift' },
@@ -233,7 +240,7 @@ export default function CreateEditPage() {
   };
 
   return (
-    <>
+    <KeyboardAvoidingView style={styles.flex} behavior="padding">
       <Header
         title={title}
         onBack={handleBack}
@@ -246,7 +253,12 @@ export default function CreateEditPage() {
         }
       />
 
-      <ScrollView style={styles.screen} contentContainerStyle={styles.scrollContent}>
+      <ScrollView
+        style={styles.screen}
+        contentContainerStyle={styles.scrollContent}
+        keyboardShouldPersistTaps="handled"
+        keyboardDismissMode="on-drag"
+      >
         <ReminderSection
           types={REMINDER_TYPES}
           type={selectedReminderType}
@@ -285,19 +297,22 @@ export default function CreateEditPage() {
           onToggle={() => setCostExpanded(!costExpanded)}
         />
       </ScrollView>
-    </>
+    </KeyboardAvoidingView>
   );
 }
 
 const makeStyles = (colors) =>
   StyleSheet.create({
+    flex: {
+      flex: 1,
+    },
     screen: {
       flex: 1,
       backgroundColor: colors.background,
     },
     scrollContent: {
       paddingHorizontal: spacing.md,
-      paddingBottom: spacing.xl ?? spacing.lg * 2,
+      paddingBottom: spacing.xl + 120,
     },
     saveButton: {
       marginLeft: spacing.sm,

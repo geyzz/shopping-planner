@@ -18,6 +18,7 @@ import {
   useWindowDimensions,
   View,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const SORT_FIELDS = [
   { key: 'created_at', label: 'Date created' },
@@ -53,6 +54,7 @@ const getItemTexts = (note) => collectStrings(note.details);
 export default function HomePage() {
   const { colors, isDark } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
+  const insets = useSafeAreaInsets();
   const router = useRouter();
   const { width: screenWidth } = useWindowDimensions();
 
@@ -277,9 +279,9 @@ export default function HomePage() {
 
   return (
     <View style={styles.screen}>
-      <View style={styles.logoRow}>
+      <View style={[styles.logoRow, { marginTop: insets.top + spacing.sm }]}>
         <AppLogo />
-        <Pressable onPress={() => router.push('/screens/notif')}>
+        <Pressable onPress={() => router.push('/screens/notif')} hitSlop={8}>
           <Feather name="bell" size={22} color={colors.navy} />
         </Pressable>
       </View>
@@ -380,6 +382,7 @@ export default function HomePage() {
         keyExtractor={(item) => String(item.id)}
         renderItem={renderNote}
         emptyText={searchText.trim() ? 'No matching notes' : 'No notes yet'}
+        bottomPadding={170}
       />
 
       {!selectMode && (
@@ -399,12 +402,22 @@ const makeStyles = (colors) =>
       flex: 1,
       backgroundColor: colors.background,
       paddingHorizontal: spacing.md,
-      paddingTop: spacing.xl,
     },
     logoRow: {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
+      paddingHorizontal: spacing.md,
+      paddingVertical: spacing.sm,
+      backgroundColor: colors.white,
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: borderRadius.lg,
+      elevation: 8,
+      shadowColor: '#000',
+      shadowOpacity: 0.15,
+      shadowRadius: 10,
+      shadowOffset: { width: 0, height: 4 },
     },
     toolbarRow: {
       flexDirection: 'row',

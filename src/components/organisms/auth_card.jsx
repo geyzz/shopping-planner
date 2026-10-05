@@ -3,7 +3,7 @@ import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing, typography } from '@/theme/theme';
 import { Link } from 'expo-router';
 import { useMemo } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { KeyboardAvoidingView, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function AuthCard({
   title,
@@ -22,43 +22,54 @@ export default function AuthCard({
   const styles = useMemo(() => makeStyles(colors), [colors]);
 
   return (
-    <View style={styles.screen}>
-      <View style={[styles.box, compact && styles.boxCompact]}>
-        <Text style={[styles.title, compact && styles.titleCompact]}>{title}</Text>
+    <KeyboardAvoidingView style={styles.flex} behavior="padding">
+      <ScrollView
+        contentContainerStyle={styles.screen}
+        keyboardShouldPersistTaps="handled"
+        keyboardDismissMode="on-drag"
+        showsVerticalScrollIndicator={false}
+      >
+        <View style={[styles.box, compact && styles.boxCompact]}>
+          <Text style={[styles.title, compact && styles.titleCompact]}>{title}</Text>
 
-        {children}
+          {children}
 
-        {onSubmit && (
-          <View style={{ marginTop: submitSpacing }}>
-            <Button
-              title={loading ? loadingLabel : submitLabel}
-              onPress={onSubmit}
-              disabled={loading}
-            />
-          </View>
-        )}
+          {onSubmit && (
+            <View style={{ marginTop: submitSpacing }}>
+              <Button
+                title={loading ? loadingLabel : submitLabel}
+                onPress={onSubmit}
+                disabled={loading}
+              />
+            </View>
+          )}
 
-        {footerText && linkHref && (
-          <>
-            <Text style={styles.footerText}>{footerText}</Text>
-            <Link href={linkHref} style={styles.signupLink}>
-              {linkLabel}
-            </Link>
-          </>
-        )}
-      </View>
-    </View>
+          {footerText && linkHref && (
+            <>
+              <Text style={styles.footerText}>{footerText}</Text>
+              <Link href={linkHref} style={styles.signupLink}>
+                {linkLabel}
+              </Link>
+            </>
+          )}
+        </View>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 }
 
 const makeStyles = (colors) =>
   StyleSheet.create({
-    screen: {
+    flex: {
       flex: 1,
+      backgroundColor: colors.background,
+    },
+    screen: {
+      flexGrow: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: colors.background,
       paddingHorizontal: spacing.md,
+      paddingVertical: spacing.lg,
     },
     box: {
       width: '100%',
