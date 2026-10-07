@@ -5,9 +5,9 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import { useMemo, useState } from 'react';
 import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 
-export default function DateField({ value, editable, onChange }) {
-  const { colors } = useAppTheme();
-  const styles = useMemo(() => makeStyles(colors), [colors]);
+export default function DateField({ value, editable, onChange, style }) {
+  const { colors, isDark } = useAppTheme();
+  const styles = useMemo(() => makeStyles(colors, isDark), [colors, isDark]);
   const [showPicker, setShowPicker] = useState(false);
 
   const formatted = value
@@ -23,7 +23,7 @@ export default function DateField({ value, editable, onChange }) {
 
   if (!editable) {
     return (
-      <View style={styles.viewOnly}>
+      <View style={[styles.viewOnly, style]}>
         <Feather name="calendar" size={14} color={colors.navy} />
         <Text style={styles.viewOnlyText}>Date: {formatted}</Text>
       </View>
@@ -32,7 +32,7 @@ export default function DateField({ value, editable, onChange }) {
 
   return (
     <>
-      <Pressable style={styles.input} onPress={() => setShowPicker(true)}>
+      <Pressable style={[styles.input, style]} onPress={() => setShowPicker(true)}>
         <Feather name="calendar" size={16} color={colors.navy} />
         <Text style={styles.inputText}>{formatted || 'Add Date'}</Text>
       </Pressable>
@@ -42,6 +42,7 @@ export default function DateField({ value, editable, onChange }) {
           value={value || new Date()}
           mode="date"
           display={Platform.OS === 'ios' ? 'inline' : 'default'}
+          themeVariant={isDark ? 'dark' : 'light'}
           onChange={handleChange}
           minimumDate={new Date()}
         />
@@ -50,7 +51,7 @@ export default function DateField({ value, editable, onChange }) {
   );
 }
 
-const makeStyles = (colors) =>
+const makeStyles = (colors, isDark) =>
   StyleSheet.create({
     input: {
       flexDirection: 'row',
@@ -60,6 +61,7 @@ const makeStyles = (colors) =>
       borderRadius: borderRadius.md,
       padding: spacing.md - 4,
       marginTop: spacing.sm / 2,
+      backgroundColor: isDark ? '#1F293D' : '#F7F8FA',
     },
     inputText: {
       fontSize: 14,
@@ -69,7 +71,6 @@ const makeStyles = (colors) =>
     viewOnly: {
       flexDirection: 'row',
       alignItems: 'center',
-      marginLeft: spacing.md,
     },
     viewOnlyText: {
       fontSize: 14,

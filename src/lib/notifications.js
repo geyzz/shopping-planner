@@ -33,6 +33,7 @@ export async function scheduleReminderNotification({
   title,
   reminderType,
   reminderDate,
+  reminderTiming = 'on',
   previousNotificationId,
 }) {
   if (previousNotificationId) {
@@ -43,15 +44,28 @@ export async function scheduleReminderNotification({
   if (!enabled || !reminderDate) return null;
 
   const fireDate = new Date(reminderDate);
+  if (reminderTiming === 'before') {
+    fireDate.setDate(fireDate.getDate() - 1);
+  } else if (reminderTiming === 'after') {
+    fireDate.setDate(fireDate.getDate() + 1);
+  }
+
   if (fireDate.getTime() <= Date.now()) return null;
 
   const typeLabel = reminderType
     ? reminderType.charAt(0).toUpperCase() + reminderType.slice(1)
     : 'List';
 
+  const timingSuffix =
+    reminderTiming === 'before'
+      ? ' (1 day before)'
+      : reminderTiming === 'after'
+      ? ' (follow-up)'
+      : '';
+
   const id = await Notifications.scheduleNotificationAsync({
     content: {
-      title: `${typeLabel} reminder`,
+      title: `${typeLabel} reminder${timingSuffix}`,
       body: `Don't forget: ${title}`,
       data: { listId },
     },

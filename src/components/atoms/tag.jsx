@@ -5,8 +5,8 @@ import { useMemo } from 'react';
 import { Pressable, StyleSheet, Text } from 'react-native';
 
 export default function Tag({ label, icon, selected, onPress }) {
-  const { colors } = useAppTheme();
-  const styles = useMemo(() => makeStyles(colors), [colors]);
+  const { colors, isDark } = useAppTheme();
+  const styles = useMemo(() => makeStyles(colors, isDark), [colors, isDark]);
 
   return (
     <Pressable
@@ -17,7 +17,7 @@ export default function Tag({ label, icon, selected, onPress }) {
         <Feather
           name={icon}
           size={16}
-          color={selected ? colors.white : colors.navy}
+          color={selected ? (isDark ? '#1B2A4A' : '#FFFFFF') : colors.navy}
         />
       )}
       <Text style={[styles.chipText, selected && styles.chipTextSelected]}>
@@ -27,7 +27,7 @@ export default function Tag({ label, icon, selected, onPress }) {
   );
 }
 
-const makeStyles = (colors) =>
+const makeStyles = (colors, isDark) =>
   StyleSheet.create({
     chip: {
       flexDirection: 'row',
@@ -38,7 +38,8 @@ const makeStyles = (colors) =>
       paddingVertical: spacing.sm / 2,
       paddingHorizontal: spacing.sm,
       marginRight: spacing.sm,
-      marginBottom: spacing.sm,
+      marginBottom: spacing.sm / 2,
+      backgroundColor: isDark ? '#1F293D' : '#F7F8FA',
     },
     chipSelected: {
       backgroundColor: colors.navy,
@@ -46,10 +47,11 @@ const makeStyles = (colors) =>
     },
     chipText: {
       fontSize: 13,
-      color: colors.navy,
+      color: colors.text,
       marginLeft: spacing.sm / 2,
     },
     chipTextSelected: {
-      color: colors.white,
+      color: isDark ? '#1B2A4A' : '#FFFFFF',
+      fontWeight: '600',
     },
   });

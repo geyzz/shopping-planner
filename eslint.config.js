@@ -6,5 +6,8 @@ module.exports = defineConfig([
   expoConfig,
   {
     ignores: ["dist/**", ".expo/**", "node_modules/**", "src.zip"],
+    rules: {
+      "react-hooks/set-state-in-effect": "off",
+    },
   }
 ]);

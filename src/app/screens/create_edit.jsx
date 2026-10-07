@@ -5,6 +5,7 @@ import ReminderSection from '@/components/organisms/reminder_section';
 import ShoppingList from '@/components/organisms/shopping_list';
 import { getItemPrices, getMallRecommendations } from '@/lib/mall_data';
 import { MALL_IMAGES } from '@/lib/mall_image';
+import { scheduleReminderNotification } from '@/lib/notifications';
 import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { spacing } from '@/theme/theme';
@@ -40,13 +41,13 @@ export default function CreateEditPage() {
   const styles = useMemo(() => makeStyles(colors), [colors]);
 
   const [noteId, setNoteId] = useState(null);
-  const [originalDateCreated, setOriginalDateCreated] = useState(null);
   const [title, setTitle] = useState('');
   const [saving, setSaving] = useState(false);
 
   const [reminderExpanded, setReminderExpanded] = useState(false);
   const [selectedReminderType, setSelectedReminderType] = useState(null);
   const [reminderDate, setReminderDate] = useState(null);
+  const [reminderTiming, setReminderTiming] = useState('on');
 
   const [locationExpanded, setLocationExpanded] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState(null);
@@ -63,12 +64,12 @@ export default function CreateEditPage() {
     try {
       const parsed = JSON.parse(list);
       setNoteId(parsed.id ?? null);
-      setOriginalDateCreated(parsed.created_at ?? parsed.dateCreated ?? null);
       setTitle(parsed.title ?? '');
 
       const details = parsed.details ?? parsed;
       setSelectedReminderType(details.reminderType ?? null);
       setReminderDate(details.reminderDate ? new Date(details.reminderDate) : null);
+      setReminderTiming(details.reminderTiming ?? 'on');
       setSelectedLocation(details.location ?? null);
       setShoppingItems(details.shoppingItems ?? []);
       setBudget(details.budget ?? '');
@@ -203,11 +204,27 @@ export default function CreateEditPage() {
     const details = {
       reminderType: selectedReminderType,
       reminderDate: reminderDate ? reminderDate.toISOString() : null,
+      reminderTiming,
       location: selectedLocation,
       shoppingItems,
       budget,
       totalCost,
     };
+
+    if (reminderDate) {
+      try {
+        const notifId = await scheduleReminderNotification({
+          listId: noteId,
+          title: title.trim(),
+          reminderType: selectedReminderType,
+          reminderDate,
+          reminderTiming,
+        });
+        if (notifId) details.notificationId = notifId;
+      } catch (e) {
+        console.warn('Failed to schedule reminder notification', e);
+      }
+    }
 
     let error;
 
@@ -265,6 +282,8 @@ export default function CreateEditPage() {
           onTypeChange={setSelectedReminderType}
           date={reminderDate}
           onDateChange={setReminderDate}
+          timing={reminderTiming}
+          onTimingChange={setReminderTiming}
           expanded={reminderExpanded}
           onToggle={() => setReminderExpanded(!reminderExpanded)}
         />
@@ -292,7 +311,7 @@ export default function CreateEditPage() {
           onChangeItemPrice={handleItemPriceChange}
           onResetItemPrice={handleResetItemPrice}
           collapsible
-          boxed={false}
+          boxed={true}
           expanded={costExpanded}
           onToggle={() => setCostExpanded(!costExpanded)}
         />

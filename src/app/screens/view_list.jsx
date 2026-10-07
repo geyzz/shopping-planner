@@ -36,6 +36,7 @@ export default function ViewListPage() {
   const [title, setTitle] = useState('');
   const [selectedReminderType, setSelectedReminderType] = useState(null);
   const [reminderDate, setReminderDate] = useState(null);
+  const [reminderTiming, setReminderTiming] = useState('on');
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [shoppingItems, setShoppingItems] = useState([]);
   const [budget, setBudget] = useState('');
@@ -50,6 +51,7 @@ export default function ViewListPage() {
       const details = parsed.details ?? parsed;
       setSelectedReminderType(details.reminderType ?? null);
       setReminderDate(details.reminderDate ? new Date(details.reminderDate) : null);
+      setReminderTiming(details.reminderTiming ?? 'on');
       setSelectedLocation(details.location ?? null);
       setShoppingItems(
         (details.shoppingItems ?? []).map((item) => ({ checked: false, ...item }))
@@ -76,6 +78,7 @@ export default function ViewListPage() {
     const details = {
       reminderType: selectedReminderType,
       reminderDate: reminderDate ? reminderDate.toISOString() : null,
+      reminderTiming,
       location: selectedLocation,
       shoppingItems: updatedItems,
       budget,
@@ -108,6 +111,7 @@ export default function ViewListPage() {
           details: {
             reminderType: selectedReminderType,
             reminderDate: reminderDate ? reminderDate.toISOString() : null,
+            reminderTiming,
             location: selectedLocation,
             shoppingItems,
             budget,
@@ -136,6 +140,7 @@ export default function ViewListPage() {
           types={REMINDER_TYPES}
           type={selectedReminderType}
           date={reminderDate}
+          timing={reminderTiming}
           readOnly
         />
 

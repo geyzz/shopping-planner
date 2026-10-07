@@ -74,7 +74,7 @@ export default function ShoppingList({
     const checked = items.filter((item) => item.checked);
 
     return (
-      <View style={styles.section}>
+      <View style={styles.card}>
         <SectionHeader title="Shopping List" />
 
         {items.length === 0 ? (
@@ -118,7 +118,7 @@ export default function ShoppingList({
   }
 
   return (
-    <View style={styles.section}>
+    <View style={styles.card}>
       <SectionHeader title="Shopping List" />
 
       <View style={styles.addRow}>
@@ -188,12 +188,18 @@ export default function ShoppingList({
 
 const makeStyles = (colors) =>
   StyleSheet.create({
-    section: {
-      marginTop: spacing.lg,
+    card: {
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: borderRadius.md,
+      padding: spacing.md,
+      backgroundColor: colors.white,
+      marginTop: spacing.md,
     },
     emptyText: {
       fontSize: 14,
       color: colors.textSecondary,
+      marginTop: spacing.sm,
     },
     addRow: {
       flexDirection: 'row',

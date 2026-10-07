@@ -1,7 +1,7 @@
 import LocationCard from '@/components/molecules/location_card';
 import SectionHeader from '@/components/molecules/section_header';
 import { useAppTheme } from '@/theme/ThemeContext';
-import { spacing } from '@/theme/theme';
+import { borderRadius, spacing } from '@/theme/theme';
 import { useMemo } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -19,12 +19,21 @@ export default function LocationSection({
 
   if (readOnly) {
     const selected = locations.find((loc) => loc.id === value);
-    if (!selected) return null;
+    if (!selected) {
+      return (
+        <View style={styles.card}>
+          <SectionHeader title="Location" />
+          <Text style={styles.emptyText}>No location selected</Text>
+        </View>
+      );
+    }
 
     return (
-      <View style={styles.section}>
+      <View style={styles.card}>
         <SectionHeader title="Location" />
-        <LocationCard image={selected.image} address={selected.address ?? selected.name} />
+        <View style={styles.readOnlyBody}>
+          <LocationCard image={selected.image} address={selected.address ?? selected.name} />
+        </View>
       </View>
     );
   }
@@ -47,7 +56,7 @@ export default function LocationSection({
   }
 
   return (
-    <View style={styles.section}>
+    <View style={styles.card}>
       <SectionHeader
         title="Location"
         collapsible
@@ -101,8 +110,21 @@ export default function LocationSection({
 
 const makeStyles = (colors) =>
   StyleSheet.create({
-    section: {
-      marginTop: spacing.lg,
+    card: {
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: borderRadius.md,
+      padding: spacing.md,
+      backgroundColor: colors.white,
+      marginTop: spacing.md,
+    },
+    readOnlyBody: {
+      marginTop: spacing.sm,
+    },
+    emptyText: {
+      fontSize: 14,
+      color: colors.textSecondary,
+      marginTop: spacing.sm,
     },
     cards: {
       paddingTop: spacing.sm,
