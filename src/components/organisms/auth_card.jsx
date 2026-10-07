@@ -17,6 +17,7 @@ export default function AuthCard({
   linkHref,
   submitSpacing = spacing.lg,
   compact = false,
+  buttonVariant = 'gold',
 }) {
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
@@ -40,6 +41,7 @@ export default function AuthCard({
                 title={loading ? loadingLabel : submitLabel}
                 onPress={onSubmit}
                 disabled={loading}
+                variant={buttonVariant}
               />
             </View>
           )}

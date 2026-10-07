@@ -10,15 +10,28 @@ export default function FormField({
   onChangeText,
   secureTextEntry,
   error,
+  compact = false,
+  onFocus,
+  onBlur,
   ...inputProps
 }) {
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [isFocused, setIsFocused] = useState(false);
-  const [isHidden, setIsHidden] = useState(secureTextEntry);
+  const [isHidden, setIsHidden] = useState(Boolean(secureTextEntry));
+
+  const handleFocus = (e) => {
+    setIsFocused(true);
+    onFocus?.(e);
+  };
+
+  const handleBlur = (e) => {
+    setIsFocused(false);
+    onBlur?.(e);
+  };
 
   return (
-    <View style={styles.field}>
+    <View style={[styles.field, compact && styles.fieldCompact]}>
       <Text style={styles.label}>{label}</Text>
 
       <View
@@ -29,17 +42,24 @@ export default function FormField({
         ]}
       >
         <RNTextInput
-          style={styles.input}
+          style={[styles.input, compact && styles.inputCompact]}
           value={value}
           onChangeText={onChangeText}
           placeholderTextColor={colors.placeholder}
           secureTextEntry={secureTextEntry ? isHidden : false}
-          onFocus={() => setIsFocused(true)}
-          onBlur={() => setIsFocused(false)}
+          autoCapitalize={secureTextEntry ? 'none' : inputProps.autoCapitalize}
+          autoCorrect={secureTextEntry ? false : inputProps.autoCorrect}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           {...inputProps}
         />
         {secureTextEntry && (
-          <Pressable onPress={() => setIsHidden(!isHidden)}>
+          <Pressable
+            onPress={() => setIsHidden((prev) => !prev)}
+            hitSlop={8}
+            accessibilityRole="button"
+            accessibilityLabel={isHidden ? 'Show password' : 'Hide password'}
+          >
             <Feather name={isHidden ? 'eye-off' : 'eye'} size={20} color={colors.navy} />
           </Pressable>
         )}
@@ -54,6 +74,9 @@ const makeStyles = (colors) =>
   StyleSheet.create({
     field: {
       marginTop: spacing.md,
+    },
+    fieldCompact: {
+      marginTop: spacing.sm,
     },
     label: {
       ...typography.label,
@@ -79,6 +102,9 @@ const makeStyles = (colors) =>
       paddingVertical: spacing.md - 4,
       fontSize: 16,
       color: colors.text,
+    },
+    inputCompact: {
+      paddingVertical: spacing.sm - 2,
     },
     errorText: {
       ...typography.small,
