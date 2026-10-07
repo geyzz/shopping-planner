@@ -1,12 +1,12 @@
 import { typography } from '@/theme/theme';
-import { useEffect, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { ActivityIndicator, Animated, Easing, StyleSheet, Text, View } from 'react-native';
 
 const BRAND_BG = '#D6CDAC';
 const BRAND_NAVY = '#1B2A4A';
 
 export default function LoadingScreen({ showSpinner = true }) {
-  const pulse = useRef(new Animated.Value(0)).current;
+  const [pulse] = useState(() => new Animated.Value(0));
 
   useEffect(() => {
     const loop = Animated.loop(

@@ -9,17 +9,11 @@ export default function ListGrid({
   keyExtractor,
   emptyText,
   bottomPadding = spacing.xl,
+  refreshing = false,
+  onRefresh,
 }) {
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
-
-  if (data.length === 0) {
-    return (
-      <View style={styles.emptyState}>
-        <Text style={styles.emptyStateText}>{emptyText}</Text>
-      </View>
-    );
-  }
 
   return (
     <FlatList
@@ -27,9 +21,16 @@ export default function ListGrid({
       keyExtractor={keyExtractor}
       renderItem={renderItem}
       numColumns={2}
-      columnWrapperStyle={styles.row}
+      columnWrapperStyle={data && data.length > 0 ? styles.row : undefined}
       contentContainerStyle={[styles.list, { paddingBottom: bottomPadding }]}
       showsVerticalScrollIndicator={false}
+      refreshing={refreshing}
+      onRefresh={onRefresh}
+      ListEmptyComponent={
+        <View style={styles.emptyState}>
+          <Text style={styles.emptyStateText}>{emptyText}</Text>
+        </View>
+      }
     />
   );
 }

@@ -71,6 +71,7 @@ export default function HomePage() {
 
   const [selectMode, setSelectMode] = useState(false);
   const [selectedIds, setSelectedIds] = useState([]);
+  const [refreshing, setRefreshing] = useState(false);
 
   const optionsButtonRef = useRef(null);
   const [menuPos, setMenuPos] = useState({ top: 110, right: 24 });
@@ -84,33 +85,91 @@ export default function HomePage() {
     });
   };
 
+  const loadData = useCallback(async () => {
+    try {
+      const [
+        cachedAvatar,
+        savedSortField,
+        savedSortDir,
+        savedSelectMode,
+        savedSelectedIds,
+      ] = await Promise.all([
+        AsyncStorage.getItem('user_avatar_uri').catch(() => null),
+        AsyncStorage.getItem('home_sort_field').catch(() => null),
+        AsyncStorage.getItem('home_sort_direction').catch(() => null),
+        AsyncStorage.getItem('home_select_mode').catch(() => null),
+        AsyncStorage.getItem('home_selected_ids').catch(() => null),
+      ]);
+
+      if (cachedAvatar) setAvatarUrl(cachedAvatar);
+
+      if (savedSortField && (savedSortField === 'created_at' || savedSortField === 'last_opened_at')) {
+        setSortField(savedSortField);
+      }
+      if (savedSortDir && (savedSortDir === 'desc' || savedSortDir === 'asc')) {
+        setSortDirection(savedSortDir);
+      }
+      if (savedSelectMode === 'true') {
+        setSelectMode(true);
+      }
+
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+      if (session?.user?.user_metadata) {
+        const meta = session.user.user_metadata;
+        if (meta.first_name) setName(meta.first_name);
+        if (meta.avatar_url) setAvatarUrl(meta.avatar_url);
+      }
+
+      const { data, error } = await supabase.from('lists').select('*');
+      if (error) {
+        console.log('Error fetching lists:', error.message);
+        return;
+      }
+
+      const fetchedLists = data ?? [];
+      setNotes(fetchedLists);
+
+      if (savedSelectedIds) {
+        try {
+          const parsed = JSON.parse(savedSelectedIds);
+          if (Array.isArray(parsed)) {
+            const validIds = new Set(fetchedLists.map((n) => n.id));
+            const filtered = parsed.filter((id) => validIds.has(id));
+            setSelectedIds(filtered);
+            if (filtered.length !== parsed.length) {
+              AsyncStorage.setItem('home_selected_ids', JSON.stringify(filtered)).catch(() => {});
+            }
+          }
+        } catch {}
+      }
+    } catch (err) {
+      console.log('Error loading home data:', err);
+    }
+  }, []);
+
   useFocusEffect(
     useCallback(() => {
-      const load = async () => {
-        const cachedAvatar = await AsyncStorage.getItem('user_avatar_uri').catch(() => null);
-        if (cachedAvatar) setAvatarUrl(cachedAvatar);
-
-        const {
-          data: { session },
-        } = await supabase.auth.getSession();
-        if (session?.user?.user_metadata) {
-          const meta = session.user.user_metadata;
-          if (meta.first_name) setName(meta.first_name);
-          if (meta.avatar_url) setAvatarUrl(meta.avatar_url);
-        }
-
-        const { data, error } = await supabase.from('lists').select('*');
-        if (error) {
-          console.log('Error fetching lists:', error.message);
-          return;
-        }
-
-        setNotes(data ?? []);
-      };
-
-      load();
-    }, [])
+      loadData();
+    }, [loadData])
   );
+
+  const handleRefresh = async () => {
+    setRefreshing(true);
+    await loadData();
+    setRefreshing(false);
+  };
+
+  const handleSetSortField = (fieldKey) => {
+    setSortField(fieldKey);
+    AsyncStorage.setItem('home_sort_field', fieldKey).catch(() => {});
+  };
+
+  const handleSetSortDirection = (dirKey) => {
+    setSortDirection(dirKey);
+    AsyncStorage.setItem('home_sort_direction', dirKey).catch(() => {});
+  };
 
   const visibleNotes = useMemo(() => {
     const query = searchText.trim().toLowerCase();
@@ -140,24 +199,32 @@ export default function HomePage() {
     setShowOptionsMenu(false);
     setSelectedIds([]);
     setSelectMode(true);
+    AsyncStorage.setItem('home_select_mode', 'true').catch(() => {});
+    AsyncStorage.setItem('home_selected_ids', JSON.stringify([])).catch(() => {});
   };
 
   const exitSelectMode = () => {
     setSelectMode(false);
     setSelectedIds([]);
+    AsyncStorage.removeItem('home_select_mode').catch(() => {});
+    AsyncStorage.removeItem('home_selected_ids').catch(() => {});
   };
 
   const toggleSelected = (id) => {
-    setSelectedIds((prev) =>
-      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
-    );
+    setSelectedIds((prev) => {
+      const next = prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id];
+      AsyncStorage.setItem('home_selected_ids', JSON.stringify(next)).catch(() => {});
+      return next;
+    });
   };
 
   const allVisibleSelected =
     visibleNotes.length > 0 && visibleNotes.every((n) => selectedIds.includes(n.id));
 
   const toggleSelectAll = () => {
-    setSelectedIds(allVisibleSelected ? [] : visibleNotes.map((n) => n.id));
+    const next = allVisibleSelected ? [] : visibleNotes.map((n) => n.id);
+    setSelectedIds(next);
+    AsyncStorage.setItem('home_selected_ids', JSON.stringify(next)).catch(() => {});
   };
 
   const deleteSelected = () => {
@@ -365,7 +432,7 @@ export default function HomePage() {
               label: field.label,
               icon: sortField === field.key ? 'check' : 'circle',
               active: sortField === field.key,
-              onPress: () => setSortField(field.key),
+              onPress: () => handleSetSortField(field.key),
             })),
           },
           {
@@ -375,7 +442,7 @@ export default function HomePage() {
               label: dir.label,
               icon: dir.icon,
               active: sortDirection === dir.key,
-              onPress: () => setSortDirection(dir.key),
+              onPress: () => handleSetSortDirection(dir.key),
             })),
           },
           {
@@ -390,6 +457,8 @@ export default function HomePage() {
         renderItem={renderNote}
         emptyText={searchText.trim() ? 'No matching notes' : 'No notes yet'}
         bottomPadding={Math.max(insets.bottom, spacing.sm) + 140}
+        refreshing={refreshing}
+        onRefresh={handleRefresh}
       />
 
       {!selectMode && (

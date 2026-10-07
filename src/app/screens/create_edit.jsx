@@ -83,13 +83,14 @@ export default function CreateEditPage() {
 
   useEffect(() => {
     let cancelled = false;
+    const names = itemNamesKey ? itemNamesKey.split('|').filter(Boolean) : [];
 
-    if (!shoppingItems.length) {
+    if (!names.length) {
       setRecommendations({});
       return;
     }
 
-    getMallRecommendations(shoppingItems.map((i) => i.name)).then((result) => {
+    getMallRecommendations(names).then((result) => {
       if (cancelled) return;
       const best = result[0]?.count ?? 0;
       const map = {};
