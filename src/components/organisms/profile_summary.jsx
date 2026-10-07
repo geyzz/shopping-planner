@@ -11,7 +11,7 @@ export default function ProfileSummary({ name, avatarUrl }) {
   return (
     <View style={styles.container}>
       <Avatar image={avatarUrl} />
-      <Text style={styles.name}>{name}</Text>
+      <Text style={styles.name}>{name || 'My Profile'}</Text>
     </View>
   );
 }

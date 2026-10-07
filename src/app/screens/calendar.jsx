@@ -6,6 +6,7 @@ import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
@@ -54,12 +55,23 @@ export default function CalendarPage() {
   const [viewDate, setViewDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [lists, setLists] = useState([]);
+  const [avatarUrl, setAvatarUrl] = useState(null);
 
   const query = searchText.trim().toLowerCase();
 
   useFocusEffect(
     useCallback(() => {
       const fetchLists = async () => {
+        const cachedAvatar = await AsyncStorage.getItem('user_avatar_uri').catch(() => null);
+        if (cachedAvatar) setAvatarUrl(cachedAvatar);
+
+        const {
+          data: { session },
+        } = await supabase.auth.getSession();
+        if (session?.user?.user_metadata?.avatar_url) {
+          setAvatarUrl(session.user.user_metadata.avatar_url);
+        }
+
         const { data, error } = await supabase
           .from('lists')
           .select('*')
@@ -91,8 +103,11 @@ export default function CalendarPage() {
     matchDates.sort((a, b) => Math.abs(a - today) - Math.abs(b - today));
     const target = matchDates[0];
 
-    setSelectedDate(target);
-    setViewDate(new Date(target.getFullYear(), target.getMonth(), 1));
+    const frame = requestAnimationFrame(() => {
+      setSelectedDate(target);
+      setViewDate(new Date(target.getFullYear(), target.getMonth(), 1));
+    });
+    return () => cancelAnimationFrame(frame);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchText, lists]);
 
@@ -184,13 +199,20 @@ export default function CalendarPage() {
             data={filteredListsForSelectedDate}
             keyExtractor={(item) => String(item.id)}
             renderItem={renderListItem}
-            contentContainerStyle={styles.listContent}
+            contentContainerStyle={[
+              styles.listContent,
+              { paddingBottom: Math.max(insets.bottom, spacing.sm) + 140 },
+            ]}
             showsVerticalScrollIndicator={false}
           />
         )}
       </View>
 
-      <BottomNavigation activeTab="calendar" onTabPress={(path) => router.replace(path)} />
+      <BottomNavigation
+        activeTab="calendar"
+        onTabPress={(path) => router.replace(path)}
+        avatarUrl={avatarUrl}
+      />
     </View>
   );
 }
@@ -243,18 +265,24 @@ const makeStyles = (colors) =>
       color: colors.textSecondary,
     },
     listContent: {
-      paddingBottom: 120,
+      paddingBottom: 150,
     },
     listCard: {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
+      backgroundColor: colors.white,
       borderWidth: 1,
       borderColor: colors.border,
-      borderRadius: borderRadius.md,
-      paddingVertical: spacing.sm,
-      paddingHorizontal: spacing.sm,
+      borderRadius: borderRadius.lg,
+      paddingVertical: spacing.sm + 2,
+      paddingHorizontal: spacing.md,
       marginBottom: spacing.sm,
+      elevation: 2,
+      shadowColor: '#000',
+      shadowOpacity: 0.04,
+      shadowRadius: 3,
+      shadowOffset: { width: 0, height: 1 },
     },
     listCardInfo: {
       flexDirection: 'row',

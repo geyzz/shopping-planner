@@ -5,6 +5,7 @@ import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { spacing } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as ImagePicker from 'expo-image-picker';
 import { useRouter } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
@@ -25,6 +26,14 @@ export default function EditProfilePage() {
 
   useEffect(() => {
     const fetchUser = async () => {
+      // 1. Read cached local avatar first
+      const cachedAvatar = await AsyncStorage.getItem('user_avatar_uri');
+      if (cachedAvatar) {
+        setSavedAvatar(cachedAvatar);
+        setAvatarUri(cachedAvatar);
+      }
+
+      // 2. Read session
       const {
         data: { session },
       } = await supabase.auth.getSession();
@@ -33,9 +42,11 @@ export default function EditProfilePage() {
         const meta = session.user.user_metadata;
         setFirstName(meta.first_name ?? '');
         setLastName(meta.last_name ?? '');
-        const url = meta.avatar_url?.startsWith('http') ? meta.avatar_url : null;
-        setSavedAvatar(url);
-        setAvatarUri(url);
+        const url = meta.avatar_url ?? null;
+        if (url) {
+          setSavedAvatar(url);
+          setAvatarUri(url);
+        }
       }
     };
 
@@ -76,32 +87,45 @@ export default function EditProfilePage() {
   const handleSave = async () => {
     setSaving(true);
 
-    let avatarUrl = savedAvatar;
-    let uploadError = null;
+    let finalAvatarUrl = savedAvatar;
 
-    if (avatarChanged) {
+    if (avatarChanged && avatarUri) {
+      // Try uploading to Supabase Storage
       try {
-        if (!avatarBase64) throw new Error('Could not read the picked photo. Try picking it again.');
+        if (avatarBase64) {
+          const {
+            data: { user },
+          } = await supabase.auth.getUser();
 
-        const {
-          data: { user },
-        } = await supabase.auth.getUser();
-        const path = `${user.id}/avatar.jpg`;
+          if (user?.id) {
+            const path = `${user.id}/avatar.jpg`;
+            const binary = atob(avatarBase64);
+            const bytes = new Uint8Array(binary.length);
+            for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
 
-        const binary = atob(avatarBase64);
-        const bytes = new Uint8Array(binary.length);
-        for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+            const { error: uploadErr } = await supabase.storage
+              .from('avatars')
+              .upload(path, bytes.buffer, { contentType: 'image/jpeg', upsert: true });
 
-        const { error } = await supabase.storage
-          .from('avatars')
-          .upload(path, bytes.buffer, { contentType: 'image/jpeg', upsert: true });
-        if (error) throw error;
-
-        const { data } = supabase.storage.from('avatars').getPublicUrl(path);
-        avatarUrl = `${data.publicUrl}?t=${Date.now()}`;
+            if (!uploadErr) {
+              const { data } = supabase.storage.from('avatars').getPublicUrl(path);
+              finalAvatarUrl = `${data.publicUrl}?t=${Date.now()}`;
+            } else {
+              // Storage bucket failed or unavailable, use base64 data URI fallback
+              finalAvatarUrl = `data:image/jpeg;base64,${avatarBase64}`;
+            }
+          }
+        } else {
+          finalAvatarUrl = avatarUri;
+        }
       } catch (e) {
-        console.log('avatar upload error:', JSON.stringify(e), e?.message);
-        uploadError = e?.message ?? 'Unknown upload error';
+        console.log('Avatar upload fallback triggered:', e?.message);
+        finalAvatarUrl = avatarBase64 ? `data:image/jpeg;base64,${avatarBase64}` : avatarUri;
+      }
+
+      // Always save to local cache so Settings and BottomNav see it immediately
+      if (finalAvatarUrl) {
+        await AsyncStorage.setItem('user_avatar_uri', finalAvatarUrl).catch(() => {});
       }
     }
 
@@ -109,7 +133,7 @@ export default function EditProfilePage() {
       data: {
         first_name: firstName,
         last_name: lastName,
-        avatar_url: avatarUrl,
+        avatar_url: finalAvatarUrl,
       },
     });
 
@@ -117,11 +141,6 @@ export default function EditProfilePage() {
 
     if (error) {
       Alert.alert('Save failed', error.message);
-      return;
-    }
-
-    if (uploadError) {
-      Alert.alert('Name saved, photo not uploaded', uploadError);
       return;
     }
 

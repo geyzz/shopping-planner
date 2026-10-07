@@ -4,7 +4,7 @@ import { borderRadius, spacing } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useMemo } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 const OPTIONS = [
   { key: 'light', label: 'Light', description: 'Always use the light theme', icon: 'sun' },
@@ -21,44 +21,46 @@ export default function AppearancePage() {
     <View style={styles.screen}>
       <Header title="Appearance" onBack={() => router.back()} />
 
-      <Text style={styles.sectionLabel}>Theme</Text>
+      <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+        <Text style={styles.sectionLabel}>Theme</Text>
 
-      {OPTIONS.map((option) => {
-        const selected = mode === option.key;
+        {OPTIONS.map((option) => {
+          const selected = mode === option.key;
 
-        return (
-          <Pressable
-            key={option.key}
-            style={[styles.optionCard, selected && styles.optionCardSelected]}
-            onPress={() => setMode(option.key)}
-          >
-            <View style={styles.optionIcon}>
-              <Feather name={option.icon} size={20} color={colors.navy} />
-            </View>
+          return (
+            <Pressable
+              key={option.key}
+              style={[styles.optionCard, selected && styles.optionCardSelected]}
+              onPress={() => setMode(option.key)}
+            >
+              <View style={styles.optionIcon}>
+                <Feather name={option.icon} size={20} color={colors.navy} />
+              </View>
 
-            <View style={styles.optionText}>
-              <Text style={styles.optionLabel}>{option.label}</Text>
-              <Text style={styles.optionDescription}>{option.description}</Text>
-            </View>
+              <View style={styles.optionText}>
+                <Text style={styles.optionLabel}>{option.label}</Text>
+                <Text style={styles.optionDescription}>{option.description}</Text>
+              </View>
 
-            <View style={[styles.radio, selected && styles.radioSelected]}>
-              {selected && <Feather name="check" size={14} color={colors.white} />}
-            </View>
-          </Pressable>
-        );
-      })}
+              <View style={[styles.radio, selected && styles.radioSelected]}>
+                {selected && <Feather name="check" size={14} color={colors.white} />}
+              </View>
+            </Pressable>
+          );
+        })}
 
-      <Text style={styles.sectionLabel}>Preview</Text>
-      <View style={styles.previewCard}>
-        <View style={styles.previewImage}>
-          <Feather name="image" size={28} color={colors.border} />
+        <Text style={styles.sectionLabel}>Preview</Text>
+        <View style={styles.previewCard}>
+          <View style={styles.previewImage}>
+            <Feather name="file-text" size={28} color={colors.border} />
+          </View>
+          <Text style={styles.previewTitle}>Sample list</Text>
+          <Text style={styles.previewDate}>Oct 1, 2026</Text>
+          <View style={styles.previewButton}>
+            <Text style={styles.previewButtonText}>View List</Text>
+          </View>
         </View>
-        <Text style={styles.previewTitle}>Sample list</Text>
-        <Text style={styles.previewDate}>Oct 1, 2026</Text>
-        <View style={styles.previewButton}>
-          <Text style={styles.previewButtonText}>Edit List</Text>
-        </View>
-      </View>
+      </ScrollView>
     </View>
   );
 }
@@ -68,13 +70,17 @@ const makeStyles = (colors) =>
     screen: {
       flex: 1,
       backgroundColor: colors.background,
+    },
+    scrollContent: {
       paddingHorizontal: spacing.md,
+      paddingBottom: spacing.xl,
     },
     sectionLabel: {
       fontSize: 12,
       fontWeight: '700',
       color: colors.textSecondary,
       textTransform: 'uppercase',
+      letterSpacing: 0.5,
       marginTop: spacing.md,
       marginBottom: spacing.sm,
     },
@@ -84,9 +90,14 @@ const makeStyles = (colors) =>
       backgroundColor: colors.white,
       borderWidth: 1,
       borderColor: colors.border,
-      borderRadius: borderRadius.md,
-      padding: spacing.sm,
+      borderRadius: borderRadius.lg,
+      padding: spacing.md,
       marginBottom: spacing.sm,
+      elevation: 2,
+      shadowColor: '#000',
+      shadowOpacity: 0.05,
+      shadowRadius: 3,
+      shadowOffset: { width: 0, height: 1 },
     },
     optionCardSelected: {
       borderColor: colors.gold,
@@ -128,18 +139,26 @@ const makeStyles = (colors) =>
       borderColor: colors.navy,
     },
     previewCard: {
-      width: '48%',
+      width: '100%',
+      maxWidth: 240,
+      alignSelf: 'center',
       backgroundColor: colors.white,
       borderWidth: 1,
       borderColor: colors.border,
-      borderRadius: borderRadius.md,
-      padding: spacing.sm,
+      borderRadius: borderRadius.lg,
+      padding: spacing.md,
       alignItems: 'center',
+      marginTop: spacing.xs,
+      elevation: 2,
+      shadowColor: '#000',
+      shadowOpacity: 0.05,
+      shadowRadius: 3,
+      shadowOffset: { width: 0, height: 1 },
     },
     previewImage: {
       width: '100%',
       aspectRatio: 1.4,
-      borderRadius: 6,
+      borderRadius: borderRadius.md,
       backgroundColor: colors.background,
       borderWidth: 1,
       borderColor: colors.border,
@@ -163,7 +182,7 @@ const makeStyles = (colors) =>
       alignItems: 'center',
       backgroundColor: colors.gold,
       borderRadius: borderRadius.md,
-      paddingVertical: 6,
+      paddingVertical: 8,
     },
     previewButtonText: {
       fontSize: 12,

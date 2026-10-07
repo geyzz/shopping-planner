@@ -1,38 +1,61 @@
 import { useAppTheme } from '@/theme/ThemeContext';
+import { fontFamilies } from '@/theme/theme';
 import { useMemo } from 'react';
-import { Image, StyleSheet, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
-const LOGO_LIGHT = require('../../../assets/images/plan_ed_logo.png');
-const LOGO_DARK = require('../../../assets/images/plan_ed_logo_dark.png');
-const ASPECT_RATIO = 967 / 241;
+const LOGO_ICON = require('../../../assets/images/logo_icon_cropped.png');
 
-export default function AppLogo({ height, size = 36, width, style }) {
-  const { isDark } = useAppTheme();
-  const logoHeight = height ?? size;
-  const logoWidth = width ?? Math.round(logoHeight * ASPECT_RATIO);
-
-  const styles = useMemo(() => makeStyles(logoWidth, logoHeight), [logoWidth, logoHeight]);
+export default function AppLogo({ size = 32, style }) {
+  const { colors } = useAppTheme();
+  const styles = useMemo(() => makeStyles(colors, size), [colors, size]);
 
   return (
     <View style={[styles.container, style]}>
       <Image
-        source={isDark ? LOGO_DARK : LOGO_LIGHT}
-        style={styles.image}
+        source={LOGO_ICON}
+        style={styles.iconImage}
         resizeMode="contain"
         accessibilityRole="image"
-        accessibilityLabel="Plan_.ed"
+        accessibilityLabel="Plan_.ed Logo"
       />
+      <Text style={styles.brandText}>
+        <Text style={styles.planText}>PLAN</Text>
+        <Text style={styles.accentText}>_.</Text>
+        <Text style={styles.edText}>ED</Text>
+      </Text>
     </View>
   );
 }
 
-const makeStyles = (width, height) =>
+const makeStyles = (colors, size) =>
   StyleSheet.create({
     container: {
-      justifyContent: 'center',
+      flexDirection: 'row',
+      alignItems: 'center',
     },
-    image: {
-      width,
-      height,
+    iconImage: {
+      width: Math.round(size * 0.95),
+      height: size,
+      marginRight: 8,
+    },
+    brandText: {
+      fontFamily: fontFamilies.serif,
+      fontSize: 22,
+      fontWeight: '700',
+      letterSpacing: 1.5,
+    },
+    planText: {
+      color: colors.navy,
+      fontFamily: fontFamilies.serif,
+      fontWeight: '700',
+    },
+    accentText: {
+      color: colors.gold,
+      fontWeight: '700',
+    },
+    edText: {
+      color: colors.gold,
+      fontFamily: fontFamilies.serif,
+      fontWeight: '700',
     },
   });

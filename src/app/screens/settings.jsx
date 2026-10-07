@@ -5,9 +5,11 @@ import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const PROFILE_SETTINGS = [
   { id: 'edit_profile', label: 'Edit Profile', icon: 'user', path: '/screens/settings_screen/edit_profile' },
@@ -15,39 +17,60 @@ const PROFILE_SETTINGS = [
 ];
 
 const GENERAL_SETTINGS = [
-  { id: 'notifications', label: 'Notifications', icon: 'bell', path: '/screens/notifications' },
+  { id: 'notifications', label: 'Notifications', icon: 'bell', path: '/screens/notif' },
   { id: 'appearance', label: 'Appearance', icon: 'sun', path: '/screens/settings_screen/appearance' },
   { id: 'about', label: 'About', icon: 'info', path: '/screens/settings_screen/about' },
 ];
 
 export default function ProfilePage() {
   const router = useRouter();
+  const insets = useSafeAreaInsets();
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [name, setName] = useState('');
   const [avatarUrl, setAvatarUrl] = useState(null);
-
-  const handleBack = () => {
-    if (router.canGoBack()) {
-      router.back();
-    } else {
-      router.replace('/screens/settings');
-    }
-  };
+  const [loggingOut, setLoggingOut] = useState(false);
 
   useFocusEffect(
     useCallback(() => {
-      const fetchUser = async () => {
-        const {
-          data: { user },
-        } = await supabase.auth.getUser();
+      let isMounted = true;
 
-        const meta = user?.user_metadata;
-        setName(meta?.first_name ?? '');
-        setAvatarUrl(meta?.avatar_url ?? null);
+      const fetchUser = async () => {
+        try {
+          // 1. Check local AsyncStorage cache first for instant UI response
+          const cachedAvatar = await AsyncStorage.getItem('user_avatar_uri');
+          if (isMounted && cachedAvatar) {
+            setAvatarUrl(cachedAvatar);
+          }
+
+          // 2. Read from session (fast local storage)
+          const {
+            data: { session },
+          } = await supabase.auth.getSession();
+          const sessionMeta = session?.user?.user_metadata;
+          if (isMounted && sessionMeta) {
+            if (sessionMeta.first_name) setName(sessionMeta.first_name);
+            if (sessionMeta.avatar_url) setAvatarUrl(sessionMeta.avatar_url);
+          }
+
+          // 3. Refresh with fresh user metadata from server
+          const {
+            data: { user },
+          } = await supabase.auth.getUser();
+          const userMeta = user?.user_metadata;
+          if (isMounted && userMeta) {
+            if (userMeta.first_name) setName(userMeta.first_name);
+            if (userMeta.avatar_url) setAvatarUrl(userMeta.avatar_url);
+          }
+        } catch (e) {
+          console.log('Error fetching user profile:', e);
+        }
       };
 
       fetchUser();
+      return () => {
+        isMounted = false;
+      };
     }, [])
   );
 
@@ -56,14 +79,28 @@ export default function ProfilePage() {
   };
 
   const handleLogout = async () => {
-    await supabase.auth.signOut();
-    router.replace('/auth/login');
+    if (loggingOut) return;
+    setLoggingOut(true);
+    try {
+      await supabase.auth.signOut();
+      await AsyncStorage.removeItem('user_avatar_uri').catch(() => {});
+    } catch (e) {
+      console.log('SignOut error:', e?.message);
+    } finally {
+      setLoggingOut(false);
+      router.replace('/auth/login');
+    }
   };
 
   return (
-    <View style={styles.screen}>
-
-      <ScrollView contentContainerStyle={styles.scrollContent}>
+    <View style={[styles.screen, { paddingTop: insets.top + spacing.sm }]}>
+      <ScrollView
+        contentContainerStyle={[
+          styles.scrollContent,
+          { paddingBottom: Math.max(insets.bottom, spacing.sm) + 140 },
+        ]}
+        showsVerticalScrollIndicator={false}
+      >
         <ProfileSummary name={name} avatarUrl={avatarUrl} />
 
         <View style={styles.section}>
@@ -96,13 +133,24 @@ export default function ProfilePage() {
           </View>
         </View>
 
-        <Pressable style={styles.logoutButton} onPress={handleLogout}>
+        <Pressable
+          style={[styles.logoutButton, loggingOut && styles.logoutButtonDisabled]}
+          onPress={handleLogout}
+          disabled={loggingOut}
+          hitSlop={12}
+        >
           <Feather name="log-out" size={18} color={colors.error} />
-          <Text style={styles.logoutButtonText}>Log Out</Text>
+          <Text style={styles.logoutButtonText}>
+            {loggingOut ? 'Logging out...' : 'Log Out'}
+          </Text>
         </Pressable>
       </ScrollView>
 
-      <BottomNavigation activeTab="settings" onTabPress={(path) => router.replace(path)} />
+      <BottomNavigation
+        activeTab="settings"
+        onTabPress={(path) => router.replace(path)}
+        avatarUrl={avatarUrl}
+      />
     </View>
   );
 }
@@ -111,7 +159,6 @@ const makeStyles = (colors) =>
   StyleSheet.create({
     screen: {
       flex: 1,
-      paddingTop: spacing.xxl,
       backgroundColor: colors.background,
     },
     scrollContent: {
@@ -132,8 +179,13 @@ const makeStyles = (colors) =>
       backgroundColor: colors.white,
       borderWidth: 1,
       borderColor: colors.border,
-      borderRadius: borderRadius.md,
+      borderRadius: borderRadius.lg,
       overflow: 'hidden',
+      elevation: 2,
+      shadowColor: '#000',
+      shadowOpacity: 0.05,
+      shadowRadius: 3,
+      shadowOffset: { width: 0, height: 1 },
     },
     divider: {
       height: 1,
@@ -144,11 +196,20 @@ const makeStyles = (colors) =>
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
+      backgroundColor: colors.white,
       borderWidth: 1,
       borderColor: colors.error,
-      borderRadius: borderRadius.md,
+      borderRadius: borderRadius.lg,
       paddingVertical: spacing.md - 4,
       marginTop: spacing.lg,
+      elevation: 2,
+      shadowColor: '#000',
+      shadowOpacity: 0.04,
+      shadowRadius: 3,
+      shadowOffset: { width: 0, height: 1 },
+    },
+    logoutButtonDisabled: {
+      opacity: 0.6,
     },
     logoutButtonText: {
       color: colors.error,

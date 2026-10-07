@@ -9,6 +9,7 @@ import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useCallback, useMemo, useRef, useState } from 'react';
 import {
   Alert,
@@ -52,7 +53,7 @@ const collectStrings = (value, out = []) => {
 const getItemTexts = (note) => collectStrings(note.details);
 
 export default function HomePage() {
-  const { colors, isDark } = useAppTheme();
+  const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const insets = useSafeAreaInsets();
   const router = useRouter();
@@ -63,6 +64,7 @@ export default function HomePage() {
   const [showSortMenu, setShowSortMenu] = useState(false);
   const [notes, setNotes] = useState([]);
   const [name, setName] = useState('');
+  const [avatarUrl, setAvatarUrl] = useState(null);
 
   const [sortField, setSortField] = useState('created_at');
   const [sortDirection, setSortDirection] = useState('desc');
@@ -85,11 +87,16 @@ export default function HomePage() {
   useFocusEffect(
     useCallback(() => {
       const load = async () => {
+        const cachedAvatar = await AsyncStorage.getItem('user_avatar_uri').catch(() => null);
+        if (cachedAvatar) setAvatarUrl(cachedAvatar);
+
         const {
           data: { session },
         } = await supabase.auth.getSession();
-        if (session?.user?.user_metadata?.first_name) {
-          setName(session.user.user_metadata.first_name);
+        if (session?.user?.user_metadata) {
+          const meta = session.user.user_metadata;
+          if (meta.first_name) setName(meta.first_name);
+          if (meta.avatar_url) setAvatarUrl(meta.avatar_url);
         }
 
         const { data, error } = await supabase.from('lists').select('*');
@@ -306,7 +313,7 @@ export default function HomePage() {
             hitSlop={8}
             style={[styles.deleteButton, selectedIds.length === 0 && styles.deleteButtonDisabled]}
           >
-            <Feather name="trash-2" size={18} color="#FFFFFF" />
+            <Feather name="trash-2" size={18} color={colors.white} />
           </Pressable>
         </View>
       ) : (
@@ -382,16 +389,23 @@ export default function HomePage() {
         keyExtractor={(item) => String(item.id)}
         renderItem={renderNote}
         emptyText={searchText.trim() ? 'No matching notes' : 'No notes yet'}
-        bottomPadding={170}
+        bottomPadding={Math.max(insets.bottom, spacing.sm) + 140}
       />
 
       {!selectMode && (
-        <Pressable style={styles.addButton} onPress={() => router.push('/screens/create_edit')}>
-          <Feather name="plus" size={26} color={isDark ? '#1B2A4A' : '#FFFFFF'} />
+        <Pressable
+          style={[styles.addButton, { bottom: Math.max(insets.bottom, spacing.sm) + spacing.sm + 72 }]}
+          onPress={() => router.push('/screens/create_edit')}
+        >
+          <Feather name="file-plus" size={24} color={colors.white} />
         </Pressable>
       )}
 
-      <BottomNavigation activeTab="home" onTabPress={(path) => router.replace(path)} />
+      <BottomNavigation
+        activeTab="home"
+        onTabPress={(path) => router.replace(path)}
+        avatarUrl={avatarUrl}
+      />
     </View>
   );
 }
@@ -453,7 +467,7 @@ const makeStyles = (colors) =>
       width: 38,
       height: 38,
       borderRadius: 19,
-      backgroundColor: '#D64545',
+      backgroundColor: colors.error,
       justifyContent: 'center',
       alignItems: 'center',
     },
@@ -506,7 +520,7 @@ const makeStyles = (colors) =>
     viewRibbonText: {
       fontSize: 11,
       fontWeight: '700',
-      color: '#0B1B3F',
+      color: colors.onGold,
     },
     notePreview: {
       width: '100%',
@@ -562,18 +576,22 @@ const makeStyles = (colors) =>
     },
     editButtonText: {
       fontSize: 13,
-      color: '#0B1B3F',
+      color: colors.onGold,
       fontWeight: '700',
     },
     addButton: {
       position: 'absolute',
       right: spacing.md,
-      bottom: 90,
       width: 56,
       height: 56,
       borderRadius: 28,
       backgroundColor: colors.navy,
       justifyContent: 'center',
       alignItems: 'center',
+      elevation: 8,
+      shadowColor: '#000',
+      shadowOpacity: 0.2,
+      shadowRadius: 8,
+      shadowOffset: { width: 0, height: 4 },
     },
   });

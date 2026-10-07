@@ -14,20 +14,37 @@ export const colors = {
   error: '#D64545',
 };
 
-export const fonts = Platform.select({
+export const fontFamilies = Platform.select({
   ios: {
-    sans: 'system-ui',
-    serif: 'ui-serif',
-    rounded: 'ui-rounded',
-    mono: 'ui-monospace',
+    regular: 'System',
+    medium: 'System',
+    bold: 'System',
+    serif: 'Georgia',
+    mono: 'Courier',
+  },
+  android: {
+    regular: 'sans-serif',
+    medium: 'sans-serif-medium',
+    bold: 'sans-serif',
+    serif: 'serif',
+    mono: 'monospace',
   },
   default: {
-    sans: 'normal',
+    regular: 'sans-serif',
+    medium: 'sans-serif',
+    bold: 'sans-serif',
     serif: 'serif',
-    rounded: 'normal',
     mono: 'monospace',
   },
 });
+
+export const fonts = {
+  sans: fontFamilies.regular,
+  sansMedium: fontFamilies.medium,
+  sansBold: fontFamilies.bold,
+  serif: fontFamilies.serif,
+  mono: fontFamilies.mono,
+};
 
 export const spacing = {
   sm: 8,
@@ -38,11 +55,40 @@ export const spacing = {
 };
 
 export const typography = {
-  heading: { fontSize: 28, fontWeight: '700' },
-  subheading: { fontSize: 20, fontWeight: '600' },
-  body: { fontSize: 16, fontWeight: '400' },
-  label: { fontSize: 14, fontWeight: '600' },
-  small: { fontSize: 12, fontWeight: '400' },
+  heading: {
+    fontFamily: fontFamilies.bold,
+    fontSize: 26,
+    fontWeight: '700',
+    lineHeight: 32,
+    letterSpacing: -0.3,
+  },
+  subheading: {
+    fontFamily: fontFamilies.medium,
+    fontSize: 18,
+    fontWeight: '600',
+    lineHeight: 24,
+    letterSpacing: -0.2,
+  },
+  body: {
+    fontFamily: fontFamilies.regular,
+    fontSize: 15,
+    fontWeight: '400',
+    lineHeight: 22,
+  },
+  label: {
+    fontFamily: fontFamilies.medium,
+    fontSize: 14,
+    fontWeight: '600',
+    lineHeight: 20,
+    letterSpacing: 0.1,
+  },
+  small: {
+    fontFamily: fontFamilies.regular,
+    fontSize: 12,
+    fontWeight: '400',
+    lineHeight: 16,
+    letterSpacing: 0.2,
+  },
 };
 
 export const borderRadius = {
