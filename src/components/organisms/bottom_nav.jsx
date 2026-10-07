@@ -81,7 +81,7 @@ export default function BottomNavigation({ activeTab, onTabPress, avatarUrl }) {
             ) : (
               <Feather
                 name="user"
-                size={24}
+                size={31}
                 color={isProfileActive ? colors.gold : colors.navy}
               />
             )}

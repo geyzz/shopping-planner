@@ -11,7 +11,6 @@ export default function SearchBar({ value, onChangeText, placeholder, compact = 
 
   return (
     <View style={[styles.container, compact && styles.containerCompact]}>
-      <Feather name="search" size={iconSize} color={colors.textSecondary} />
       <RNTextInput
         style={[styles.input, compact && styles.inputCompact]}
         value={value}
@@ -20,10 +19,11 @@ export default function SearchBar({ value, onChangeText, placeholder, compact = 
         onChangeText={onChangeText}
       />
       {value?.length > 0 && (
-        <Pressable onPress={() => onChangeText('')}>
+        <Pressable onPress={() => onChangeText('')} hitSlop={6} style={styles.clearBtn}>
           <Feather name="x" size={iconSize} color={colors.textSecondary} />
         </Pressable>
       )}
+      <Feather name="search" size={iconSize} color={colors.textSecondary} />
     </View>
   );
 }
@@ -35,24 +35,29 @@ const makeStyles = (colors) =>
       alignItems: 'center',
       borderWidth: 1,
       borderColor: colors.border,
-      borderRadius: borderRadius.md,
+      borderRadius: borderRadius.full,
       paddingVertical: spacing.sm,
       paddingHorizontal: spacing.md,
       backgroundColor: colors.white,
     },
     containerCompact: {
-      paddingVertical: 6,
-      paddingHorizontal: spacing.sm,
+      paddingVertical: 7,
+      paddingHorizontal: spacing.md,
+      borderRadius: borderRadius.full,
     },
     input: {
       flex: 1,
-      marginLeft: spacing.sm,
       color: colors.text,
+      marginRight: spacing.sm,
+      paddingVertical: 0,
       ...typography.body,
     },
     inputCompact: {
-      marginLeft: 6,
+      marginRight: 6,
       paddingVertical: 0,
       fontSize: 13,
+    },
+    clearBtn: {
+      marginRight: 6,
     },
   });

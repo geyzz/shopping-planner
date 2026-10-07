@@ -35,7 +35,7 @@
         "expo-splash-screen",
         {
           "backgroundColor": "#D6CDAC",
-          "image": "./assets/images/plan_ed-logo.jpg",
+          "image": "./assets/images/transparent_logo.png",
           "imageWidth": 200,
           "resizeMode": "contain"
         }

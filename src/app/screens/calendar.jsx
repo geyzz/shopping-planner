@@ -156,10 +156,18 @@ export default function CalendarPage() {
 
   return (
     <View style={styles.screen}>
-      <View style={[styles.logoRow, { marginTop: insets.top + spacing.sm }]}>
-        <AppLogo />
-        <Pressable onPress={() => router.push('/screens/notif')} hitSlop={8}>
-          <Feather name="bell" size={22} color={colors.navy} />
+      <View style={[styles.headerRow, { marginTop: insets.top + spacing.sm }]}>
+        <View style={styles.logoCard}>
+          <AppLogo />
+        </View>
+        <Pressable
+          style={styles.notifButton}
+          onPress={() => router.push('/screens/notif')}
+          hitSlop={8}
+          accessibilityRole="button"
+          accessibilityLabel="Notifications"
+        >
+          <Feather name="bell" size={20} color={colors.navy} />
         </Pressable>
       </View>
 
@@ -224,21 +232,41 @@ const makeStyles = (colors) =>
       backgroundColor: colors.background,
       paddingHorizontal: spacing.md,
     },
-    logoRow: {
+    headerRow: {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
-      paddingHorizontal: spacing.md,
-      paddingVertical: spacing.sm,
+    },
+    logoCard: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingHorizontal: spacing.md + 14,
+      height: 48,
       backgroundColor: colors.white,
       borderWidth: 1,
       borderColor: colors.border,
-      borderRadius: borderRadius.lg,
-      elevation: 8,
+      borderRadius: borderRadius.full,
+      elevation: 4,
       shadowColor: '#000',
-      shadowOpacity: 0.15,
-      shadowRadius: 10,
-      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.12,
+      shadowRadius: 8,
+      shadowOffset: { width: 0, height: 3 },
+    },
+    notifButton: {
+      width: 48,
+      height: 48,
+      borderRadius: borderRadius.full,
+      backgroundColor: colors.white,
+      borderWidth: 1,
+      borderColor: colors.border,
+      justifyContent: 'center',
+      alignItems: 'center',
+      elevation: 4,
+      shadowColor: '#000',
+      shadowOpacity: 0.12,
+      shadowRadius: 8,
+      shadowOffset: { width: 0, height: 3 },
     },
     searchWrapper: {
       flex: 1,
