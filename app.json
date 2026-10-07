@@ -16,7 +16,14 @@
         "foregroundImage": "./assets/images/plan_ed-logo.jpg"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.geyzz.plan_ed"
+      "package": "com.geyzz.plan_ed",
+      "permissions": [
+        "RECEIVE_BOOT_COMPLETED",
+        "SCHEDULE_EXACT_ALARM",
+        "USE_EXACT_ALARM",
+        "POST_NOTIFICATIONS",
+        "VIBRATE"
+      ]
     },
     "web": {
       "output": "single",
@@ -33,7 +40,13 @@
           "resizeMode": "contain"
         }
       ],
-      "@react-native-community/datetimepicker"
+      "@react-native-community/datetimepicker",
+      [
+        "expo-notifications",
+        {
+          "color": "#D4AF37"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,

@@ -17,7 +17,22 @@ export default function DateField({ value, editable, onChange, style }) {
   const handleChange = (event, selectedDate) => {
     setShowPicker(Platform.OS === 'ios');
     if (selectedDate) {
-      onChange(selectedDate);
+      const merged = new Date(selectedDate);
+      if (value) {
+        merged.setHours(value.getHours(), value.getMinutes(), 0, 0);
+      } else {
+        const now = new Date();
+        const isToday =
+          merged.getFullYear() === now.getFullYear() &&
+          merged.getMonth() === now.getMonth() &&
+          merged.getDate() === now.getDate();
+        if (isToday) {
+          merged.setHours(now.getHours() + 1, 0, 0, 0);
+        } else {
+          merged.setHours(9, 0, 0, 0);
+        }
+      }
+      onChange(merged);
     }
   };
 

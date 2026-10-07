@@ -1,15 +1,48 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Notifications from 'expo-notifications';
+import { Platform } from 'react-native';
 
 const STORAGE_KEY = 'notifications_enabled';
+export const REMINDER_CHANNEL_ID = 'plan_ed_reminders_v2';
 
+// Active foreground timers to guarantee on-the-second delivery if app is open
+const activeForegroundTimers = new Map();
+
+// Foreground presentation behavior: banner + sound + badge
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
-    shouldShowAlert: true,
     shouldPlaySound: true,
-    shouldSetBadge: false,
+    shouldSetBadge: true,
+    shouldShowBanner: true,
+    shouldShowList: true,
+    shouldShowAlert: true,
   }),
 });
+
+export async function initNotifications() {
+  if (Platform.OS === 'android') {
+    // Delete older channels to force Android to register MAX importance afresh
+    await Notifications.deleteNotificationChannelAsync('default').catch(() => {});
+    await Notifications.deleteNotificationChannelAsync('reminders').catch(() => {});
+
+    // Create fresh high-priority channel for heads-up pop-up alerts
+    await Notifications.setNotificationChannelAsync(REMINDER_CHANNEL_ID, {
+      name: 'Shopping Reminders & Alerts',
+      description: 'Popup reminder banners for your shopping lists',
+      importance: Notifications.AndroidImportance.MAX,
+      vibrationPattern: [0, 500, 250, 500],
+      lightColor: '#D4AF37',
+      enableLights: true,
+      enableVibrate: true,
+      showBadge: true,
+      lockscreenVisibility: Notifications.AndroidNotificationVisibility.PUBLIC,
+      bypassDnd: false,
+    }).catch(() => {});
+  }
+
+  // Request device notification permissions on startup
+  await requestNotificationPermission().catch(() => {});
+}
 
 export async function getNotificationsEnabled() {
   const saved = await AsyncStorage.getItem(STORAGE_KEY);
@@ -21,13 +54,31 @@ export async function setNotificationsEnabled(value) {
 }
 
 export async function requestNotificationPermission() {
-  const { status } = await Notifications.requestPermissionsAsync();
-  return status === 'granted';
+  const settings = await Notifications.getPermissionsAsync().catch(() => null);
+  if (
+    settings &&
+    (settings.granted ||
+      settings.ios?.status === Notifications.IosAuthorizationStatus.PROVISIONAL)
+  ) {
+    return true;
+  }
+  const result = await Notifications.requestPermissionsAsync().catch(() => null);
+  return result?.status === 'granted';
 }
 
-// Cancels any previously scheduled notification for this list, then schedules
-// a new one if the reminder date/time is in the future and notifications are on.
-// Returns the new notification id (or null if nothing was scheduled).
+export function computeFireDate(reminderDate, reminderTiming = 'on') {
+  if (!reminderDate) return null;
+  const d = new Date(reminderDate);
+  if (isNaN(d.getTime())) return null;
+
+  if (reminderTiming === 'before') {
+    d.setDate(d.getDate() - 1);
+  } else if (reminderTiming === 'after') {
+    d.setDate(d.getDate() + 1);
+  }
+  return d;
+}
+
 export async function scheduleReminderNotification({
   listId,
   title,
@@ -40,17 +91,25 @@ export async function scheduleReminderNotification({
     await Notifications.cancelScheduledNotificationAsync(previousNotificationId).catch(() => {});
   }
 
+  const listIdKey = listId ? String(listId) : title;
+  if (activeForegroundTimers.has(listIdKey)) {
+    clearTimeout(activeForegroundTimers.get(listIdKey));
+    activeForegroundTimers.delete(listIdKey);
+  }
+
   const enabled = await getNotificationsEnabled();
   if (!enabled || !reminderDate) return null;
 
-  const fireDate = new Date(reminderDate);
-  if (reminderTiming === 'before') {
-    fireDate.setDate(fireDate.getDate() - 1);
-  } else if (reminderTiming === 'after') {
-    fireDate.setDate(fireDate.getDate() + 1);
+  const hasPermission = await requestNotificationPermission();
+  if (!hasPermission) {
+    console.warn('Notification permission not granted by device');
+    return null;
   }
 
-  if (fireDate.getTime() <= Date.now()) return null;
+  const fireDate = computeFireDate(reminderDate, reminderTiming);
+  if (!fireDate || fireDate.getTime() <= Date.now()) return null;
+
+  const diffSeconds = Math.max(1, Math.round((fireDate.getTime() - Date.now()) / 1000));
 
   const typeLabel = reminderType
     ? reminderType.charAt(0).toUpperCase() + reminderType.slice(1)
@@ -63,19 +122,81 @@ export async function scheduleReminderNotification({
       ? ' (follow-up)'
       : '';
 
+  const notificationContent = {
+    title: `🔔 ${typeLabel} Reminder${timingSuffix}`,
+    body: `Don't forget: ${title}`,
+    data: { listId: listId ? String(listId) : '' },
+    sound: true,
+    priority: 'max',
+    interruptionLevel: 'timeSensitive',
+    vibrate: [0, 500, 250, 500],
+    channelId: REMINDER_CHANNEL_ID,
+    color: '#D4AF37',
+    autoDismiss: true,
+  };
+
+  // 1. OS-level background alarm scheduling via TIME_INTERVAL
   const id = await Notifications.scheduleNotificationAsync({
-    content: {
-      title: `${typeLabel} reminder${timingSuffix}`,
-      body: `Don't forget: ${title}`,
-      data: { listId },
+    content: notificationContent,
+    trigger: {
+      type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,
+      seconds: diffSeconds,
+      channelId: REMINDER_CHANNEL_ID,
     },
-    trigger: fireDate,
+  }).catch((e) => {
+    console.warn('scheduleNotificationAsync error:', e);
+    return null;
   });
+
+  // 2. Active foreground timer: guarantees on-the-second execution if user stays in app
+  if (diffSeconds > 0 && diffSeconds <= 86400) {
+    const timer = setTimeout(async () => {
+      try {
+        await Notifications.scheduleNotificationAsync({
+          content: notificationContent,
+          trigger: null, // triggers immediately
+        });
+      } catch (err) {
+        console.warn('Foreground timer notification error:', err);
+      }
+    }, diffSeconds * 1000);
+
+    activeForegroundTimers.set(listIdKey, timer);
+  }
 
   return id;
 }
 
-export async function cancelReminderNotification(notificationId) {
-  if (!notificationId) return;
-  await Notifications.cancelScheduledNotificationAsync(notificationId).catch(() => {});
+export async function cancelReminderNotification(notificationId, listId) {
+  if (notificationId) {
+    await Notifications.cancelScheduledNotificationAsync(notificationId).catch(() => {});
+  }
+  const key = listId ? String(listId) : null;
+  if (key && activeForegroundTimers.has(key)) {
+    clearTimeout(activeForegroundTimers.get(key));
+    activeForegroundTimers.delete(key);
+  }
+}
+
+export async function syncAllReminders(enabled, lists = []) {
+  // Clear all in-memory timers
+  for (const timer of activeForegroundTimers.values()) {
+    clearTimeout(timer);
+  }
+  activeForegroundTimers.clear();
+
+  await Notifications.cancelAllScheduledNotificationsAsync().catch(() => {});
+  if (!enabled) return;
+
+  for (const list of lists) {
+    if (list?.details?.reminderDate) {
+      await scheduleReminderNotification({
+        listId: list.id,
+        title: list.title,
+        reminderType: list.details.reminderType,
+        reminderDate: list.details.reminderDate,
+        reminderTiming: list.details.reminderTiming,
+      }).catch(() => {});
+    }
+  }
 }

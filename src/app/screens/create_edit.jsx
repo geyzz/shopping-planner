@@ -5,7 +5,10 @@ import ReminderSection from '@/components/organisms/reminder_section';
 import ShoppingList from '@/components/organisms/shopping_list';
 import { getItemPrices, getMallRecommendations } from '@/lib/mall_data';
 import { MALL_IMAGES } from '@/lib/mall_image';
-import { scheduleReminderNotification } from '@/lib/notifications';
+import {
+  scheduleReminderNotification,
+  cancelReminderNotification,
+} from '@/lib/notifications';
 import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { spacing } from '@/theme/theme';
@@ -57,6 +60,7 @@ export default function CreateEditPage() {
 
   const [costExpanded, setCostExpanded] = useState(false);
   const [budget, setBudget] = useState('');
+  const [existingNotifId, setExistingNotifId] = useState(null);
 
   // Load an existing list when editing
   useEffect(() => {
@@ -71,6 +75,7 @@ export default function CreateEditPage() {
       setReminderDate(details.reminderDate ? new Date(details.reminderDate) : null);
       setReminderTiming(details.reminderTiming ?? 'on');
       setSelectedLocation(details.location ?? null);
+      setExistingNotifId(details.notificationId ?? null);
       setShoppingItems(details.shoppingItems ?? []);
       setBudget(details.budget ?? '');
     } catch (e) {
@@ -220,10 +225,18 @@ export default function CreateEditPage() {
           reminderType: selectedReminderType,
           reminderDate,
           reminderTiming,
+          previousNotificationId: existingNotifId,
         });
         if (notifId) details.notificationId = notifId;
       } catch (e) {
         console.warn('Failed to schedule reminder notification', e);
+      }
+    } else if (existingNotifId) {
+      try {
+        await cancelReminderNotification(existingNotifId, noteId);
+        details.notificationId = null;
+      } catch (e) {
+        console.warn('Failed to cancel existing reminder notification', e);
       }
     }
 

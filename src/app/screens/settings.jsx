@@ -1,6 +1,12 @@
 import SettingsRow from '@/components/molecules/settings_row';
 import BottomNavigation from '@/components/organisms/bottom_nav';
 import ProfileSummary from '@/components/organisms/profile_summary';
+import {
+  getNotificationsEnabled,
+  requestNotificationPermission,
+  setNotificationsEnabled,
+  syncAllReminders,
+} from '@/lib/notifications';
 import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing, typography } from '@/theme/theme';
@@ -8,18 +14,12 @@ import { Feather } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const PROFILE_SETTINGS = [
   { id: 'edit_profile', label: 'Edit Profile', icon: 'user', path: '/screens/settings_screen/edit_profile' },
   { id: 'change_password', label: 'Change Password', icon: 'lock', path: '/screens/settings_screen/change_pass' },
-];
-
-const GENERAL_SETTINGS = [
-  { id: 'notifications', label: 'Notifications', icon: 'bell', path: '/screens/notif' },
-  { id: 'appearance', label: 'Appearance', icon: 'sun', path: '/screens/settings_screen/appearance' },
-  { id: 'about', label: 'About', icon: 'info', path: '/screens/settings_screen/about' },
 ];
 
 export default function ProfilePage() {
@@ -29,6 +29,7 @@ export default function ProfilePage() {
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [name, setName] = useState('');
   const [avatarUrl, setAvatarUrl] = useState(null);
+  const [notifEnabled, setNotifEnabled] = useState(true);
   const [loggingOut, setLoggingOut] = useState(false);
 
   useFocusEffect(
@@ -62,6 +63,12 @@ export default function ProfilePage() {
             if (userMeta.first_name) setName(userMeta.first_name);
             if (userMeta.avatar_url) setAvatarUrl(userMeta.avatar_url);
           }
+
+          // Check notifications enabled state
+          const savedNotifEnabled = await getNotificationsEnabled();
+          if (isMounted) {
+            setNotifEnabled(savedNotifEnabled);
+          }
         } catch (e) {
           console.log('Error fetching user profile:', e);
         }
@@ -77,6 +84,31 @@ export default function ProfilePage() {
   const handleNavigate = (path) => {
     router.push(path);
   };
+
+  const handleToggleNotifications = async (value) => {
+    if (value) {
+      const granted = await requestNotificationPermission();
+      if (!granted) {
+        Alert.alert(
+          'Permission Required',
+          'Please allow notifications in your device settings to receive reminder alerts.'
+        );
+        setNotifEnabled(false);
+        await setNotificationsEnabled(false);
+        return;
+      }
+      setNotifEnabled(true);
+      await setNotificationsEnabled(true);
+
+      const { data: lists } = await supabase.from('lists').select('*');
+      await syncAllReminders(true, lists ?? []);
+    } else {
+      setNotifEnabled(false);
+      await setNotificationsEnabled(false);
+      await syncAllReminders(false);
+    }
+  };
+
 
   const handleLogout = async () => {
     if (loggingOut) return;
@@ -121,15 +153,24 @@ export default function ProfilePage() {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>General Settings</Text>
           <View style={styles.sectionCard}>
-            {GENERAL_SETTINGS.map((item, index) => (
-              <View key={item.id}>
-                <SettingsRow
-                  title={item.label}
-                  onPress={() => handleNavigate(item.path)}
-                />
-                {index < GENERAL_SETTINGS.length - 1 && <View style={styles.divider} />}
-              </View>
-            ))}
+            <SettingsRow
+              title="Notifications"
+              subtitle={notifEnabled ? 'Reminder alerts are active' : 'Reminder alerts are turned off'}
+              toggle
+              value={notifEnabled}
+              onToggleChange={handleToggleNotifications}
+            />
+
+            <View style={styles.divider} />
+            <SettingsRow
+              title="Appearance"
+              onPress={() => handleNavigate('/screens/settings_screen/appearance')}
+            />
+            <View style={styles.divider} />
+            <SettingsRow
+              title="About"
+              onPress={() => handleNavigate('/screens/settings_screen/about')}
+            />
           </View>
         </View>
 

@@ -20,6 +20,8 @@ export default function SetTime({ value, editable, onChange, style }) {
       const merged = new Date(value || new Date());
       merged.setHours(selectedTime.getHours());
       merged.setMinutes(selectedTime.getMinutes());
+      merged.setSeconds(0);
+      merged.setMilliseconds(0);
       onChange(merged);
     }
   };

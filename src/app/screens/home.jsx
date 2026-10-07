@@ -4,6 +4,7 @@ import BottomNavigation from '@/components/organisms/bottom_nav';
 import GreetingBanner from '@/components/organisms/greeting_banner';
 import ListGrid from '@/components/organisms/list_grid';
 import MenuDropdown from '@/components/organisms/menu_dropdown';
+import { cancelReminderNotification } from '@/lib/notifications';
 import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing, typography } from '@/theme/theme';
@@ -240,6 +241,14 @@ export default function HomePage() {
           text: 'Delete',
           style: 'destructive',
           onPress: async () => {
+            const listsToDelete = notes.filter((n) => selectedIds.includes(n.id));
+            listsToDelete.forEach((l) => {
+              const details = l.details ?? {};
+              if (details.notificationId) {
+                cancelReminderNotification(details.notificationId);
+              }
+            });
+
             const { error } = await supabase.from('lists').delete().in('id', selectedIds);
 
             if (error) {

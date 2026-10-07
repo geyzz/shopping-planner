@@ -1,5 +1,7 @@
+import { initNotifications } from '@/lib/notifications';
 import { ThemeProvider as AppThemeProvider, useAppTheme } from '@/theme/ThemeContext';
-import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from 'expo-router';
+import * as Notifications from 'expo-notifications';
+import { DarkTheme, DefaultTheme, Stack, ThemeProvider, useRouter } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import * as SystemUI from 'expo-system-ui';
 import { useEffect } from 'react';
@@ -47,9 +49,20 @@ function ThemedStack() {
 }
 
 export default function RootLayout() {
+  const router = useRouter();
+
   useEffect(() => {
     SplashScreen.hideAsync();
-  }, []);
+    initNotifications();
+
+    const sub = Notifications.addNotificationResponseReceivedListener(() => {
+      router.push('/screens/notif');
+    });
+
+    return () => {
+      sub.remove();
+    };
+  }, [router]);
 
   return (
     <AppThemeProvider>

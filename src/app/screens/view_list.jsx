@@ -40,6 +40,7 @@ export default function ViewListPage() {
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [shoppingItems, setShoppingItems] = useState([]);
   const [budget, setBudget] = useState('');
+  const [notificationId, setNotificationId] = useState(null);
 
   useEffect(() => {
     if (!list) return;
@@ -53,6 +54,7 @@ export default function ViewListPage() {
       setReminderDate(details.reminderDate ? new Date(details.reminderDate) : null);
       setReminderTiming(details.reminderTiming ?? 'on');
       setSelectedLocation(details.location ?? null);
+      setNotificationId(details.notificationId ?? null);
       setShoppingItems(
         (details.shoppingItems ?? []).map((item) => ({ checked: false, ...item }))
       );
@@ -83,6 +85,7 @@ export default function ViewListPage() {
       shoppingItems: updatedItems,
       budget,
       totalCost: updatedItems.reduce((sum, item) => sum + (parseFloat(item.price) || 0), 0),
+      notificationId,
     };
 
     const { error } = await supabase.from('lists').update({ details }).eq('id', noteId);
@@ -116,6 +119,7 @@ export default function ViewListPage() {
             shoppingItems,
             budget,
             totalCost,
+            notificationId,
           },
         }),
       },
