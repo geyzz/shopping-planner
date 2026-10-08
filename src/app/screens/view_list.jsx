@@ -4,13 +4,13 @@ import LocationSection from '@/components/organisms/location_section';
 import ReminderSection from '@/components/organisms/reminder_section';
 import ShoppingList from '@/components/organisms/shopping_list';
 import { MALL_IMAGES } from '@/lib/mall_image';
-import { supabase } from '@/lib/supabase';
+import { updateListDetailsWithCache } from '@/lib/lists_storage';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { spacing } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
-import { Alert, Pressable, ScrollView, StyleSheet, Text } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text } from 'react-native';
 
 const REMINDER_TYPES = [
   { id: 'gift', label: 'Gift', icon: 'gift' },
@@ -88,11 +88,9 @@ export default function ViewListPage() {
       notificationId,
     };
 
-    const { error } = await supabase.from('lists').update({ details }).eq('id', noteId);
-
+    const { error } = await updateListDetailsWithCache(noteId, details);
     if (error) {
       console.log('Error updating checklist:', error.message);
-      Alert.alert('Update failed', error.message);
     }
   };
 

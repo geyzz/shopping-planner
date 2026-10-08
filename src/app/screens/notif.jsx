@@ -1,7 +1,7 @@
 import Tag from '@/components/atoms/tag';
 import Header from '@/components/organisms/header';
+import { fetchListsWithCache, getCachedLists } from '@/lib/lists_storage';
 import { computeFireDate } from '@/lib/notifications';
-import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
@@ -42,45 +42,53 @@ export default function NotificationsPage() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
 
+  const processReminders = (data) => {
+    const now = Date.now();
+    return (data ?? [])
+      .filter((list) => Boolean(list?.details?.reminderDate))
+      .map((list) => {
+        const reminderDate = list.details.reminderDate;
+        const reminderTiming = list.details.reminderTiming || 'on';
+        const fireDate = computeFireDate(reminderDate, reminderTiming);
+        const isPast = fireDate ? fireDate.getTime() <= now : false;
+
+        return {
+          id: String(list.id),
+          title: list.title || 'Untitled List',
+          reminderType: list.details.reminderType || 'general',
+          reminderDate,
+          reminderTiming,
+          fireDate,
+          isPast,
+          rawList: list,
+        };
+      })
+      .sort((a, b) => {
+        if (a.isPast !== b.isPast) {
+          return a.isPast ? 1 : -1;
+        }
+        const timeA = a.fireDate ? a.fireDate.getTime() : 0;
+        const timeB = b.fireDate ? b.fireDate.getTime() : 0;
+        return a.isPast ? timeB - timeA : timeA - timeB;
+      });
+  };
+
   const fetchReminders = useCallback(async () => {
     try {
-      const { data, error } = await supabase.from('lists').select('*');
-      if (error) {
+      const cached = await getCachedLists();
+      if (cached && cached.length > 0) {
+        setReminders(processReminders(cached));
+      }
+
+      const { data, error } = await fetchListsWithCache();
+      if (error && (!cached || cached.length === 0)) {
         console.log('Error fetching reminders:', error.message);
         return;
       }
 
-      const now = Date.now();
-      const listReminders = (data ?? [])
-        .filter((list) => Boolean(list.details?.reminderDate))
-        .map((list) => {
-          const reminderDate = list.details.reminderDate;
-          const reminderTiming = list.details.reminderTiming || 'on';
-          const fireDate = computeFireDate(reminderDate, reminderTiming);
-          const isPast = fireDate ? fireDate.getTime() <= now : false;
-
-          return {
-            id: String(list.id),
-            title: list.title || 'Untitled List',
-            reminderType: list.details.reminderType || 'general',
-            reminderDate,
-            reminderTiming,
-            fireDate,
-            isPast,
-            rawList: list,
-          };
-        })
-        .sort((a, b) => {
-          // Upcoming items first (sorted by closest fireDate), then past items
-          if (a.isPast !== b.isPast) {
-            return a.isPast ? 1 : -1;
-          }
-          const timeA = a.fireDate ? a.fireDate.getTime() : 0;
-          const timeB = b.fireDate ? b.fireDate.getTime() : 0;
-          return a.isPast ? timeB - timeA : timeA - timeB;
-        });
-
-      setReminders(listReminders);
+      if (data) {
+        setReminders(processReminders(data));
+      }
     } catch (e) {
       console.log('Error loading reminders:', e);
     } finally {

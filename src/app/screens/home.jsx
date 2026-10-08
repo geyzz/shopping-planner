@@ -5,6 +5,12 @@ import GreetingBanner from '@/components/organisms/greeting_banner';
 import ListGrid from '@/components/organisms/list_grid';
 import MenuDropdown from '@/components/organisms/menu_dropdown';
 import { cancelReminderNotification } from '@/lib/notifications';
+import {
+  deleteListsWithCache,
+  fetchListsWithCache,
+  getCachedLists,
+  markOpenedWithCache,
+} from '@/lib/lists_storage';
 import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing, typography } from '@/theme/theme';
@@ -123,20 +129,27 @@ export default function HomePage() {
         if (meta.avatar_url) setAvatarUrl(meta.avatar_url);
       }
 
-      const { data, error } = await supabase.from('lists').select('*');
-      if (error) {
+      // Fast path: load instantly from local cache
+      const cachedLists = await getCachedLists();
+      if (cachedLists && cachedLists.length > 0) {
+        setNotes(cachedLists);
+      }
+
+      // Revalidate in background and update cache
+      const { data: fetchedLists, error } = await fetchListsWithCache();
+      if (error && (!cachedLists || cachedLists.length === 0)) {
         console.log('Error fetching lists:', error.message);
         return;
       }
 
-      const fetchedLists = data ?? [];
-      setNotes(fetchedLists);
+      const activeLists = fetchedLists ?? cachedLists ?? [];
+      setNotes(activeLists);
 
       if (savedSelectedIds) {
         try {
           const parsed = JSON.parse(savedSelectedIds);
           if (Array.isArray(parsed)) {
-            const validIds = new Set(fetchedLists.map((n) => n.id));
+            const validIds = new Set(activeLists.map((n) => n.id));
             const filtered = parsed.filter((id) => validIds.has(id));
             setSelectedIds(filtered);
             if (filtered.length !== parsed.length) {
@@ -249,16 +262,14 @@ export default function HomePage() {
               }
             });
 
-            const { error } = await supabase.from('lists').delete().in('id', selectedIds);
-
-            if (error) {
-              console.log('Error deleting lists:', error.message);
-              Alert.alert('Error', 'Could not delete the selected lists. Please try again.');
-              return;
-            }
-
+            // Optimistically remove from state and local cache + delete in Supabase
             setNotes((prev) => prev.filter((n) => !selectedIds.includes(n.id)));
             exitSelectMode();
+
+            const { error } = await deleteListsWithCache(selectedIds);
+            if (error) {
+              console.log('Error deleting lists:', error.message);
+            }
           },
         },
       ]
@@ -270,16 +281,10 @@ export default function HomePage() {
     setShowSortMenu(true);
   };
 
-  const markOpened = async (note) => {
+  const markOpened = (note) => {
     const now = new Date().toISOString();
     setNotes((prev) => prev.map((n) => (n.id === note.id ? { ...n, last_opened_at: now } : n)));
-
-    const { error } = await supabase
-      .from('lists')
-      .update({ last_opened_at: now })
-      .eq('id', note.id);
-
-    if (error) console.log('Error updating last_opened_at:', error.message);
+    markOpenedWithCache(note.id);
   };
 
   const handleOpenNote = (note) => {

@@ -9,6 +9,7 @@ import {
   scheduleReminderNotification,
   cancelReminderNotification,
 } from '@/lib/notifications';
+import { saveListWithCache } from '@/lib/lists_storage';
 import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { spacing } from '@/theme/theme';
@@ -240,24 +241,12 @@ export default function CreateEditPage() {
       }
     }
 
-    let error;
-
-    if (noteId) {
-      const { data: updated, error: updateError } = await supabase
-        .from('lists')
-        .update({ title: title.trim(), details })
-        .eq('id', noteId)
-        .select('id');
-
-      error = updateError;
-      if (!error && (!updated || updated.length === 0)) {
-        error = { message: 'No row was updated. Check the update policy on the lists table.' };
-      }
-    } else {
-      ({ error } = await supabase
-        .from('lists')
-        .insert({ title: title.trim(), details, user_id: session.user.id }));
-    }
+    const { error } = await saveListWithCache({
+      noteId,
+      title: title.trim(),
+      details,
+      userId: session.user.id,
+    });
 
     setSaving(false);
 

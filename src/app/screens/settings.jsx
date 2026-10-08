@@ -7,6 +7,7 @@ import {
   setNotificationsEnabled,
   syncAllReminders,
 } from '@/lib/notifications';
+import { clearCachedLists, fetchListsWithCache } from '@/lib/lists_storage';
 import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing, typography } from '@/theme/theme';
@@ -100,7 +101,7 @@ export default function ProfilePage() {
       setNotifEnabled(true);
       await setNotificationsEnabled(true);
 
-      const { data: lists } = await supabase.from('lists').select('*');
+      const { data: lists } = await fetchListsWithCache();
       await syncAllReminders(true, lists ?? []);
     } else {
       setNotifEnabled(false);
@@ -116,6 +117,7 @@ export default function ProfilePage() {
     try {
       await supabase.auth.signOut();
       await AsyncStorage.removeItem('user_avatar_uri').catch(() => {});
+      await clearCachedLists();
     } catch (e) {
       console.log('SignOut error:', e?.message);
     } finally {

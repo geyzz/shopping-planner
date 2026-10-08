@@ -2,6 +2,7 @@ import AppLogo from '@/components/atoms/app_logo';
 import SearchBar from '@/components/molecules/search_bar';
 import BottomNavigation from '@/components/organisms/bottom_nav';
 import CalendarView from '@/components/organisms/calendar_view';
+import { fetchListsWithCache, getCachedLists } from '@/lib/lists_storage';
 import { supabase } from '@/lib/supabase';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing, typography } from '@/theme/theme';
@@ -72,12 +73,14 @@ export default function CalendarPage() {
           setAvatarUrl(session.user.user_metadata.avatar_url);
         }
 
-        const { data, error } = await supabase
-          .from('lists')
-          .select('*')
-          .order('created_at', { ascending: false });
+        // Instant load from cache
+        const cachedLists = await getCachedLists();
+        if (cachedLists && cachedLists.length > 0) {
+          setLists(cachedLists);
+        }
 
-        if (error) {
+        const { data, error } = await fetchListsWithCache();
+        if (error && (!cachedLists || cachedLists.length === 0)) {
           console.log('Error fetching lists:', error.message);
           return;
         }
