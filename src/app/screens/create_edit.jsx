@@ -63,7 +63,7 @@ export default function CreateEditPage() {
   const [budget, setBudget] = useState('');
   const [existingNotifId, setExistingNotifId] = useState(null);
 
-  // Load an existing list when editing
+  // edit list
   useEffect(() => {
     if (!list) return;
     try {
@@ -84,7 +84,7 @@ export default function CreateEditPage() {
     }
   }, [list]);
 
-  // Mall recommendations based on the shopping items
+  // mall recommendations
   const itemNamesKey = shoppingItems.map((i) => i.name).join('|');
 
   useEffect(() => {
@@ -111,9 +111,7 @@ export default function CreateEditPage() {
     };
   }, [itemNamesKey]);
 
-  // Fill in estimated prices for items that don't have one yet: items typed without
-  // picking a suggestion, and lists saved before prices existed. A price the user
-  // already typed (anything above 0) is left alone.
+  // item prices
   const unpricedKey = shoppingItems
     .filter((i) => i.estimatedPrice === undefined)
     .map((i) => i.name)
@@ -144,8 +142,7 @@ export default function CreateEditPage() {
     };
   }, [unpricedKey]);
 
-  // `estimate` is the lowest known shop price. It becomes the starting price,
-  // and the user can still type their own in Cost Estimation.
+  // add item
   const handleAddItem = (name, shops = [], estimate = null) => {
     setShoppingItems([
       ...shoppingItems,
@@ -169,7 +166,7 @@ export default function CreateEditPage() {
     );
   };
 
-  // Put an edited price back to the estimate
+  // reset price
   const handleResetItemPrice = (id) => {
     setShoppingItems(
       shoppingItems.map((item) =>

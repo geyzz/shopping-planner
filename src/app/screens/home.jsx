@@ -129,13 +129,12 @@ export default function HomePage() {
         if (meta.avatar_url) setAvatarUrl(meta.avatar_url);
       }
 
-      // Fast path: load instantly from local cache
+      // load lists
       const cachedLists = await getCachedLists();
       if (cachedLists && cachedLists.length > 0) {
         setNotes(cachedLists);
       }
 
-      // Revalidate in background and update cache
       const { data: fetchedLists, error } = await fetchListsWithCache();
       if (error && (!cachedLists || cachedLists.length === 0)) {
         console.log('Error fetching lists:', error.message);
@@ -262,7 +261,7 @@ export default function HomePage() {
               }
             });
 
-            // Optimistically remove from state and local cache + delete in Supabase
+            // delete lists
             setNotes((prev) => prev.filter((n) => !selectedIds.includes(n.id)));
             exitSelectMode();
 

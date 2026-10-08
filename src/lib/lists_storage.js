@@ -3,10 +3,7 @@ import { supabase } from './supabase';
 
 export const LISTS_CACHE_KEY = '@plan_ed_cached_shopping_lists';
 
-/**
- * Read cached shopping lists from AsyncStorage.
- * Always returns an array (empty on miss or error).
- */
+// get cached lists
 export async function getCachedLists() {
   try {
     const raw = await AsyncStorage.getItem(LISTS_CACHE_KEY);
@@ -19,9 +16,7 @@ export async function getCachedLists() {
   }
 }
 
-/**
- * Persist shopping lists array to AsyncStorage.
- */
+// save cached lists
 export async function setCachedLists(lists) {
   try {
     const safeLists = Array.isArray(lists) ? lists : [];
@@ -33,9 +28,7 @@ export async function setCachedLists(lists) {
   }
 }
 
-/**
- * Clear cached shopping lists (e.g. on user logout).
- */
+// clear cached lists
 export async function clearCachedLists() {
   try {
     await AsyncStorage.removeItem(LISTS_CACHE_KEY);
@@ -44,9 +37,7 @@ export async function clearCachedLists() {
   }
 }
 
-/**
- * Synchronize any local lists that were created, updated, or marked for deletion offline.
- */
+// sync offline lists
 export async function syncPendingLists() {
   try {
     const cached = await getCachedLists();
@@ -83,7 +74,6 @@ export async function syncPendingLists() {
             .single();
 
           if (!error && data) {
-            // Replace local temporary ID with Supabase row
             updatedList = updatedList.map((x) => (x.id === item.id ? data : x));
             hasChanges = true;
           }
@@ -121,12 +111,7 @@ export async function syncPendingLists() {
   }
 }
 
-/**
- * Fetch lists with offline cache support.
- * 1. Syncs any pending offline actions if connected.
- * 2. Fetches fresh lists from Supabase and updates cache.
- * 3. Falls back gracefully to cached data if offline or error occurs.
- */
+// fetch lists
 export async function fetchListsWithCache() {
   await syncPendingLists().catch(() => {});
   const cached = await getCachedLists();
@@ -143,7 +128,6 @@ export async function fetchListsWithCache() {
     }
 
     if (Array.isArray(data)) {
-      // Preserve any local offline items that haven't synced yet
       const pendingLocal = cached.filter((c) => c && c._pendingSync);
       const merged = [
         ...pendingLocal,
@@ -160,9 +144,7 @@ export async function fetchListsWithCache() {
   }
 }
 
-/**
- * Save (create or update) a shopping list with instant local caching and background Supabase sync.
- */
+// save list
 export async function saveListWithCache({ noteId, title, details, userId }) {
   const cached = await getCachedLists();
   const now = new Date().toISOString();
@@ -183,11 +165,9 @@ export async function saveListWithCache({ noteId, title, details, userId }) {
       _pendingAction: 'create',
     };
 
-    // Save to local cache immediately
     const updated = [newEntry, ...cached];
     await setCachedLists(updated);
 
-    // Try Supabase insert
     try {
       const { data, error } = await supabase
         .from('lists')
@@ -254,9 +234,7 @@ export async function saveListWithCache({ noteId, title, details, userId }) {
   }
 }
 
-/**
- * Update list details in cache immediately and sync to Supabase (ideal for checklist toggling).
- */
+// update list details
 export async function updateListDetailsWithCache(noteId, details) {
   if (!noteId) return { error: new Error('Missing list ID') };
   const cached = await getCachedLists();
@@ -282,9 +260,7 @@ export async function updateListDetailsWithCache(noteId, details) {
   }
 }
 
-/**
- * Delete lists from cache immediately and delete from Supabase.
- */
+// delete lists
 export async function deleteListsWithCache(ids) {
   if (!ids || ids.length === 0) return { error: null };
   const idSet = new Set(ids);
@@ -306,9 +282,7 @@ export async function deleteListsWithCache(ids) {
   }
 }
 
-/**
- * Mark a list as opened in cache and update Supabase.
- */
+// update last opened
 export async function markOpenedWithCache(noteId) {
   if (!noteId) return;
   const now = new Date().toISOString();
@@ -320,7 +294,5 @@ export async function markOpenedWithCache(noteId) {
 
   try {
     await supabase.from('lists').update({ last_opened_at: now }).eq('id', noteId);
-  } catch {
-    // Non-critical background call
-  }
+  } catch {}
 }

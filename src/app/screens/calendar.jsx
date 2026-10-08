@@ -73,7 +73,7 @@ export default function CalendarPage() {
           setAvatarUrl(session.user.user_metadata.avatar_url);
         }
 
-        // Instant load from cache
+        // load lists
         const cachedLists = await getCachedLists();
         if (cachedLists && cachedLists.length > 0) {
           setLists(cachedLists);

@@ -4,14 +4,7 @@ import { Feather } from '@expo/vector-icons';
 import { useMemo } from 'react';
 import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
 
-// Small popover menu anchored to the top right, used for the Options and Sort
-// menus on Home.
-//
-// sections: [{ title?, items: [{ key, label, icon?, onPress, active? }] }]
-//   active undefined: normal item
-//   active true:      highlighted (navy, bold)
-//   active false:     icon is dimmed, so a row can show a selected state
-// top: distance from the top of the screen
+// dropdown menu
 export default function MenuDropdown({ visible, onClose, sections = [], top = 110, right = spacing.md + spacing.sm }) {
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);

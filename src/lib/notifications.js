@@ -5,10 +5,9 @@ import { Platform } from 'react-native';
 const STORAGE_KEY = 'notifications_enabled';
 export const REMINDER_CHANNEL_ID = 'plan_ed_reminders_v2';
 
-// Active foreground timers to guarantee on-the-second delivery if app is open
 const activeForegroundTimers = new Map();
 
-// Foreground presentation behavior: banner + sound + badge
+// notification handler
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
     shouldPlaySound: true,
@@ -21,11 +20,10 @@ Notifications.setNotificationHandler({
 
 export async function initNotifications() {
   if (Platform.OS === 'android') {
-    // Delete older channels to force Android to register MAX importance afresh
+    // setup android channel
     await Notifications.deleteNotificationChannelAsync('default').catch(() => {});
     await Notifications.deleteNotificationChannelAsync('reminders').catch(() => {});
 
-    // Create fresh high-priority channel for heads-up pop-up alerts
     await Notifications.setNotificationChannelAsync(REMINDER_CHANNEL_ID, {
       name: 'Shopping Reminders & Alerts',
       description: 'Popup reminder banners for your shopping lists',
@@ -40,7 +38,6 @@ export async function initNotifications() {
     }).catch(() => {});
   }
 
-  // Request device notification permissions on startup
   await requestNotificationPermission().catch(() => {});
 }
 
@@ -135,7 +132,7 @@ export async function scheduleReminderNotification({
     autoDismiss: true,
   };
 
-  // 1. OS-level background alarm scheduling via TIME_INTERVAL
+  // schedule reminder
   const id = await Notifications.scheduleNotificationAsync({
     content: notificationContent,
     trigger: {
@@ -148,13 +145,12 @@ export async function scheduleReminderNotification({
     return null;
   });
 
-  // 2. Active foreground timer: guarantees on-the-second execution if user stays in app
   if (diffSeconds > 0 && diffSeconds <= 86400) {
     const timer = setTimeout(async () => {
       try {
         await Notifications.scheduleNotificationAsync({
           content: notificationContent,
-          trigger: null, // triggers immediately
+          trigger: null,
         });
       } catch (err) {
         console.warn('Foreground timer notification error:', err);
@@ -179,7 +175,6 @@ export async function cancelReminderNotification(notificationId, listId) {
 }
 
 export async function syncAllReminders(enabled, lists = []) {
-  // Clear all in-memory timers
   for (const timer of activeForegroundTimers.values()) {
     clearTimeout(timer);
   }

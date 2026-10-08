@@ -38,7 +38,7 @@ export default function LocationSection({
     );
   }
 
-  // Best mall(s) for the current shopping list, shown whether or not a mall is selected
+  // mall recommendations
   const ranked = Object.values(recommendations).sort(
     (a, b) => b.count - a.count || a.name.localeCompare(b.name)
   );

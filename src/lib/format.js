@@ -1,9 +1,4 @@
-/**
- * Formats a number or numeric string into Philippine Peso currency format (e.g. ₱1,000.00)
- * @param {number|string} value - The numeric value to format
- * @param {boolean} includeSymbol - Whether to prepend the '₱' symbol (defaults to true)
- * @returns {string} Formatted currency string
- */
+// format currency
 export function formatCurrency(value, includeSymbol = true) {
   const num = typeof value === 'number' ? value : parseFloat(value);
   if (value == null || Number.isNaN(num)) {

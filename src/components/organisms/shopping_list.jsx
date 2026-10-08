@@ -33,7 +33,7 @@ export default function ShoppingList({
   const [newItemText, setNewItemText] = useState('');
   const [suggestions, setSuggestions] = useState([]);
 
-  // Look up matching items from the database while typing
+  // search items
   useEffect(() => {
     if (readOnly) return;
 

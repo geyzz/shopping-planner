@@ -1,4 +1,4 @@
--- Insert / Update items using 'name' as unique conflict target
+-- items --
 INSERT INTO public.items (name, category_id) VALUES
   ('12-pc Buffalo wings with blue cheese', 'd7110230-f965-40bd-af40-568cde68ee92'),
   ('14K gold wedding band pair', '77df59d7-d91b-419e-89b6-84fe69516504'),
@@ -1779,7 +1779,7 @@ INSERT INTO public.items (name, category_id) VALUES
 ON CONFLICT (name) DO UPDATE SET
   category_id = EXCLUDED.category_id;
 
--- Ensure Row-Level Security allows public reading
+-- rls --
 ALTER TABLE public.items ENABLE ROW LEVEL SECURITY;
 DROP POLICY IF EXISTS "Allow public read on items" ON public.items;
 CREATE POLICY "Allow public read on items" ON public.items FOR SELECT USING (true);

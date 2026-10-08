@@ -1,7 +1,6 @@
--- Ensure unique constraint/index on shop_items
 CREATE UNIQUE INDEX IF NOT EXISTS shop_items_shop_id_item_id_idx ON public.shop_items (shop_id, item_id);
 
--- Dynamically link shop_id to item_id using items.name
+-- shop items --
 INSERT INTO public.shop_items (shop_id, item_id, price)
 SELECT map.shop_id, i.id, map.price
 FROM (
@@ -1753,7 +1752,7 @@ JOIN public.items i ON i.name = map.item_name
 ON CONFLICT (shop_id, item_id) DO UPDATE SET
   price = EXCLUDED.price;
 
--- Ensure Row-Level Security allows public reading
+-- rls --
 ALTER TABLE public.shop_items ENABLE ROW LEVEL SECURITY;
 DROP POLICY IF EXISTS "Allow public read on shop_items" ON public.shop_items;
 CREATE POLICY "Allow public read on shop_items" ON public.shop_items FOR SELECT USING (true);

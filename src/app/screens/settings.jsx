@@ -39,13 +39,12 @@ export default function ProfilePage() {
 
       const fetchUser = async () => {
         try {
-          // 1. Check local AsyncStorage cache first for instant UI response
+          // load user
           const cachedAvatar = await AsyncStorage.getItem('user_avatar_uri');
           if (isMounted && cachedAvatar) {
             setAvatarUrl(cachedAvatar);
           }
 
-          // 2. Read from session (fast local storage)
           const {
             data: { session },
           } = await supabase.auth.getSession();
@@ -55,7 +54,6 @@ export default function ProfilePage() {
             if (sessionMeta.avatar_url) setAvatarUrl(sessionMeta.avatar_url);
           }
 
-          // 3. Refresh with fresh user metadata from server
           const {
             data: { user },
           } = await supabase.auth.getUser();
@@ -65,7 +63,7 @@ export default function ProfilePage() {
             if (userMeta.avatar_url) setAvatarUrl(userMeta.avatar_url);
           }
 
-          // Check notifications enabled state
+          // check notifications
           const savedNotifEnabled = await getNotificationsEnabled();
           if (isMounted) {
             setNotifEnabled(savedNotifEnabled);

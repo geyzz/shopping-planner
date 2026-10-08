@@ -1,4 +1,4 @@
--- Insert / Update item_categories
+-- item categories --
 INSERT INTO public.item_categories (id, name) VALUES
   ('77df59d7-d91b-419e-89b6-84fe69516504', 'Apparel, Shoes & Accessories'),
   ('7a7daa20-4c09-4853-90c5-5e74582f805a', 'Hardware & Home Goods'),
@@ -8,7 +8,7 @@ INSERT INTO public.item_categories (id, name) VALUES
 ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name;
 
--- Ensure Row-Level Security allows public read
+-- rls --
 ALTER TABLE public.item_categories ENABLE ROW LEVEL SECURITY;
 DROP POLICY IF EXISTS "Allow public read on item_categories" ON public.item_categories;
 CREATE POLICY "Allow public read on item_categories" ON public.item_categories FOR SELECT USING (true);

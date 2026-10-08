@@ -26,14 +26,13 @@ export default function EditProfilePage() {
 
   useEffect(() => {
     const fetchUser = async () => {
-      // 1. Read cached local avatar first
+      // load profile
       const cachedAvatar = await AsyncStorage.getItem('user_avatar_uri');
       if (cachedAvatar) {
         setSavedAvatar(cachedAvatar);
         setAvatarUri(cachedAvatar);
       }
 
-      // 2. Read session
       const {
         data: { session },
       } = await supabase.auth.getSession();
@@ -90,7 +89,7 @@ export default function EditProfilePage() {
     let finalAvatarUrl = savedAvatar;
 
     if (avatarChanged && avatarUri) {
-      // Try uploading to Supabase Storage
+      // upload avatar
       try {
         if (avatarBase64) {
           const {
@@ -111,7 +110,6 @@ export default function EditProfilePage() {
               const { data } = supabase.storage.from('avatars').getPublicUrl(path);
               finalAvatarUrl = `${data.publicUrl}?t=${Date.now()}`;
             } else {
-              // Storage bucket failed or unavailable, use base64 data URI fallback
               finalAvatarUrl = `data:image/jpeg;base64,${avatarBase64}`;
             }
           }
@@ -123,7 +121,7 @@ export default function EditProfilePage() {
         finalAvatarUrl = avatarBase64 ? `data:image/jpeg;base64,${avatarBase64}` : avatarUri;
       }
 
-      // Always save to local cache so Settings and BottomNav see it immediately
+      // save avatar
       if (finalAvatarUrl) {
         await AsyncStorage.setItem('user_avatar_uri', finalAvatarUrl).catch(() => {});
       }

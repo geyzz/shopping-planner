@@ -1,4 +1,4 @@
--- 1. Insert/Update Malls using 'slug' as the unique conflict target
+-- malls --
 INSERT INTO public.malls (slug, name) VALUES
   ('sm_city_clark', 'SM City Clark'),
   ('marquee_mall', 'MarQuee Mall'),
@@ -7,10 +7,9 @@ INSERT INTO public.malls (slug, name) VALUES
 ON CONFLICT (slug) DO UPDATE SET
   name = EXCLUDED.name;
 
--- 2. Ensure unique constraint/index on mall_shops for ON CONFLICT target
 CREATE UNIQUE INDEX IF NOT EXISTS mall_shops_mall_id_shop_id_idx ON public.mall_shops (mall_id, shop_id);
 
--- 3. Insert Mall Shops Relationships dynamically matching existing malls.id by slug
+-- mall shops --
 INSERT INTO public.mall_shops (mall_id, shop_id)
 SELECT m.id, map.shop_id
 FROM (
@@ -602,7 +601,7 @@ FROM (
 JOIN public.malls m ON m.slug = map.mall_slug
 ON CONFLICT (mall_id, shop_id) DO NOTHING;
 
--- 4. Ensure Row-Level Security (RLS) allows public reading
+-- rls --
 ALTER TABLE public.malls ENABLE ROW LEVEL SECURITY;
 DROP POLICY IF EXISTS "Allow public read on malls" ON public.malls;
 CREATE POLICY "Allow public read on malls" ON public.malls FOR SELECT USING (true);

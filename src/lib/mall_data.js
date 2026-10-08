@@ -1,7 +1,7 @@
 import { supabase } from '@/lib/supabase';
 import { useEffect, useState } from 'react';
 
-// Malls for the Location section. `id` is the slug, so lists saved earlier still match.
+// load malls
 export function useMalls() {
   const [malls, setMalls] = useState([]);
 
@@ -32,9 +32,7 @@ export function useMalls() {
   return malls;
 }
 
-// Items matching `query`, each with the shops that sell it and the lowest estimated price.
-// When `mallSlug` is given, only items sold in that mall are returned,
-// and `shops` lists only the shops in that mall.
+// search items
 export async function searchItems(query, mallSlug) {
   const q = query.trim();
   if (!q) return [];
@@ -61,7 +59,6 @@ export async function searchItems(query, mallSlug) {
 
       const shops = offers.map((si) => si.shops.name);
 
-      // Estimated price = the lowest price among these shops (null if none is priced)
       const prices = offers
         .map((si) => parseFloat(si.price))
         .filter((p) => !Number.isNaN(p));
@@ -73,8 +70,7 @@ export async function searchItems(query, mallSlug) {
     .slice(0, 6);
 }
 
-// For a list of item names, returns the malls that carry them, best first.
-// Each result: { slug, name, items, count, total, missing }
+// mall recommendations
 export async function getMallRecommendations(itemNames) {
   const names = [...new Set(itemNames.map((n) => n.trim()).filter(Boolean))];
   if (!names.length) return [];
@@ -115,8 +111,7 @@ export async function getMallRecommendations(itemNames) {
     .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 }
 
-// Lowest known price for each item name, for example { Pillow: 700 }.
-// Names with no price are left out. Returns null if the lookup fails.
+// get item prices
 export async function getItemPrices(itemNames) {
   const names = [...new Set(itemNames.map((n) => n.trim()).filter(Boolean))];
   if (!names.length) return {};

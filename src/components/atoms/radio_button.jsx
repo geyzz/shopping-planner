@@ -1,4 +1,3 @@
-// atoms/RadioButton.jsx
 import { useAppTheme } from '@/theme/ThemeContext';
 import { useMemo } from 'react';
 import { StyleSheet, View } from 'react-native';

@@ -23,7 +23,6 @@ export default function BottomNavigation({ activeTab, onTabPress, avatarUrl }) {
       pointerEvents="box-none"
     >
       <View style={styles.bar}>
-        {/* Left Tab: Home */}
         <Pressable
           style={styles.sideTab}
           hitSlop={12}
@@ -40,10 +39,8 @@ export default function BottomNavigation({ activeTab, onTabPress, avatarUrl }) {
           <Text style={[styles.tabLabel, isHomeActive && styles.tabLabelActive]}>Home</Text>
         </Pressable>
 
-        {/* Center Spacer for the raised button */}
         <View style={styles.centerSpacer} />
 
-        {/* Right Tab: Calendar */}
         <Pressable
           style={styles.sideTab}
           hitSlop={12}
@@ -61,7 +58,6 @@ export default function BottomNavigation({ activeTab, onTabPress, avatarUrl }) {
         </Pressable>
       </View>
 
-      {/* Raised Center Profile Button */}
       <View style={styles.centerButtonWrapper} pointerEvents="box-none">
         <View style={styles.centerHalo}>
           <Pressable

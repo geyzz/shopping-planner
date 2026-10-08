@@ -62,7 +62,6 @@ export default function ReminderSection({
         <SectionHeader title="Reminder" />
 
         <View style={styles.readOnlyContainer}>
-          {/* Row 1: Tag */}
           <View style={styles.readOnlySection}>
             {selected ? (
               <Tag label={selected.label} icon={selected.icon} selected />
@@ -73,7 +72,6 @@ export default function ReminderSection({
 
           <View style={styles.divider} />
 
-          {/* Row 2: Date */}
           <View style={styles.readOnlySection}>
             <View style={styles.readOnlyItem}>
               <Feather name="calendar" size={16} color={colors.navy} />
@@ -83,7 +81,6 @@ export default function ReminderSection({
 
           <View style={styles.divider} />
 
-          {/* Row 3: Time on date */}
           <View style={styles.readOnlySection}>
             <View style={styles.timeOnDateRow}>
               <View style={styles.readOnlyItem}>
