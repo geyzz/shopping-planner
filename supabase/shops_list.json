@@ -1,0 +1,2287 @@
+[
+  {
+    "id": "4bf75d31-7a00-4af5-ac20-a9eb04ca1e2c",
+    "name": "158 Designers’ Boulevard",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "cba24585-80e8-42a8-ae63-4a5012fccdc0",
+    "name": "24 Chicken",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "a8314b1c-93cb-4055-acbb-18fa54a2e5e4",
+    "name": "7-ELEVEN",
+    "category_id": "fc311f8d-9368-4f02-90b1-86aff3740dfb"
+  },
+  {
+    "id": "fd383064-d43d-472f-9671-4cf7d5037517",
+    "name": "Abenson",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "e39fe99f-29b0-4bd0-91bb-2d37c2fa3b2a",
+    "name": "Ace Hardware",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "29529637-996d-49f7-8025-0baaea3cd95f",
+    "name": "Acer",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "c4353999-9342-4a87-ad35-aff5c73ded74",
+    "name": "ACQUA SUISSE PERFUME BAR",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "83399268-98bc-44a2-82f0-fc4a4bc33323",
+    "name": "Adidas",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "604ea275-9311-416b-ac97-508e54bf2a76",
+    "name": "AFICIONADO",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "c8803f4b-64dc-4c95-abc4-e6626a612591",
+    "name": "ALFAMART",
+    "category_id": "fc311f8d-9368-4f02-90b1-86aff3740dfb"
+  },
+  {
+    "id": "44027f85-abc4-49b7-ab0c-cef7a1058e6f",
+    "name": "ALIBABA",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "1538e22f-962a-43e7-a719-4584b9b01cf5",
+    "name": "ALL ABOUT BAKING",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "ce1551bf-0cfd-4055-ac66-4deea530e358",
+    "name": "An Original Penguin by Munsingwear",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "824b2b1c-7b1a-4f7d-a853-24004db14818",
+    "name": "ANELLO",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "44dfe973-0a27-4adb-af95-0824cc448799",
+    "name": "ANKER",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "2d384fb7-dcd0-4917-a556-80bb85ef2d54",
+    "name": "APPE THAI-ZING",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "2dde01db-4c81-4ee3-a480-d8ca3e4813c9",
+    "name": "AQUA MINERAL",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "ed80c835-3dac-4d20-a81a-7a0ef3ba9702",
+    "name": "AQUAFLASK",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "67143114-ce50-4a65-a099-82fad93dc9ed",
+    "name": "Armando's Pizza",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "c1ca1082-698a-4f33-adf5-004b39e0be41",
+    "name": "ARMY NAVY BURGER BURRITO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "50fefde8-d694-4932-adfa-3184d15944ce",
+    "name": "ARROW",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "82366fb9-3c54-4589-aaf4-db4175046eed",
+    "name": "ARTWORK",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "1788cad6-90c1-4f9c-a2e2-93fd7ab8eae2",
+    "name": "ASIANIC",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "ad72b37e-89e5-4210-a834-7c0e4030f6c3",
+    "name": "ASPREY TIME",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "de675e0e-13e7-4220-a451-47be9cfa896e",
+    "name": "ASUS",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "7b567f64-e8d0-434e-a88e-62a1271ede42",
+    "name": "AUDIONET",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "af4c2a98-04b8-4669-af88-fc092d24b946",
+    "name": "Auntie Anne's",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "a2b3ea61-b201-4ae2-a5fe-93b11c39aa14",
+    "name": "AVOCADO LOCCO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "52e8a120-33ef-4554-ae69-ab9c60f38b66",
+    "name": "AWEI",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "9057c3cb-64fc-4267-abaf-9b69a6101b8d",
+    "name": "BABOTS FRUITAS FARM",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "fbe03c96-9e79-4dcb-a936-8f93de836cae",
+    "name": "BACOLOD CHICKEN INASAL",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "567ad5ad-b59d-40d3-aa8c-5d3f48ce582f",
+    "name": "BANH MI KITCHEN",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "89ec49cc-eedd-4981-ae49-8c276245f3c0",
+    "name": "BAREFRUIT GUYABANO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "27343bd1-55b0-48a3-aa00-6435f23ba884",
+    "name": "Baseus",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "02d4be19-78ff-43d6-ae2d-6f9648b9608a",
+    "name": "Bath & Body Works",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "4c8d05ae-b767-4f94-ad7b-85d48cc2f2e4",
+    "name": "BAVIN",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "f670e6ae-b33b-4301-a3c2-6029bb262bc4",
+    "name": "BAYO",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "cbbdd9e3-3408-4794-a501-445b7481fa40",
+    "name": "BBB CAR STICKERS",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "cbabecaa-3416-469a-ad25-99c5f8c161f3",
+    "name": "BEAUCHE INTERNATIONAL",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "5f9c0518-3eb2-41b8-a161-087aa40a5328",
+    "name": "BEAUTEDERM",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "a5265624-908e-45dc-a0d8-b1a30717965d",
+    "name": "BENCH",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "524677ae-b21c-4613-a57d-55eda29636e2",
+    "name": "BENCH ACTIVE",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "bab1596f-f4e0-45b5-a794-9713969c356c",
+    "name": "BETTYS NATIVE CAKE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "27ddd579-e6b6-491b-ac5f-3e8e98339650",
+    "name": "BIBINGKINITAN",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "b50cd1e6-c265-4567-abdb-c355de23358b",
+    "name": "Big Bob Burger",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "4c22ba15-1f5d-42f5-acad-4baf2441c952",
+    "name": "Binalot",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "ea57a66c-f845-468d-aa21-9f43978858f3",
+    "name": "BISEN",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "b82f53f2-cd53-40d2-a654-351ad85218ae",
+    "name": "BLK 513",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "290ff33f-16da-4b71-a490-3823262bb81a",
+    "name": "BLK COSMETICS",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "764956a4-2ff9-4c48-ab26-31dc5c6981b3",
+    "name": "BLUE MAGIC",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "f4b53d5c-19e7-4053-acfd-c7b5c44889ab",
+    "name": "Bobson",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "13d4fb8e-26b1-4862-a544-496a6bea256c",
+    "name": "BONCHON",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "713d44f3-9891-4075-a9da-8db2229964fc",
+    "name": "BOTEJYU",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "d5514d28-9556-415b-a4cc-cadfe92b0855",
+    "name": "BREADTALK",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "604a0cbb-c1b7-4057-ab44-08ef771ebc23",
+    "name": "BROWNIES UNLIMITED",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "3db0fdf3-19d4-403c-adfa-a52d19503eee",
+    "name": "BSD INTERNATIONAL",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "30b408bf-2092-4e01-ad0c-db5cec88c3d6",
+    "name": "BUFFALO'S WINGS N' THINGS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "59ddc7d5-1973-441f-bb24-d9dc55a08d8c",
+    "name": "Buffet 101",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "07854346-632d-48e0-a3c6-7955a002460c",
+    "name": "BUKO EXPRESS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "ffba93d7-1764-4587-a7ec-a185d92ae6c2",
+    "name": "BUKO LOCO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "76db3f4d-1db1-4255-a5e1-a3ba6a2bc4c5",
+    "name": "Cabalen",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "2a04a61c-0789-4172-ab2c-3c364967bd20",
+    "name": "CABEZA JEWELRY AND ACCESSORIES SHOP",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "9d01461c-129e-4edd-bb4c-344fed7a58fd",
+    "name": "Café Mary Grace",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "3f726188-d1d1-4e69-aca7-d2d12a6c83b3",
+    "name": "CAFE NOELLE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "c442b3f0-7e39-4faa-ac99-aa9a1e0772e0",
+    "name": "CAMKIDS",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "cf6fc819-7a93-4cb8-aeac-3ceb51399221",
+    "name": "CANDY CORNER",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "ab48b5ef-fc0e-4867-a6d9-375377d3fab1",
+    "name": "CANDY MANIA",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "26d2f600-e247-4f25-a3a6-04e2bd551d61",
+    "name": "CANDY STATION",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "c5927c2f-d5ab-4e8e-94ea-950729769911",
+    "name": "Capital",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "0211fec2-4bd3-4688-aefd-0396a5e72f42",
+    "name": "CARAMIA CAKES & GELATO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "0f4fab16-7d46-4a95-a2f1-6d74e9bd2a26",
+    "name": "CASIO",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "a6b23010-3605-49ea-a82e-815139f0975a",
+    "name": "CELLBOY",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "ef3008d1-e569-467f-a0ad-d15043db2b9a",
+    "name": "CELLSHOPPE",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "16bf2f6f-dca9-4b4f-a059-666ae133dc4a",
+    "name": "CHAMPAS MEXICAN GRILL AND TAQUERIA",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "7cef2d09-4b26-4b33-ac7e-7d8a8baeda11",
+    "name": "CHATIME",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "dbd58fed-289c-4a1a-aaff-55b4367a0b36",
+    "name": "CHEF TONYS POPCORN",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "47a9f9fc-a683-421d-a736-328c33051e8c",
+    "name": "CHILIS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "96e5d7cb-ff94-4f36-aa52-7306b8b5ab7a",
+    "name": "CHINGU BUKO HOUSE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "5269fce4-9715-4ccf-adb9-41abe36061e3",
+    "name": "CHIZMOZZA",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "4eb0705b-654d-4a16-ac39-be1e3bbe282f",
+    "name": "CHONGS SIOMAI RICE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "6dd1841d-9bf4-4ee1-a251-e54fd21b59a5",
+    "name": "CHOWKING",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "70a018f7-6d3d-41ab-aae8-97d7438633f2",
+    "name": "CHRIS SPORTS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "f18116f9-ae1a-471d-a27a-c95ad8d77fa3",
+    "name": "CHUNGCHUN RICE CORN DOG",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "c4380445-bd3b-4918-a7dc-d1554c24ac8d",
+    "name": "Cindy's Bakery and Restaurant",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "a89fd855-ea3a-4692-a231-d0181f13827d",
+    "name": "CINNABON",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "6a624919-7373-47aa-aaae-f92b34f2a103",
+    "name": "CITRUS PULP DETOX",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "db92a991-b215-41bf-a31a-f61065b23a27",
+    "name": "CLASSIC SAVORY",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "df22d441-5189-4679-abb6-b4808ea5aa33",
+    "name": "CLINIQUE",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "a25aa1a8-fea0-451d-a054-1cda5ca3fc81",
+    "name": "CLN",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "07653dd3-3b70-40f3-a85a-f3ab780dd14f",
+    "name": "CLUBE MELISSA",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "72740e7f-95ca-4928-a47f-6166d37251d1",
+    "name": "CLYDES BREAD PASTRIES",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "cde1070a-fbae-4ae5-a3ed-2a0a625023f6",
+    "name": "COCO FRESCO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "648d0cb9-446e-41b7-9988-07fdbc335e6c",
+    "name": "Coco Fresh Tea & Juice",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "6d0acf28-dd25-44c8-a479-0250d3fb4037",
+    "name": "COFFEE AND YOU COFFEE HOUSE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "383e0d33-36c2-4d7c-ab29-6e64da6c61a8",
+    "name": "COFFEE OVERDOSE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "4afe4664-2f88-4f4d-8e4a-9d240082d270",
+    "name": "Cold Stone Creamery",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "f3e1b558-3023-4c4b-a3bc-22f9bab775dd",
+    "name": "COLE HAAN",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "46faf0b1-41d1-4b1a-a5fc-565fe38ba8d6",
+    "name": "COLUMBIA SPORTSWEAR",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "deb42326-ac76-4edb-9c5c-7979378d2997",
+    "name": "Complex Lifestyle Store",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "c40bfc26-bcc7-44cb-a4a5-9472db149f22",
+    "name": "CONCORDE",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "ffc85a41-f343-4286-9bb2-b243f65d7e12",
+    "name": "Conti’s Bakeshop and Restaurant",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "12ef3356-f615-41ba-93a3-1b93004f7764",
+    "name": "Converse",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "789d28e8-fac9-4f15-a5fb-faea47423cf7",
+    "name": "COREEN RAZONS HALO-HALO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "6e6ecce0-f58d-4525-a8bd-65783f30a98d",
+    "name": "Cotton On",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "8e01e434-2541-4315-9961-4176d824c115",
+    "name": "Crocs",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "132b6641-7045-47fe-a978-5179e0a4ba18",
+    "name": "CYBERTAB",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "cb3194a2-4fb0-4f2f-a211-7f4906b7eb0f",
+    "name": "DAILY DETOX JUICES",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "277c8ac5-dbc5-482b-abfc-29f478895d60",
+    "name": "DAINTY RESTAURANT",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "771dfcf8-eccc-4e56-a541-5ab6737e144e",
+    "name": "DAIRY QUEEN",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "28b67ef3-2fdc-4632-a219-c4ce595d2195",
+    "name": "Daiso Japan",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "857fc731-0e40-4b3c-b4b3-7b01c1d606b7",
+    "name": "DC Shoes",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "b898b32e-8bc2-4689-a884-d7ec8fdfd63b",
+    "name": "DCREAM COFFEE TEA",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "ff5c0348-fe98-4a09-a05a-033433689826",
+    "name": "Decathlon",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "9d24797d-2860-4435-9861-a66de64e587b",
+    "name": "Denny's",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "31b11cb3-ccba-4139-ace7-284c7abb26bd",
+    "name": "Digital Walker",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "2c7f6246-d550-4d92-a487-6f739fa55f55",
+    "name": "DIVAS KAFFE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "49ed76a3-ef79-4c75-a5f3-11009f87c66f",
+    "name": "DJI",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "6b0b0f54-b30e-406e-a8f4-a1854d669f9e",
+    "name": "DUNKIN",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "5222b6f5-7d16-45d6-a7e4-2ac3982a3e73",
+    "name": "EDELYN'S HOMEMADE NUTS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "618a478f-096b-47de-a78e-fdbfd08b1290",
+    "name": "EMPIRE GOLF",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "bec263f7-bc95-47a0-a430-d9e9899a7d91",
+    "name": "EVERYTHING BUT CHEESE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "01cd75c8-6260-4dad-a3de-cdcddf798d24",
+    "name": "EXECUTIVE OPTICAL",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "0ca4b973-c77b-401b-a8cf-b26284639c7f",
+    "name": "FAMOUS BELGIAN WAFFLES",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "10724359-9538-4791-a212-49d86174d5d1",
+    "name": "FAR EAST MEDICAL EQUIPMENT",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "cb8139ad-01be-48eb-afb8-4a6efed25681",
+    "name": "FEAST & FIRE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "4ebcb6c6-edb5-4b4f-82d9-49aa8e244b5d",
+    "name": "Fiesta Court",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "b68d48bc-9107-4665-a885-7d3e709e67e1",
+    "name": "FIGARO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "f8f8fc68-1740-4216-8be8-13303f4cde28",
+    "name": "FitFlop",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "b62144d9-200a-42f5-ab4a-4abb81440df9",
+    "name": "FLORSHEIM KIDS",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "37ab2a2c-f688-43c5-a08b-83a1791a97b7",
+    "name": "FONERANGE",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "1e76aca8-06a6-4796-ae3a-76c51e2f8a89",
+    "name": "FORTUNE TEA HOUSE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "ea36b9d7-5b99-4503-acff-b81a7e7a276e",
+    "name": "FOSSIL",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "f0e43f22-ffeb-450a-a2a7-023a48716243",
+    "name": "FRITO FRIES",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "107ffbec-f773-4f33-a47a-7807f41b14fc",
+    "name": "GAME XTREME",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "9799de4c-11cd-4af9-afbe-54d9d09a408f",
+    "name": "GAMELINE",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "5462571a-27a2-4190-ad5b-c1828cc8af66",
+    "name": "GAMES & GADGETS",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "90aa9308-1eaf-4865-ab03-ddf42c3f0dcd",
+    "name": "GAMING GROUNDS",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "4a544686-abc6-45f2-8c98-5d1f5d423320",
+    "name": "Garmin",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "30af3a67-bc5a-4f3f-abfd-eef898743cdc",
+    "name": "GENEVIEVE GOZUM",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "1f7c2817-9cb8-434b-ae7a-77e63984175d",
+    "name": "GEORGE OPTICAL",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "55bc3091-59e4-44d8-a0f2-47583201b3b5",
+    "name": "GERRY'S RESTAURANT",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "dfd57bb0-94ea-4488-aba6-238ca2e140b9",
+    "name": "GIGAHERTZ COMPUTER SYSTEM",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "c9a1ba45-cb07-48a6-a456-a8f2bc1ca399",
+    "name": "GILIGAN'S RESTAURANT",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "2c972c60-8264-4fd6-a418-97acc3b4a756",
+    "name": "GINGERSNAPS",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "47416ccf-3527-47a2-a197-6b57e4407959",
+    "name": "GIORDANO",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "7272f177-afbc-4da3-ab47-5d62b503b50e",
+    "name": "GLOBE",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "3dc5fff8-112b-4b18-b5e0-cc3bcaa722fe",
+    "name": "Globe / Smart / Dito Telecom",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "91361133-9b65-4088-a817-419412c540c8",
+    "name": "GOLD AND PEARLS",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "9be5ef74-d685-4c6e-abaf-97f6cb35e054",
+    "name": "GOLDEN HILLS JEWELRY",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "15698195-da7b-4f05-adb6-f2c8274e1689",
+    "name": "GOLDILOCKS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "1204ae9d-11f4-4fcd-abdd-8003e8045729",
+    "name": "GOLDSIGHT TELECOMS",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "749e2e0d-43f6-4d7c-afde-85ae541ee894",
+    "name": "GONG CHA",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "309495ff-b752-4909-a72c-f2fef06b4e1c",
+    "name": "GRANDAS SWEETS AND DELICACIES",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "3163f47f-2bf6-485b-adca-83b93e99d1e6",
+    "name": "GREAT IMAGE",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "9b451988-b722-41a2-a556-3edffd928792",
+    "name": "GREEN KITCHEN",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "a16c9ab5-8a7a-4716-a7ff-3a53663bbe5f",
+    "name": "GREEN PUFF",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "2fa9573c-98dc-4721-a2c3-6695f5c57df7",
+    "name": "GREENWICH",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "2f01d497-72cc-4d04-afe4-e3c8b91b8bb2",
+    "name": "GUBY'S CHICHARON ESPESYAL",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "a8d74eaf-d03f-4fbd-ab93-5ab44d90c4b9",
+    "name": "GUESS",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "d6c970c2-359b-45d3-a4d3-803e18a6e18e",
+    "name": "H&M",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "85456b63-ee87-4e58-ab2a-6f4ec4963170",
+    "name": "Handyman / DIY Hardware",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "83cb83f9-86e9-4a5c-a651-024a35d0058b",
+    "name": "Handyman Do it Best",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "5d094e18-95be-4b1e-a420-1c1e7faab02d",
+    "name": "HANNAH MARIELLES BAKES AND CAKES",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "f8d1f87b-f578-45c1-8d6c-f7d375fd2cb7",
+    "name": "Havaianas",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "3e28560e-7297-4612-af10-fb7a862450f7",
+    "name": "HEALTHY OPTIONS",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "8fcea279-8147-4541-aa69-466ba6d8a97c",
+    "name": "HEARTS ARROWS",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "173bdeaa-c7f4-402c-abdc-a0efce7702f8",
+    "name": "HEDGREN",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "5155994b-6ea9-46a9-a6aa-ba2e96f07c47",
+    "name": "HOLA",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "3a635137-fa2d-4ab7-83fa-333c85dd7f01",
+    "name": "Huawei",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "aa4999a1-d9cb-42dd-a0b8-e4771cf82956",
+    "name": "HUMAN",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "d5606fda-39f2-47c2-a035-93439694b019",
+    "name": "Hungry Asian",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "cc5f33cb-4cc6-4611-ac3c-1746c2300719",
+    "name": "HUSH PUPPIES",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "f86ee99d-7488-4561-a989-576389416b47",
+    "name": "HYDRO FLASK",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "320a1a1d-27bd-4654-a9e5-ead9591363d3",
+    "name": "I-WATCH STRAPS BATTERIES CENTER",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "4ca2d02a-d5b3-442f-a32c-b915c705eb32",
+    "name": "IAN DARCY",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "7da4f046-b00e-41b4-afc4-2a47a7403c1b",
+    "name": "IBOOK",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "1df1cac4-e753-45f7-a0d8-1f226855157c",
+    "name": "ICHIRORAIN CELLPHONE SHOP",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "928ebfcc-f3cc-4cd5-a2c4-2bf49b5d075e",
+    "name": "IDEAL VISION CENTER",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "52e95870-e9bc-420d-a04f-dab83e5c2faf",
+    "name": "IHAW JUAN",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "775377e0-9ed7-4738-a6fd-39962d0326ce",
+    "name": "IKABUD PAGKAING PINOY",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "0f92679a-3214-417d-a708-98a81d7025f0",
+    "name": "IMONO",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "6855f44b-84cf-43c8-a16a-bb67dc6c5361",
+    "name": "INBOX STORE",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "5bdf8da3-a9e5-4056-a585-db55fa16cc1e",
+    "name": "INFINIX",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "9d956685-c9c1-4070-a4d0-1bb731f6f172",
+    "name": "INNISFREE",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "c8d3a77b-27a9-4603-aedd-604f7f365bbc",
+    "name": "IQOS",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "f088bdc4-0501-4877-b01c-e441b54773c8",
+    "name": "Italianni's",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "120d17d5-3358-4093-aeac-063ca75100db",
+    "name": "J CO DONUTS COFFEE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "1650f237-ef12-4731-ac97-c9a8dff6451e",
+    "name": "J.CO Donuts",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "e6b0fd48-0a98-402b-a04b-a6aca13b6ecd",
+    "name": "J.CO Donuts & Coffee",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "8b43f6eb-9024-4502-a233-6fe695d38a53",
+    "name": "Jag",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "ff8f779c-7b4d-48e1-a4bf-df2eb1097e89",
+    "name": "JAMBA JUICE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "8968c25a-2c80-4788-aa55-d8337bb15277",
+    "name": "Japan Home Centre",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "4f900ea3-990c-4bc4-a63f-4f895228229b",
+    "name": "JD Store / Outlet Shops",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "6ac4b2d9-91c6-4dea-a646-14496728e603",
+    "name": "JOHNN LEMON",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "e068976b-9ae5-4f43-ac85-e008bab07b76",
+    "name": "JOHNSON FITNESS AND WELLNESS",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "6a08f0b2-1804-4c24-a9bf-9c1c63a699a6",
+    "name": "JOLLIBEE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "80243cfa-0109-4544-ada8-af89f500ea89",
+    "name": "JOYROOM",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "00176bb3-2fe7-402b-a07f-18ac9f96eba9",
+    "name": "JUST G",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "fcd1325b-dc27-46c9-aa4a-f4b82de18b44",
+    "name": "JVEETECH",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "8770bb6b-0fd1-462b-8fce-3e4e4627bdc4",
+    "name": "Kamaki Ramen Bar",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "365ab17b-9988-4525-a7f3-162e2ad11aaf",
+    "name": "KAMIR",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "a7e757a9-06eb-4c26-a307-e48ca8eaa571",
+    "name": "KARAT WORLD",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "97e10c46-de0c-4d86-b392-4ac644679454",
+    "name": "Karimadon",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "859c780a-f5fb-4f0e-a932-dd21950ca639",
+    "name": "KENNY ROGERS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "40b65a08-7630-4eca-99a6-65994d2a97ac",
+    "name": "Kenny Rogers Roasters",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "e5d83323-350b-4818-a476-2716e9732970",
+    "name": "KETTLE KORN",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "451eb45e-c6ed-496d-bd3c-80c65c7b6186",
+    "name": "KFC",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "30dc3f5c-22b6-4338-ae74-641e6a23ac8d",
+    "name": "KLGO",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "f8661719-aedf-479e-a4e4-28de507758c8",
+    "name": "Kowloon House",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "56f6f007-cdfe-42af-a28b-80c735723322",
+    "name": "KRISPY KREME",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "142c8dde-81e6-4771-a433-de8cf63af1da",
+    "name": "KUMORI JAPANESE BAKERY CAFE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "28da859c-c867-4463-afb2-6e47f20d47f2",
+    "name": "KUSINA MANYAMAN",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "1a844a71-f310-4a7f-a54e-dbe52167105e",
+    "name": "L TIME STUDIO",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "87712238-ae9c-4035-a4fa-3235d0721a12",
+    "name": "LA NILAD COFFEE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "e4ae6759-58d3-4d7d-ae52-a15c45964117",
+    "name": "LAC NUTRITION FOR LIFE",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "6de1acc8-5535-4f9f-ab0c-92e0bf18ee03",
+    "name": "LACTATION TREATS BY RCG",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "9455d92d-5001-4a35-a875-52f1a2fe260b",
+    "name": "LADY KARAT",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "a5832545-bf64-4cad-a0b6-d687c0998e18",
+    "name": "LAZER MUSIC",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "a8f64430-f964-41f0-ab0c-76d2f8288e76",
+    "name": "Lee",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "6be6d49d-5e8e-4c96-ac1c-4508726369d7",
+    "name": "LEGION",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "5e4e2dce-26a4-4a4c-84a5-488de646d9c4",
+    "name": "Lenovo",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "09a32cd1-27ec-4138-aae0-b4d2e0626a79",
+    "name": "Levi's",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "eff83f70-4d25-4a41-a9e3-86c9de5611e0",
+    "name": "LIGHTERS GALORE",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "79b0011a-aa00-4a73-a82e-2aa78f933903",
+    "name": "LLAO LLAO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "1d9ad9d0-9096-434d-a3ff-1bcf2dba5bf8",
+    "name": "Llaollao",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "f7c248cd-3dc3-4976-aa94-6f815b3a9094",
+    "name": "Lucia’s Recipe",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "41237b0b-31e8-4a39-a5ee-0c9bef4e6a1a",
+    "name": "LYRIC",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "dcc17cc1-73a6-4186-aadf-cff9ac530c1a",
+    "name": "MAC",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "ac25f405-75eb-4d1d-a7ee-f697cbaee6ec",
+    "name": "Makimura Ramen Bar",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "fbd13152-d4e4-4bd1-acda-2091b17cbfbe",
+    "name": "MALANNE",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "0a1400b0-96f0-4b77-a7aa-cb3c8ed31551",
+    "name": "MAMA LOUS ITALIAN KITCHEN",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "5ec25b6a-1a60-442c-a16e-e08fcaaf90a9",
+    "name": "MANG CHA-A",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "c712ddfd-85b6-4647-9325-1b2ab343e17a",
+    "name": "Mang Inasal",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "57f8993d-d08a-4a1a-a124-5f744e8b5767",
+    "name": "MANGO MANGO MAN",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "8e832f58-c9a6-4d7b-afb2-77f8ad695814",
+    "name": "MANGOTANGOS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "22083b48-da90-46dd-9d2d-0df99cc742dc",
+    "name": "Marugame Udon",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "ee1b3e84-5c3e-4b23-ac67-28e59bec1420",
+    "name": "MARUGAME UDON UDON TEMPURA",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "d1f0908b-056c-4520-a9f1-fc0a4fdd2391",
+    "name": "MARY GRACE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "3d199695-d12f-4e10-af15-5166ce4a073f",
+    "name": "MAXS RESTAURANT",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "1a72eaf8-c499-417d-abc0-5ad4e37e4891",
+    "name": "McDonald's",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "9b6b86cc-3eb7-4bdc-ab86-cdc2b9fefa59",
+    "name": "MENDREZ",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "aac08949-0092-4a54-a654-ec564107388a",
+    "name": "MESA FILIPINO MODERNE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "a1113c77-0e05-4236-a3d8-037b60bba465",
+    "name": "Metro Department Store",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "4ea024d2-5980-4093-ae34-090f7c65379d",
+    "name": "Metro Supermarket",
+    "category_id": "fc311f8d-9368-4f02-90b1-86aff3740dfb"
+  },
+  {
+    "id": "e44c7393-971f-4151-ac22-a876b87d13a6",
+    "name": "MI",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "bc53dbd8-53a1-41f1-a309-6e8dbf8f8d31",
+    "name": "MIA MAISON",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "9af16039-a155-4ea7-a20d-ef077bb6b462",
+    "name": "MILA'S TOKWAT BABOY",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "eb0d944f-4156-4067-acde-dcf70ae132de",
+    "name": "MILKO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "3916a04a-fd00-4042-a12c-907033a76898",
+    "name": "MINISO",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "b59f20f1-effb-40d5-aa92-1c7bc0770dcb",
+    "name": "MISTER DONUT",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "ef4278be-4676-47d1-afe1-3514d99afc37",
+    "name": "MISTER FROSTY",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "64cc94c9-e8c0-45aa-abe1-a22944419c0a",
+    "name": "MOBILE ARMORY",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "ce532e89-4895-4eab-ae6e-47076c44d016",
+    "name": "MODERN SHANG",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "bcab72d6-b053-48ee-a0ca-e14f2e758fa7",
+    "name": "MOSSIMO",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "3706eeeb-ac6e-4118-aab1-00a6e1c868ba",
+    "name": "MOSSIMO KIDS",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "e1fccfc4-2782-4987-a168-58df9a6f1d73",
+    "name": "MOTO",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "22f0cd3f-d783-4d4b-a970-c02785ed5218",
+    "name": "MOTOWORLD",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "c5635f89-becd-46d9-a5b0-034ac3352f20",
+    "name": "MR GINGER HEALTHY DETOX DRINKS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "c94d5d90-4e3a-4803-ab69-d8a7304c49b7",
+    "name": "MR SOFTY ICE CREAM",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "e8ebee1d-07e4-442e-a661-3778d7be4a17",
+    "name": "MR TACO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "c0567550-fb01-47db-ac80-2d07cc849bc2",
+    "name": "Mr. Lee",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "dfc7258d-a5a7-4fca-83ad-1e08a7211618",
+    "name": "MSI",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "2c37f5d5-51a8-486c-ad98-92b7c1d46585",
+    "name": "MUSTELA",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "13c420f6-fded-4e0f-ae58-c8b0dae23854",
+    "name": "MX MEMOXPRESS",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "0a2e489e-6309-47d1-872a-3a587b5f7222",
+    "name": "Nathaniel's Bakeshop",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "90930840-7538-4093-a171-2cbaaf9e7ddf",
+    "name": "NATHANIELS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "4fff8ba6-ae19-4772-8d04-4376aba7162b",
+    "name": "National Book Store",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "09ba34ce-d39f-437e-a633-37dfe20f8b7f",
+    "name": "NATIONAL BOOKSTORE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "23f17969-5d7d-4e50-a0b0-7d2ef96997dd",
+    "name": "Nature Republic",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "9a5b31b4-02cd-45a6-a9ec-a06fbf559453",
+    "name": "Nelson’s Bibingka",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "c326f0f3-2b7a-461f-98aa-4e9ada51d6ac",
+    "name": "Nepo Lane & Nepo Alley",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "88e7ad5d-3d47-427a-a91f-724dde17b7b2",
+    "name": "New Balance",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "3e15e6ce-787d-477b-aa00-96d42ce79824",
+    "name": "NEW ERA",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "a4d6ef5b-f0cf-40cd-a018-6f991547c92e",
+    "name": "NEW YORK SUPREME",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "4f3d4677-e170-464c-98fe-eca88256a9f7",
+    "name": "Nike",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "e5611375-e931-47b4-a43b-23880fbc7b2e",
+    "name": "Nike Stadium",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "9280129b-f9f4-4232-accd-f37fd49bfd0b",
+    "name": "NOKIA",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "bfd4996b-9215-4348-a5a0-49e9d00c920d",
+    "name": "North Park",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "19cba7ad-54c5-4b72-ae74-b8f0a6feb9a5",
+    "name": "NUTRITION DEPOT",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "31df8e5a-e661-4567-a128-690de0a5a09c",
+    "name": "OAKLEY",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "f8af9d48-3355-412d-aefa-f0e769628d60",
+    "name": "OCAMPOS JEWELRY",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "f3e8221c-3b57-4c6c-a64b-a55d187a1f39",
+    "name": "OCTAGON",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "7a491c49-58b8-4ccf-aa1f-16353da9b6a8",
+    "name": "Octagon Computer Superstore",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "f59fb5d7-684d-4bf1-a68d-13fd66e13cc3",
+    "name": "ODYSSEUS",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "e85c5b55-7368-439e-a129-839b1efba201",
+    "name": "OGAWA",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "3745db63-061f-4c1e-be9c-82fd0d5ed231",
+    "name": "Oppo",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "8ecf47ca-4e89-4afb-a944-7ef14fd3be4f",
+    "name": "OUR HOME",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "4a31b570-2723-4969-a669-1562c10b19b9",
+    "name": "OWNDAYS",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "a8e181ec-06ef-4e3a-adcc-c2963088c54c",
+    "name": "OXGN",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "8060928d-ddca-475c-a5c0-832fb517118b",
+    "name": "Oxygen (OXGN)",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "dd08cb67-4c94-4b47-a7ff-95439433f318",
+    "name": "PALLADIUM",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "399e53f4-581d-46d4-a6aa-ddfefface777",
+    "name": "PAN DE MANILA",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "16b90891-1e7c-4b1d-adcb-9c03c9517959",
+    "name": "PANDORA",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "4ca9e646-c48c-4d61-aaf5-d06bde0e5dd3",
+    "name": "PAPEMELROTI",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "8c0957db-f05a-4c6d-a81e-2d63f8417fc1",
+    "name": "PASSPORT FOODS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "eff1fde0-0af0-4dc5-a0f2-71779d4793b9",
+    "name": "PAYLESS SHOESOURCE",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "2fdd2806-3f38-4543-a480-5bdb497f8516",
+    "name": "PC EXPRESS",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "4cb50ab6-66b3-4fde-9cdb-167b19de54b9",
+    "name": "Penshoppe",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "1d1b99d9-16b5-4a69-af7c-34379007044e",
+    "name": "PENSHOPPE ACCESSORIES",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "16de7cce-fd76-4384-a079-66cc689bcfe6",
+    "name": "Pepper Lunch",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "f4486116-4d3a-4fa0-a2a3-9a7e3f8b3fc2",
+    "name": "PERGASSO",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "9d4b3d31-e21c-416c-a285-06b92b96e2c2",
+    "name": "PERSIAN AVENUE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "e712ea7d-3b81-4374-8f4d-cc77c8d88774",
+    "name": "Pet Express",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "001cf5d5-b3f9-4330-a75c-58d9523c0fbd",
+    "name": "Petrol",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "05b1d0c3-3755-456a-ab43-19a43f59d70b",
+    "name": "PHILIP STEIN TW STEEL WENGER LUMINOX",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "f6cf6ae9-5e31-4cb3-a041-391037ca190b",
+    "name": "PHO.CO",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "3e791689-41a3-41fa-af4c-c21a745400fd",
+    "name": "PHOTOLINE",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "cf871122-4c3f-41ad-a100-ece986f57648",
+    "name": "PICTURE CITY",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "9f361bc1-f5c6-4ccf-a140-a6ff9b79db3b",
+    "name": "PIZZA HUT",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "c27334f5-2201-4236-ad35-14360b500d0a",
+    "name": "PIZZARINA PIZZARAP",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "d071cd50-5313-4d9f-b3a3-19251b4c806a",
+    "name": "Plains & Prints",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "9dd3f803-70d6-44ec-a592-79dfdff0e07f",
+    "name": "PLDT SMART",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "258ad015-969f-41b3-aac3-cb89ec17e4ac",
+    "name": "POTATO CORNER",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "86a40379-e1b9-49c1-ae12-dd40f4c131d0",
+    "name": "Potpourri",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "0c7b496e-ecff-468e-a660-037347f05952",
+    "name": "Power Mac Center",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "a5e147a3-beb9-4014-a896-e2aa2e4d3d20",
+    "name": "PRESCRIPTO",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "f65382a8-8e0c-4939-a043-ec1ef2afb09d",
+    "name": "PRIME STEAK HOUSE - UNLIMITED IMPORTED STEAK",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "ba8934e7-a5c4-4e9c-a98c-faec8b6be33f",
+    "name": "PRO+ECH",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "7d53e18b-3634-4e89-a3be-c527752131d1",
+    "name": "PROGUARD",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "c92c427d-7112-4d22-a784-d13aab8a352c",
+    "name": "PURPLE PAD THAI",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "3d804ca2-2232-4279-a53f-5ee2e97a74e4",
+    "name": "QUIKSILVER",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "28441fb1-3f9f-4075-a7ee-129386696394",
+    "name": "RAMEN NAGI",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "4f3d5971-9f36-4bf6-afb4-3c9957d8ddde",
+    "name": "REALME",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "bea6b080-b88a-4bf2-a4fe-a4b605569bfd",
+    "name": "RED RIBBON",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "64327133-3b81-40fe-a785-2386b0f1b54a",
+    "name": "REDHEE GENTEXT TELECOM",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "35cf5284-c6d4-4866-a952-d900fd552bb1",
+    "name": "REDTECH",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "51b49f79-d75c-49bf-aeda-03be2792e66c",
+    "name": "REGATTA",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "05f2b311-254b-4f47-ae1e-9512ef443e0f",
+    "name": "RELX",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "b11b64eb-6845-4051-aa57-ab691aa0f8b3",
+    "name": "REMAX",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "7c8e845e-e9f3-40f4-ac46-65bf7cd4b9cf",
+    "name": "REPUBLIC OF GAMERS",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "8c98c8c1-96c7-4ab9-a7eb-78ce98faa3c8",
+    "name": "REYES BARBECUE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "96bc2606-02c2-4824-a00b-e3404b0a5d1a",
+    "name": "Robinsons Department Store",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "e310f372-8d44-45aa-9471-748903549c9d",
+    "name": "Robinsons Supermarket",
+    "category_id": "fc311f8d-9368-4f02-90b1-86aff3740dfb"
+  },
+  {
+    "id": "948206c9-006b-4d2c-ab5c-54941064f2c8",
+    "name": "ROBOT",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "32bf3e58-dfce-41ed-aeb2-187f81993c86",
+    "name": "ROMANTIC BABOY",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "a4312853-0115-43fc-ad99-7005ba1299d7",
+    "name": "RRJ",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "09d6ed91-a414-4d9d-a738-4641288848a2",
+    "name": "RULLS CELLPHONE AND ACCESSORIES",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "9b2ea009-542c-4db5-b7b1-cae35eb0647c",
+    "name": "S&R New York Style Pizza",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "d87f45e4-f9c1-4d87-a6a6-6a1448e6770c",
+    "name": "SAKURA RESTAURANT",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "f74a9353-e1f8-4ccf-adce-db3b9393d74c",
+    "name": "SAMGYEOPMASARAP",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "5ccc3140-3de5-48bf-a558-5cb935e397b7",
+    "name": "Samgyupsal King",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "7113443a-8400-416c-af84-a4562808d704",
+    "name": "Samgyupsalamat",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "75deda35-393a-48f7-af09-02863bc0c6bb",
+    "name": "SAMSONITE",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "99d4dcfd-cb2d-4ce7-a29e-374fcdbcbd34",
+    "name": "Samsung",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "c199e773-1936-486d-a6af-0b7c33921581",
+    "name": "SANTINO'S SUPREME SLICE PIZZA",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "b7af892b-39f0-4ce0-afc6-813ec26a1f20",
+    "name": "SANTOUKA",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "750b70ed-5a22-4653-ae76-823690eb2ff3",
+    "name": "SASMUAN DELICACIES",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "a19b3d8f-5623-4c61-ab60-26f6306f733d",
+    "name": "SBARRO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "fee926b2-710d-43b7-a81a-738c67838d26",
+    "name": "SCENT STATION",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "373f1825-9c46-4762-a8b9-2eec80248265",
+    "name": "SERENITEA",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "b810d196-e992-4209-a289-3dfd9f1bdba5",
+    "name": "Shakey's",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "57a760bb-e560-402a-aee3-befdae86a4f7",
+    "name": "SHAWARMA SHACK",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "e2d74439-94b8-467b-a1ed-96cef333ac3a",
+    "name": "SHOWCASE CARPET",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "5d5913d8-c3f4-4c2e-ae90-dfa6bd94c1f0",
+    "name": "SILICON VALLEY",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "bb04b62b-eb63-4aea-ac1d-904bbe836812",
+    "name": "SILVER WINGS",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "6c28f6e7-2a60-4d86-acd9-792c2001e5fc",
+    "name": "SILVERWORKS",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "46b58a6d-7388-4125-a76b-5cab50df84b0",
+    "name": "SIOMAI HOUSE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "c0298e15-a520-4e23-a69b-b4734cafaa9d",
+    "name": "SIZZLING PLATE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "2f21cdb2-a4a5-4ba9-a78f-dd37f97c5806",
+    "name": "Skechers",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "fc1f5a7e-15b1-4bcc-ab76-a912062aa4e6",
+    "name": "SKIN STATION",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "82107a3a-063d-41ba-ad3a-14bc4a092903",
+    "name": "SM APPLIANCE CENTER",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "f09ef798-8ff0-452c-a21b-6a55f8bb9040",
+    "name": "SM CINEMA SNACKBAR",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "dceac4b6-78c1-40fb-a533-f3f9b4142a4f",
+    "name": "SM CINEMA SNACKBAR IMAX",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "8ad847e9-c0d2-4b75-a368-84e096b8d076",
+    "name": "SM FOODCOURT",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "0cc6b98f-ac47-4904-a3b1-636ca0bb8b6c",
+    "name": "SM HYPERMARKET",
+    "category_id": "fc311f8d-9368-4f02-90b1-86aff3740dfb"
+  },
+  {
+    "id": "2684a786-1d49-4f00-8e66-9753b09e2f2e",
+    "name": "SM Store",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "afd331f2-7b58-4ae2-8269-f6db3dc19470",
+    "name": "SM Supermarket",
+    "category_id": "fc311f8d-9368-4f02-90b1-86aff3740dfb"
+  },
+  {
+    "id": "d0c420eb-9ae7-405c-aedb-b7972f18e30c",
+    "name": "SO FAB",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "611e81ce-e6ce-4a49-a089-fbda3d6368f2",
+    "name": "Sole Avenue PH",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "df57acf2-3af6-4289-ac7c-ad3c0a1a6ef9",
+    "name": "SOLIMAN PAROLI EYE CARE",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "a98b7296-2c55-4e12-8aea-932fb4dac1cf",
+    "name": "Sony",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "cc03d32d-d281-48f6-a155-b2468ffba998",
+    "name": "Southstar Drug",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "19432cda-3ef6-47d0-8034-46e712e2d5b5",
+    "name": "Sperry Top-Sider",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "657286d9-f7e8-42d3-aae2-0286e9cea030",
+    "name": "SPIGEN",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "c45e6e5b-484a-4b2d-ac9f-01e84b031303",
+    "name": "SPORTSHOUSE",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "9bee9c14-b31b-480f-ad21-dd1c70f0274b",
+    "name": "SPRINTO",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "7eb677ca-a415-4e26-a6f2-994db0260a40",
+    "name": "SPYDER",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "12e02031-8eb1-4d89-9f30-a01cac11164a",
+    "name": "Starbucks",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "ce56e3f9-6f55-42fb-a0e3-8b08d84b2fde",
+    "name": "STARBUCKS COFFEE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "87da0cfe-1998-423e-afcc-e5e11d9a046d",
+    "name": "STARFINDER OPTICAL",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "0d5671f5-7cbb-49b6-8160-524b42dd6e3b",
+    "name": "Subway",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "dcbbfed3-d6ad-499a-a815-3060f2dfc14f",
+    "name": "SUMO NIKU UNLIMITED JAPANESE BARBEQUE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "d239b00a-9f5c-4eb8-96d1-11b0f0fe24e7",
+    "name": "Sumoniku Unlimited Japanese Barbeque",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "b1fc1796-da10-4529-a407-e46be890283c",
+    "name": "SUNNIES BY CHARLIE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "eeaefd0b-fc37-434a-abd7-60991902f542",
+    "name": "SUNNIES STUDIOS",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "b4a44c9e-58b9-4135-a141-4034b9d4a69e",
+    "name": "SURPLUS SHOP",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "067103ce-61ef-46f3-a079-70a9eb81013f",
+    "name": "SUSHI BAR BY JIRO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "d75be8e1-f4ca-4014-a33d-dbbd4a345fc5",
+    "name": "SUSIES CUISINE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "4d2cfed8-22f8-4ee5-af6b-780154233156",
+    "name": "SWEET BITES",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "108e848b-bc69-4f8e-a362-9eeab82f41b7",
+    "name": "SWEET N' FANCY",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "e835a912-22bd-4262-a941-90ba079f74c5",
+    "name": "TAQUERIA CHUPACABRA",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "5c616fda-b720-47c4-a6d1-2424db95deb5",
+    "name": "TATERS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "9a405feb-7cca-4b6d-ab2b-7306151e0518",
+    "name": "TECHKNOW",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "7f3a6deb-cd84-446f-a154-c7349feba864",
+    "name": "TECHNO KID",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "63b20c7e-65aa-4e8c-a0f9-31b0d12b0402",
+    "name": "TECNO",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "b729981a-82ed-4011-a76f-bfee0a9df4c3",
+    "name": "TEPPANYA BAR RESTO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "31b98ee7-2c31-4476-a3e3-f0e8a95cb807",
+    "name": "TERRANOVA",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "b9936c64-5392-42ca-a959-c2a052038e29",
+    "name": "Texas Roadhouse",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "2088270e-3b1b-416c-99b3-346ef76037e1",
+    "name": "TGI Fridays",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "d71927e9-b2d7-42d0-a99e-4ed84cce13c9",
+    "name": "TGIFRIDAYS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "1ec24e4d-1525-4ce4-a9fe-6f6d5fabcfaa",
+    "name": "The Athlete's Foot",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "fa8822c5-5afa-40ff-a496-40418e923c28",
+    "name": "THE BODY SHOP",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "9928ffbb-587c-457a-a04d-4c81830c34ad",
+    "name": "The Coffee Bean & Tea Leaf",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "3c125dc6-eefa-4de5-aa0a-c8112d2b8bc8",
+    "name": "THE COFFEE BEAN TEA LEAF",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "ba2449d4-37ff-4ff7-afaf-f71fbbcc99b8",
+    "name": "THE FACE SHOP",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "56245f78-c1dd-4c35-a1b9-a7f8311d5464",
+    "name": "THE FRENCH BAKER",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "26c3d947-00fb-4973-a89e-fd76e5dbca0b",
+    "name": "The Generics Pharmacy",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "d538659d-4efc-4f99-a7c7-c4029d46a1dd",
+    "name": "THE GOOD STEWARD",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "e7b20e30-786b-4da7-a4fe-33efd8bd0f45",
+    "name": "THE HEALTH SHOP",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "10bcda68-7fe8-400d-acfb-e22366424a83",
+    "name": "THE TRAVEL CLUB",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "059f8278-a11d-435c-ae1c-cd3132074109",
+    "name": "THEOS FLOWER SHOP",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "012590a8-e4c9-47e1-ab65-ac48b3700743",
+    "name": "TICKLES",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "db3fae38-e330-44d1-8101-5c2a3591064b",
+    "name": "Tim Hortons",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "a0e84755-4e94-4c72-a68f-bde6b6748c8b",
+    "name": "TOKYO TEMPURA",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "57cba17d-8947-4284-a350-d19a9a9a9e7e",
+    "name": "TOKYO TOKYO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "11d500c7-09b1-4569-afaf-6b50ab4974f6",
+    "name": "TOLL HOUSE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "2f331085-8529-4621-a4e8-822a8fa8670a",
+    "name": "Tom N Toms Coffee",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "ccfe32d0-ee90-4ca6-a411-a03ddf4bcced",
+    "name": "Tommy Hilfiger",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "e80801fb-2167-463e-af2d-f2372e866966",
+    "name": "TOTOBITS STREAT FOOD STALL",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "2a4f4888-55c7-4978-9bc7-f0dd36c76304",
+    "name": "Toys \"R\" Us",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "705b7e49-6cef-4d93-acd1-b55d2d87667f",
+    "name": "TRIBAL GEAR",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "2ccf552b-2d08-486c-a396-47e0d03ce8c0",
+    "name": "TROPICS SALAD DELIGHTS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "10dc5e95-52e5-45a3-b2bd-bcc3a0b09d08",
+    "name": "True Value",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "01b5fb04-b2d9-4f14-a053-98e2206861be",
+    "name": "TSUJIRI",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "f4bd62ee-0e6f-4aa7-ac5f-03dd26501043",
+    "name": "TURKS SHAWARMA",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "1d3ee282-b6d7-481a-ac7b-b71d37611552",
+    "name": "Uniqlo",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "68f21e91-3cd0-4a6f-ae1a-e1677f601777",
+    "name": "UNISILVER",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "2a9619bd-04eb-4dc3-a462-b74559e01d49",
+    "name": "UNISILVER TIME",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "1cd4b440-66fc-4608-b072-0ed8992f4a1d",
+    "name": "Vans",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "6ae4dccf-fbd8-4056-a035-1ae819cd3645",
+    "name": "VAPE KING",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "e805470c-c285-439d-af96-585700037a21",
+    "name": "VERDE BY VILLAROSA",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "c53a7a54-a0a8-45a4-acdc-27660b99b249",
+    "name": "VICE CO",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "12080b36-9a95-4ff2-ab1b-87499641040f",
+    "name": "VILLAROSA CREATIONS",
+    "category_id": "6c56821c-70f6-442c-9573-dacf226ada2e"
+  },
+  {
+    "id": "970183a3-36c9-4eb1-ad52-a8461d72ece8",
+    "name": "VIONIC",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "bf4401be-d024-49c4-a8ef-f02cd37b14b9",
+    "name": "VISION EXPRESS",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "c74b6b3a-3a43-4ac8-a16b-ba447a83152b",
+    "name": "VIVO",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "841117bd-36d4-48b8-ab3a-0e2a66d2af6b",
+    "name": "VIZCOS CAKE SHOP",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "e30ff13b-d738-4011-ac35-4cbf1d3f38d4",
+    "name": "WATAMI JAPANESE RESTAURANT",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "e5989da2-bba5-46ab-adbd-188e1733d717",
+    "name": "WATCH REPUBLIC",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "6e77e510-723a-460f-816a-2d3c2512b87a",
+    "name": "Watsons",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "14638a8f-1947-41b1-aadb-5a0c844d7ded",
+    "name": "WELLNESSFIX",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "d8414d60-5709-497a-a878-74445d566bc3",
+    "name": "WENDYS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "c85d63dd-0824-44d9-a2f6-142d3aa820d7",
+    "name": "WING ZONE",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "05ec9028-1925-4ef9-9902-36dee1e09d2d",
+    "name": "World Balance",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "f0293adf-53f9-47c5-a543-6a8d1dcd6e63",
+    "name": "Xiaomi",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "930155b9-de9a-4540-ac4f-958a66e0acfe",
+    "name": "XO",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "4b5ee8cc-712e-4d48-a18b-eac57cfe3487",
+    "name": "XTREMELY XPRESSO",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "f6e36c42-a3d9-4ac7-a783-a7ef9e5e7bf5",
+    "name": "Yakimix",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "80c9b86d-45d0-4277-ac39-f6ac3c3f7b92",
+    "name": "YAMANG BUKID",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "d875f084-f6a0-4166-adac-dedf16caa61b",
+    "name": "YELLOW CAB",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "5bc814a0-7fcd-45f0-a790-108089c3b229",
+    "name": "Yo! Shabu Shabu",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "c93f240f-0b4b-4f40-aeaa-e52b0b282382",
+    "name": "YOI YOI TEI",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "50991971-6ff5-4b63-911b-4cca0b90eb9c",
+    "name": "Zara",
+    "category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3"
+  },
+  {
+    "id": "908706c5-6183-45d0-adc4-74eca9d64fbf",
+    "name": "ZARKS BURGERS",
+    "category_id": "a224d118-7372-4b83-8d2e-f543141d484e"
+  },
+  {
+    "id": "850b1082-a342-4631-af5b-e9dddc116423",
+    "name": "ZEN ZEST",
+    "category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556"
+  },
+  {
+    "id": "66d71f69-5c93-49be-a98f-63656848c204",
+    "name": "ZENCELL CELLPHONE ACCESSORIES",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  },
+  {
+    "id": "ea94c2d8-3f4a-4f0f-a507-27b7e530f252",
+    "name": "ZGA",
+    "category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30"
+  }
+]

@@ -1,0 +1,5400 @@
+[
+  {
+    "shop_id": "4bf75d31-7a00-4af5-ac20-a9eb04ca1e2c",
+    "shop_name": "158 Designers’ Boulevard",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Designer evening gown",
+      "Leather crossbody bag",
+      "Silk scarf",
+      "Designer sunglasses"
+    ]
+  },
+  {
+    "shop_id": "cba24585-80e8-42a8-ae63-4a5012fccdc0",
+    "shop_name": "24 Chicken",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "24 Signature boneless chicken",
+      "Yangneom chicken with cheese",
+      "Snow cheese tenders",
+      "Kimchi fried rice"
+    ]
+  },
+  {
+    "shop_id": "a8314b1c-93cb-4055-acbb-18fa54a2e5e4",
+    "shop_name": "7-ELEVEN",
+    "shop_category_id": "fc311f8d-9368-4f02-90b1-86aff3740dfb",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Big Bite hotdog",
+      "City Cafe iced coffee",
+      "Gulp soft drink",
+      "Pork sisig rice meal",
+      "Slurpee"
+    ]
+  },
+  {
+    "shop_id": "fd383064-d43d-472f-9671-4cf7d5037517",
+    "shop_name": "Abenson",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Inverter split air conditioner",
+      "55-inch 4K UHD Smart TV",
+      "Top-load washing machine",
+      "Inverter refrigerator",
+      "Microwave oven"
+    ]
+  },
+  {
+    "shop_id": "e39fe99f-29b0-4bd0-91bb-2d37c2fa3b2a",
+    "shop_name": "Ace Hardware",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Cordless 18V power drill",
+      "LED floodlight",
+      "Heavy duty padlock",
+      "Multi-tier shelving unit",
+      "Exterior acrylic latex paint"
+    ]
+  },
+  {
+    "shop_id": "29529637-996d-49f7-8025-0baaea3cd95f",
+    "shop_name": "Acer",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Predator Helios gaming laptop",
+      "Nitro V 15 laptop",
+      "Swift Go ultrabook",
+      "27-inch 165Hz gaming monitor",
+      "Wireless optical mouse"
+    ]
+  },
+  {
+    "shop_id": "c4353999-9342-4a87-ad35-aff5c73ded74",
+    "shop_name": "ACQUA SUISSE PERFUME BAR",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Eau de Parfum 50ml",
+      "Pocket perfume spray",
+      "Long-lasting fragrance mist",
+      "Car diffuser scent"
+    ]
+  },
+  {
+    "shop_id": "83399268-98bc-44a2-82f0-fc4a4bc33323",
+    "shop_name": "Adidas",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Ultraboost light running shoes",
+      "Samba OG sneakers",
+      "Stan Smith classic shoes",
+      "Tiro tracksuit pants",
+      "Trefoil graphic t-shirt"
+    ]
+  },
+  {
+    "shop_id": "604ea275-9311-416b-ac97-508e54bf2a76",
+    "shop_name": "AFICIONADO",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "F2 German cologne 60ml",
+      "F10 body mist",
+      "Perfumed moisturizing lotion",
+      "Pocket cologne spray"
+    ]
+  },
+  {
+    "shop_id": "c8803f4b-64dc-4c95-abc4-e6626a612591",
+    "shop_name": "ALFAMART",
+    "shop_category_id": "fc311f8d-9368-4f02-90b1-86aff3740dfb",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Ready-to-eat chicken rice bowl",
+      "Fresh brown eggs 10s",
+      "Pure canola cooking oil 1L",
+      "Bottled purified drinking water"
+    ]
+  },
+  {
+    "shop_id": "44027f85-abc4-49b7-ab0c-cef7a1058e6f",
+    "shop_name": "ALIBABA",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Tempered glass screen protector",
+      "Fast charging USB-C cable",
+      "Heavy duty phone casing",
+      "Universal car mount"
+    ]
+  },
+  {
+    "shop_id": "1538e22f-962a-43e7-a719-4584b9b01cf5",
+    "shop_name": "ALL ABOUT BAKING",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "All-purpose baking flour 1kg",
+      "Dark chocolate compound drops",
+      "Silicone baking muffin molds",
+      "Electric hand mixer",
+      "Vanilla extract 100ml"
+    ]
+  },
+  {
+    "shop_id": "ce1551bf-0cfd-4055-ac66-4deea530e358",
+    "shop_name": "An Original Penguin by Munsingwear",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Classic Earl polo shirt",
+      "Slim fit chino shorts",
+      "Cotton graphic tee",
+      "Heritage windbreaker jacket"
+    ]
+  },
+  {
+    "shop_id": "824b2b1c-7b1a-4f7d-a853-24004db14818",
+    "shop_name": "ANELLO",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Classic mouth-wire backpack",
+      "Water-repellent crossbody bag",
+      "Two-way mini boston bag",
+      "Canvas shoulder tote"
+    ]
+  },
+  {
+    "shop_id": "44dfe973-0a27-4adb-af95-0824cc448799",
+    "shop_name": "ANKER",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "PowerCore 20000mAh power bank",
+      "Soundcore 2 Bluetooth speaker",
+      "PowerPort 65W GaN wall charger",
+      "PowerLine braided USB-C cable"
+    ]
+  },
+  {
+    "shop_id": "2d384fb7-dcd0-4917-a556-80bb85ef2d54",
+    "shop_name": "APPE THAI-ZING",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Traditional Pad Thai noodles",
+      "Spicy Tom Yum Goong soup",
+      "Thai iced milk tea",
+      "Sweet mango sticky rice"
+    ]
+  },
+  {
+    "shop_id": "2dde01db-4c81-4ee3-a480-d8ca3e4813c9",
+    "shop_name": "AQUA MINERAL",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Dead Sea exfoliating facial scrub",
+      "Gold collagen facial serum",
+      "Body butter with Dead Sea minerals",
+      "Dead Sea bath salts"
+    ]
+  },
+  {
+    "shop_id": "ed80c835-3dac-4d20-a81a-7a0ef3ba9702",
+    "shop_name": "AQUAFLASK",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "32oz Insulated stainless steel bottle",
+      "40oz Wide mouth tumbler",
+      "Silicone protective boot",
+      "Replacement straw spout lid"
+    ]
+  },
+  {
+    "shop_id": "67143114-ce50-4a65-a099-82fad93dc9ed",
+    "shop_name": "Armando's Pizza",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Armando's special thin-crust pizza",
+      "Four-cheese gourmet pizza",
+      "Classic spaghetti Bolognese",
+      "Crispy garlic breadsticks"
+    ]
+  },
+  {
+    "shop_id": "c1ca1082-698a-4f33-adf5-004b39e0be41",
+    "shop_name": "ARMY NAVY BURGER BURRITO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Classic double burger",
+      "Bully Boy triple burger",
+      "Steak burrito with salsa",
+      "Fearless fried chicken",
+      "Freedom fries with seasoning"
+    ]
+  },
+  {
+    "shop_id": "50fefde8-d694-4932-adfa-3184d15944ce",
+    "shop_name": "ARROW",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Wrinkle-free dress shirt",
+      "Tailored fit formal trousers",
+      "Silk necktie",
+      "Reversible genuine leather belt"
+    ]
+  },
+  {
+    "shop_id": "82366fb9-3c54-4589-aaf4-db4175046eed",
+    "shop_name": "ARTWORK",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Graphic design cotton t-shirt",
+      "Printed canvas tote bag",
+      "Collector graphic pins & patches",
+      "Creative illustrated notebook"
+    ]
+  },
+  {
+    "shop_id": "1788cad6-90c1-4f9c-a2e2-93fd7ab8eae2",
+    "shop_name": "ASIANIC",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Mechanical RGB gaming keyboard",
+      "PC ATX power supply 650W",
+      "Thermal compound paste",
+      "High-performance CPU air cooler"
+    ]
+  },
+  {
+    "shop_id": "ad72b37e-89e5-4210-a834-7c0e4030f6c3",
+    "shop_name": "ASPREY TIME",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Classic analog leather wristwatch",
+      "Stainless steel mesh watch band",
+      "Watch battery replacement service",
+      "Sports chronograph watch"
+    ]
+  },
+  {
+    "shop_id": "de675e0e-13e7-4220-a451-47be9cfa896e",
+    "shop_name": "ASUS",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "ROG Strix G16 gaming laptop",
+      "ZenBook 14 OLED ultraportable",
+      "TUF Gaming GeForce graphics card",
+      "Wi-Fi 6 dual-band gaming router"
+    ]
+  },
+  {
+    "shop_id": "7b567f64-e8d0-434e-a88e-62a1271ede42",
+    "shop_name": "AUDIONET",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Home theater speaker system",
+      "Karaoke mixing amplifier",
+      "Dual UHF wireless microphones",
+      "Bluetooth soundbar with subwoofer"
+    ]
+  },
+  {
+    "shop_id": "af4c2a98-04b8-4669-af88-fc092d24b946",
+    "shop_name": "Auntie Anne's",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Cinnamon sugar pretzel",
+      "Pretzel dog with cheese",
+      "Almond cream cheese stix",
+      "Freshly squeezed lemonade"
+    ]
+  },
+  {
+    "shop_id": "a2b3ea61-b201-4ae2-a5fe-93b11c39aa14",
+    "shop_name": "AVOCADO LOCCO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature avocado shake with tapioca pearls",
+      "Avocado soft-serve ice cream cup",
+      "Avocado graham dessert bowl"
+    ]
+  },
+  {
+    "shop_id": "52e8a120-33ef-4554-ae69-ab9c60f38b66",
+    "shop_name": "AWEI",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "TWS Bluetooth wireless earbuds",
+      "Neckband sports earphones",
+      "Fast charging magnetic cable",
+      "Portable mini Bluetooth speaker"
+    ]
+  },
+  {
+    "shop_id": "9057c3cb-64fc-4267-abaf-9b69a6101b8d",
+    "shop_name": "BABOTS FRUITAS FARM",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Fresh carabao mango shake",
+      "Mixed berries smoothie",
+      "Fresh chilled coconut water"
+    ]
+  },
+  {
+    "shop_id": "fbe03c96-9e79-4dcb-a936-8f93de836cae",
+    "shop_name": "BACOLOD CHICKEN INASAL",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Inasal Paa (chicken leg quarter)",
+      "Inasal Pecho (chicken breast with wing)",
+      "Authentic chicken oil bottle",
+      "Garlic rice bowl"
+    ]
+  },
+  {
+    "shop_id": "567ad5ad-b59d-40d3-aa8c-5d3f48ce582f",
+    "shop_name": "BANH MI KITCHEN",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Traditional pork Vietnamese banh mi",
+      "Lemongrass chicken banh mi",
+      "Vietnamese iced coffee Ca Phe Sua Da"
+    ]
+  },
+  {
+    "shop_id": "89ec49cc-eedd-4981-ae49-8c276245f3c0",
+    "shop_name": "BAREFRUIT GUYABANO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Pure Guyabano juice extract",
+      "Guyabano smoothie with chia seeds",
+      "All-natural Guyabano tea concentrate"
+    ]
+  },
+  {
+    "shop_id": "27343bd1-55b0-48a3-aa00-6435f23ba884",
+    "shop_name": "Baseus",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "65W GaN fast wall charger",
+      "Magnetic car phone mount",
+      "8-in-1 USB-C multi-port hub",
+      "Retractable 3-in-1 charging cable"
+    ]
+  },
+  {
+    "shop_id": "02d4be19-78ff-43d6-ae2d-6f9648b9608a",
+    "shop_name": "Bath & Body Works",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Japanese Cherry Blossom fragrance mist",
+      "3-Wick scented soy candle",
+      "Foaming antibacterial hand soap",
+      "Ultra Shea 24-hour body cream"
+    ]
+  },
+  {
+    "shop_id": "4c8d05ae-b767-4f94-ad7b-85d48cc2f2e4",
+    "shop_name": "BAVIN",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "MagSafe wireless power bank 10000mAh",
+      "Braided fast charging Type-C cable",
+      "Dual USB car charger adapter",
+      "In-ear stereo earphones"
+    ]
+  },
+  {
+    "shop_id": "f670e6ae-b33b-4301-a3c2-6029bb262bc4",
+    "shop_name": "BAYO",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Linen blend blazer",
+      "Floral midi wrap dress",
+      "Tailored work trousers",
+      "Sleeveless ruffled blouse"
+    ]
+  },
+  {
+    "shop_id": "cbbdd9e3-3408-4794-a501-445b7481fa40",
+    "shop_name": "BBB CAR STICKERS",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Reflective vinyl car decals",
+      "Custom frosted glass stickers",
+      "Waterproof automotive stickers"
+    ]
+  },
+  {
+    "shop_id": "cbabecaa-3416-469a-ad25-99c5f8c161f3",
+    "shop_name": "BEAUCHE INTERNATIONAL",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Clarifying facial soap bar",
+      "Skin toning lotion",
+      "Age-erasing cream",
+      "Exfoliating cream"
+    ]
+  },
+  {
+    "shop_id": "5f9c0518-3eb2-41b8-a161-087aa40a5328",
+    "shop_name": "BEAUTEDERM",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Papaya whitening soap",
+      "Day and night facial cream set",
+      "Day wear SPF 50 sunscreen",
+      "Purifying facial toner"
+    ]
+  },
+  {
+    "shop_id": "a5265624-908e-45dc-a0d8-b1a30717965d",
+    "shop_name": "BENCH",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Her/His signature daily body scent",
+      "Bench basic crew neck t-shirt",
+      "Fix professional styling hair wax",
+      "Denim jeans slim fit"
+    ]
+  },
+  {
+    "shop_id": "524677ae-b21c-4613-a57d-55eda29636e2",
+    "shop_name": "BENCH ACTIVE",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Breathable workout t-shirt",
+      "High-waist athletic leggings",
+      "Moisture-wicking sports bra",
+      "Gym training shorts"
+    ]
+  },
+  {
+    "shop_id": "bab1596f-f4e0-45b5-a794-9713969c356c",
+    "shop_name": "BETTYS NATIVE CAKE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Native bibingka with salted egg",
+      "Cassava cake with macapuno",
+      "Puto bumbong with grated coconut"
+    ]
+  },
+  {
+    "shop_id": "27ddd579-e6b6-491b-ac5f-3e8e98339650",
+    "shop_name": "BIBINGKINITAN",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Mini baked bibingka 6-pack",
+      "Bibingka with cheese & salted egg",
+      "Kapeng Barako hot brew"
+    ]
+  },
+  {
+    "shop_id": "b50cd1e6-c265-4567-abdb-c355de23358b",
+    "shop_name": "Big Bob Burger",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Big Bob double cheeseburger",
+      "Bacon mushroom Swiss burger",
+      "Crispy onion rings basket",
+      "Thick chocolate milkshake"
+    ]
+  },
+  {
+    "shop_id": "4c22ba15-1f5d-42f5-acad-4baf2441c952",
+    "shop_name": "Binalot",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Binalot adobo rice wrapped in banana leaf",
+      "Tapa meal with salted egg and tomato",
+      "Inihaw na liempo meal",
+      "Sago't gulaman drink"
+    ]
+  },
+  {
+    "shop_id": "ea57a66c-f845-468d-aa21-9f43978858f3",
+    "shop_name": "BISEN",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Smart fast mobile charger",
+      "Heavy duty braided lightning cable",
+      "Universal 360-degree car mount"
+    ]
+  },
+  {
+    "shop_id": "b82f53f2-cd53-40d2-a654-351ad85218ae",
+    "shop_name": "BLK 513",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Dark skim activated charcoal frozen yogurt",
+      "Froyo cup with fruit sauce & granola",
+      "Activated charcoal vegan cookie"
+    ]
+  },
+  {
+    "shop_id": "290ff33f-16da-4b71-a490-3823262bb81a",
+    "shop_name": "BLK COSMETICS",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Soft matte mousse lipstick",
+      "Airy matte tint",
+      "Daydream tinted sunscreen SPF 50",
+      "Dual-ended brow pencil & brush"
+    ]
+  },
+  {
+    "shop_id": "764956a4-2ff9-4c48-ab26-31dc5c6981b3",
+    "shop_name": "BLUE MAGIC",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "e4da1382-4917-4a72-8441-19cbc589426f",
+    "products": [
+      "Plush stuffed teddy bear",
+      "Heart-shaped novelty pillow",
+      "Soft animal plushie",
+      "Greeting card & gift bag"
+    ]
+  },
+  {
+    "shop_id": "f4b53d5c-19e7-4053-acfd-c7b5c44889ab",
+    "shop_name": "Bobson",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Relaxed fit denim jeans",
+      "Denim trucker jacket",
+      "Basic cotton polo shirt",
+      "Canvas utility belt"
+    ]
+  },
+  {
+    "shop_id": "13d4fb8e-26b1-4862-a544-496a6bea256c",
+    "shop_name": "BONCHON",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Soy garlic glazed chicken wings",
+      "Spicy Korean fried chicken",
+      "Beef bulgogi rice bowl",
+      "Korean bibimbap with egg"
+    ]
+  },
+  {
+    "shop_id": "713d44f3-9891-4075-a9da-8db2229964fc",
+    "shop_name": "BOTEJYU",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Original okonomiyaki Osaka style",
+      "Pork yakisoba stir-fried noodles",
+      "Tonkotsu pork ramen",
+      "Crispy takoyaki 6pcs"
+    ]
+  },
+  {
+    "shop_id": "d5514d28-9556-415b-a4cc-cadfe92b0855",
+    "shop_name": "BREADTALK",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Flosss pork floss bun",
+      "Fire Flosss spicy bun",
+      "Spring in the City bun",
+      "Earthquake cheese loaf"
+    ]
+  },
+  {
+    "shop_id": "604a0cbb-c1b7-4057-ab44-08ef771ebc23",
+    "shop_name": "BROWNIES UNLIMITED",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Fudge brownies box of 6",
+      "Walnut swirl brownie",
+      "Chocoholic brownie bar",
+      "Chocolate chip brownie cookies"
+    ]
+  },
+  {
+    "shop_id": "3db0fdf3-19d4-403c-adfa-a52d19503eee",
+    "shop_name": "BSD INTERNATIONAL",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Computer replacement battery",
+      "Universal laptop charger 90W",
+      "External optical drive",
+      "Replacement laptop keyboard"
+    ]
+  },
+  {
+    "shop_id": "30b408bf-2092-4e01-ad0c-db5cec88c3d6",
+    "shop_name": "BUFFALO'S WINGS N' THINGS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "12-pc Buffalo wings with blue cheese",
+      "Champion buffalo tenders",
+      "Crispy dirty rice",
+      "Jalapeno cheese dip"
+    ]
+  },
+  {
+    "shop_id": "59ddc7d5-1973-441f-bb24-d9dc55a08d8c",
+    "shop_name": "Buffet 101",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Weekend dinner buffet pass",
+      "Unlimited sashimi and sushi",
+      "Carving station roast beef",
+      "Free-flowing draft beer"
+    ]
+  },
+  {
+    "shop_id": "07854346-632d-48e0-a3c6-7955a002460c",
+    "shop_name": "BUKO EXPRESS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Pure fresh buko juice bottle",
+      "Buko pandan jelly shake",
+      "Chilled buko with milk"
+    ]
+  },
+  {
+    "shop_id": "ffba93d7-1764-4587-a7ec-a185d92ae6c2",
+    "shop_name": "BUKO LOCO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Fresh coconut shake with nata",
+      "Buko juice in natural shell",
+      "Coconut water 500ml"
+    ]
+  },
+  {
+    "shop_id": "76db3f4d-1db1-4255-a5e1-a3ba6a2bc4c5",
+    "shop_name": "Cabalen",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Pampanga style pork sisig",
+      "Kare-kare with rich peanut sauce",
+      "Crispy lechon de leche",
+      "Ginataang bilo-bilo dessert"
+    ]
+  },
+  {
+    "shop_id": "2a04a61c-0789-4172-ab2c-3c364967bd20",
+    "shop_name": "CABEZA JEWELRY AND ACCESSORIES SHOP",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Gold plated drop earrings",
+      "Stainless steel necklace with pendant",
+      "Beaded charm bracelet"
+    ]
+  },
+  {
+    "shop_id": "9d01461c-129e-4edd-bb4c-344fed7a58fd",
+    "shop_name": "Café Mary Grace",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature Mary Grace ensaymada",
+      "Classic cheese roll",
+      "Creamy carbonara with bacon",
+      "Hot chocolate de batirol"
+    ]
+  },
+  {
+    "shop_id": "3f726188-d1d1-4e69-aca7-d2d12a6c83b3",
+    "shop_name": "CAFE NOELLE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Spinach dip with toasted baguette",
+      "Beef pot roast with mashed potatoes",
+      "Noelle's chocolate fantasy cake",
+      "Brewed iced fruit tea"
+    ]
+  },
+  {
+    "shop_id": "c442b3f0-7e39-4faa-ac99-aa9a1e0772e0",
+    "shop_name": "CAMKIDS",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Children's light-up running shoes",
+      "Kids velcro sneaker",
+      "Breathable sports shoes for boys",
+      "Girls pink walking shoes"
+    ]
+  },
+  {
+    "shop_id": "cf6fc819-7a93-4cb8-aeac-3ceb51399221",
+    "shop_name": "CANDY CORNER",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Sour gummy worms 100g",
+      "Jelly Belly assorted jelly beans",
+      "Chocolate covered almonds",
+      "Lollipop swirl bouquet"
+    ]
+  },
+  {
+    "shop_id": "ab48b5ef-fc0e-4867-a6d9-375377d3fab1",
+    "shop_name": "CANDY MANIA",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Assorted gummy bears",
+      "Fizzy cola bottles",
+      "Rainbow sour belts",
+      "Giant marshmallow twists"
+    ]
+  },
+  {
+    "shop_id": "26d2f600-e247-4f25-a3a6-04e2bd551d61",
+    "shop_name": "CANDY STATION",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Gummy peach rings",
+      "Strawberry marshmallow puffs",
+      "Sour apple belts",
+      "Hard candy drops"
+    ]
+  },
+  {
+    "shop_id": "c5927c2f-d5ab-4e8e-94ea-950729769911",
+    "shop_name": "Capital",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Special edition lifestyle sneakers",
+      "Retro athletic shoes",
+      "Premium sneaker cleaning kit",
+      "Crease protector shoe inserts"
+    ]
+  },
+  {
+    "shop_id": "0211fec2-4bd3-4688-aefd-0396a5e72f42",
+    "shop_name": "CARAMIA CAKES & GELATO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Ube bloom cake",
+      "Midnight dream chocolate cake",
+      "Ferrero gelato cup",
+      "Pistachio artisanal gelato"
+    ]
+  },
+  {
+    "shop_id": "0f4fab16-7d46-4a95-a2f1-6d74e9bd2a26",
+    "shop_name": "CASIO",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "G-Shock shock-resistant digital watch",
+      "Baby-G sports watch",
+      "Vintage digital stainless steel watch",
+      "Scientific calculator FX-991EX"
+    ]
+  },
+  {
+    "shop_id": "a6b23010-3605-49ea-a82e-815139f0975a",
+    "shop_name": "CELLBOY",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Android smartphone case cover",
+      "Curved tempered glass screen protector",
+      "Fast charging Type-C cable",
+      "Portable wireless power bank"
+    ]
+  },
+  {
+    "shop_id": "ef3008d1-e569-467f-a0ad-d15043db2b9a",
+    "shop_name": "CELLSHOPPE",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Universal fast charger adapter",
+      "Protective silicone phone case",
+      "Magnetic car phone cradle",
+      "Wired 3.5mm stereo headset"
+    ]
+  },
+  {
+    "shop_id": "16bf2f6f-dca9-4b4f-a059-666ae133dc4a",
+    "shop_name": "CHAMPAS MEXICAN GRILL AND TAQUERIA",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Birria tacos with consomme broth",
+      "Loaded nachos with melted cheese and beef",
+      "Carnitas pork burrito",
+      "Horchata Mexican drink"
+    ]
+  },
+  {
+    "shop_id": "7cef2d09-4b26-4b33-ac7e-7d8a8baeda11",
+    "shop_name": "CHATIME",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Chatime milk tea with grass jelly",
+      "Roasted milk tea with pearls",
+      "Taiwan mango green tea",
+      "Brown sugar pearl milk tea"
+    ]
+  },
+  {
+    "shop_id": "dbd58fed-289c-4a1a-aaff-55b4367a0b36",
+    "shop_name": "CHEF TONYS POPCORN",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Original caramel popcorn tub",
+      "White chocolate popcorn",
+      "Country cheddar popcorn",
+      "Jalapeno cheddar popcorn"
+    ]
+  },
+  {
+    "shop_id": "47a9f9fc-a683-421d-a736-328c33051e8c",
+    "shop_name": "CHILIS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Baby back ribs full rack",
+      "Classic bacon burger with fries",
+      "Bottomless chips and salsa",
+      "Molten chocolate lava cake"
+    ]
+  },
+  {
+    "shop_id": "96e5d7cb-ff94-4f36-aa52-7306b8b5ab7a",
+    "shop_name": "CHINGU BUKO HOUSE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Coconut shake with brown sugar jelly",
+      "Chilled fresh buko juice",
+      "Coconut ice cream cup"
+    ]
+  },
+  {
+    "shop_id": "5269fce4-9715-4ccf-adb9-41abe36061e3",
+    "shop_name": "CHIZMOZZA",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Mozzarella cheese sticks 6pcs",
+      "Mozzarella cheese balls with marinara",
+      "Fried mozzarella corndog"
+    ]
+  },
+  {
+    "shop_id": "4eb0705b-654d-4a16-ac39-be1e3bbe282f",
+    "shop_name": "CHONGS SIOMAI RICE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Steamed pork siomai with chili garlic rice",
+      "Fried beef siomai with egg and rice",
+      "Chilled gulaman drink"
+    ]
+  },
+  {
+    "shop_id": "6dd1841d-9bf4-4ee1-a251-e54fd21b59a5",
+    "shop_name": "CHOWKING",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Chinese-style fried chicken lauriat",
+      "Pork chaofan with fried siomai",
+      "Meaty wonton mami noodle soup",
+      "Halo-halo supreme with ice cream"
+    ]
+  },
+  {
+    "shop_id": "70a018f7-6d3d-41ab-aae8-97d7438633f2",
+    "shop_name": "CHRIS SPORTS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Hexagonal rubber dumbbell 10kg",
+      "Non-slip yoga mat 6mm",
+      "Adjustable jump rope with counter",
+      "Resistance exercise bands set"
+    ]
+  },
+  {
+    "shop_id": "f18116f9-ae1a-471d-a27a-c95ad8d77fa3",
+    "shop_name": "CHUNGCHUN RICE CORN DOG",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Mozzarella and sausage corndog",
+      "All-mozzarella cheese corndog",
+      "Potato coated corndog with cheese dust"
+    ]
+  },
+  {
+    "shop_id": "c4380445-bd3b-4918-a7dc-d1554c24ac8d",
+    "shop_name": "Cindy's Bakery and Restaurant",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Cindy's classic barbecue chicken meal",
+      "Pancit palabok platter",
+      "Butter toast loaf bread",
+      "Mocha celebration cake"
+    ]
+  },
+  {
+    "shop_id": "a89fd855-ea3a-4692-a231-d0181f13827d",
+    "shop_name": "CINNABON",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Classic Cinnabon roll with cream cheese frosting",
+      "Minibon cinnamon roll",
+      "BonBites 4-piece pack",
+      "Chillatta blended iced coffee"
+    ]
+  },
+  {
+    "shop_id": "6a624919-7373-47aa-aaae-f92b34f2a103",
+    "shop_name": "CITRUS PULP DETOX",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Cold-pressed orange citrus juice",
+      "Lemon ginger detox drink",
+      "Grapefruit cucumber detox water"
+    ]
+  },
+  {
+    "shop_id": "db92a991-b215-41bf-a31a-f61065b23a27",
+    "shop_name": "CLASSIC SAVORY",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Classic Savory whole roasted chicken",
+      "Savory special chopsuey",
+      "Yang Chow fried rice",
+      "Shanghai fried rolls"
+    ]
+  },
+  {
+    "shop_id": "df22d441-5189-4679-abb6-b4808ea5aa33",
+    "shop_name": "CLINIQUE",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Dramatically Different moisturizing lotion",
+      "Clinique Take The Day Off cleansing balm",
+      "Even Better clinical serum",
+      "Black Honey almost lipstick"
+    ]
+  },
+  {
+    "shop_id": "a25aa1a8-fea0-451d-a054-1cda5ca3fc81",
+    "shop_name": "CLN",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Formal block heel pumps",
+      "Slip-on casual loafers",
+      "Quilted leather shoulder bag",
+      "Mini flap crossbody bag"
+    ]
+  },
+  {
+    "shop_id": "07653dd3-3b70-40f3-a85a-f3ab780dd14f",
+    "shop_name": "CLUBE MELISSA",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Melissa Posession jelly sandals",
+      "Melissa Harmonic flip-flops",
+      "Comfortable slip-on flats"
+    ]
+  },
+  {
+    "shop_id": "72740e7f-95ca-4928-a47f-6166d37251d1",
+    "shop_name": "CLYDES BREAD PASTRIES",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Freshly baked garlic cheese bread",
+      "Butter croissant",
+      "Soft dinner rolls 12s",
+      "Blueberry cheesecake slice"
+    ]
+  },
+  {
+    "shop_id": "cde1070a-fbae-4ae5-a3ed-2a0a625023f6",
+    "shop_name": "COCO FRESCO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Fresh coconut shake with tapioca",
+      "Chilled pure buko water",
+      "Coconut fruit cooler"
+    ]
+  },
+  {
+    "shop_id": "648d0cb9-446e-41b7-9988-07fdbc335e6c",
+    "shop_name": "Coco Fresh Tea & Juice",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "3 Guys milk tea (pudding, grass jelly, pearls)",
+      "Panda milk tea with dual pearls",
+      "Lemon green tea with passion fruit",
+      "Taro milk tea with boba"
+    ]
+  },
+  {
+    "shop_id": "6d0acf28-dd25-44c8-a479-0250d3fb4037",
+    "shop_name": "COFFEE AND YOU COFFEE HOUSE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Caramel macchiato iced brew",
+      "Spanish latte hot coffee",
+      "Toasted club sandwich",
+      "Red velvet cupcake"
+    ]
+  },
+  {
+    "shop_id": "383e0d33-36c2-4d7c-ab29-6e64da6c61a8",
+    "shop_name": "COFFEE OVERDOSE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Overdose signature iced espresso",
+      "Vanilla sweet cream cold brew",
+      "Cheesy lasagna pasta",
+      "Nutella waffle"
+    ]
+  },
+  {
+    "shop_id": "4afe4664-2f88-4f4d-8e4a-9d240082d270",
+    "shop_name": "Cold Stone Creamery",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Founder's Favorite creation in waffle bowl",
+      "Birthday Cake Remix ice cream",
+      "Chocolate Devotion ice cream",
+      "Mint Mint Chocolate Chocolate Chip"
+    ]
+  },
+  {
+    "shop_id": "f3e1b558-3023-4c4b-a3bc-22f9bab775dd",
+    "shop_name": "COLE HAAN",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Zerogrand wingtip oxford shoes",
+      "Grandpro tennis sneakers",
+      "Leather work tote bag",
+      "Grand ambition leather loafers"
+    ]
+  },
+  {
+    "shop_id": "46faf0b1-41d1-4b1a-a5fc-565fe38ba8d6",
+    "shop_name": "COLUMBIA SPORTSWEAR",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Waterproof Omni-Tech rain jacket",
+      "Silver Ridge cargo pants",
+      "Trail hiking shoes with traction",
+      "Sun protection fishing shirt"
+    ]
+  },
+  {
+    "shop_id": "deb42326-ac76-4edb-9c5c-7979378d2997",
+    "shop_name": "Complex Lifestyle Store",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Creative lifestyle sneakers",
+      "Streetwear logo hoodie",
+      "Canvas messenger bag",
+      "Adjustable strapback cap"
+    ]
+  },
+  {
+    "shop_id": "c40bfc26-bcc7-44cb-a4a5-9472db149f22",
+    "shop_name": "CONCORDE",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Automotive dash camera 1080P",
+      "Car air purifier ionizer",
+      "Carnauba car wax liquid",
+      "Heavy duty jumper cables"
+    ]
+  },
+  {
+    "shop_id": "ffc85a41-f343-4286-9bb2-b243f65d7e12",
+    "shop_name": "Conti’s Bakeshop and Restaurant",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Mango Bravo signature cake",
+      "Baked salmon with garlic sauce",
+      "Chicken pie whole",
+      "Garlic sotanghon noodles"
+    ]
+  },
+  {
+    "shop_id": "12ef3356-f615-41ba-93a3-1b93004f7764",
+    "shop_name": "Converse",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Chuck Taylor All Star high top sneakers",
+      "Chuck 70 vintage canvas shoes",
+      "One Star suede sneakers",
+      "Converse star chevron graphic tee"
+    ]
+  },
+  {
+    "shop_id": "789d28e8-fac9-4f15-a5fb-faea47423cf7",
+    "shop_name": "COREEN RAZONS HALO-HALO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Famous Guagua style halo-halo",
+      "Special pancit luglug with egg",
+      "Putong puti with butter"
+    ]
+  },
+  {
+    "shop_id": "6e6ecce0-f58d-4525-a8bd-65783f30a98d",
+    "shop_name": "Cotton On",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Classic oversized cotton tee",
+      "High-rise denim mom jeans",
+      "Ribbed knit cardigan",
+      "Linen blend resort shirt"
+    ]
+  },
+  {
+    "shop_id": "8e01e434-2541-4315-9961-4176d824c115",
+    "shop_name": "Crocs",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Classic Clog slip-on shoes",
+      "Baya Clog lightweight sandals",
+      "Jibbitz shoe charms 5-pack",
+      "Crocs Brooklyn low wedge sandal"
+    ]
+  },
+  {
+    "shop_id": "132b6641-7045-47fe-a978-5179e0a4ba18",
+    "shop_name": "CYBERTAB",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Android educational tablet 10-inch",
+      "Kids rugged shockproof tablet case",
+      "Stylus pen touch screen",
+      "Bluetooth mini keyboard"
+    ]
+  },
+  {
+    "shop_id": "cb3194a2-4fb0-4f2f-a211-7f4906b7eb0f",
+    "shop_name": "DAILY DETOX JUICES",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Fresh green detox juice with celery & kale",
+      "Carrot orange immunity boost juice",
+      "Beetroot apple energy cleanse"
+    ]
+  },
+  {
+    "shop_id": "277c8ac5-dbc5-482b-abfc-29f478895d60",
+    "shop_name": "DAINTY RESTAURANT",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature DAINTY RESTAURANT specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "771dfcf8-eccc-4e56-a541-5ab6737e144e",
+    "shop_name": "DAIRY QUEEN",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Oreo Blizzard upside-down cup",
+      "Strawberry cheesecake Blizzard",
+      "DQ Dilly bar chocolate coated",
+      "Ice cream cake with fudge crunch"
+    ]
+  },
+  {
+    "shop_id": "28b67ef3-2fdc-4632-a219-c4ce595d2195",
+    "shop_name": "Daiso Japan",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Japanese ceramic tableware bowl",
+      "Bento box lunch organizer",
+      "Storage organization baskets",
+      "Microfiber cleaning cloths 5s"
+    ]
+  },
+  {
+    "shop_id": "857fc731-0e40-4b3c-b4b3-7b01c1d606b7",
+    "shop_name": "DC Shoes",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Court Graffik skate shoes",
+      "Manual slip-on skate sneakers",
+      "DC Star logo hoodie",
+      "Skate snapback cap"
+    ]
+  },
+  {
+    "shop_id": "b898b32e-8bc2-4689-a884-d7ec8fdfd63b",
+    "shop_name": "DCREAM COFFEE TEA",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Golden sun milk tea with pudding",
+      "Assam black milk tea with pearls",
+      "Matcha latte green tea",
+      "Wintermelon tea with cream"
+    ]
+  },
+  {
+    "shop_id": "ff5c0348-fe98-4a09-a05a-033433689826",
+    "shop_name": "Decathlon",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Domyos 100 non-slip fitness mat",
+      "Quechua 20L hiking backpack",
+      "Kipsta training soccer ball",
+      "Artengo sports socks 3-pack"
+    ]
+  },
+  {
+    "shop_id": "9d24797d-2860-4435-9861-a66de64e587b",
+    "shop_name": "Denny's",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "All-American slam breakfast platter",
+      "Original Grand Slam pancakes & bacon",
+      "Bourbon bacon double burger",
+      "Strawberry vanilla waffle"
+    ]
+  },
+  {
+    "shop_id": "31b11cb3-ccba-4139-ace7-284c7abb26bd",
+    "shop_name": "Digital Walker",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Marshall Emberton II Bluetooth speaker",
+      "Nothing Ear wireless earbuds",
+      "Momax magnetic power bank",
+      "UAG rugged shockproof iPhone case"
+    ]
+  },
+  {
+    "shop_id": "2c7f6246-d550-4d92-a487-6f739fa55f55",
+    "shop_name": "DIVAS KAFFE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Iced Spanish latte",
+      "Caramel frappe blended coffee",
+      "Creamy pesto pasta",
+      "Blueberry cheesecake"
+    ]
+  },
+  {
+    "shop_id": "49ed76a3-ef79-4c75-a5f3-11009f87c66f",
+    "shop_name": "DJI",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "DJI Mini 4 Pro camera drone",
+      "DJI Osmo Pocket 3 gimbal camera",
+      "DJI Osmo Mobile 6 smartphone gimbal",
+      "DJI Mic 2 wireless microphone kit"
+    ]
+  },
+  {
+    "shop_id": "6b0b0f54-b30e-406e-a8f4-a1854d669f9e",
+    "shop_name": "DUNKIN",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Bavarian filled Boston kreme donut",
+      "Choco butternut Munchkins bucket",
+      "Famous iced Dunkin coffee extra large",
+      "Croissant bacon & egg sandwich"
+    ]
+  },
+  {
+    "shop_id": "5222b6f5-7d16-45d6-a7e4-2ac3982a3e73",
+    "shop_name": "EDELYN'S HOMEMADE NUTS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Crispy garlic peanuts 500g",
+      "Roasted cashew nuts salted",
+      "Sweet honey glazed peanuts",
+      "Spicy toasted cornick"
+    ]
+  },
+  {
+    "shop_id": "618a478f-096b-47de-a78e-fdbfd08b1290",
+    "shop_name": "EMPIRE GOLF",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Callaway titanium driver club",
+      "Titleist Pro V1 golf balls dozen",
+      "Golf stand carry bag",
+      "Leather golf glove cabretta"
+    ]
+  },
+  {
+    "shop_id": "bec263f7-bc95-47a0-a430-d9e9899a7d91",
+    "shop_name": "EVERYTHING BUT CHEESE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Classic grilled cheese sandwich with tomato soup",
+      "Cheesy bacon mac and cheese bowl",
+      "Crispy cheese fondue box",
+      "Cheese burger overloaded"
+    ]
+  },
+  {
+    "shop_id": "01cd75c8-6260-4dad-a3de-cdcddf798d24",
+    "shop_name": "EXECUTIVE OPTICAL",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Designer prescription eyeglasses frames",
+      "Ultra-thin anti-radiation lenses",
+      "FreshLook color contact lenses",
+      "Polarized sunglasses UV400"
+    ]
+  },
+  {
+    "shop_id": "0ca4b973-c77b-401b-a8cf-b26284639c7f",
+    "shop_name": "FAMOUS BELGIAN WAFFLES",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Chocolate hazelnut filled waffle",
+      "Cream cheese & blueberry waffle",
+      "Ham and cheese savory waffle",
+      "Belgian chocolate waffle"
+    ]
+  },
+  {
+    "shop_id": "10724359-9538-4791-a212-49d86174d5d1",
+    "shop_name": "FAR EAST MEDICAL EQUIPMENT",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Digital upper arm blood pressure monitor",
+      "Portable finger pulse oximeter",
+      "Folding lightweight wheelchair",
+      "Ultrasonic medical nebulizer"
+    ]
+  },
+  {
+    "shop_id": "cb8139ad-01be-48eb-afb8-4a6efed25681",
+    "shop_name": "FEAST & FIRE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Smoked barbecue pork ribs platter",
+      "Charbroiled beef burger with fries",
+      "Grilled Cajun chicken breast",
+      "Loaded barbecue potato skins"
+    ]
+  },
+  {
+    "shop_id": "4ebcb6c6-edb5-4b4f-82d9-49aa8e244b5d",
+    "shop_name": "Fiesta Court",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Pork barbecue stick with rice",
+      "Sizzling beef bulalo gravy",
+      "Crispy lechon kawali meal",
+      "Pancit palabok special"
+    ]
+  },
+  {
+    "shop_id": "b68d48bc-9107-4665-a885-7d3e709e67e1",
+    "shop_name": "FIGARO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Barako blend brewed coffee",
+      "Frost Figaro mocha ice blend",
+      "Chicken a la king with steamed rice",
+      "Tuna and mushroom pasta"
+    ]
+  },
+  {
+    "shop_id": "f8f8fc68-1740-4216-8be8-13303f4cde28",
+    "shop_name": "FitFlop",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Lulu leather toe-post sandals",
+      "F-Mode leather flatform trainers",
+      "Shuv felt leather clogs",
+      "Comfortable slip-on sneakers"
+    ]
+  },
+  {
+    "shop_id": "b62144d9-200a-42f5-ab4a-4abb81440df9",
+    "shop_name": "FLORSHEIM KIDS",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Boys black leather formal school shoes",
+      "Classic kids leather penny loafers",
+      "Boys lace-up dress shoes"
+    ]
+  },
+  {
+    "shop_id": "37ab2a2c-f688-43c5-a08b-83a1791a97b7",
+    "shop_name": "FONERANGE",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Fast charging dual USB wall charger",
+      "Car cigarette lighter phone adapter",
+      "Stereo handsfree headset with mic",
+      "Clear anti-yellow phone bumper case"
+    ]
+  },
+  {
+    "shop_id": "1e76aca8-06a6-4796-ae3a-76c51e2f8a89",
+    "shop_name": "FORTUNE TEA HOUSE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Steamed pork siomai dimsum 4pcs",
+      "Hakaw shrimp dumplings",
+      "Sweet and sour pork rice meal",
+      "Hong Kong style milk tea"
+    ]
+  },
+  {
+    "shop_id": "ea36b9d7-5b99-4503-acff-b81a7e7a276e",
+    "shop_name": "FOSSIL",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Men's Grant leather chronograph watch",
+      "Women's Jacqueline stainless steel watch",
+      "Logan leather RFID zip clutch wallet",
+      "Fossil Gen 6 smartwatch"
+    ]
+  },
+  {
+    "shop_id": "f0e43f22-ffeb-450a-a2a7-023a48716243",
+    "shop_name": "FRITO FRIES",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Crispy shoestring fries with cheese powder",
+      "Sour cream jumbo fries",
+      "BBQ seasoned crinkle cut fries"
+    ]
+  },
+  {
+    "shop_id": "107ffbec-f773-4f33-a47a-7807f41b14fc",
+    "shop_name": "GAME XTREME",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "PlayStation 5 console disc edition",
+      "Nintendo Switch OLED console",
+      "DualSense wireless PS5 controller",
+      "Latest blockbuster game disc"
+    ]
+  },
+  {
+    "shop_id": "9799de4c-11cd-4af9-afbe-54d9d09a408f",
+    "shop_name": "GAMELINE",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "DualShock controller charging station",
+      "Gaming headset with noise-canceling mic",
+      "Wireless PC gaming mouse 2.4GHz",
+      "Large desk RGB mouse pad"
+    ]
+  },
+  {
+    "shop_id": "5462571a-27a2-4190-ad5b-c1828cc8af66",
+    "shop_name": "GAMES & GADGETS",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Retro handheld video game console",
+      "Switch Joy-Con replacement controllers",
+      "Protective console carry travel case",
+      "Thumb grip stick caps"
+    ]
+  },
+  {
+    "shop_id": "90aa9308-1eaf-4865-ab03-ddf42c3f0dcd",
+    "shop_name": "GAMING GROUNDS",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Mechanical gaming keyboard with red switches",
+      "Gaming chair with ergonomic lumbar support",
+      "Surround sound 7.1 gaming headset"
+    ]
+  },
+  {
+    "shop_id": "4a544686-abc6-45f2-8c98-5d1f5d423320",
+    "shop_name": "Garmin",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Forerunner 265 GPS running smartwatch",
+      "Fenix 7 Pro solar multisport watch",
+      "Venu 3 AMOLED fitness smartwatch",
+      "Heart rate monitor chest strap"
+    ]
+  },
+  {
+    "shop_id": "30af3a67-bc5a-4f3f-abfd-eef898743cdc",
+    "shop_name": "GENEVIEVE GOZUM",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Casual button-down summer dress",
+      "High-waist formal culottes pants",
+      "Sleeveless chiffon top",
+      "Lightweight knit cardigan"
+    ]
+  },
+  {
+    "shop_id": "1f7c2817-9cb8-434b-ae7a-77e63984175d",
+    "shop_name": "GEORGE OPTICAL",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Titanium ultra-light eyeglass frames",
+      "Blue light filter prescription lenses",
+      "Transition photochromic lenses",
+      "Acuvue daily disposable contact lenses"
+    ]
+  },
+  {
+    "shop_id": "55bc3091-59e4-44d8-a0f2-47583201b3b5",
+    "shop_name": "GERRY'S RESTAURANT",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature GERRY'S RESTAURANT specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "dfd57bb0-94ea-4488-aba6-238ca2e140b9",
+    "shop_name": "GIGAHERTZ COMPUTER SYSTEM",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Custom gaming desktop PC system",
+      "NVIDIA GeForce RTX graphics card",
+      "1TB NVMe M.2 high-speed SSD",
+      "16GB DDR5 5600MHz RAM kit"
+    ]
+  },
+  {
+    "shop_id": "c9a1ba45-cb07-48a6-a456-a8f2bc1ca399",
+    "shop_name": "GILIGAN'S RESTAURANT",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Sizzling pork sisig barkada platter",
+      "Fried garlic chicken whole",
+      "Crispy pata with spicy dip",
+      "Sweet and sour fish fillet with rice"
+    ]
+  },
+  {
+    "shop_id": "2c972c60-8264-4fd6-a418-97acc3b4a756",
+    "shop_name": "GINGERSNAPS",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Baby girls floral party dress",
+      "Toddler boys cotton polo shirt",
+      "Kids denim overalls",
+      "Children's summer shorts set"
+    ]
+  },
+  {
+    "shop_id": "47416ccf-3527-47a2-a197-6b57e4407959",
+    "shop_name": "GIORDANO",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Classic polo shirt with lion embroidery",
+      "Cotton crewneck basic t-shirt",
+      "Slim taper stretch khaki trousers",
+      "Pique cotton collared polo"
+    ]
+  },
+  {
+    "shop_id": "7272f177-afbc-4da3-ab47-5d62b503b50e",
+    "shop_name": "GLOBE",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "High-speed data transfer cable",
+      "Bluetooth wireless audio earbuds",
+      "Heavy duty smartphone protective case"
+    ]
+  },
+  {
+    "shop_id": "3dc5fff8-112b-4b18-b5e0-cc3bcaa722fe",
+    "shop_name": "Globe / Smart / Dito Telecom",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "5G Prepaid SIM card with data",
+      "Prepaid mobile load card PHP 300",
+      "5G Home prepaid Wi-Fi router",
+      "eSIM activation QR voucher"
+    ]
+  },
+  {
+    "shop_id": "91361133-9b65-4088-a817-419412c540c8",
+    "shop_name": "GOLD AND PEARLS",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "South Sea cultured pearl earrings",
+      "18K yellow gold chain necklace",
+      "Freshwater pearl bracelet with gold clasp"
+    ]
+  },
+  {
+    "shop_id": "9be5ef74-d685-4c6e-abaf-97f6cb35e054",
+    "shop_name": "GOLDEN HILLS JEWELRY",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Diamond engagement solitaire ring",
+      "14K gold wedding band pair",
+      "Gold cross pendant with necklace",
+      "Diamond stud earrings in white gold"
+    ]
+  },
+  {
+    "shop_id": "15698195-da7b-4f05-adb6-f2c8274e1689",
+    "shop_name": "GOLDILOCKS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Mocha roll whole cake",
+      "Classic polvoron assorted box of 30",
+      "Fluffy mamon sponge cake 6-pack",
+      "Pork dinuguan with puto",
+      "Birthday greeting cake 8x12"
+    ]
+  },
+  {
+    "shop_id": "1204ae9d-11f4-4fcd-abdd-8003e8045729",
+    "shop_name": "GOLDSIGHT TELECOMS",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Prepaid Wi-Fi external booster antenna",
+      "Pocket Wi-Fi LTE mobile router",
+      "Long braided Micro-USB charging cable"
+    ]
+  },
+  {
+    "shop_id": "749e2e0d-43f6-4d7c-afde-85ae541ee894",
+    "shop_name": "GONG CHA",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "House special Gong Cha milk black tea",
+      "Wintermelon tea with milk foam",
+      "Pearl milk tea with boba",
+      "Taro milk drink with pudding"
+    ]
+  },
+  {
+    "shop_id": "309495ff-b752-4909-a72c-f2fef06b4e1c",
+    "shop_name": "GRANDAS SWEETS AND DELICACIES",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Pampanga pastillas de leche",
+      "Caramelized banana chips",
+      "Macapuno tart sweets",
+      "Yema spread bottle 250g"
+    ]
+  },
+  {
+    "shop_id": "3163f47f-2bf6-485b-adca-83b93e99d1e6",
+    "shop_name": "GREAT IMAGE",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Professional studio portrait package",
+      "Passport and ID photo print rush",
+      "Custom framed canvas wall portrait",
+      "Baby milestone photo session"
+    ]
+  },
+  {
+    "shop_id": "9b451988-b722-41a2-a556-3edffd928792",
+    "shop_name": "GREEN KITCHEN",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Grilled chicken Caesar salad bowl",
+      "Quinoa and roasted vegetables bowl",
+      "Fresh cold-pressed detox juice",
+      "Whole wheat chicken breast wrap"
+    ]
+  },
+  {
+    "shop_id": "a16c9ab5-8a7a-4716-a7ff-3a53663bbe5f",
+    "shop_name": "GREEN PUFF",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Matcha cream puff pastry",
+      "Chocolate lava cream puff",
+      "Classic French vanilla custard puff",
+      "Custard horn pastry"
+    ]
+  },
+  {
+    "shop_id": "2fa9573c-98dc-4721-a2c3-6695f5c57df7",
+    "shop_name": "GREENWICH",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Overloaded Hawaiian pizza double",
+      "Lasagna supreme with garlic bread",
+      "Crispy fried chicken with rice",
+      "Creamy carbonara bowl"
+    ]
+  },
+  {
+    "shop_id": "2f01d497-72cc-4d04-afe4-e3c8b91b8bb2",
+    "shop_name": "GUBY'S CHICHARON ESPESYAL",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Pork back fat chicharon with meat",
+      "Chicharon bituka crispy",
+      "Chicharon bulaklak with spicy vinegar"
+    ]
+  },
+  {
+    "shop_id": "a8d74eaf-d03f-4fbd-ab93-5ab44d90c4b9",
+    "shop_name": "GUESS",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Guess triangle logo crewneck tee",
+      "Slim fit designer denim jeans",
+      "Monogram faux-leather shoulder bag",
+      "Analog dress watch with silicone strap"
+    ]
+  },
+  {
+    "shop_id": "d6c970c2-359b-45d3-a4d3-803e18a6e18e",
+    "shop_name": "H&M",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Basic relaxed fit cotton t-shirt",
+      "High waist wide leg denim trousers",
+      "Floral summer wrap dress",
+      "Tailored slim fit blazer jacket",
+      "Linen blend resort shirt"
+    ]
+  },
+  {
+    "shop_id": "85456b63-ee87-4e58-ab2a-6f4ec4963170",
+    "shop_name": "Handyman / DIY Hardware",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Black & Decker electric drill kit",
+      "WD-40 multi-use lubricant 412ml",
+      "Heavy duty extension cord 5m",
+      "Indoor anti-slip rubber floor mat",
+      "LED ceiling light bulb 9W"
+    ]
+  },
+  {
+    "shop_id": "83cb83f9-86e9-4a5c-a651-024a35d0058b",
+    "shop_name": "Handyman Do it Best",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Everyday essential merchandise",
+      "Signature specialty product"
+    ]
+  },
+  {
+    "shop_id": "5d094e18-95be-4b1e-a420-1c1e7faab02d",
+    "shop_name": "HANNAH MARIELLES BAKES AND CAKES",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Custom fondant birthday cake",
+      "Ube velvet slice cake",
+      "Red velvet cupcakes with cream cheese",
+      "Chocolate chip cookies box"
+    ]
+  },
+  {
+    "shop_id": "f8d1f87b-f578-45c1-8d6c-f7d375fd2cb7",
+    "shop_name": "Havaianas",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Slim metallic rubber flip-flops",
+      "Top basic unisex sandals",
+      "Brasil logo comfortable flip-flops",
+      "Urban material slide sandals"
+    ]
+  },
+  {
+    "shop_id": "3e28560e-7297-4612-af10-fb7a862450f7",
+    "shop_name": "HEALTHY OPTIONS",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Solgar Vitamin C 1000mg with rose hips",
+      "Organic raw unfiltered apple cider vinegar",
+      "Gluten-free rolled oats 500g",
+      "Natural cold-pressed virgin coconut oil",
+      "Melatonin 5mg sleep aid gummies"
+    ]
+  },
+  {
+    "shop_id": "8fcea279-8147-4541-aa69-466ba6d8a97c",
+    "shop_name": "HEARTS ARROWS",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Hearts & Arrows certified diamond ring",
+      "Diamond halo pendant with platinum chain",
+      "Princess cut diamond earrings pair"
+    ]
+  },
+  {
+    "shop_id": "173bdeaa-c7f4-402c-abdc-a0efce7702f8",
+    "shop_name": "HEDGREN",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Crossbody RFID anti-theft bag",
+      "Lightweight nylon backpack for travel",
+      "Water-resistant commuter messenger bag"
+    ]
+  },
+  {
+    "shop_id": "5155994b-6ea9-46a9-a6aa-ba2e96f07c47",
+    "shop_name": "HOLA",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Spanish churros with thick chocolate dip",
+      "Chicken and seafood paella platter",
+      "Gambas al ajillo garlic shrimp"
+    ]
+  },
+  {
+    "shop_id": "3a635137-fa2d-4ab7-83fa-333c85dd7f01",
+    "shop_name": "Huawei",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Huawei Pura 70 Pro smartphone",
+      "Huawei MatePad 11.5 tablet",
+      "Huawei Watch GT 4 sports smartwatch",
+      "Huawei FreeBuds 5i wireless earbuds"
+    ]
+  },
+  {
+    "shop_id": "aa4999a1-d9cb-42dd-a0b8-e4771cf82956",
+    "shop_name": "HUMAN",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Streetwear graphic print t-shirt",
+      "Acid wash relaxed fit jeans",
+      "Embroidered bucket hat",
+      "Canvas utility pouch bag"
+    ]
+  },
+  {
+    "shop_id": "d5606fda-39f2-47c2-a035-93439694b019",
+    "shop_name": "Hungry Asian",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Stir-fry beef chow mein noodles",
+      "Sweet and sour chicken rice bowl",
+      "Crispy vegetable spring rolls 4pcs",
+      "Iced lemon wintermelon tea"
+    ]
+  },
+  {
+    "shop_id": "cc5f33cb-4cc6-4611-ac3c-1746c2300719",
+    "shop_name": "HUSH PUPPIES",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Bounce tech comfortable leather loafers",
+      "Slip-on casual leather moccasins",
+      "Breathable walking shoes for men",
+      "Women's padded low heel pumps"
+    ]
+  },
+  {
+    "shop_id": "f86ee99d-7488-4561-a989-576389416b47",
+    "shop_name": "HYDRO FLASK",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "32oz Wide mouth bottle with flex cap",
+      "24oz Standard mouth stainless steel bottle",
+      "16oz Insulated coffee tumbler with flex sip lid",
+      "Straw lid replacement cap"
+    ]
+  },
+  {
+    "shop_id": "320a1a1d-27bd-4654-a9e5-ead9591363d3",
+    "shop_name": "I-WATCH STRAPS BATTERIES CENTER",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Genuine leather watch strap 20mm",
+      "Stainless steel watch bracelet adjustment",
+      "Silver oxide watch battery replacement"
+    ]
+  },
+  {
+    "shop_id": "4ca2d02a-d5b3-442f-a32c-b915c705eb32",
+    "shop_name": "IAN DARCY",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Oil-rich French perfume inspired spray 100ml",
+      "Long-lasting Eau de Parfum pocket spray"
+    ]
+  },
+  {
+    "shop_id": "7da4f046-b00e-41b4-afc4-2a47a7403c1b",
+    "shop_name": "IBOOK",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Apple MacBook Air M2 13-inch",
+      "Apple Pencil 2nd generation",
+      "Magic Mouse wireless",
+      "USB-C to MagSafe 3 charging cable"
+    ]
+  },
+  {
+    "shop_id": "1df1cac4-e753-45f7-a0d8-1f226855157c",
+    "shop_name": "ICHIRORAIN CELLPHONE SHOP",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Screen protector installation service",
+      "Shockproof bumper phone case",
+      "Dual port fast car charger adapter"
+    ]
+  },
+  {
+    "shop_id": "928ebfcc-f3cc-4cd5-a2c4-2bf49b5d075e",
+    "shop_name": "IDEAL VISION CENTER",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Designer prescription eyeglasses frame",
+      "Transitions Gen 8 light-intelligent lenses",
+      "Bausch & Lomb SofLens contact lenses",
+      "Anti-fog cleaning cloth for eyeglasses"
+    ]
+  },
+  {
+    "shop_id": "52e95870-e9bc-420d-a04f-dab83e5c2faf",
+    "shop_name": "IHAW JUAN",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Inihaw na liempo (grilled pork belly) meal",
+      "Chicken inasal leg quarter with rice",
+      "Grilled pork skewers 3pcs with java rice"
+    ]
+  },
+  {
+    "shop_id": "775377e0-9ed7-4738-a6fd-39962d0326ce",
+    "shop_name": "IKABUD PAGKAING PINOY",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Pampanga sizzling sisig",
+      "Crispy kare-kare with thick peanut gravy",
+      "Sinigang na baboy sa sampalok",
+      "Lechon kawali with liver sauce"
+    ]
+  },
+  {
+    "shop_id": "0f92679a-3214-417d-a708-98a81d7025f0",
+    "shop_name": "IMONO",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Non-tarnish stainless steel link necklace",
+      "Hypoallergenic titanium wedding ring",
+      "Stainless steel bangle bracelet"
+    ]
+  },
+  {
+    "shop_id": "6855f44b-84cf-43c8-a16a-bb67dc6c5361",
+    "shop_name": "INBOX STORE",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Universal USB wall charger 20W",
+      "Tempered glass protector for iPad",
+      "Magnetic phone ring holder kickstand"
+    ]
+  },
+  {
+    "shop_id": "5bdf8da3-a9e5-4056-a585-db55fa16cc1e",
+    "shop_name": "INFINIX",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Infinix Note 40 Pro 5G smartphone",
+      "Infinix Hot 40 smartphone",
+      "Infinix XE27 Bluetooth wireless earbuds"
+    ]
+  },
+  {
+    "shop_id": "9d956685-c9c1-4070-a4d0-1bb731f6f172",
+    "shop_name": "INNISFREE",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Green Tea seed hyaluronic acid serum",
+      "Super Volcanic pore clay mask 2X",
+      "No-Sebum mineral powder compact",
+      "Jeju cherry blossom jelly cream"
+    ]
+  },
+  {
+    "shop_id": "c8d3a77b-27a9-4603-aedd-604f7f365bbc",
+    "shop_name": "IQOS",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "IQOS ILUMA heat-not-burn holder kit",
+      "IQOS TEREA heated tobacco sticks pack",
+      "Cleaning tool and charging dock"
+    ]
+  },
+  {
+    "shop_id": "f088bdc4-0501-4877-b01c-e441b54773c8",
+    "shop_name": "Italianni's",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Complimentary warm focaccia with olive oil dip",
+      "Sicilian gourmet thin-crust pizza",
+      "Spaghetti with meatballs in pomodoro sauce",
+      "Chicken Italianni's with spinach & cheese sauce"
+    ]
+  },
+  {
+    "shop_id": "120d17d5-3358-4093-aeac-063ca75100db",
+    "shop_name": "J CO DONUTS COFFEE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Iced caramel latte",
+      "Hot cappuccino brew",
+      "Toasted butter croissant",
+      "Mocha frappe with whipped cream"
+    ]
+  },
+  {
+    "shop_id": "1650f237-ef12-4731-ac97-c9a8dff6451e",
+    "shop_name": "J.CO Donuts",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature J.CO Donuts specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "e6b0fd48-0a98-402b-a04b-a6aca13b6ecd",
+    "shop_name": "J.CO Donuts & Coffee",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Alcapone signature white chocolate almond donut",
+      "Glazzy honey glazed donut",
+      "J.Cool frozen yogurt with fruit toppings",
+      "J.Coffee Iced Jcoccino with coffee jelly"
+    ]
+  },
+  {
+    "shop_id": "8b43f6eb-9024-4502-a233-6fe695d38a53",
+    "shop_name": "Jag",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Ankle skinny stretch denim jeans",
+      "Classic western denim jacket",
+      "Basic logo embroidered t-shirt",
+      "Leather jeans belt"
+    ]
+  },
+  {
+    "shop_id": "ff8f779c-7b4d-48e1-a4bf-df2eb1097e89",
+    "shop_name": "JAMBA JUICE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Strawberries Wild signature fruit smoothie",
+      "Mango-A-Go-Go fruit smoothie",
+      "Peanut Butter Moo'd protein shake",
+      "Acai Primo antioxidant smoothie bowl"
+    ]
+  },
+  {
+    "shop_id": "8968c25a-2c80-4788-aa55-d8337bb15277",
+    "shop_name": "Japan Home Centre",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Japanese ceramic porcelain bowl",
+      "Space-saving clothes organizing hangers 10s",
+      "Plastic drawer storage bin",
+      "Japanese cleaning magic sponge 10-pack"
+    ]
+  },
+  {
+    "shop_id": "4f900ea3-990c-4bc4-a63f-4f895228229b",
+    "shop_name": "JD Store / Outlet Shops",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Nike discounted outlet running shoes",
+      "Adidas discounted track jackets",
+      "Puma training sneakers sale",
+      "Sportswear gym duffel bag"
+    ]
+  },
+  {
+    "shop_id": "6ac4b2d9-91c6-4dea-a646-14496728e603",
+    "shop_name": "JOHNN LEMON",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Fresh squeezed lemonade with chia seeds",
+      "Lemon yakult fruit refresher",
+      "Lemon cucumber detox drink"
+    ]
+  },
+  {
+    "shop_id": "e068976b-9ae5-4f43-ac85-e008bab07b76",
+    "shop_name": "JOHNSON FITNESS AND WELLNESS",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Horizon motorized folding treadmill",
+      "Matrix magnetic indoor exercise bike",
+      "Adjustable dumbbell set with stand",
+      "Commercial rubber gym weight plates"
+    ]
+  },
+  {
+    "shop_id": "6a08f0b2-1804-4c24-a9bf-9c1c63a699a6",
+    "shop_name": "JOLLIBEE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Chickenjoy 1-pc with rice & gravy",
+      "Chickenjoy 6-pc bucket with gravy",
+      "Jolly Spaghetti with hotdog slices",
+      "Yumburger with special dressing",
+      "Peach Mango Pie crispy dessert"
+    ]
+  },
+  {
+    "shop_id": "80243cfa-0109-4544-ada8-af89f500ea89",
+    "shop_name": "JOYROOM",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Power bank 20000mAh with LED display",
+      "True wireless ENC earbuds",
+      "Flexible braided Type-C cable 1.2m",
+      "Fast wireless charging pad 15W"
+    ]
+  },
+  {
+    "shop_id": "00176bb3-2fe7-402b-a07f-18ac9f96eba9",
+    "shop_name": "JUST G",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Teens casual floral summer dress",
+      "High-waist denim shorts for girls",
+      "Cute graphic crop top",
+      "Pastel bucket hat"
+    ]
+  },
+  {
+    "shop_id": "fcd1325b-dc27-46c9-aa4a-f4b82de18b44",
+    "shop_name": "JVEETECH",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Laptop cooling pad with LED fans",
+      "USB 3.0 external hard drive enclosure",
+      "Ergonomic vertical wireless mouse"
+    ]
+  },
+  {
+    "shop_id": "8770bb6b-0fd1-462b-8fce-3e4e4627bdc4",
+    "shop_name": "Kamaki Ramen Bar",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Tonkotsu rich pork broth ramen with chashu",
+      "Spicy tantanmen ramen with minced pork",
+      "Pan-fried pork gyoza 6pcs",
+      "Karaage Japanese fried chicken"
+    ]
+  },
+  {
+    "shop_id": "365ab17b-9988-4525-a7f3-162e2ad11aaf",
+    "shop_name": "KAMIR",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Middle Eastern beef shawarma wrap",
+      "Chicken kabab platter with basmati rice",
+      "Creamy hummus dip with warm pita bread"
+    ]
+  },
+  {
+    "shop_id": "a7e757a9-06eb-4c26-a307-e48ca8eaa571",
+    "shop_name": "KARAT WORLD",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "14K yellow gold hoop earrings",
+      "Diamond eternity wedding ring",
+      "Gold herringbone chain necklace",
+      "Solitaire diamond pendant with chain"
+    ]
+  },
+  {
+    "shop_id": "97e10c46-de0c-4d86-b392-4ac644679454",
+    "shop_name": "Karimadon",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Off-shoulder formal evening gown",
+      "Wide-leg formal crepe jumpsuit",
+      "Tailored women's event blazer",
+      "Cocktail lace dress"
+    ]
+  },
+  {
+    "shop_id": "859c780a-f5fb-4f0e-a932-dd21950ca639",
+    "shop_name": "KENNY ROGERS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature KENNY ROGERS specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "40b65a08-7630-4eca-99a6-65994d2a97ac",
+    "shop_name": "Kenny Rogers Roasters",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Original roasted half chicken meal",
+      "Corn muffin freshly baked 6-pack",
+      "Kenny's chicken macaroni salad",
+      "Ribs and roast chicken combo platter"
+    ]
+  },
+  {
+    "shop_id": "e5d83323-350b-4818-a476-2716e9732970",
+    "shop_name": "KETTLE KORN",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Sweet and salty freshly popped popcorn jumbo",
+      "Cheese popcorn bucket",
+      "Caramel coated kettle popcorn"
+    ]
+  },
+  {
+    "shop_id": "451eb45e-c6ed-496d-bd3c-80c65c7b6186",
+    "shop_name": "KFC",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Original recipe fried chicken 2-pc meal with rice",
+      "Hot & Crispy chicken with savory gravy",
+      "Zinger spicy chicken burger",
+      "Famous chicken bowl with corn & gravy",
+      "Mashed potatoes with signature gravy"
+    ]
+  },
+  {
+    "shop_id": "30dc3f5c-22b6-4338-ae74-641e6a23ac8d",
+    "shop_name": "KLGO",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Quick charge 3.0 wall charger",
+      "Braided heavy duty charging cable",
+      "Compact in-ear wired earphones"
+    ]
+  },
+  {
+    "shop_id": "f8661719-aedf-479e-a4e4-28de507758c8",
+    "shop_name": "Kowloon House",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Jumbo pork siopao with special sauce",
+      "Asado siopao sweet pork bun",
+      "Special steamed pork siomai 4pcs",
+      "Beef wanton mami soup"
+    ]
+  },
+  {
+    "shop_id": "56f6f007-cdfe-42af-a28b-80c735723322",
+    "shop_name": "KRISPY KREME",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Original Glazed doughnut box of 12",
+      "Chocolate iced with sprinkles doughnut",
+      "New York cheesecake filled doughnut",
+      "Brewed signature iced coffee"
+    ]
+  },
+  {
+    "shop_id": "142c8dde-81e6-4771-a433-de8cf63af1da",
+    "shop_name": "KUMORI JAPANESE BAKERY CAFE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Hanjuku cheese cake piece",
+      "Signature cheese tart Japanese style",
+      "Fuwa-fuwa bun with custard",
+      "Kuro sesame Japanese bun"
+    ]
+  },
+  {
+    "shop_id": "28da859c-c867-4463-afb2-6e47f20d47f2",
+    "shop_name": "KUSINA MANYAMAN",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Pampanga tibok-tibok carabao milk pudding",
+      "Bringhe Kapampangan fiesta rice",
+      "Pork sisig kapampangan with calamansi",
+      "Asadong matamis Kapampangan"
+    ]
+  },
+  {
+    "shop_id": "1a844a71-f310-4a7f-a54e-dbe52167105e",
+    "shop_name": "L TIME STUDIO",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Seiko automatic sports watch",
+      "Citizen Eco-Drive solar watch",
+      "Casio Edifice chronograph watch",
+      "Leather replacement watch strap"
+    ]
+  },
+  {
+    "shop_id": "87712238-ae9c-4035-a4fa-3235d0721a12",
+    "shop_name": "LA NILAD COFFEE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Barako drip brewed coffee hot",
+      "Caramelized iced latte",
+      "Tablea dark chocolate drink",
+      "Toasted pandesal with kesong puti"
+    ]
+  },
+  {
+    "shop_id": "e4ae6759-58d3-4d7d-ae52-a15c45964117",
+    "shop_name": "LAC NUTRITION FOR LIFE",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "LAC Masquelier French pine bark extract",
+      "LAC Full-Cal calcium citrate powder",
+      "Triple strength Omega-3 fish oil 1000mg",
+      "Whey protein isolate vanilla tub"
+    ]
+  },
+  {
+    "shop_id": "6de1acc8-5535-4f9f-ab0c-92e0bf18ee03",
+    "shop_name": "LACTATION TREATS BY RCG",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Galactagogue lactation brownies box of 8",
+      "Lactation cookies with brewer's yeast",
+      "Lactation smoothie mix packet"
+    ]
+  },
+  {
+    "shop_id": "9455d92d-5001-4a35-a875-52f1a2fe260b",
+    "shop_name": "LADY KARAT",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Gold cross pendant with chain",
+      "Dainty gold stud earrings",
+      "Charm bracelet with birthstones"
+    ]
+  },
+  {
+    "shop_id": "a5832545-bf64-4cad-a0b6-d687c0998e18",
+    "shop_name": "LAZER MUSIC",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Acoustic steel-string guitar with gig bag",
+      "Digital keyboard piano 61-keys",
+      "Electric guitar amplifier 15W",
+      "Guitar clip-on digital tuner"
+    ]
+  },
+  {
+    "shop_id": "a8f64430-f964-41f0-ab0c-76d2f8288e76",
+    "shop_name": "Lee",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Rider slim tapered denim jeans",
+      "Classic denim button-down western shirt",
+      "Lee logo graphic cotton tee",
+      "Heavy duty leather jeans belt"
+    ]
+  },
+  {
+    "shop_id": "6be6d49d-5e8e-4c96-ac1c-4508726369d7",
+    "shop_name": "LEGION",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Lenovo Legion Pro 5 gaming laptop",
+      "Legion wireless RGB gaming mouse",
+      "Legion H500 7.1 surround gaming headset",
+      "Legion armored gaming backpack"
+    ]
+  },
+  {
+    "shop_id": "5e4e2dce-26a4-4a4c-84a5-488de646d9c4",
+    "shop_name": "Lenovo",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "ThinkPad E14 business laptop",
+      "IdeaPad Slim 3 everyday laptop",
+      "Yoga 7 2-in-1 convertible touchscreen laptop",
+      "Lenovo wireless laser mouse",
+      "ThinkPad padded laptop bag"
+    ]
+  },
+  {
+    "shop_id": "09a32cd1-27ec-4138-aae0-b4d2e0626a79",
+    "shop_name": "Levi's",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "501 original fit straight leg jeans",
+      "511 slim fit denim jeans",
+      "Levi's classic batwing logo t-shirt",
+      "Trucker denim jacket with metal buttons"
+    ]
+  },
+  {
+    "shop_id": "eff83f70-4d25-4a41-a9e3-86c9de5611e0",
+    "shop_name": "LIGHTERS GALORE",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Zippo windproof brass lighter",
+      "Zippo genuine lighter fluid 125ml",
+      "Zippo replacement flints and wicks pack",
+      "Collectible novelty metal lighter"
+    ]
+  },
+  {
+    "shop_id": "79b0011a-aa00-4a73-a82e-2aa78f933903",
+    "shop_name": "LLAO LLAO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature LLAO LLAO specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "1d9ad9d0-9096-434d-a3ff-1bcf2dba5bf8",
+    "shop_name": "Llaollao",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Sanum yogurt cup with fresh fruit & crunch",
+      "Small frozen yogurt with fruit sauce",
+      "Medium yogurt tub with 3 toppings",
+      "Takeaway frozen yogurt tub 1 liter"
+    ]
+  },
+  {
+    "shop_id": "f7c248cd-3dc3-4976-aa94-6f815b3a9094",
+    "shop_name": "Lucia’s Recipe",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Creamy garlic parmesan chicken pasta",
+      "Slow-cooked beef salpicao rice meal",
+      "Homemade blueberry cheesecake slice"
+    ]
+  },
+  {
+    "shop_id": "41237b0b-31e8-4a39-a5ee-0c9bef4e6a1a",
+    "shop_name": "LYRIC",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Yamaha acoustic guitar standard",
+      "Kawai portable digital stage piano",
+      "Dynamic vocal microphone with cable",
+      "Keyboard stand double-X steel"
+    ]
+  },
+  {
+    "shop_id": "dcc17cc1-73a6-4186-aadf-cff9ac530c1a",
+    "shop_name": "MAC",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Retro matte lipstick Ruby Woo",
+      "Studio Fix fluid foundation SPF 15",
+      "Prep + Prime Fix+ finishing mist",
+      "Pro Longwear fluidline eye liner"
+    ]
+  },
+  {
+    "shop_id": "ac25f405-75eb-4d1d-a7ee-f697cbaee6ec",
+    "shop_name": "Makimura Ramen Bar",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature tonkotsu pork broth ramen",
+      "Spicy miso ramen with ajitsuke tamago",
+      "Ebi tempura 5pcs",
+      "Pork katsudon rice bowl"
+    ]
+  },
+  {
+    "shop_id": "fbd13152-d4e4-4bd1-acda-2091b17cbfbe",
+    "shop_name": "MALANNE",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Scented organic soy candle",
+      "Aromatherapy reed diffuser with sticks",
+      "Soothing room linen spray 100ml"
+    ]
+  },
+  {
+    "shop_id": "0a1400b0-96f0-4b77-a7aa-cb3c8ed31551",
+    "shop_name": "MAMA LOUS ITALIAN KITCHEN",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Mama Lou's special pizza with prosciutto & balsamic",
+      "Truffle mac & cheese skillet",
+      "Spaghetti seafood marinara",
+      "Risotto al tartufo with mushrooms"
+    ]
+  },
+  {
+    "shop_id": "5ec25b6a-1a60-442c-a16e-e08fcaaf90a9",
+    "shop_name": "MANG CHA-A",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Wintermelon milk tea with grass jelly",
+      "Classic roasted brown sugar pearl milk tea",
+      "Matcha green tea latte cold"
+    ]
+  },
+  {
+    "shop_id": "c712ddfd-85b6-4647-9325-1b2ab343e17a",
+    "shop_name": "Mang Inasal",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Chicken Inasal Paa (leg quarter) with unli-rice",
+      "Chicken Inasal Pecho (breast) meal",
+      "Palabok with chicharon flakes & egg",
+      "Pork BBQ skewers with unli-rice",
+      "Extra creamy Halo-Halo with leche flan"
+    ]
+  },
+  {
+    "shop_id": "57f8993d-d08a-4a1a-a124-5f744e8b5767",
+    "shop_name": "MANGO MANGO MAN",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Mango graham float cup",
+      "Fresh mango shake with crushed graham",
+      "Mango tapioca dessert cup"
+    ]
+  },
+  {
+    "shop_id": "8e832f58-c9a6-4d7b-afb2-77f8ad695814",
+    "shop_name": "MANGOTANGOS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Mango juice blend with passion fruit",
+      "Chilled mango coconut shake",
+      "Fresh ripe mango slices cup"
+    ]
+  },
+  {
+    "shop_id": "22083b48-da90-46dd-9d2d-0df99cc742dc",
+    "shop_name": "Marugame Udon",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Beef Ontama Bukkake Udon with poached egg",
+      "Kitsune Udon with sweet fried tofu",
+      "Chicken Katsu Curry Udon",
+      "Crispy Ebi Tempura piece",
+      "Vegetable Kakiage tempura fritter"
+    ]
+  },
+  {
+    "shop_id": "ee1b3e84-5c3e-4b23-ac67-28e59bec1420",
+    "shop_name": "MARUGAME UDON UDON TEMPURA",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature MARUGAME UDON UDON TEMPURA specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "d1f0908b-056c-4520-a9f1-fc0a4fdd2391",
+    "shop_name": "MARY GRACE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Handmade Mary Grace ensaymada",
+      "Classic Mary Grace cheese roll",
+      "Hot Belgian chocolate drink",
+      "Vigan longganisa pasta with garlic"
+    ]
+  },
+  {
+    "shop_id": "3d199695-d12f-4e10-af15-5166ce4a073f",
+    "shop_name": "MAXS RESTAURANT",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Max's signature whole fried chicken with banana ketchup",
+      "Kare-kare with tender oxtail & beef",
+      "Sizzling tofu with mayonnaise sauce",
+      "Crispy pata family size",
+      "Halo-halo with ube ice cream"
+    ]
+  },
+  {
+    "shop_id": "1a72eaf8-c499-417d-abc0-5ad4e37e4891",
+    "shop_name": "McDonald's",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature McDonald's specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "9b6b86cc-3eb7-4bdc-ab86-cdc2b9fefa59",
+    "shop_name": "MENDREZ",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Pointed toe office pumps",
+      "Casual slip-on loafers for women",
+      "Quilted crossbody shoulder bag",
+      "Structured office hand tote bag"
+    ]
+  },
+  {
+    "shop_id": "aac08949-0092-4a54-a654-ec564107388a",
+    "shop_name": "MESA FILIPINO MODERNE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Crispchon whole roasted suckling pig in 2 ways",
+      "Sinigang sa guava pineapple broth",
+      "Laing 2-ways with crispy pork",
+      "Tinapa rice in claypot"
+    ]
+  },
+  {
+    "shop_id": "a1113c77-0e05-4236-a3d8-037b60bba465",
+    "shop_name": "Metro Department Store",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Microfiber bed sheet set Queen",
+      "Plush bath towel 100% cotton",
+      "Non-stick frying pan 28cm",
+      "Stainless steel cutlery set 24pcs",
+      "Women's tailored work trousers"
+    ]
+  },
+  {
+    "shop_id": "4ea024d2-5980-4093-ae34-090f7c65379d",
+    "shop_name": "Metro Supermarket",
+    "shop_category_id": "fc311f8d-9368-4f02-90b1-86aff3740dfb",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Sinandomeng well-milled rice 25kg",
+      "Fresh whole dressed chicken 1kg",
+      "Farm fresh red tomatoes 1kg",
+      "San Miguel Pure Foods tender juicy hotdogs",
+      "Colgate total clean toothpaste 150g"
+    ]
+  },
+  {
+    "shop_id": "e44c7393-971f-4151-ac22-a876b87d13a6",
+    "shop_name": "MI",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Xiaomi 14 ultra smartphone",
+      "Redmi Note 13 Pro smartphone",
+      "Xiaomi Smart Band 8 fitness tracker",
+      "Xiaomi 10000mAh ultra slim power bank",
+      "Mi Robot smart vacuum cleaner"
+    ]
+  },
+  {
+    "shop_id": "bc53dbd8-53a1-41f1-a309-6e8dbf8f8d31",
+    "shop_name": "MIA MAISON",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Ocean Breeze water-based fragrance oil",
+      "Warm Vanilla aroma diffuser oil",
+      "Ultrasonic aroma mist diffuser unit"
+    ]
+  },
+  {
+    "shop_id": "9af16039-a155-4ea7-a20d-ef077bb6b462",
+    "shop_name": "MILA'S TOKWAT BABOY",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Original Mila's tokwat baboy with celery & onions",
+      "Mila's crispy sizzling sisig",
+      "Crispy pig's ears (pako salad)"
+    ]
+  },
+  {
+    "shop_id": "eb0d944f-4156-4067-acde-dcf70ae132de",
+    "shop_name": "MILKO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Farm fresh pasteurized cow's milk 1L",
+      "Chocolate flavored fresh milk bottle",
+      "Carabao milk cheese (kesong puti) block"
+    ]
+  },
+  {
+    "shop_id": "3916a04a-fd00-4042-a12c-907033a76898",
+    "shop_name": "MINISO",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Sanrio licensed plush toy pillow",
+      "Wireless ergonomic optical mouse",
+      "Travel neck pillow memory foam",
+      "Nordic minimalist plastic desk organizer",
+      "Moisturizing hand cream 3-pack"
+    ]
+  },
+  {
+    "shop_id": "b59f20f1-effb-40d5-aa92-1c7bc0770dcb",
+    "shop_name": "MISTER DONUT",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Bavarian filled chocolate doughnut",
+      "Smidgets assorted bite-sized doughnuts 20s",
+      "Choco butternut ring doughnut",
+      "Iced coffee brew 16oz"
+    ]
+  },
+  {
+    "shop_id": "ef4278be-4676-47d1-afe1-3514d99afc37",
+    "shop_name": "MISTER FROSTY",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Soft-serve vanilla ice cream cone",
+      "Chocolate dipped ice cream bar",
+      "Sundae cup with hot fudge and nuts"
+    ]
+  },
+  {
+    "shop_id": "64cc94c9-e8c0-45aa-abe1-a22944419c0a",
+    "shop_name": "MOBILE ARMORY",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Military-grade armor phone case",
+      "Privacy anti-peep tempered glass",
+      "Camera lens protector ring set"
+    ]
+  },
+  {
+    "shop_id": "ce532e89-4895-4eab-ae6e-47076c44d016",
+    "shop_name": "MODERN SHANG",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature xiao long bao pork soup dumplings 6pcs",
+      "Shanghai style sweet and sour pork ribs",
+      "Braised pork belly with steamed buns",
+      "Dan Dan noodles in spicy broth"
+    ]
+  },
+  {
+    "shop_id": "bcab72d6-b053-48ee-a0ca-e14f2e758fa7",
+    "shop_name": "MOSSIMO",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Classic logo print cotton t-shirt",
+      "Slim straight dark wash denim jeans",
+      "Hooded zip-up fleece jacket",
+      "Mossimo canvas strapback cap"
+    ]
+  },
+  {
+    "shop_id": "3706eeeb-ac6e-4118-aab1-00a6e1c868ba",
+    "shop_name": "MOSSIMO KIDS",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Boys casual graphic t-shirt",
+      "Girls printed cotton summer shorts",
+      "Children's stretch denim jeans",
+      "Kids fleece hoodie"
+    ]
+  },
+  {
+    "shop_id": "e1fccfc4-2782-4987-a168-58df9a6f1d73",
+    "shop_name": "MOTO",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Motorcycle full-face DOT certified helmet",
+      "Motorcycle riding gloves with knuckle armor",
+      "Waterproof motorcycle saddle bag set"
+    ]
+  },
+  {
+    "shop_id": "22f0cd3f-d783-4d4b-a970-c02785ed5218",
+    "shop_name": "MOTOWORLD",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "AGV full face racing helmet",
+      "Komine padded mesh motorcycle jacket",
+      "Oxford motorcycle disc brake lock",
+      "Anti-fog helmet visor insert"
+    ]
+  },
+  {
+    "shop_id": "c5635f89-becd-46d9-a5b0-034ac3352f20",
+    "shop_name": "MR GINGER HEALTHY DETOX DRINKS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Pure ginger honey turmeric brew 500ml",
+      "Lemon ginger cleanse juice",
+      "Cold-pressed ginger shots 100ml"
+    ]
+  },
+  {
+    "shop_id": "c94d5d90-4e3a-4803-ab69-d8a7304c49b7",
+    "shop_name": "MR SOFTY ICE CREAM",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Vanilla chocolate swirl soft serve cone",
+      "Oreo cookie sundae cup with fudge",
+      "Rainbow sprinkle waffle cone"
+    ]
+  },
+  {
+    "shop_id": "e8ebee1d-07e4-442e-a661-3778d7be4a17",
+    "shop_name": "MR TACO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Crunchy beef taco with cheddar cheese",
+      "Soft flour chicken taco with guacamole",
+      "Loaded carne asada cheese fries"
+    ]
+  },
+  {
+    "shop_id": "c0567550-fb01-47db-ac80-2d07cc849bc2",
+    "shop_name": "Mr. Lee",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Classic regular fit blue denim jeans",
+      "Button-down cotton plaid shirt",
+      "Casual twill chino trousers"
+    ]
+  },
+  {
+    "shop_id": "dfc7258d-a5a7-4fca-83ad-1e08a7211618",
+    "shop_name": "MSI",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "MSI Katana 15 gaming laptop",
+      "MSI Stealth AI ultra-thin laptop",
+      "MSI 27-inch curved gaming monitor 180Hz",
+      "MSI GeForce RTX 4070 gaming graphics card"
+    ]
+  },
+  {
+    "shop_id": "2c37f5d5-51a8-486c-ad98-92b7c1d46585",
+    "shop_name": "MUSTELA",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Gentle cleansing gel for baby hair & body 500ml",
+      "Hydra Bebe body lotion with avocado",
+      "Stelatopia emollient cream for eczema",
+      "No-rinse soothing cleansing water"
+    ]
+  },
+  {
+    "shop_id": "13c420f6-fded-4e0f-ae58-c8b0dae23854",
+    "shop_name": "MX MEMOXPRESS",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Samsung Galaxy A55 5G smartphone",
+      "Xiaomi Redmi pad tablet",
+      "Remax fast charging power bank 20000mAh",
+      "JBL Go 3 waterproof portable speaker"
+    ]
+  },
+  {
+    "shop_id": "0a2e489e-6309-47d1-872a-3a587b5f7222",
+    "shop_name": "Nathaniel's Bakeshop",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Puto pao with sweet pork asado filling",
+      "Special baked empanadas with beef 6-pack",
+      "Nathaniel's famous buko pandan salad tub",
+      "Siomai special 10-pack frozen"
+    ]
+  },
+  {
+    "shop_id": "90930840-7538-4093-a171-2cbaaf9e7ddf",
+    "shop_name": "NATHANIELS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature NATHANIELS specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "4fff8ba6-ae19-4772-8d04-4376aba7162b",
+    "shop_name": "National Book Store",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "e4da1382-4917-4a72-8441-19cbc589426f",
+    "products": [
+      "Best-selling fiction paperback book",
+      "Pilot G-Tec C4 gel pens 3-pack",
+      "Corona spiral lecture notebook 5-pack",
+      "Prang professional watercolor set",
+      "Mesh desk pencil and paper organizer"
+    ]
+  },
+  {
+    "shop_id": "09ba34ce-d39f-437e-a633-37dfe20f8b7f",
+    "shop_name": "NATIONAL BOOKSTORE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature NATIONAL BOOKSTORE specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "23f17969-5d7d-4e50-a0b0-7d2ef96997dd",
+    "shop_name": "Nature Republic",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Soothing & Moisture Aloe Vera 92% soothing gel tub",
+      "Snail solution intensive skin essence",
+      "Daily fresh sheet masks pack of 10",
+      "California aloe fresh powdery sun stick SPF 50"
+    ]
+  },
+  {
+    "shop_id": "9a5b31b4-02cd-45a6-a9ec-a06fbf559453",
+    "shop_name": "Nelson’s Bibingka",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Hot baked bibingka with native cheese & egg",
+      "Traditional puto bumbong with muscovado sugar",
+      "Native ginger salabat tea"
+    ]
+  },
+  {
+    "shop_id": "c326f0f3-2b7a-461f-98aa-4e9ada51d6ac",
+    "shop_name": "Nepo Lane & Nepo Alley",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Affordable RTW casual summer blouses",
+      "Bargain denim short shorts",
+      "Novelty printed graphic tees",
+      "Locally made slide sandals"
+    ]
+  },
+  {
+    "shop_id": "88e7ad5d-3d47-427a-a91f-724dde17b7b2",
+    "shop_name": "New Balance",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "New Balance 574 iconic lifestyle sneakers",
+      "New Balance 550 retro basketball shoes",
+      "Fresh Foam X 1080 running shoes",
+      "Athletics classic cotton logo t-shirt"
+    ]
+  },
+  {
+    "shop_id": "3e15e6ce-787d-477b-aa00-96d42ce79824",
+    "shop_name": "NEW ERA",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "59FIFTY fitted MLB baseball cap",
+      "9FORTY adjustable strapback cap",
+      "New Era heritage logo hoodie",
+      "Cap protective storage case"
+    ]
+  },
+  {
+    "shop_id": "a4d6ef5b-f0cf-40cd-a018-6f991547c92e",
+    "shop_name": "NEW YORK SUPREME",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "New York style giant cheese pizza slice",
+      "Pepperoni stuffed crust pizza",
+      "Garlic parmesan chicken tenders with dip"
+    ]
+  },
+  {
+    "shop_id": "4f3d4677-e170-464c-98fe-eca88256a9f7",
+    "shop_name": "Nike",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Nike Air Force 1 '07 white sneakers",
+      "Nike Dunk Low retro shoes",
+      "Nike Air Max 90 lifestyle shoes",
+      "Dri-FIT moisture wicking training t-shirt",
+      "Club fleece pullover hoodie"
+    ]
+  },
+  {
+    "shop_id": "e5611375-e931-47b4-a43b-23880fbc7b2e",
+    "shop_name": "Nike Stadium",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Casual cotton graphic t-shirt",
+      "Slim fit stretch denim pants",
+      "Everyday canvas sneakers",
+      "Fashion shoulder bag"
+    ]
+  },
+  {
+    "shop_id": "9280129b-f9f4-4232-accd-f37fd49bfd0b",
+    "shop_name": "NOKIA",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Nokia 2660 flip classic phone with 4G",
+      "Nokia G42 5G smartphone",
+      "Nokia clarity earbuds with noise cancellation"
+    ]
+  },
+  {
+    "shop_id": "bfd4996b-9215-4348-a5a0-49e9d00c920d",
+    "shop_name": "North Park",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Superior pot noodles soup bowl",
+      "North Park special toasted noodles",
+      "Sweet and sour pork Cantonese style",
+      "Steamed fresh prawn dumplings hakaw"
+    ]
+  },
+  {
+    "shop_id": "19cba7ad-54c5-4b72-ae74-b8f0a6feb9a5",
+    "shop_name": "NUTRITION DEPOT",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Optimum Nutrition Gold Standard 100% whey protein 5lb",
+      "Cellucor C4 original pre-workout powder",
+      "Rule 1 protein isolate tub",
+      "BlenderBottle classic shaker bottle with ball"
+    ]
+  },
+  {
+    "shop_id": "31df8e5a-e661-4567-a128-690de0a5a09c",
+    "shop_name": "OAKLEY",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Holbrook polarized sunglasses",
+      "Radar EV Path sports performance sunglasses",
+      "Frogskins classic heritage sunglasses",
+      "Oakley tactical assault backpack"
+    ]
+  },
+  {
+    "shop_id": "f8af9d48-3355-412d-aefa-f0e769628d60",
+    "shop_name": "OCAMPOS JEWELRY",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "18K Saudi gold necklace chain",
+      "Diamond solitaire engagement ring",
+      "Custom engraved gold wedding bands pair",
+      "South Sea gold pearl pendant"
+    ]
+  },
+  {
+    "shop_id": "f3e8221c-3b57-4c6c-a64b-a55d187a1f39",
+    "shop_name": "OCTAGON",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Logitech MX Master 3S wireless mouse",
+      "SanDisk extreme portable SSD 1TB",
+      "TP-Link Archer AX55 Wi-Fi 6 router",
+      "Kingston Fury Beast 16GB RAM kit",
+      "HP laser multifunction printer"
+    ]
+  },
+  {
+    "shop_id": "7a491c49-58b8-4ccf-aa1f-16353da9b6a8",
+    "shop_name": "Octagon Computer Superstore",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "High-speed data transfer cable",
+      "Bluetooth wireless audio earbuds",
+      "Heavy duty smartphone protective case"
+    ]
+  },
+  {
+    "shop_id": "f59fb5d7-684d-4bf1-a68d-13fd66e13cc3",
+    "shop_name": "ODYSSEUS",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Leather casual driving moccasins",
+      "Handcrafted leather dress shoes",
+      "Genuine leather bi-fold wallet"
+    ]
+  },
+  {
+    "shop_id": "e85c5b55-7368-439e-a129-839b1efba201",
+    "shop_name": "OGAWA",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Master Drive AI full body massage chair",
+      "Mobile seat XE portable massage cushion",
+      "Foot therapy reflexology machine",
+      "Handheld deep tissue percussion massager"
+    ]
+  },
+  {
+    "shop_id": "3745db63-061f-4c1e-be9c-82fd0d5ed231",
+    "shop_name": "Oppo",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Oppo Reno 12 Pro 5G smartphone",
+      "Oppo Find N3 Flip foldable phone",
+      "Oppo Enco Air3 wireless Bluetooth earbuds",
+      "Oppo Pad Neo 11.4-inch tablet"
+    ]
+  },
+  {
+    "shop_id": "8ecf47ca-4e89-4afb-a944-7ef14fd3be4f",
+    "shop_name": "OUR HOME",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "3-Seater fabric modern sofa",
+      "Queen size orthopedic pocket spring mattress",
+      "Solid wood 6-seater dining table set",
+      "Decorative geometric throw pillow",
+      "Blackout window curtain panels pair"
+    ]
+  },
+  {
+    "shop_id": "4a31b570-2723-4969-a669-1562c10b19b9",
+    "shop_name": "OWNDAYS",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Lightweight air ultem prescription frames",
+      "Snap magnetic sunglass clip-on frames",
+      "High index anti-reflective lenses",
+      "Computer blue-light blocking lenses"
+    ]
+  },
+  {
+    "shop_id": "a8e181ec-06ef-4e3a-adcc-c2963088c54c",
+    "shop_name": "OXGN",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Casual cotton graphic t-shirt",
+      "Slim fit stretch denim pants",
+      "Everyday canvas sneakers",
+      "Fashion shoulder bag"
+    ]
+  },
+  {
+    "shop_id": "8060928d-ddca-475c-a5c0-832fb517118b",
+    "shop_name": "Oxygen (OXGN)",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Oversized graphic streetwear t-shirt",
+      "Relaxed fit cargo pants with pockets",
+      "Unisex casual utility vest",
+      "OXGN embroidered baseball cap"
+    ]
+  },
+  {
+    "shop_id": "dd08cb67-4c94-4b47-a7ff-95439433f318",
+    "shop_name": "PALLADIUM",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Pampa Hi original canvas boots",
+      "Pallatrooper waterproof leather boots",
+      "Pampa travel lightweight shoes"
+    ]
+  },
+  {
+    "shop_id": "399e53f4-581d-46d4-a6aa-ddfefface777",
+    "shop_name": "PAN DE MANILA",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Hot toasted whole wheat pandesal 10s",
+      "Classic coco jam spread jar 250g",
+      "Spanish-style canned tuna in olive oil",
+      "Café con leche instant coffee mix 3-in-1"
+    ]
+  },
+  {
+    "shop_id": "16b90891-1e7c-4b1d-adcb-9c03c9517959",
+    "shop_name": "PANDORA",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Moments silver charm bracelet with barrel clasp",
+      "Sparkling infinity cubic zirconia charm",
+      "Birthstone dangling pendant charm",
+      "Sterling silver promise ring"
+    ]
+  },
+  {
+    "shop_id": "4ca9e646-c48c-4d61-aaf5-d06bde0e5dd3",
+    "shop_name": "PAPEMELROTI",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Recycled paper inspirational desk plaque",
+      "Handmade kraft paper journal notebook",
+      "Wooden decorative wall hanging quote",
+      "Eco-friendly tote bag with typography"
+    ]
+  },
+  {
+    "shop_id": "8c0957db-f05a-4c6d-a81e-2d63f8417fc1",
+    "shop_name": "PASSPORT FOODS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Frozen dimsum variety party pack",
+      "Imported Singapore laksa paste pack",
+      "Japanese frozen ramen noodles pack"
+    ]
+  },
+  {
+    "shop_id": "eff1fde0-0af0-4dc5-a0f2-71779d4793b9",
+    "shop_name": "PAYLESS SHOESOURCE",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Comfort Plus women's wedge sandals",
+      "Smart fit boys school shoes",
+      "Dexter men's casual canvas boat shoes",
+      "Cross trainers athletic sneakers"
+    ]
+  },
+  {
+    "shop_id": "2fdd2806-3f38-4543-a480-5bdb497f8516",
+    "shop_name": "PC EXPRESS",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "High-speed data transfer cable",
+      "Bluetooth wireless audio earbuds",
+      "Heavy duty smartphone protective case"
+    ]
+  },
+  {
+    "shop_id": "4cb50ab6-66b3-4fde-9cdb-167b19de54b9",
+    "shop_name": "Penshoppe",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Penshoppe classic logo crewneck t-shirt",
+      "Skinny fit denim stretch jeans",
+      "Denim trucker jacket blue wash",
+      "Penshoppe body spray fragrance 100ml"
+    ]
+  },
+  {
+    "shop_id": "1d1b99d9-16b5-4a69-af7c-34379007044e",
+    "shop_name": "PENSHOPPE ACCESSORIES",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "UV400 retro sunglasses",
+      "Braided faux leather belt",
+      "Minimalist canvas bucket hat",
+      "Stainless steel pendant necklace"
+    ]
+  },
+  {
+    "shop_id": "16de7cce-fd76-4384-a079-66cc689bcfe6",
+    "shop_name": "Pepper Lunch",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Beef Pepper Rice with corn and special butter",
+      "Megahamburger steak with egg and rice",
+      "Salmon and chicken pepper rice combo",
+      "Miso soup bowl with tofu"
+    ]
+  },
+  {
+    "shop_id": "f4486116-4d3a-4fa0-a2a3-9a7e3f8b3fc2",
+    "shop_name": "PERGASSO",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Italian style leather business shoes",
+      "Formal genuine leather belt with automatic buckle",
+      "Leather driving shoes slip-on"
+    ]
+  },
+  {
+    "shop_id": "9d4b3d31-e21c-416c-a285-06b92b96e2c2",
+    "shop_name": "PERSIAN AVENUE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Beef shawarma wrap with garlic yogurt sauce",
+      "Chicken shawarma rice platter with pita",
+      "Beef sirloin kebab with buttered rice"
+    ]
+  },
+  {
+    "shop_id": "e712ea7d-3b81-4374-8f4d-cc77c8d88774",
+    "shop_name": "Pet Express",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "e4da1382-4917-4a72-8441-19cbc589426f",
+    "products": [
+      "Royal Canin maxi adult dog dry food 15kg",
+      "Whiskas ocean fish adult cat dry food",
+      "Stainless steel pet cage with pull-out tray",
+      "Pet grooming slicker brush and nail clipper",
+      "Absorbent puppy training pee pads 50s"
+    ]
+  },
+  {
+    "shop_id": "001cf5d5-b3f9-4330-a75c-58d9523c0fbd",
+    "shop_name": "Petrol",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Motorcycle graphic print t-shirt",
+      "Industrial wash rugged denim jeans",
+      "Zip-front hooded utility jacket",
+      "Distressed denim trucker vest"
+    ]
+  },
+  {
+    "shop_id": "05b1d0c3-3755-456a-ab43-19a43f59d70b",
+    "shop_name": "PHILIP STEIN TW STEEL WENGER LUMINOX",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Philip Stein natural frequency technology watch",
+      "TW Steel oversized chronograph watch",
+      "Luminox Navy SEAL dive watch 200m",
+      "Wenger Swiss military stainless steel watch"
+    ]
+  },
+  {
+    "shop_id": "f6cf6ae9-5e31-4cb3-a041-391037ca190b",
+    "shop_name": "PHO.CO",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Traditional Vietnamese beef Pho noodle soup",
+      "Fresh shrimp and pork summer rolls with peanut dip",
+      "Crispy fried spring rolls 4pcs",
+      "Vietnamese drip iced coffee"
+    ]
+  },
+  {
+    "shop_id": "3e791689-41a3-41fa-af4c-c21a745400fd",
+    "shop_name": "PHOTOLINE",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Fujifilm Instax Mini instant film twin pack",
+      "Fujifilm Instax Mini 12 camera",
+      "SanDisk Ultra 64GB SD memory card",
+      "Custom high gloss photo prints 4R"
+    ]
+  },
+  {
+    "shop_id": "cf871122-4c3f-41ad-a100-ece986f57648",
+    "shop_name": "PICTURE CITY",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Passport ID picture rush print package",
+      "Custom wooden picture photo frame 8x10",
+      "Digital photo restoration service",
+      "Ceramic personalized photo mug"
+    ]
+  },
+  {
+    "shop_id": "9f361bc1-f5c6-4ccf-a140-a6ff9b79db3b",
+    "shop_name": "PIZZA HUT",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Supreme pan pizza large with melted mozzarella",
+      "Cheese stuffed crust pepperoni pizza",
+      "Creamy mushroom chicken pasta bowl",
+      "Crispy roasted chicken wings 6pcs with dip"
+    ]
+  },
+  {
+    "shop_id": "c27334f5-2201-4236-ad35-14360b500d0a",
+    "shop_name": "PIZZARINA PIZZARAP",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Double cheese folded pizza pocket",
+      "Ham and cheese stuffed pizza wrap",
+      "Pepperoni supreme pizza cone"
+    ]
+  },
+  {
+    "shop_id": "d071cd50-5313-4d9f-b3a3-19251b4c806a",
+    "shop_name": "Plains & Prints",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Designer printed midi wrap dress",
+      "Tailored office pencil skirt",
+      "Short sleeve floral button-up blouse",
+      "Pleated trousers with belt"
+    ]
+  },
+  {
+    "shop_id": "9dd3f803-70d6-44ec-a592-79dfdff0e07f",
+    "shop_name": "PLDT SMART",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "High-speed data transfer cable",
+      "Bluetooth wireless audio earbuds",
+      "Heavy duty smartphone protective case"
+    ]
+  },
+  {
+    "shop_id": "258ad015-969f-41b3-aac3-cb89ec17e4ac",
+    "shop_name": "POTATO CORNER",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature POTATO CORNER specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "86a40379-e1b9-49c1-ae12-dd40f4c131d0",
+    "shop_name": "Potpourri",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Aromatic lavender dried floral potpourri",
+      "Decorative ceramic scent burner",
+      "Scented bath salts with essential oils"
+    ]
+  },
+  {
+    "shop_id": "0c7b496e-ecff-468e-a660-037347f05952",
+    "shop_name": "Power Mac Center",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Apple iPhone 16 Pro Max 256GB",
+      "Apple iPad Pro 11-inch M4 chip",
+      "Apple MacBook Air 15-inch M3",
+      "Apple AirPods Pro 2 with USB-C",
+      "Apple MagSafe 15W wireless charger adapter"
+    ]
+  },
+  {
+    "shop_id": "a5e147a3-beb9-4014-a896-e2aa2e4d3d20",
+    "shop_name": "PRESCRIPTO",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Perfume concentration inspired fragrance spray 55ml",
+      "Long-lasting pocket perfume atomizer",
+      "Body spray mist"
+    ]
+  },
+  {
+    "shop_id": "f65382a8-8e0c-4939-a043-ec1ef2afb09d",
+    "shop_name": "PRIME STEAK HOUSE - UNLIMITED IMPORTED STEAK",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Unlimited ribeye and flat iron steak with sides",
+      "Unlimited steak with potato wedges and gravy",
+      "Surf and turf steak with grilled shrimp"
+    ]
+  },
+  {
+    "shop_id": "ba8934e7-a5c4-4e9c-a98c-faec8b6be33f",
+    "shop_name": "PRO+ECH",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Screen cleaning spray kit with microfiber",
+      "Magnetic wireless car charger 15W",
+      "Shockproof silicone phone case"
+    ]
+  },
+  {
+    "shop_id": "7d53e18b-3634-4e89-a3be-c527752131d1",
+    "shop_name": "PROGUARD",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Impact-resistant smartphone screen protector",
+      "Anti-fingerprint matte screen guard",
+      "Camera lens protector film"
+    ]
+  },
+  {
+    "shop_id": "c92c427d-7112-4d22-a784-d13aab8a352c",
+    "shop_name": "PURPLE PAD THAI",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Shrimp Pad Thai with crushed peanuts and lime",
+      "Chicken green curry with jasmine rice",
+      "Thai iced milk tea with grass jelly"
+    ]
+  },
+  {
+    "shop_id": "3d804ca2-2232-4279-a53f-5ee2e97a74e4",
+    "shop_name": "QUIKSILVER",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Highline boardshorts water-repellent",
+      "Everyday cotton graphic tee",
+      "Omni sun protection rashguard",
+      "Surf straw wide-brim sun hat"
+    ]
+  },
+  {
+    "shop_id": "28441fb1-3f9f-4075-a7ee-129386696394",
+    "shop_name": "RAMEN NAGI",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Original Butao king tonkotsu pork broth ramen",
+      "Red king spicy chili broth ramen",
+      "Black king squid ink and garlic ramen",
+      "Gyoza Japanese pan-fried dumplings 5pcs"
+    ]
+  },
+  {
+    "shop_id": "4f3d5971-9f36-4bf6-afb4-3c9957d8ddde",
+    "shop_name": "REALME",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Realme 12 Pro+ 5G smartphone",
+      "Realme C67 smartphone with 108MP camera",
+      "Realme Buds T300 wireless earbuds",
+      "Realme 33W SuperVOOC power adapter"
+    ]
+  },
+  {
+    "shop_id": "bea6b080-b88a-4bf2-a4fe-a4b605569bfd",
+    "shop_name": "RED RIBBON",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Black forest celebration whole cake",
+      "Triple chocolate roll",
+      "Taisan buttery sponge bread loaf",
+      "Cheesy ensaymada pack of 4",
+      "Mocha dedication cake with message"
+    ]
+  },
+  {
+    "shop_id": "64327133-3b81-40fe-a785-2386b0f1b54a",
+    "shop_name": "REDHEE GENTEXT TELECOM",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Universal dual SIM mobile phone",
+      "Micro-USB high speed data cable",
+      "Universal external battery charger"
+    ]
+  },
+  {
+    "shop_id": "35cf5284-c6d4-4866-a952-d900fd552bb1",
+    "shop_name": "REDTECH",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Smartphone back cover with kickstand",
+      "High speed Type-C charging wire",
+      "Bluetooth hands-free mono earpiece"
+    ]
+  },
+  {
+    "shop_id": "51b49f79-d75c-49bf-aeda-03be2792e66c",
+    "shop_name": "REGATTA",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Classic pique cotton polo shirt",
+      "Linen blend long sleeve casual shirt",
+      "Tailored walk shorts with belt loops",
+      "Canvas boat shoes for men"
+    ]
+  },
+  {
+    "shop_id": "05f2b311-254b-4f47-ae1e-9512ef443e0f",
+    "shop_name": "RELX",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "RELX Infinity 2 vape device pod system",
+      "RELX replacement pods pack (tangy grape / menthol)",
+      "USB Type-C charging lanyard"
+    ]
+  },
+  {
+    "shop_id": "b11b64eb-6845-4051-aa57-ab691aa0f8b3",
+    "shop_name": "REMAX",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Remax 30000mAh high capacity power bank",
+      "Retractable 3-in-1 fast charging cable",
+      "Desktop folding phone and tablet stand",
+      "In-ear heavy bass wired earphones"
+    ]
+  },
+  {
+    "shop_id": "7c8e845e-e9f3-40f4-ac46-65bf7cd4b9cf",
+    "shop_name": "REPUBLIC OF GAMERS",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "ROG Zephyrus G16 OLED gaming laptop",
+      "ROG Ally Z1 Extreme handheld gaming PC",
+      "ROG Gladius III wireless gaming mouse",
+      "ROG Delta S gaming headset"
+    ]
+  },
+  {
+    "shop_id": "8c98c8c1-96c7-4ab9-a7eb-78ce98faa3c8",
+    "shop_name": "REYES BARBECUE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Boneless chicken barbecue with peanut sauce & java rice",
+      "Pork barbecue skewers 2-pc with java rice",
+      "Grilled tuna belly with atchara",
+      "Sizzling sisig with egg"
+    ]
+  },
+  {
+    "shop_id": "96bc2606-02c2-4824-a00b-e3404b0a5d1a",
+    "shop_name": "Robinsons Department Store",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Microfiber hotel bedsheet set King",
+      "Hardcase 4-wheel spinner luggage trolley 24-inch",
+      "Queen size orthopedic pillow",
+      "Stainless steel cookware set 5-piece",
+      "Men's wrinkle-free cotton dress shirt"
+    ]
+  },
+  {
+    "shop_id": "e310f372-8d44-45aa-9471-748903549c9d",
+    "shop_name": "Robinsons Supermarket",
+    "shop_category_id": "fc311f8d-9368-4f02-90b1-86aff3740dfb",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Robinsons select jasmine rice 5kg",
+      "Fresh whole dressed chicken 1kg",
+      "Nestle fresh full cream milk 1L",
+      "San Miguel Pure Foods bacon 500g",
+      "Head & Shoulders anti-dandruff shampoo 650ml"
+    ]
+  },
+  {
+    "shop_id": "948206c9-006b-4d2c-ab5c-54941064f2c8",
+    "shop_name": "ROBOT",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Robot RT190 10000mAh ultra slim power bank",
+      "Fast charging Type-C cable 2.4A",
+      "Bluetooth mini wireless speaker waterproof"
+    ]
+  },
+  {
+    "shop_id": "32bf3e58-dfce-41ed-aeb2-187f81993c86",
+    "shop_name": "ROMANTIC BABOY",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Unlimited Korean pork belly samgyupsal with melted cheese",
+      "Unlimited beef brisket woo samgyup",
+      "Unlimited Korean banchan side dishes",
+      "Steamed egg and kimchi jigae soup"
+    ]
+  },
+  {
+    "shop_id": "a4312853-0115-43fc-ad99-7005ba1299d7",
+    "shop_name": "RRJ",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Rugged straight fit blue denim jeans",
+      "Acid washed graphic t-shirt",
+      "Denim trucker vest with pockets",
+      "Embroidered snapback cap"
+    ]
+  },
+  {
+    "shop_id": "09d6ed91-a414-4d9d-a738-4641288848a2",
+    "shop_name": "RULLS CELLPHONE AND ACCESSORIES",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Universal mobile phone car mount holder",
+      "Tempered glass 9D edge-to-edge protector",
+      "Fast charging USB-A to Type-C wire"
+    ]
+  },
+  {
+    "shop_id": "9b2ea009-542c-4db5-b7b1-cae35eb0647c",
+    "shop_name": "S&R New York Style Pizza",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "18-inch Giant pepperoni whole pizza",
+      "Jumbo pepperoni pizza slice",
+      "Southern style fried chicken with gravy 2pcs",
+      "All-beef quarter pound hotdog with drink",
+      "Creamy New York clam chowder in bread bowl"
+    ]
+  },
+  {
+    "shop_id": "d87f45e4-f9c1-4d87-a6a6-6a1448e6770c",
+    "shop_name": "SAKURA RESTAURANT",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Salmon sashimi thick cut 8pcs",
+      "California maki rolls 8pcs",
+      "Pork tenderloin tonkatsu with shredded cabbage",
+      "Beef gyudon rice bowl"
+    ]
+  },
+  {
+    "shop_id": "f74a9353-e1f8-4ccf-adce-db3b9393d74c",
+    "shop_name": "SAMGYEOPMASARAP",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Unlimited pork belly and beef brisket buffet",
+      "Korean spicy marinated pork",
+      "Unlimited kimchi and lettuce wrap",
+      "Tofu soybean paste soup"
+    ]
+  },
+  {
+    "shop_id": "5ccc3140-3de5-48bf-a558-5cb935e397b7",
+    "shop_name": "Samgyupsal King",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Unlimited pork belly and beef brisket BBQ",
+      "Spicy pork bulgogi with melted cheese dip",
+      "Korean potato salad banchan",
+      "Unlimited rice and iced tea"
+    ]
+  },
+  {
+    "shop_id": "7113443a-8400-416c-af84-a4562808d704",
+    "shop_name": "Samgyupsalamat",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Unlimited 9 types of pork and beef barbecue",
+      "Marinated bulgogi beef slices",
+      "Unlimited steamed egg and kimchi",
+      "Korean ramen with egg noodle soup"
+    ]
+  },
+  {
+    "shop_id": "75deda35-393a-48f7-af09-02863bc0c6bb",
+    "shop_name": "SAMSONITE",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Samsonite EVOA spinner expandable luggage 28-inch",
+      "Lite-Box lightweight hardside suitcase",
+      "Backpack with laptop compartment and USB port",
+      "Travel neck pillow with memory foam"
+    ]
+  },
+  {
+    "shop_id": "99d4dcfd-cb2d-4ce7-a29e-374fcdbcbd34",
+    "shop_name": "Samsung",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Samsung Galaxy S24 Ultra 256GB",
+      "Samsung Galaxy Z Flip 6 foldable smartphone",
+      "Samsung Galaxy Tab S9 tablet with S Pen",
+      "Samsung Galaxy Watch 7 smartwatch",
+      "Samsung Galaxy Buds 3 Pro earbuds",
+      "Samsung 55-inch Crystal UHD 4K Smart TV"
+    ]
+  },
+  {
+    "shop_id": "c199e773-1936-486d-a6af-0b7c33921581",
+    "shop_name": "SANTINO'S SUPREME SLICE PIZZA",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Hawaiian supreme pizza slice",
+      "Bacon sausage supreme pizza slice",
+      "Pepperoni supreme pizza slice"
+    ]
+  },
+  {
+    "shop_id": "b7af892b-39f0-4ce0-afc6-813ec26a1f20",
+    "shop_name": "SANTOUKA",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Toroniku special pork jowl ramen with shio broth",
+      "Shoyu pork ramen with bamboo shoots",
+      "Crispy gyoza with dipping sauce",
+      "Japanese chashu rice bowl"
+    ]
+  },
+  {
+    "shop_id": "750b70ed-5a22-4653-ae76-823690eb2ff3",
+    "shop_name": "SASMUAN DELICACIES",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Pampanga polvoron pinipig box of 20",
+      "Sasmuan special pastillas de leche",
+      "Crispy peanut brittle pack",
+      "Ube halaya jar"
+    ]
+  },
+  {
+    "shop_id": "a19b3d8f-5623-4c61-ab60-26f6306f733d",
+    "shop_name": "SBARRO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Chicago deep-dish stuffed meat pizza slice",
+      "Baked ziti with ricotta and meat sauce",
+      "Classic pepperoni pan pizza slice",
+      "Chicken stromboli rolled pizza slice"
+    ]
+  },
+  {
+    "shop_id": "fee926b2-710d-43b7-a81a-738c67838d26",
+    "shop_name": "SCENT STATION",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Long-lasting body perfume spray 50ml",
+      "Pocket size oil-based perfume roll-on",
+      "Linen and room fragrance mist"
+    ]
+  },
+  {
+    "shop_id": "373f1825-9c46-4762-a8b9-2eec80248265",
+    "shop_name": "SERENITEA",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Okinawa brown sugar milk tea with pearls",
+      "Hokkaido roasted milk tea",
+      "Chicken poppers with pepper seasoning",
+      "Taro lover milk tea with egg pudding"
+    ]
+  },
+  {
+    "shop_id": "b810d196-e992-4209-a289-3dfd9f1bdba5",
+    "shop_name": "Shakey's",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature Shakey's specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "57a760bb-e560-402a-aee3-befdae86a4f7",
+    "shop_name": "SHAWARMA SHACK",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Buy 1 Take 1 beef shawarma wrap",
+      "Buy 1 Take 1 shawarma rice bowl",
+      "Cheesy beef nachos with cheese sauce"
+    ]
+  },
+  {
+    "shop_id": "e2d74439-94b8-467b-a1ed-96cef333ac3a",
+    "shop_name": "SHOWCASE CARPET",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Persian style area rug carpet 160x230cm",
+      "Modern geometric living room carpet",
+      "Plush non-slip bedside shaggy rug"
+    ]
+  },
+  {
+    "shop_id": "5d5913d8-c3f4-4c2e-ae90-dfa6bd94c1f0",
+    "shop_name": "SILICON VALLEY",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "High-speed data transfer cable",
+      "Bluetooth wireless audio earbuds",
+      "Heavy duty smartphone protective case"
+    ]
+  },
+  {
+    "shop_id": "bb04b62b-eb63-4aea-ac1d-904bbe836812",
+    "shop_name": "SILVER WINGS",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Sterling silver 925 hoop earrings",
+      "Silver chain necklace with cross pendant",
+      "Silver couple promise ring set"
+    ]
+  },
+  {
+    "shop_id": "6c28f6e7-2a60-4d86-acd9-792c2001e5fc",
+    "shop_name": "SILVERWORKS",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Sterling silver initial letter pendant necklace",
+      "Stainless steel couple ring with engraving",
+      "Titanium stud earrings hypoallergenic",
+      "Silver charm link bracelet"
+    ]
+  },
+  {
+    "shop_id": "46b58a6d-7388-4125-a76b-5cab50df84b0",
+    "shop_name": "SIOMAI HOUSE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Steamed pork and shrimp siomai with chili garlic oil 4pcs",
+      "Fried pork siomai with calamansi soy sauce",
+      "Chilled gulaman drink with sago"
+    ]
+  },
+  {
+    "shop_id": "c0298e15-a520-4e23-a69b-b4734cafaa9d",
+    "shop_name": "SIZZLING PLATE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Sizzling porterhouse steak with gravy & java rice",
+      "Sizzling boneless chicken with buttered vegetables",
+      "Sizzling pork chop with egg and java rice"
+    ]
+  },
+  {
+    "shop_id": "2f21cdb2-a4a5-4ba9-a78f-dd37f97c5806",
+    "shop_name": "Skechers",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Skechers Slip-ins hands-free walking shoes",
+      "Go Walk 7 cushioned walking shoes",
+      "D'Lites retro chunky sneakers",
+      "Arch Fit supportive athletic sneakers"
+    ]
+  },
+  {
+    "shop_id": "fc1f5a7e-15b1-4bcc-ab76-a912062aa4e6",
+    "shop_name": "SKIN STATION",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature SKIN STATION specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "82107a3a-063d-41ba-ad3a-14bc4a092903",
+    "shop_name": "SM APPLIANCE CENTER",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Carrier 1.5HP inverter window aircon",
+      "LG 50-inch 4K Smart LED TV",
+      "Panasonic 2-door no frost inverter refrigerator",
+      "Whirlpool microwave oven 20L",
+      "Philips electric air fryer 4.1L"
+    ]
+  },
+  {
+    "shop_id": "f09ef798-8ff0-452c-a21b-6a55f8bb9040",
+    "shop_name": "SM CINEMA SNACKBAR",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature SM CINEMA SNACKBAR specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "dceac4b6-78c1-40fb-a533-f3f9b4142a4f",
+    "shop_name": "SM CINEMA SNACKBAR IMAX",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature SM CINEMA SNACKBAR IMAX specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "8ad847e9-c0d2-4b75-a368-84e096b8d076",
+    "shop_name": "SM FOODCOURT",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Sizzling bulalo with gravy on hot plate",
+      "Pork sisig meal with sunny side egg",
+      "Grilled chicken inasal with garlic rice",
+      "Pancit palabok special with chicharon"
+    ]
+  },
+  {
+    "shop_id": "0cc6b98f-ac47-4904-a3b1-636ca0bb8b6c",
+    "shop_name": "SM HYPERMARKET",
+    "shop_category_id": "fc311f8d-9368-4f02-90b1-86aff3740dfb",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Fresh chilled fruit juice",
+      "Snack chips family pack",
+      "Bottled mineral water 1L"
+    ]
+  },
+  {
+    "shop_id": "2684a786-1d49-4f00-8e66-9753b09e2f2e",
+    "shop_name": "SM Store",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "SM Home micro-fiber queen bedsheet set",
+      "Urban luggage 20-inch carry-on hard trolley",
+      "Men's tailored slim-fit long sleeve polo",
+      "Plush bath towel set 2-pack",
+      "Storage box plastic container with wheels 60L"
+    ]
+  },
+  {
+    "shop_id": "afd331f2-7b58-4ae2-8269-f6db3dc19470",
+    "shop_name": "SM Supermarket",
+    "shop_category_id": "fc311f8d-9368-4f02-90b1-86aff3740dfb",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Sinandomeng special rice 10kg sack",
+      "Fresh ground pork lean 1kg",
+      "Fresh Norwegian salmon steak slices 500g",
+      "Magnolia gold pure butter salted 225g",
+      "Tide powder detergent with Downy 1.5kg"
+    ]
+  },
+  {
+    "shop_id": "d0c420eb-9ae7-405c-aedb-b7972f18e30c",
+    "shop_name": "SO FAB",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Open toe block heel sandals",
+      "Classic pointed nude stiletto heels",
+      "Casual slip-on ballerina flats",
+      "Evening party clutch handbag"
+    ]
+  },
+  {
+    "shop_id": "611e81ce-e6ce-4a49-a089-fbda3d6368f2",
+    "shop_name": "Sole Avenue PH",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Exclusive collector basketball sneakers",
+      "Retro athletic running shoes",
+      "Sneaker protective display showcase box"
+    ]
+  },
+  {
+    "shop_id": "df57acf2-3af6-4289-ac7c-ad3c0a1a6ef9",
+    "shop_name": "SOLIMAN PAROLI EYE CARE",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Prescription progressive eyeglass lenses",
+      "Designer acetate optical frame",
+      "Contact lens multi-purpose solution 360ml"
+    ]
+  },
+  {
+    "shop_id": "a98b7296-2c55-4e12-8aea-932fb4dac1cf",
+    "shop_name": "Sony",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Sony Bravia 55-inch 4K HDR Google TV",
+      "Sony WH-1000XM5 wireless noise-canceling headphones",
+      "Sony WF-1000XM5 wireless earbuds",
+      "Sony PlayStation 5 DualSense controller",
+      "Sony Alpha A6700 mirrorless camera body"
+    ]
+  },
+  {
+    "shop_id": "cc03d32d-d281-48f6-a155-b2468ffba998",
+    "shop_name": "Southstar Drug",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Biogesic Paracetamol 500mg 20 tablets",
+      "Neozep Forte cold relief 10 tablets",
+      "Ascorbic Acid Vitamin C 500mg 100 capsules",
+      "Centrum Silver multivitamins for adults 30 tablets",
+      "Betadine antiseptic wound solution 60ml"
+    ]
+  },
+  {
+    "shop_id": "19432cda-3ef6-47d0-8034-46e712e2d5b5",
+    "shop_name": "Sperry Top-Sider",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Authentic Original 2-eye leather boat shoes",
+      "Striper II CVO washed canvas sneakers",
+      "Songfish leather boat shoes for women",
+      "No-show breathable boat shoe socks 3-pack"
+    ]
+  },
+  {
+    "shop_id": "657286d9-f7e8-42d3-aae2-0286e9cea030",
+    "shop_name": "SPIGEN",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Spigen Ultra Hybrid clear shockproof case for iPhone",
+      "Spigen Rugged Armor protective case",
+      "Spigen Glas.tR EZ Fit tempered glass 2-pack",
+      "Spigen MagFit magnetic phone card wallet"
+    ]
+  },
+  {
+    "shop_id": "c45e6e5b-484a-4b2d-ac9f-01e84b031303",
+    "shop_name": "SPORTSHOUSE",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Spalding official size 7 basketball",
+      "Mikasa indoor competitive volleyball",
+      "Yonex carbon graphite badminton racket pair",
+      "Speedo anti-fog swimming goggles"
+    ]
+  },
+  {
+    "shop_id": "9bee9c14-b31b-480f-ad21-dd1c70f0274b",
+    "shop_name": "SPRINTO",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Polarized active sports sunglasses",
+      "Impact-resistant polycarbonate shades",
+      "UV400 lifestyle sunglasses"
+    ]
+  },
+  {
+    "shop_id": "7eb677ca-a415-4e26-a6f2-994db0260a40",
+    "shop_name": "SPYDER",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Spyder full-face motorcycle helmet with dual visor",
+      "Spyder polarized cycling sunglasses with interchangeable lenses",
+      "Impact-absorbing cycling helmet with rear light"
+    ]
+  },
+  {
+    "shop_id": "12e02031-8eb1-4d89-9f30-a01cac11164a",
+    "shop_name": "Starbucks",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Caramel Macchiato espresso drink iced",
+      "Caffe Americano hot brewed coffee",
+      "Java Chip Frappuccino with whipped cream",
+      "Triple cheese sourdough ham panini",
+      "Cinnamon Danish pastry"
+    ]
+  },
+  {
+    "shop_id": "ce56e3f9-6f55-42fb-a0e3-8b08d84b2fde",
+    "shop_name": "STARBUCKS COFFEE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Iced caramel latte",
+      "Hot cappuccino brew",
+      "Toasted butter croissant",
+      "Mocha frappe with whipped cream"
+    ]
+  },
+  {
+    "shop_id": "87da0cfe-1998-423e-afcc-e5e11d9a046d",
+    "shop_name": "STARFINDER OPTICAL",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Korean style ultra-lightweight titanium eyeglasses",
+      "Anti-fatigue blue light lenses",
+      "Tinted prescription sunglasses UV400"
+    ]
+  },
+  {
+    "shop_id": "0d5671f5-7cbb-49b6-8160-524b42dd6e3b",
+    "shop_name": "Subway",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Italian B.M.T. footlong sub sandwich",
+      "Roasted chicken breast 6-inch sub",
+      "Subway club footlong with fresh veggies",
+      "Chocolate chip soft baked cookie",
+      "Lays potato chips bag"
+    ]
+  },
+  {
+    "shop_id": "dcbbfed3-d6ad-499a-a815-3060f2dfc14f",
+    "shop_name": "SUMO NIKU UNLIMITED JAPANESE BARBEQUE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature SUMO NIKU UNLIMITED JAPANESE BARBEQUE specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "d239b00a-9f5c-4eb8-96d1-11b0f0fe24e7",
+    "shop_name": "Sumoniku Unlimited Japanese Barbeque",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Unlimited Japanese wagyu beef slices and pork",
+      "Unlimited salmon sashimi and sushi",
+      "Japanese chicken karaage and tempura",
+      "Steamed rice with miso soup"
+    ]
+  },
+  {
+    "shop_id": "b1fc1796-da10-4529-a407-e46be890283c",
+    "shop_name": "SUNNIES BY CHARLIE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature SUNNIES BY CHARLIE specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "eeaefd0b-fc37-434a-abd7-60991902f542",
+    "shop_name": "SUNNIES STUDIOS",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Sunnies retro polarized sunglasses",
+      "Anti-radiation optical computer eyeglasses",
+      "Sunnies face fluffy matte velvet lipstick",
+      "Eyewear hard case with cleaning cloth"
+    ]
+  },
+  {
+    "shop_id": "b4a44c9e-58b9-4135-a141-4034b9d4a69e",
+    "shop_name": "SURPLUS SHOP",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Export overruns branded graphic t-shirt",
+      "Discounted utility cargo shorts",
+      "Activewear dry-fit training shirt",
+      "Casual zip-up fleece jacket",
+      "Budget-friendly canvas sneakers"
+    ]
+  },
+  {
+    "shop_id": "067103ce-61ef-46f3-a079-70a9eb81013f",
+    "shop_name": "SUSHI BAR BY JIRO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Spicy salmon crunchy maki roll 8pcs",
+      "Tuna and salmon nigiri sushi combo",
+      "Dragon roll with ebi tempura and avocado",
+      "Seared beef roll with teriyaki glaze"
+    ]
+  },
+  {
+    "shop_id": "d75be8e1-f4ca-4014-a33d-dbbd4a345fc5",
+    "shop_name": "SUSIES CUISINE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Susie's famous pancit luglug with egg & chicharon",
+      "Tibok-tibok carabao milk pudding slice",
+      "Moche sweet rice cake with coconut bean sauce",
+      "Special cassava bibingka slice"
+    ]
+  },
+  {
+    "shop_id": "4d2cfed8-22f8-4ee5-af6b-780154233156",
+    "shop_name": "SWEET BITES",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Assorted mini chocolate cupcakes box of 12",
+      "Caramelized cream puff tower",
+      "Fudge brownies bites pack"
+    ]
+  },
+  {
+    "shop_id": "108e848b-bc69-4f8e-a362-9eeab82f41b7",
+    "shop_name": "SWEET N' FANCY",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Cake decorating sprinkles variety jar",
+      "Color gel food paste set",
+      "Fondant rolling pin and cutter set"
+    ]
+  },
+  {
+    "shop_id": "e835a912-22bd-4262-a941-90ba079f74c5",
+    "shop_name": "TAQUERIA CHUPACABRA",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Authentic street-style pork carnitas tacos 3pcs",
+      "Spicy carne asada beef taco with cilantro",
+      "Cheesy grilled quesadilla with guacamole"
+    ]
+  },
+  {
+    "shop_id": "5c616fda-b720-47c4-a6d1-2424db95deb5",
+    "shop_name": "TATERS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Superpop popcorn tub (white cheddar / sour cream)",
+      "Tofu chips crispy bag",
+      "Taters potato crunchers basket",
+      "All-beef jumbo stadium hotdog"
+    ]
+  },
+  {
+    "shop_id": "9a405feb-7cca-4b6d-ab2b-7306151e0518",
+    "shop_name": "TECHKNOW",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Universal laptop multi-port adapter",
+      "Magnetic wireless charging desk stand",
+      "High-speed USB 3.0 flash drive 64GB"
+    ]
+  },
+  {
+    "shop_id": "7f3a6deb-cd84-446f-a154-c7349feba864",
+    "shop_name": "TECHNO KID",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Universal fast-charge wall brick 20W",
+      "Heavy duty nylon braided micro USB cord",
+      "Protective silicone earphone case"
+    ]
+  },
+  {
+    "shop_id": "63b20c7e-65aa-4e8c-a0f9-31b0d12b0402",
+    "shop_name": "TECNO",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Tecno Camon 30 Pro 5G smartphone",
+      "Tecno Spark 20 smartphone",
+      "Tecno True 1 active noise cancellation earbuds"
+    ]
+  },
+  {
+    "shop_id": "b729981a-82ed-4011-a76f-bfee0a9df4c3",
+    "shop_name": "TEPPANYA BAR RESTO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Teppanyaki Angus ribeye steak cooked live",
+      "Teppanyaki Norwegian salmon with teriyaki glaze",
+      "Japanese garlic fried rice",
+      "Tiger prawn teppanyaki 4pcs"
+    ]
+  },
+  {
+    "shop_id": "31b98ee7-2c31-4476-a3e3-f0e8a95cb807",
+    "shop_name": "TERRANOVA",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Casual cotton graphic t-shirt",
+      "Slim fit stretch denim pants",
+      "Everyday canvas sneakers",
+      "Fashion shoulder bag"
+    ]
+  },
+  {
+    "shop_id": "b9936c64-5392-42ca-a959-c2a052038e29",
+    "shop_name": "Texas Roadhouse",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Hand-cut USDA Choice Ribeye steak 10oz",
+      "Fresh-baked rolls with sweet cinnamon butter (complimentary)",
+      "Fall-off-the-bone BBQ pork ribs half rack",
+      "Loaded baked potato with bacon and cheddar cheese"
+    ]
+  },
+  {
+    "shop_id": "2088270e-3b1b-416c-99b3-346ef76037e1",
+    "shop_name": "TGI Fridays",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature whiskey-glazed ribs half rack",
+      "Fridays classic bacon cheeseburger with seasoned fries",
+      "Loaded potato skins with sour cream and bacon",
+      "Cajun shrimp and chicken pasta with garlic bread"
+    ]
+  },
+  {
+    "shop_id": "d71927e9-b2d7-42d0-a99e-4ed84cce13c9",
+    "shop_name": "TGIFRIDAYS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature TGIFRIDAYS specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "1ec24e4d-1525-4ce4-a9fe-6f6d5fabcfaa",
+    "shop_name": "The Athlete's Foot",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Nike Pegasus 40 running shoes",
+      "Asics Gel-Kayano 30 running shoes",
+      "Puma Suede classic sneakers",
+      "Sportswear moisture wicking athletic socks 3s"
+    ]
+  },
+  {
+    "shop_id": "fa8822c5-5afa-40ff-a496-40418e923c28",
+    "shop_name": "THE BODY SHOP",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Tea tree skin clearing facial wash 250ml",
+      "British Rose moisture shower gel",
+      "Shea nourishing body butter tub 200ml",
+      "Ginger anti-dandruff shampoo 400ml",
+      "Drops of Youth skin concentrate serum"
+    ]
+  },
+  {
+    "shop_id": "9928ffbb-587c-457a-a04d-4c81830c34ad",
+    "shop_name": "The Coffee Bean & Tea Leaf",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "The Original Mocha Ice Blended drink with whipped cream",
+      "African Sunrise herbal loose leaf tea latte",
+      "Chai tea latte hot brew",
+      "Tuna melt on focaccia bread",
+      "Warm blueberry muffin"
+    ]
+  },
+  {
+    "shop_id": "3c125dc6-eefa-4de5-aa0a-c8112d2b8bc8",
+    "shop_name": "THE COFFEE BEAN TEA LEAF",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Iced caramel latte",
+      "Hot cappuccino brew",
+      "Toasted butter croissant",
+      "Mocha frappe with whipped cream"
+    ]
+  },
+  {
+    "shop_id": "ba2449d4-37ff-4ff7-afaf-f71fbbcc99b8",
+    "shop_name": "THE FACE SHOP",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Rice Water Bright foaming facial cleanser 150ml",
+      "Jeju volcanic lava pore scrub",
+      "Daily real nature sheet masks 10-pack",
+      "Yehwadam anti-aging revitalizing serum"
+    ]
+  },
+  {
+    "shop_id": "56245f78-c1dd-4c35-a1b9-a7f8311d5464",
+    "shop_name": "THE FRENCH BAKER",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Traditional French sourdough batard",
+      "Freshly baked butter croissant",
+      "Baguette traditional French crusty bread",
+      "Chicken a la king in sourdough bread bowl",
+      "Creamy mushroom soup in bread bowl"
+    ]
+  },
+  {
+    "shop_id": "26c3d947-00fb-4973-a89e-fd76e5dbca0b",
+    "shop_name": "The Generics Pharmacy",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "TGP Paracetamol 500mg 100 tablets",
+      "TGP Amoxicillin 500mg 100 capsules",
+      "TGP Ascorbic Acid 500mg box",
+      "TGP Losartan 50mg 100 tablets",
+      "TGP Mefenamic Acid 500mg pain relief"
+    ]
+  },
+  {
+    "shop_id": "d538659d-4efc-4f99-a7c7-c4029d46a1dd",
+    "shop_name": "THE GOOD STEWARD",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Sustainable bamboo wood toothbrush 4-pack",
+      "Zero-waste natural shampoo bar",
+      "Stainless steel reusable metal straws with brush",
+      "Natural beeswax food wrap set"
+    ]
+  },
+  {
+    "shop_id": "e7b20e30-786b-4da7-a4fe-33efd8bd0f45",
+    "shop_name": "THE HEALTH SHOP",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Cold pressed extra virgin olive oil 500ml",
+      "Pure raw organic honey jar",
+      "Organic chia seeds 500g",
+      "Apple cider vinegar with mother"
+    ]
+  },
+  {
+    "shop_id": "10bcda68-7fe8-400d-acfb-e22366424a83",
+    "shop_name": "THE TRAVEL CLUB",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Delsey Paris expandable spinner luggage 28-inch",
+      "Victorinox Swiss Army knife climber",
+      "Pacsafe anti-theft shoulder crossbody bag",
+      "Eagle Creek packing cubes compression set"
+    ]
+  },
+  {
+    "shop_id": "059f8278-a11d-435c-ae1c-cd3132074109",
+    "shop_name": "THEOS FLOWER SHOP",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Fresh red roses bouquet dozen",
+      "Assorted Ecuadorian roses flower arrangement",
+      "Sympathy standing floral wreath",
+      "Dried preserved flowers in glass dome"
+    ]
+  },
+  {
+    "shop_id": "012590a8-e4c9-47e1-ab65-ac48b3700743",
+    "shop_name": "TICKLES",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Novelty quirky printed socks",
+      "Fun gag gift desk toy",
+      "Retro tin wind-up robot toy",
+      "Cute novelty stationery & pens"
+    ]
+  },
+  {
+    "shop_id": "db3fae38-e330-44d1-8101-5c2a3591064b",
+    "shop_name": "Tim Hortons",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Double Double hot brewed coffee with cream",
+      "Original Iced Capp blended frozen coffee",
+      "Timbits assorted bite-sized doughnut holes 10s",
+      "Boston cream filled doughnut",
+      "Crispy chicken bacon ranch sandwich"
+    ]
+  },
+  {
+    "shop_id": "a0e84755-4e94-4c72-a68f-bde6b6748c8b",
+    "shop_name": "TOKYO TEMPURA",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Crispy deep-fried shrimp tempura 8pcs with dipping sauce",
+      "Tempura glazed rice bowl (Tendon)",
+      "Crabstick tempura snack pack 5pcs"
+    ]
+  },
+  {
+    "shop_id": "57cba17d-8947-4284-a350-d19a9a9a9e7e",
+    "shop_name": "TOKYO TOKYO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Beef misono bento meal with unli-rice",
+      "Best-selling pork tonkatsu bento meal",
+      "Prawn and vegetable tempura bento",
+      "Red iced tea signature 16oz",
+      "Tokyo Tokyo ramen bowl spicy pork broth"
+    ]
+  },
+  {
+    "shop_id": "11d500c7-09b1-4569-afaf-6b50ab4974f6",
+    "shop_name": "TOLL HOUSE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature TOLL HOUSE specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "2f331085-8529-4621-a4e8-822a8fa8670a",
+    "shop_name": "Tom N Toms Coffee",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Tom N Toms honey butter bread warm",
+      "Pepperoni pretzel with marinara dip",
+      "Iced Tomntoccino caramel blended coffee",
+      "Cinnamon sugar pretzel bites"
+    ]
+  },
+  {
+    "shop_id": "ccfe32d0-ee90-4ca6-a411-a03ddf4bcced",
+    "shop_name": "Tommy Hilfiger",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Classic embroidered flag logo cotton polo",
+      "Custom slim fit long sleeve button-up shirt",
+      "Straight leg denim jeans with leather patch",
+      "Signature tri-color leather bi-fold wallet"
+    ]
+  },
+  {
+    "shop_id": "e80801fb-2167-463e-af2d-f2372e866966",
+    "shop_name": "TOTOBITS STREAT FOOD STALL",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Fried fish balls with sweet spicy brown sauce 10pcs",
+      "Crispy kikiam with spiced vinegar dip",
+      "Squid balls skewer with chili sauce",
+      "Deep fried kwek-kwek quail eggs in orange batter 5pcs"
+    ]
+  },
+  {
+    "shop_id": "2a4f4888-55c7-4978-9bc7-f0dd36c76304",
+    "shop_name": "Toys \"R\" Us",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "e4da1382-4917-4a72-8441-19cbc589426f",
+    "products": [
+      "LEGO Star Wars X-Wing fighter building set",
+      "Marvel Avengers Titan Hero action figure",
+      "Fisher-Price baby musical learning table",
+      "Monopoly classic board game",
+      "Barbie dreamhouse 3-story dollhouse"
+    ]
+  },
+  {
+    "shop_id": "705b7e49-6cef-4d93-acd1-b55d2d87667f",
+    "shop_name": "TRIBAL GEAR",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Tribal graphic streetwear print t-shirt",
+      "Tribal gothic skull hoodie",
+      "Loose fit skateboard denim jeans",
+      "Embroidered flat-brim cap"
+    ]
+  },
+  {
+    "shop_id": "2ccf552b-2d08-486c-a396-47e0d03ce8c0",
+    "shop_name": "TROPICS SALAD DELIGHTS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Grilled chicken Caesar salad with dressing",
+      "Garden fresh vegetable salad with balsamic",
+      "Fruit salad with honey cream yogurt"
+    ]
+  },
+  {
+    "shop_id": "10dc5e95-52e5-45a3-b2bd-bcc3a0b09d08",
+    "shop_name": "True Value",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "DeWalt 20V Max cordless compact drill driver",
+      "Master Lock heavy duty steel padlock",
+      "Stanley 5-piece hand tool screwdriver set",
+      "Rubbermaid 10-piece food storage container set",
+      "Weber portable outdoor charcoal grill"
+    ]
+  },
+  {
+    "shop_id": "01b5fb04-b2d9-4f14-a053-98e2206861be",
+    "shop_name": "TSUJIRI",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Tsujiri matcha green tea soft serve cone",
+      "O-Matcha float with red bean and shiratama",
+      "Uji matcha chiffon cake slice",
+      "Matcha warabi mochi with kinako powder"
+    ]
+  },
+  {
+    "shop_id": "f4bd62ee-0e6f-4aa7-ac5f-03dd26501043",
+    "shop_name": "TURKS SHAWARMA",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Turks beef pita doner with garlic sauce & spicy sauce",
+      "Turks chicken pita wrap with cheese",
+      "Turks beef shawarma rice bowl with cucumber",
+      "Turks hotdog wrap with melted cheese"
+    ]
+  },
+  {
+    "shop_id": "1d3ee282-b6d7-481a-ac7b-b71d37611552",
+    "shop_name": "Uniqlo",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "AIRism cotton oversized crewneck t-shirt",
+      "Ultra Light Down packable jacket",
+      "Dry-EX moisture wicking crewneck tee",
+      "Smart ankle-length stretch trousers",
+      "Heattech crewneck long sleeve thermal top"
+    ]
+  },
+  {
+    "shop_id": "68f21e91-3cd0-4a6f-ae1a-e1677f601777",
+    "shop_name": "UNISILVER",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Hypoallergenic 925 sterling silver stud earrings",
+      "Silver figaro chain necklace with pendant",
+      "Silver couple eternity ring set",
+      "Solid silver link bracelet"
+    ]
+  },
+  {
+    "shop_id": "2a9619bd-04eb-4dc3-a462-b74559e01d49",
+    "shop_name": "UNISILVER TIME",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Analog stainless steel sports watch",
+      "Digital silicon strap water-resistant watch",
+      "Chrono-style everyday wristwatch"
+    ]
+  },
+  {
+    "shop_id": "1cd4b440-66fc-4608-b072-0ed8992f4a1d",
+    "shop_name": "Vans",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Vans Old Skool black & white skate sneakers",
+      "Vans Classic Slip-On checkerboard shoes",
+      "Vans Sk8-Hi high top canvas shoes",
+      "Vans Realm checkerboard backpack",
+      "Classic logo cotton crewneck t-shirt"
+    ]
+  },
+  {
+    "shop_id": "6ae4dccf-fbd8-4056-a035-1ae819cd3645",
+    "shop_name": "VAPE KING",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Refillable pod vape system kit",
+      "Freebase nicotine e-liquid 60ml bottle",
+      "Salt nicotine vape juice 30ml (mint / fruit)",
+      "Replacement mesh coil 5-pack"
+    ]
+  },
+  {
+    "shop_id": "e805470c-c285-439d-af96-585700037a21",
+    "shop_name": "VERDE BY VILLAROSA",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Indoor potted snake plant in ceramic pot",
+      "Money tree succulent in decorative planter",
+      "Hanging pothos plant in macrame holder"
+    ]
+  },
+  {
+    "shop_id": "c53a7a54-a0a8-45a4-acdc-27660b99b249",
+    "shop_name": "VICE CO",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Good Vibes matte bullet lipstick",
+      "Kavogue waterproof liquid eyeliner pen",
+      "Aura soft cheek blush powder",
+      "Endless Ganda dual powder foundation SPF 15"
+    ]
+  },
+  {
+    "shop_id": "12080b36-9a95-4ff2-ab1b-87499641040f",
+    "shop_name": "VILLAROSA CREATIONS",
+    "shop_category_id": "6c56821c-70f6-442c-9573-dacf226ada2e",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Custom bridal bouquet with fresh flowers",
+      "Grand opening flower stand arrangement",
+      "Box of preserved dried roses with ribbon"
+    ]
+  },
+  {
+    "shop_id": "970183a3-36c9-4eb1-ad52-a8461d72ece8",
+    "shop_name": "VIONIC",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Vionic orthopedic supportive walking sneakers",
+      "Rest Bella orthotic toe-post sandals",
+      "Women's arch support casual slip-on shoes"
+    ]
+  },
+  {
+    "shop_id": "bf4401be-d024-49c4-a8ef-f02cd37b14b9",
+    "shop_name": "VISION EXPRESS",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Ray-Ban original Wayfarer sunglasses",
+      "Gucci luxury prescription optical frames",
+      "Shamir computer anti-glare prescription lenses",
+      "Transitions Gen S light adaptive lenses"
+    ]
+  },
+  {
+    "shop_id": "c74b6b3a-3a43-4ac8-a16b-ba447a83152b",
+    "shop_name": "VIVO",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Vivo V30 5G smartphone with Aura light",
+      "Vivo Y28 long-battery smartphone",
+      "Vivo TWS 3e noise cancellation wireless earbuds"
+    ]
+  },
+  {
+    "shop_id": "841117bd-36d4-48b8-ab3a-0e2a66d2af6b",
+    "shop_name": "VIZCOS CAKE SHOP",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Vizco's famous strawberry shortcake whole",
+      "Mango shortcake slice with fresh fruit",
+      "Ube velvet layered celebration cake"
+    ]
+  },
+  {
+    "shop_id": "e30ff13b-d738-4011-ac35-4cbf1d3f38d4",
+    "shop_name": "WATAMI JAPANESE RESTAURANT",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Salmon sashimi sushi platter",
+      "Beef sukiyaki hot pot with raw egg dip",
+      "Chicken teriyaki skewers with rice",
+      "Ebi tempura roll with avocado"
+    ]
+  },
+  {
+    "shop_id": "e5989da2-bba5-46ab-adbd-188e1733d717",
+    "shop_name": "WATCH REPUBLIC",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Timex Expedition rugged field watch",
+      "Nixon Time Teller minimalist analog watch",
+      "Police designer stainless steel watch",
+      "Ingersoll automatic skeleton watch"
+    ]
+  },
+  {
+    "shop_id": "6e77e510-723a-460f-816a-2d3c2512b87a",
+    "shop_name": "Watsons",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Biore UV Aqua Rich watery essence sunscreen 50g",
+      "Cetaphil gentle skin cleanser 500ml",
+      "Watsons multivitamin with iron 100 tablets",
+      "Watsons treatment wax hair conditioner with argan oil",
+      "Maybelline Superstay matte ink liquid lipstick"
+    ]
+  },
+  {
+    "shop_id": "14638a8f-1947-41b1-aadb-5a0c844d7ded",
+    "shop_name": "WELLNESSFIX",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Immune support elderberry gummies",
+      "Apple cider vinegar slimming gummies 60s",
+      "Collagen peptide powder with hyaluronic acid",
+      "Keto electro drink electrolyte mix"
+    ]
+  },
+  {
+    "shop_id": "d8414d60-5709-497a-a878-74445d566bc3",
+    "shop_name": "WENDYS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Dave's Single all-beef cheeseburger with fries",
+      "Baconator double beef burger with melted cheese",
+      "Crispy chicken nuggets 6pcs with honey mustard",
+      "Famous chocolate Frosty dessert cup"
+    ]
+  },
+  {
+    "shop_id": "c85d63dd-0824-44d9-a2f6-142d3aa820d7",
+    "shop_name": "WING ZONE",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Original boneless chicken wings 10-pc with flavor rub",
+      "Crispy traditional bone-in wings with honey Q dip",
+      "Mozzarella cheese sticks 5pcs",
+      "Seasoned wedge fries basket"
+    ]
+  },
+  {
+    "shop_id": "05ec9028-1925-4ef9-9902-36dee1e09d2d",
+    "shop_name": "World Balance",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "World Balance running shoes with bounce pad",
+      "Easy Soft waterproof slip-on black shoes",
+      "Air dry performance training t-shirt",
+      "Everyday crew socks 3-pair pack",
+      "Athletic cross-body gym bag"
+    ]
+  },
+  {
+    "shop_id": "f0293adf-53f9-47c5-a543-6a8d1dcd6e63",
+    "shop_name": "Xiaomi",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Signature Xiaomi specialty dish",
+      "Fresh fruit iced beverage",
+      "Steamed rice meal combo"
+    ]
+  },
+  {
+    "shop_id": "930155b9-de9a-4540-ac4f-958a66e0acfe",
+    "shop_name": "XO",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Heavy duty braided USB-C cable 2m",
+      "Fast PD 20W travel charger adapter",
+      "Car phone mount with wireless charging"
+    ]
+  },
+  {
+    "shop_id": "4b5ee8cc-712e-4d48-a18b-eac57cfe3487",
+    "shop_name": "XTREMELY XPRESSO",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Big Ben gourmet burger with bacon & fries",
+      "Creamy chicken pesto linguine pasta",
+      "Freshly brewed iced caramel latte",
+      "New York style cheesecake slice"
+    ]
+  },
+  {
+    "shop_id": "f6e36c42-a3d9-4ac7-a783-a7ef9e5e7bf5",
+    "shop_name": "Yakimix",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Unlimited buffet pass with smokeless table grill",
+      "Marinated beef short ribs for grilling",
+      "Fresh salmon and tuna sushi rolls",
+      "Unlimited dessert and ice cream bar"
+    ]
+  },
+  {
+    "shop_id": "80c9b86d-45d0-4277-ac39-f6ac3c3f7b92",
+    "shop_name": "YAMANG BUKID",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Yamang Bukid 10-in-1 Turmeric tea with honey",
+      "Turmeric instant tea powder 400g jar",
+      "Pure wild forest honey bottle 350ml"
+    ]
+  },
+  {
+    "shop_id": "d875f084-f6a0-4166-adac-dedf16caa61b",
+    "shop_name": "YELLOW CAB",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "New York's Finest loaded pizza 18-inch",
+      "Manhattan meat lovers pizza",
+      "Charlie Chan chicken pasta with spicy peanut sauce",
+      "Hot wings chicken platter 6pcs with ranch"
+    ]
+  },
+  {
+    "shop_id": "5bc814a0-7fcd-45f0-a790-108089c3b229",
+    "shop_name": "Yo! Shabu Shabu",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Unlimited shabu-shabu hotpot buffet with beef & pork",
+      "Assorted seafood balls and fish tofu",
+      "Spicy Sichuan hotpot soup base",
+      "Fresh ramen noodles and vegetable basket"
+    ]
+  },
+  {
+    "shop_id": "c93f240f-0b4b-4f40-aeaa-e52b0b282382",
+    "shop_name": "YOI YOI TEI",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Crispy pork katsudon rice bowl",
+      "Chicken karaage bento with potato salad",
+      "Spicy miso ramen with tender chashu"
+    ]
+  },
+  {
+    "shop_id": "50991971-6ff5-4b63-911b-4cca0b90eb9c",
+    "shop_name": "Zara",
+    "shop_category_id": "6ae4535d-162d-40f0-a7d4-fa8047bbc8c3",
+    "item_category_id": "77df59d7-d91b-419e-89b6-84fe69516504",
+    "products": [
+      "Double-breasted tailored women's blazer",
+      "High-waist wide-leg flowing trousers",
+      "Textured midi summer dress",
+      "Basic lightweight linen shirt",
+      "Leather cross-body city bag"
+    ]
+  },
+  {
+    "shop_id": "908706c5-6183-45d0-adc4-74eca9d64fbf",
+    "shop_name": "ZARKS BURGERS",
+    "shop_category_id": "a224d118-7372-4b83-8d2e-f543141d484e",
+    "item_category_id": "d7110230-f965-40bd-af40-568cde68ee92",
+    "products": [
+      "Zark's Ultimate double cheese burger with fries",
+      "Jawbreaker triple beef burger with bacon",
+      "Tombstone loaded quadruple burger challenge",
+      "Crispy bacon mac & cheese burger"
+    ]
+  },
+  {
+    "shop_id": "850b1082-a342-4631-af5b-e9dddc116423",
+    "shop_name": "ZEN ZEST",
+    "shop_category_id": "72c5ca0f-584a-496a-9a7d-88e887a2c556",
+    "item_category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a",
+    "products": [
+      "Green Tea aromatherapy body fragrance 100ml",
+      "Virgin Coconut Oil body scrub tub",
+      "Lavender anti-stress room and linen mist"
+    ]
+  },
+  {
+    "shop_id": "66d71f69-5c93-49be-a98f-63656848c204",
+    "shop_name": "ZENCELL CELLPHONE ACCESSORIES",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "Universal fast charging power bank 10000mAh",
+      "Tempered glass screen protector installation",
+      "Multi-angle folding desk mobile holder"
+    ]
+  },
+  {
+    "shop_id": "ea94c2d8-3f4a-4f0f-a507-27b7e530f252",
+    "shop_name": "ZGA",
+    "shop_category_id": "60315e6f-d85f-49f3-875a-6f6c568b8f30",
+    "item_category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706",
+    "products": [
+      "High speed Type-C phone charging wire",
+      "Bluetooth mono in-ear driver headset",
+      "Silicone shockproof protective back case"
+    ]
+  }
+]

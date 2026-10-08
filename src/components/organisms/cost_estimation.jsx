@@ -1,4 +1,5 @@
 import CostRow from '@/components/molecules/cost_row';
+import { formatCurrency } from '@/lib/format';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
@@ -54,7 +55,7 @@ export default function CostEstimation({
                 />
               </View>
             ) : (
-              <Text style={styles.value}>₱{budgetNum.toFixed(2)}</Text>
+              <Text style={styles.value}>{formatCurrency(budgetNum)}</Text>
             )}
           </View>
 
@@ -71,13 +72,13 @@ export default function CostEstimation({
           <View style={styles.divider} />
           <View style={styles.budgetRow}>
             <Text style={styles.label}>Total</Text>
-            <Text style={styles.value}>₱{total.toFixed(2)}</Text>
+            <Text style={styles.value}>{formatCurrency(total)}</Text>
           </View>
           {budgetNum > 0 && (
             <View style={styles.budgetRow}>
               <Text style={styles.label}>{remaining >= 0 ? 'Remaining' : 'Over budget'}</Text>
               <Text style={[styles.value, remaining < 0 && { color: colors.error ?? 'red' }]}>
-                ₱{Math.abs(remaining).toFixed(2)}
+                {formatCurrency(Math.abs(remaining))}
               </Text>
             </View>
           )}

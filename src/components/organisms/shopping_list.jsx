@@ -1,5 +1,6 @@
 import ItemRow from '@/components/molecules/item_row';
 import SectionHeader from '@/components/molecules/section_header';
+import { formatCurrency } from '@/lib/format';
 import { searchItems } from '@/lib/mall_data';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing } from '@/theme/theme';
@@ -16,7 +17,7 @@ const formatShops = (shops = []) => {
 const formatPrice = (value) => {
   if (value == null) return '';
   if (value === 0) return 'Free';
-  return `₱${String(Math.round(value)).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
+  return formatCurrency(value);
 };
 
 export default function ShoppingList({

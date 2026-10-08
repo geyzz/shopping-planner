@@ -1,0 +1,502 @@
+[
+  {
+    "id": "00f649fb-3f90-47a8-85ff-c88dfa3f48a0",
+    "name": "Dry-fit shirts",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "07c72232-4179-476f-a339-b5a09f75ed4b",
+    "name": "Chuck Taylor sneakers",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "0830d891-7b9d-451f-8d98-6d75a2919f1e",
+    "name": "T-shirts",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "087ae632-748f-48e7-a510-cfd5a028033b",
+    "name": "Grooming accessories",
+    "category_id": "e4da1382-4917-4a72-8441-19cbc589426f"
+  },
+  {
+    "id": "096ad87a-24b1-40a3-9c1f-9464cf9cd526",
+    "name": "Home decor",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "0984d63d-4be1-42db-9cea-d78f262b08c9",
+    "name": "Teas",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "0ae975ca-6cb8-47db-bcfa-3c0aaae9d780",
+    "name": "Camping gear",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "0bdb37ee-a5d7-4864-b0c3-fdd2543db514",
+    "name": "Track jackets",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "0c8c39bb-f0ef-4f87-843f-102c3ce7334c",
+    "name": "Iced capps",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "101abd22-0c38-4d6e-b021-8e0efc3394f2",
+    "name": "Japanese donburi",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "108b48c2-11b3-44ce-a674-a06c27153c14",
+    "name": "Gravy",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "11e06134-f17e-43c1-b0b8-d394827c3a2e",
+    "name": "ThinkPad laptops",
+    "category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706"
+  },
+  {
+    "id": "12261a8c-d2ef-4361-b32a-6961b73fe2e8",
+    "name": "Unli-rice",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "1266d088-9af7-4fc3-8ebd-0d48b5df00d3",
+    "name": "Burgers",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "12d9356f-3350-4e5e-832d-13ecb3ce3811",
+    "name": "Light bulbs",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "12edd6e2-b851-43d6-a6f2-982a2430ffca",
+    "name": "Rice",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "140aaf28-c1dd-43f6-a725-dc3ce9561b3e",
+    "name": "Streetwear footwear",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "143eefc8-fa5c-4462-825c-00fd9dae8c0b",
+    "name": "Chicken inasal",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "150b3026-2069-486d-bf2b-70d5e3740318",
+    "name": "Laptop bags",
+    "category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706"
+  },
+  {
+    "id": "15af9042-0f4c-4ace-939e-df1feb93dfa5",
+    "name": "iPhones",
+    "category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706"
+  },
+  {
+    "id": "162efa86-03fe-4886-b8a0-c06b1cce75fc",
+    "name": "American breakfast platters",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "19083ecf-ddd4-4f86-8b81-0485327504cf",
+    "name": "Building blocks",
+    "category_id": "e4da1382-4917-4a72-8441-19cbc589426f"
+  },
+  {
+    "id": "1a50bc8e-98ae-401d-b685-9ecbd8cc71f3",
+    "name": "Roasted chicken",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "1ad051d7-9b39-44e8-88e8-a5a2a5430b42",
+    "name": "Cages",
+    "category_id": "e4da1382-4917-4a72-8441-19cbc589426f"
+  },
+  {
+    "id": "1b1cb4c1-934d-473f-8a87-c25f4b003b8d",
+    "name": "Double Double coffee",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "1b40e936-2378-4e9d-bea8-2104aef8691a",
+    "name": "Unlimited international buffet spread",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "1b5f2b45-935d-4ee8-b9b5-76450d44c06d",
+    "name": "Fresh-baked rolls with cinnamon butter",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "1ba279db-6742-4db1-85d5-eb04ea0c5cf0",
+    "name": "Unlimited Korean pork and beef barbecue with banchan side dishes",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "1d50a56b-a39f-4570-ab75-66a517448b5c",
+    "name": "Custom-mixed ice cream creations on frozen granite stones",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "1eaa3094-1a68-440c-b4a2-b942b4ef5b80",
+    "name": "Branded sneakers",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "1edcc5da-441b-4208-acb9-d57656176155",
+    "name": "Complimentary focaccia bread",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "20f6a07c-e577-4f07-a965-ad8b73454743",
+    "name": "Empanadas",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "2157183f-95a3-493e-904b-4466efd4367f",
+    "name": "Fresh vegetables",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "230e6e23-4664-4fbc-b5e5-aadc52f8c5bd",
+    "name": "Pillows",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "24253aa3-0299-43a9-97aa-c351bfc56752",
+    "name": "Wanton noodle soup",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "255c67e4-69f5-46d3-ac65-71a73e4d3228",
+    "name": "iPads",
+    "category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706"
+  },
+  {
+    "id": "2601c55d-a61f-4a26-8b20-0fa4f75287ad",
+    "name": "Air Force 1s",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "2665cd6f-45cc-4cdb-b012-4683abfb6a1f",
+    "name": "Extra-large pepperoni pizza slices",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "26d63fda-3aea-426f-9731-33947bb035b9",
+    "name": "Fitness trackers",
+    "category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706"
+  },
+  {
+    "id": "2853a7d5-6e10-44aa-8523-6eac15eeff7e",
+    "name": "Paninis",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "29c92e48-1a07-4109-8abd-38e3e2dc965a",
+    "name": "Hand tools",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "2ad8edc4-5086-447d-9639-0b9553afc63a",
+    "name": "Jerseys",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "2c7420d1-314c-4b6a-bdde-81584167b996",
+    "name": "Skate decks",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "2dc187a7-fcb1-44fd-8589-03f767175b13",
+    "name": "Formal dresses",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "2e1c22e4-502c-4f9f-868a-5309e8497b7d",
+    "name": "Toiletries",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "2ec00107-a6d6-4ec6-a813-e1a1e7827457",
+    "name": "High-end tools",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "2fbe5a83-1c76-400e-8149-5e14a3807fcb",
+    "name": "Canvas slip-ons",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "308f522f-c4a2-4ce5-9b99-658db2a6777f",
+    "name": "Storage bins",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "3176da8c-6688-4a7b-9b97-03b9e81f1ce4",
+    "name": "Trendy thrift-style finds",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "3246c449-0dcf-4417-8fa2-251a6bf86dce",
+    "name": "Jumpsuits",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "336733a4-020d-436f-a829-b5dbd33875b3",
+    "name": "Milkshakes",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "3448b69a-5af4-4426-bc80-02feec68eb79",
+    "name": "Rustic pizzas",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "34bf3cb2-2fad-46ec-aff6-9b4cd98f0e0f",
+    "name": "Action figures",
+    "category_id": "e4da1382-4917-4a72-8441-19cbc589426f"
+  },
+  {
+    "id": "35450e4a-5398-4b41-9ac8-b1ced51e3e12",
+    "name": "Garden hoses",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "37b17609-2d5f-466f-a6dd-88192aeb09a6",
+    "name": "Galaxy smartphones",
+    "category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706"
+  },
+  {
+    "id": "381efdc5-8658-46d4-ab03-2685675a1fa3",
+    "name": "Side dishes",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "3a19efb4-0716-420e-8447-af9fbe9ba43e",
+    "name": "MagSafe accessories",
+    "category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706"
+  },
+  {
+    "id": "3a1f65bc-5beb-487d-b940-2f171b64d8b9",
+    "name": "Organizers",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "3a4f101f-e02c-420a-ac4e-4c29e052025f",
+    "name": "Reno smartphones",
+    "category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706"
+  },
+  {
+    "id": "3ab065cd-04a9-465d-a5ef-6c6d04fe624e",
+    "name": "Screws",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "3b3ad5f1-fd1d-4bd1-8a97-9fa9d75a654f",
+    "name": "AIRism shirts",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "3d5cb850-a1e7-4309-8ad2-e31eb11f3b40",
+    "name": "Meats",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "3ee8247d-db0d-45b3-b1ae-d5a4cf6419fb",
+    "name": "Graphic t-shirts",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "3ffff9e7-978c-4a59-b2a5-7132e2454052",
+    "name": "Fast-fashion dresses",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "4037e8f8-7d6a-4cd8-9419-e33e15d713f3",
+    "name": "Smartphones",
+    "category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706"
+  },
+  {
+    "id": "408061bd-ea23-4151-a8c5-6f14ac417217",
+    "name": "Socks",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "40a5f760-7e56-4c64-992c-455c0f4c6830",
+    "name": "Mac & cheese",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "419a43ee-27c0-48b4-9bc5-9f3989905ac6",
+    "name": "Casual t-shirts",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "4280fb12-26d5-4e4f-9fa6-e475fad14d87",
+    "name": "Blazers",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "43f7ee1a-8245-488a-a3f2-06552a2111ba",
+    "name": "Regional street food",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "455bb73f-2b7f-41c1-9716-5f1e34cce493",
+    "name": "Casual sneakers",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "4754e9c6-f23d-4979-87ad-de9534474c7d",
+    "name": "Custom novelty clothing",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "47658521-5e3f-44db-943f-d1142fdb39f3",
+    "name": "Smart TVs",
+    "category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706"
+  },
+  {
+    "id": "479e6d31-5f47-4121-9dd4-1873d61a291a",
+    "name": "Crispy pata",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "49960700-6840-479b-aaff-229eb21e6ebb",
+    "name": "Linen button-downs",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "4ab583ee-9d0f-416e-bf72-22bd481246e0",
+    "name": "Dolls",
+    "category_id": "e4da1382-4917-4a72-8441-19cbc589426f"
+  },
+  {
+    "id": "4b16276f-5761-409f-a563-da738388b0b8",
+    "name": "Down jackets",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "4c80ba2d-cbcf-466b-97aa-352b48530d12",
+    "name": "Chips",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "4d2d7d39-ff00-4eab-bd30-cb1e30b02a64",
+    "name": "Caps",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "4dc7dff4-393a-4ae0-afc0-820034df0ab1",
+    "name": "Bathroom accessories",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "4f61b7e5-0a14-4f9f-8b04-cc0347312471",
+    "name": "Beef ontama bukkake udon",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "50066041-f28c-4d2f-ab5d-ba35b56022a6",
+    "name": "Casual shorts",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "528f8fa8-e300-4824-9101-4357ef573a7f",
+    "name": "Toys",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "53080367-72b8-4a29-9839-0d38ced698be",
+    "name": "Customized footlong subs",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "53252de7-ec1f-45ec-a5c0-962cf6a41082",
+    "name": "The Original The Ice Blended drinks",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "533a781e-e98c-4c1c-b3fb-8e5b94143dcf",
+    "name": "Checkerboard backpacks",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "53644366-abf3-4782-85e9-977c78e69a7c",
+    "name": "Sneakers",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "5554b7e0-3980-478a-bb68-976e0d9f917d",
+    "name": "Churros",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "560a7b9c-52f0-45d6-81d1-31a72024235d",
+    "name": "Yoga mats",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "5655631a-6fb3-4b4e-86a8-e6a7e9539169",
+    "name": "Door knobs",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "56ceded3-1985-4958-b666-3c9dac22551b",
+    "name": "Old Skool sneakers",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "56d2ef68-f1fd-4b62-af35-66b315c20b16",
+    "name": "Headphones",
+    "category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706"
+  },
+  {
+    "id": "56d95cd7-bd71-4434-a217-71023e43c48c",
+    "name": "Galaxy Watches",
+    "category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706"
+  },
+  {
+    "id": "580bee37-ffd6-4b48-a870-260b07376113",
+    "name": "Gym duffel bags",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "5a198153-66bd-4a1c-bcc3-fbfd4270a832",
+    "name": "AirPods",
+    "category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706"
+  },
+  {
+    "id": "5b758195-33b6-4cd7-957e-ca98bb97b820",
+    "name": "Bravia TVs",
+    "category_id": "ffac2e6d-a904-4640-93c5-e741dacdd706"
+  },
+  {
+    "id": "5b86401a-b3a1-48b0-a953-9815fe7c66b7",
+    "name": "Makeup",
+    "category_id": "7a7daa20-4c09-4853-90c5-5e74582f805a"
+  },
+  {
+    "id": "5baf61a6-c355-426a-99a5-3a2e7ae3c244",
+    "name": "Everyday walking shoes",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  },
+  {
+    "id": "5cc0b2ba-f0aa-4b3c-824d-a7b52c45fb8c",
+    "name": "Pearl milk tea",
+    "category_id": "d7110230-f965-40bd-af40-568cde68ee92"
+  },
+  {
+    "id": "5d54cd05-5a34-4f47-b7aa-ee63b8e8b5a9",
+    "name": "Discounted branded sneakers",
+    "category_id": "77df59d7-d91b-419e-89b6-84fe69516504"
+  }
+]

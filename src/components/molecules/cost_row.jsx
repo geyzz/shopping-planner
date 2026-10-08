@@ -1,3 +1,4 @@
+import { formatCurrency } from '@/lib/format';
 import { useAppTheme } from '@/theme/ThemeContext';
 import { borderRadius, spacing } from '@/theme/theme';
 import { useMemo } from 'react';
@@ -23,7 +24,7 @@ export default function CostRow({ name, price, editable, onChangePrice }) {
           />
         </View>
       ) : (
-        <Text style={styles.price}>₱{(parseFloat(price) || 0).toFixed(2)}</Text>
+        <Text style={styles.price}>{formatCurrency(price)}</Text>
       )}
     </View>
   );
