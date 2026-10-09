@@ -113,3 +113,28 @@ To satisfy the 80/20 rule, a significant portion of this project consists of cod
     - When the user first opens the app, the prominent greeting banner and accessible search bar welcome the user and offer immediate search functionality.
     - As the user scrolls down through multiple shopping lists, screen real estate is preserved by smoothly fading away the large banner and search bar, while keeping search and sorting accessible through the compact header buttons pinned at the top.
     - Most importantly, we intentionally animate **non-layout properties** (`opacity` and `transform: [{ scale }]`) rather than layout dimensions (`height` or `margin`). Animating layout properties in React Native causes Yoga layout recalculations on every frame, which produces severe card jitter. By driving only visual opacity and scale, the scroll maintains rock-solid layout stability and smooth 60 FPS performance.
+
+---
+
+## 4. Video Presentation Guide: AI Segment (2–3 Minutes)
+
+This structured outline aligns directly with the **Presentation Video (60 points)** requirement, providing an exact on-camera roadmap for the mandatory 2–3 minute AI discussion:
+
+1. **AI Pair Programmer Introduction (30 seconds)**:
+   - State that you collaborated with **Claude (Anthropic)** as an interactive pair-programming assistant for architectural design, code verification, and troubleshooting.
+   - Emphasize that all architectural directions, database schemas, and frontend UI design were developer-led.
+
+2. **The 80/20 Division & What I Wrote Myself (1 minute)**:
+   - Detail the code you authored yourself:
+     - The atomic UI component library (`atoms/`, `molecules/`, `organisms/`) styled with Plan_.ed's signature Navy (`#1B2A4A`) and Gold (`#D4AF37`) design system.
+     - The PostgreSQL database schema and seed records mapping local shopping malls (SM City Clark, Marquee Mall, Nepo Mall, Newpoint Mall) to stores, item categories, and pricing.
+     - Safe-area layout handling, light/dark theme switching, and Expo Router navigation routes.
+
+3. **Critical Bugs Caught from AI Outputs (45 seconds)**:
+   - Highlight that AI outputs were verified rigorously, presenting three caught issues:
+     - **Scroll Jitter Bug**: Caught the AI attempting to animate layout `height` and `margin` inside a `FlatList`, causing Yoga layout re-measure loops. Refactored to non-layout `opacity` and `scale` for buttery 60 FPS scrolling ([Commit `f176920`](https://github.com/geyzz/shopping-planner/commit/f176920)).
+     - **Asset Schema Error**: Caught `.jpg` image paths in `app.json` violating Expo schema validation, correcting them to `.png` format to ensure successful EAS cloud APK builds ([Commit `c4af20e`](https://github.com/geyzz/shopping-planner/commit/c4af20e)).
+     - **ListGrid Bottom Padding Overwrite**: Caught JSX prop precedence wiping out bottom padding, ensuring shopping cards never render underneath the floating bottom navigation bar ([Commit `4937bfb`](https://github.com/geyzz/shopping-planner/commit/4937bfb)).
+
+4. **The AI-Written Code I Understand Best (45 seconds)**:
+   - Walk through the scroll-driven collapsible header interpolation in `src/app/screens/home.jsx` ([Commit `f176920`](https://github.com/geyzz/shopping-planner/commit/f176920)), explaining how `scrollY` drives a 3-stage visual transition between the greeting banner, body search toolbar, and pinned top header action icons.

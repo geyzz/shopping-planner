@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://expo.dev/accounts/geyzz/projects/plan_ed/builds/b5a6bcf0-9215-4b1e-b45f-41264e726465"><img src="https://img.shields.io/badge/Android_APK-Download-34A853?logo=android&logoColor=white" alt="Download APK" /></a>
+  <a href="https://expo.dev/accounts/geyzz/projects/plan_ed/builds/7ab10b7e-9481-4a03-a32b-5c72b10bc365"><img src="https://img.shields.io/badge/Android_APK-Download-34A853?logo=android&logoColor=white" alt="Download APK" /></a>
   <a href="AI-USAGE.md"><img src="https://img.shields.io/badge/AI_Assisted-Claude-4F46E5" alt="AI Assisted" /></a>
   <img src="https://img.shields.io/badge/Expo-SDK_57-black?logo=expo" alt="Expo SDK" />
 </p>
@@ -14,10 +14,30 @@ A smart, mall-connected shopping and errand planner mobile app built with React 
 
 ---
 
+## App Showcase
+
+<p align="center">
+  <img src="./assets/screenshots/mall_and_budget.jpg" width="220" alt="4 Malls Directory & Cost Estimation" />
+  &nbsp;&nbsp;
+  <img src="./assets/screenshots/home_dashboard.jpg" width="220" alt="Home Dashboard" />
+  &nbsp;&nbsp;
+  <img src="./assets/screenshots/errand_calendar.jpg" width="220" alt="Errand Calendar" />
+</p>
+
+<p align="center">
+  <img src="./assets/screenshots/sort_and_order.jpg" width="220" alt="Sorting & Filtering" />
+  &nbsp;&nbsp;
+  <img src="./assets/screenshots/multi_select_delete.jpg" width="220" alt="Batch Multi-Select Mode" />
+  &nbsp;&nbsp;
+  <img src="./assets/screenshots/collapsible_header.jpg" width="220" alt="Collapsible Header" />
+</p>
+
+---
+
 ## Features
 
 - **Smart Checklists**: Create shopping lists with quantities, store assignments, categories, and real-time cost calculation.
-- **Mall Directory**: Link shopping items to local malls (SM City Clark, Marquee Mall, Nepo Mall, Newpoint Mall) and specific retail stores.
+- **Mall Directory**: Link shopping items to 4 major Pampanga malls (SM City Clark, MarQuee Mall, Nepo Mall, Newpoint Mall) and specific retail stores.
 - **Errand Calendar**: Schedule shopping dates and track upcoming trips on an interactive calendar.
 - **Reminder Alarms**: Set native device alarms and notifications for planned shopping trips.
 - **Cloud & Offline Sync**: Powered by Supabase (PostgreSQL with Row-Level Security) with offline local caching via AsyncStorage.
@@ -35,10 +55,17 @@ A smart, mall-connected shopping and errand planner mobile app built with React 
 
 ---
 
+## Presentation & Media
+
+- 🎥 **Video Walkthrough (Google Drive)**: [Watch 3-5 Min Presentation](PASTE_YOUR_GOOGLE_DRIVE_VIDEO_LINK_HERE) *(Includes 2-3 min AI breakdown)*
+- 📊 **Presentation Slides**: [View Slides (PDF / Link)](PASTE_YOUR_SLIDES_LINK_HERE)
+
+---
+
 ## Getting Started
 
 ### Download APK
-Download the Android app directly: [**Plan_.ed v1.0.0 APK**](https://expo.dev/accounts/geyzz/projects/plan_ed/builds/b5a6bcf0-9215-4b1e-b45f-41264e726465)
+Download the Android app directly: [**Plan_.ed v1.0.0 APK (Latest Build)**](https://expo.dev/accounts/geyzz/projects/plan_ed/builds/7ab10b7e-9481-4a03-a32b-5c72b10bc365)
 
 ### Run in Development
 
