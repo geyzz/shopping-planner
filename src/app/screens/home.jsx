@@ -104,79 +104,49 @@ export default function HomePage() {
     headerActionScale,
     headerActionMargin,
     toolbarOpacity,
-    toolbarHeight,
-    toolbarMarginTop,
-    toolbarMarginBottom,
     toolbarScale,
     bannerOpacity,
-    bannerHeight,
-    bannerMarginTop,
     bannerScale,
   } = useMemo(
     () => ({
       headerActionWidth: scrollY.interpolate({
-        inputRange: [20, 60],
+        inputRange: [50, 100],
         outputRange: [0, headerHeight],
         extrapolate: 'clamp',
       }),
       headerActionOpacity: scrollY.interpolate({
-        inputRange: [20, 60],
+        inputRange: [50, 100],
         outputRange: [0, 1],
         extrapolate: 'clamp',
       }),
       headerActionScale: scrollY.interpolate({
-        inputRange: [20, 60],
+        inputRange: [50, 100],
         outputRange: [0.6, 1],
         extrapolate: 'clamp',
       }),
       headerActionMargin: scrollY.interpolate({
-        inputRange: [20, 60],
+        inputRange: [50, 100],
         outputRange: [0, spacing.sm],
         extrapolate: 'clamp',
       }),
       bannerOpacity: scrollY.interpolate({
-        inputRange: [5, 45],
+        inputRange: [0, 50],
         outputRange: [1, 0],
-        extrapolate: 'clamp',
-      }),
-      bannerHeight: scrollY.interpolate({
-        inputRange: [10, 60],
-        outputRange: [110, 0],
-        extrapolate: 'clamp',
-      }),
-      bannerMarginTop: scrollY.interpolate({
-        inputRange: [10, 60],
-        outputRange: [spacing.md, 0],
         extrapolate: 'clamp',
       }),
       bannerScale: scrollY.interpolate({
-        inputRange: [5, 45],
-        outputRange: [1, 0.85],
+        inputRange: [0, 50],
+        outputRange: [1, 0.96],
         extrapolate: 'clamp',
       }),
       toolbarOpacity: scrollY.interpolate({
-        inputRange: [10, 50],
+        inputRange: [40, 90],
         outputRange: [1, 0],
         extrapolate: 'clamp',
       }),
-      toolbarHeight: scrollY.interpolate({
-        inputRange: [15, 60],
-        outputRange: [48, 0],
-        extrapolate: 'clamp',
-      }),
-      toolbarMarginTop: scrollY.interpolate({
-        inputRange: [15, 60],
-        outputRange: [spacing.lg, 0],
-        extrapolate: 'clamp',
-      }),
-      toolbarMarginBottom: scrollY.interpolate({
-        inputRange: [15, 60],
-        outputRange: [spacing.md, 0],
-        extrapolate: 'clamp',
-      }),
       toolbarScale: scrollY.interpolate({
-        inputRange: [10, 50],
-        outputRange: [1, 0.85],
+        inputRange: [40, 90],
+        outputRange: [1, 0.96],
         extrapolate: 'clamp',
       }),
     }),
@@ -482,13 +452,10 @@ export default function HomePage() {
         <Animated.View
           style={{
             opacity: bannerOpacity,
-            maxHeight: bannerHeight,
-            marginTop: bannerMarginTop,
             transform: [{ scale: bannerScale }],
-            overflow: 'hidden',
           }}
         >
-          <GreetingBanner name={name} totalCount={numOfNotes} style={{ marginTop: 0 }} />
+          <GreetingBanner name={name} totalCount={numOfNotes} />
         </Animated.View>
         {selectMode ? (
           <View style={styles.selectBar}>
@@ -517,11 +484,7 @@ export default function HomePage() {
               styles.toolbarRow,
               {
                 opacity: toolbarOpacity,
-                height: toolbarHeight,
-                marginTop: toolbarMarginTop,
-                marginBottom: toolbarMarginBottom,
                 transform: [{ scale: toolbarScale }],
-                overflow: 'hidden',
               },
             ]}
           >
@@ -563,13 +526,8 @@ export default function HomePage() {
     colors.navy,
     openOptionsMenu,
     toolbarOpacity,
-    toolbarHeight,
-    toolbarMarginTop,
-    toolbarMarginBottom,
     toolbarScale,
     bannerOpacity,
-    bannerHeight,
-    bannerMarginTop,
     bannerScale,
   ]);
 
@@ -581,6 +539,7 @@ export default function HomePage() {
         renderItem={renderNote}
         emptyText={searchText.trim() ? 'No matching notes' : 'No notes yet'}
         bottomPadding={Math.max(insets.bottom, spacing.sm) + 150}
+        contentContainerStyle={{ minHeight: screenHeight + 120 }}
         refreshing={refreshing}
         onRefresh={handleRefresh}
         onScroll={handleScroll}
