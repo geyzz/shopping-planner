@@ -139,12 +139,21 @@ export default function SignupPage() {
 
     if (error) {
       const msg = (error.message || '').toLowerCase();
-      if (msg.includes('email') || msg.includes('user already') || msg.includes('registered')) {
+      if (msg.includes('user already') || msg.includes('registered')) {
+        setEmailError('An account with this email already exists. Please sign in.');
+      } else if (msg.includes('confirmation email') || msg.includes('rate limit') || msg.includes('over_email_send_rate_limit')) {
+        setEmailError('Unable to send verification email. Please try again later.');
+        Alert.alert(
+          'Email Delivery Issue',
+          'We were unable to send the confirmation email. If you are testing with Resend, please use your registered Resend account email, or try again in a few minutes.',
+          [{ text: 'OK' }]
+        );
+      } else if (msg.includes('email') || msg.includes('invalid')) {
         setEmailError(error.message);
       } else if (msg.includes('password')) {
         setPasswordError(error.message);
       } else {
-        setPasswordError(error.message);
+        Alert.alert('Sign Up Error', error.message || 'An unexpected error occurred. Please try again.');
       }
       return;
     }
