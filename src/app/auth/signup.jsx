@@ -202,11 +202,12 @@ export default function SignupPage() {
         loadingLabel="Signing up..."
         loading={loading}
         onSubmit={handleSignup}
-        submitSpacing={20}
-        compact
+        submitSpacing={spacing.lg}
+        footerText="Already have an account?"
+        linkLabel="Log In"
+        linkHref="/auth/login"
       >
         <FormField
-          compact
           label="First Name"
           placeholder="Enter your first name"
           value={firstName}
@@ -217,7 +218,6 @@ export default function SignupPage() {
           error={firstNameError}
         />
         <FormField
-          compact
           label="Last Name"
           placeholder="Enter your last name"
           value={lastName}
@@ -228,7 +228,6 @@ export default function SignupPage() {
           error={lastNameError}
         />
         <FormField
-          compact
           label="Email"
           placeholder="Enter your email"
           value={email}
@@ -242,7 +241,6 @@ export default function SignupPage() {
           error={emailError}
         />
         <FormField
-          compact
           label="Password"
           placeholder="Enter your password"
           value={password}
@@ -255,7 +253,6 @@ export default function SignupPage() {
           error={passwordError}
         />
         <FormField
-          compact
           label="Re-enter Password"
           placeholder="Re-enter your password"
           value={confirmPassword}
