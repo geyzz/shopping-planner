@@ -4,7 +4,7 @@
     "slug": "plan_ed",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/plan_ed-logo.jpg",
+    "icon": "./assets/images/icon.png",
     "scheme": "planed",
     "userInterfaceStyle": "automatic",
     "ios": {
@@ -13,7 +13,7 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#D6CDAC",
-        "foregroundImage": "./assets/images/plan_ed-logo.jpg"
+        "foregroundImage": "./assets/images/android-icon-foreground.png"
       },
       "predictiveBackGestureEnabled": false,
       "package": "com.geyzz.plan_ed",
@@ -27,7 +27,7 @@
     },
     "web": {
       "output": "single",
-      "favicon": "./assets/images/plan_ed-logo.jpg"
+      "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
       "expo-router",
