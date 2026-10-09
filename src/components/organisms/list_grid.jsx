@@ -25,11 +25,6 @@ export default function ListGrid({
       renderItem={renderItem}
       numColumns={2}
       columnWrapperStyle={data && data.length > 0 ? styles.row : undefined}
-      contentContainerStyle={[
-        styles.list,
-        { paddingBottom: bottomPadding, flexGrow: 1 },
-        rest.contentContainerStyle,
-      ]}
       showsVerticalScrollIndicator={false}
       refreshing={refreshing}
       onRefresh={onRefresh}
@@ -41,6 +36,11 @@ export default function ListGrid({
         </View>
       }
       {...rest}
+      contentContainerStyle={[
+        styles.list,
+        rest.contentContainerStyle,
+        { paddingBottom: bottomPadding, flexGrow: 1 },
+      ]}
     />
   );
 }
