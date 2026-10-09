@@ -103,26 +103,56 @@ export default function HomePage() {
     headerActionOpacity,
     headerActionScale,
     headerActionMargin,
+    toolbarOpacity,
+    toolbarHeight,
+    toolbarMarginTop,
+    toolbarMarginBottom,
+    toolbarScale,
   } = useMemo(
     () => ({
       headerActionWidth: scrollY.interpolate({
-        inputRange: [30, 80],
+        inputRange: [20, 60],
         outputRange: [0, headerHeight],
         extrapolate: 'clamp',
       }),
       headerActionOpacity: scrollY.interpolate({
-        inputRange: [40, 80],
+        inputRange: [20, 60],
         outputRange: [0, 1],
         extrapolate: 'clamp',
       }),
       headerActionScale: scrollY.interpolate({
-        inputRange: [30, 80],
+        inputRange: [20, 60],
         outputRange: [0.6, 1],
         extrapolate: 'clamp',
       }),
       headerActionMargin: scrollY.interpolate({
-        inputRange: [30, 80],
+        inputRange: [20, 60],
         outputRange: [0, spacing.sm],
+        extrapolate: 'clamp',
+      }),
+      toolbarOpacity: scrollY.interpolate({
+        inputRange: [10, 50],
+        outputRange: [1, 0],
+        extrapolate: 'clamp',
+      }),
+      toolbarHeight: scrollY.interpolate({
+        inputRange: [15, 60],
+        outputRange: [48, 0],
+        extrapolate: 'clamp',
+      }),
+      toolbarMarginTop: scrollY.interpolate({
+        inputRange: [15, 60],
+        outputRange: [spacing.lg, 0],
+        extrapolate: 'clamp',
+      }),
+      toolbarMarginBottom: scrollY.interpolate({
+        inputRange: [15, 60],
+        outputRange: [spacing.md, 0],
+        extrapolate: 'clamp',
+      }),
+      toolbarScale: scrollY.interpolate({
+        inputRange: [10, 50],
+        outputRange: [1, 0.85],
         extrapolate: 'clamp',
       }),
     }),
@@ -448,7 +478,19 @@ export default function HomePage() {
             </Pressable>
           </View>
         ) : (
-          <View style={styles.toolbarRow}>
+          <Animated.View
+            style={[
+              styles.toolbarRow,
+              {
+                opacity: toolbarOpacity,
+                height: toolbarHeight,
+                marginTop: toolbarMarginTop,
+                marginBottom: toolbarMarginBottom,
+                transform: [{ scale: toolbarScale }],
+                overflow: 'hidden',
+              },
+            ]}
+          >
             <View style={styles.searchWrapper}>
               <SearchBar
                 value={searchText}
@@ -466,7 +508,7 @@ export default function HomePage() {
             >
               <Feather name="more-vertical" size={22} color={colors.navy} />
             </Pressable>
-          </View>
+          </Animated.View>
         )}
       </View>
     );
@@ -486,6 +528,11 @@ export default function HomePage() {
     searchText,
     colors.navy,
     openOptionsMenu,
+    toolbarOpacity,
+    toolbarHeight,
+    toolbarMarginTop,
+    toolbarMarginBottom,
+    toolbarScale,
   ]);
 
   return (
