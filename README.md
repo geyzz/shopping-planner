@@ -55,13 +55,6 @@ A smart, mall-connected shopping and errand planner mobile app built with React 
 
 ---
 
-## Presentation & Media
-
-- 🎥 **Video Walkthrough (Google Drive)**: [Watch 3-5 Min Presentation](PASTE_YOUR_GOOGLE_DRIVE_VIDEO_LINK_HERE) *(Includes 2-3 min AI breakdown)*
-- 📊 **Presentation Slides**: [View Slides (PDF / Link)](PASTE_YOUR_SLIDES_LINK_HERE)
-
----
-
 ## Getting Started
 
 ### Download APK
