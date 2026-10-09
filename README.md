@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="PASTE_YOUR_APK_LINK_HERE"><img src="https://img.shields.io/badge/Android_APK-Download-34A853?logo=android&logoColor=white" alt="Download APK" /></a>
+  <a href="https://expo.dev/accounts/geyzz/projects/plan_ed/builds/b5a6bcf0-9215-4b1e-b45f-41264e726465"><img src="https://img.shields.io/badge/Android_APK-Download-34A853?logo=android&logoColor=white" alt="Download APK" /></a>
   <a href="AI-USAGE.md"><img src="https://img.shields.io/badge/AI_Assisted-Claude-4F46E5" alt="AI Assisted" /></a>
   <img src="https://img.shields.io/badge/Expo-SDK_57-black?logo=expo" alt="Expo SDK" />
 </p>
@@ -38,7 +38,7 @@ A smart, mall-connected shopping and errand planner mobile app built with React 
 ## Getting Started
 
 ### Download APK
-Download the Android app directly: [**Plan_.ed v1.0.0 APK**](PASTE_YOUR_APK_LINK_HERE)
+Download the Android app directly: [**Plan_.ed v1.0.0 APK**](https://expo.dev/accounts/geyzz/projects/plan_ed/builds/b5a6bcf0-9215-4b1e-b45f-41264e726465)
 
 ### Run in Development
 
