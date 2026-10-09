@@ -7,7 +7,7 @@ import { spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useMemo, useState } from 'react';
-import { Alert, Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 
 const isValidEmail = (val) => {
   const trimmed = (val ?? '').trim();
@@ -25,6 +25,7 @@ export default function SignupPage() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const [termsModalVisible, setTermsModalVisible] = useState(false);
 
   const [firstNameError, setFirstNameError] = useState('');
   const [lastNameError, setLastNameError] = useState('');
@@ -267,27 +268,116 @@ export default function SignupPage() {
           error={confirmPasswordError}
         />
 
-        <Pressable
-          style={styles.checkboxRow}
-          onPress={() => {
-            setAgreedToTerms((prev) => {
-              const next = !prev;
-              if (next) setTermsError('');
-              return next;
-            });
-          }}
-          accessibilityRole="checkbox"
-          accessibilityState={{ checked: agreedToTerms }}
-        >
-          <View pointerEvents="none">
-            <Checkbox checked={agreedToTerms} />
-          </View>
-          <Text style={[styles.checkboxLabel, termsError ? styles.checkboxLabelError : null]}>
-            Agree to terms and policies
-          </Text>
-        </Pressable>
+        <View style={styles.checkboxContainer}>
+          <Pressable
+            style={styles.checkboxRow}
+            onPress={() => {
+              setAgreedToTerms((prev) => {
+                const next = !prev;
+                if (next) setTermsError('');
+                return next;
+              });
+            }}
+            accessibilityRole="checkbox"
+            accessibilityState={{ checked: agreedToTerms }}
+          >
+            <View pointerEvents="none">
+              <Checkbox checked={agreedToTerms} />
+            </View>
+            <Text style={[styles.checkboxLabel, termsError ? styles.checkboxLabelError : null]}>
+              I agree to the{' '}
+              <Text
+                style={styles.termsLink}
+                onPress={() => setTermsModalVisible(true)}
+              >
+                Terms & Policies
+              </Text>
+            </Text>
+          </Pressable>
+          <Pressable
+            hitSlop={10}
+            onPress={() => setTermsModalVisible(true)}
+            style={styles.infoButton}
+          >
+            <Feather name="info" size={18} color={colors.gold || colors.navy} />
+          </Pressable>
+        </View>
         {termsError ? <Text style={styles.termsErrorText}>{termsError}</Text> : null}
       </AuthCard>
+
+      <Modal
+        visible={termsModalVisible}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setTermsModalVisible(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalCard}>
+            <View style={styles.modalHeader}>
+              <View style={styles.modalHeaderTitleRow}>
+                <Feather name="file-text" size={20} color={colors.gold || colors.navy} />
+                <Text style={styles.modalTitle}>Terms & Policies</Text>
+              </View>
+              <Pressable
+                hitSlop={12}
+                onPress={() => setTermsModalVisible(false)}
+                style={styles.modalCloseButton}
+              >
+                <Feather name="x" size={22} color={colors.text} />
+              </Pressable>
+            </View>
+
+            <ScrollView
+              style={styles.modalScroll}
+              contentContainerStyle={styles.modalScrollContent}
+              showsVerticalScrollIndicator={false}
+            >
+              <Text style={styles.modalSectionTitle}>1. Acceptance of Terms</Text>
+              <Text style={styles.modalSectionText}>
+                Welcome to Plan_.ed. By creating an account, you agree to these Terms and Policies. Plan_.ed is designed to help you organize shopping checklists, estimate expenses, explore mall directories, and schedule errand reminders.
+              </Text>
+
+              <Text style={styles.modalSectionTitle}>2. Account & Data Security</Text>
+              <Text style={styles.modalSectionText}>
+                Your account is secured via Supabase Authentication and protected with PostgreSQL Row-Level Security (RLS). You are responsible for safeguarding your login credentials. Your lists, stores, and errands remain private to your account.
+              </Text>
+
+              <Text style={styles.modalSectionTitle}>3. Privacy & Personal Information</Text>
+              <Text style={styles.modalSectionText}>
+                We collect your name, email, shopping items, and scheduled errand dates strictly to deliver application features. We respect your privacy and never sell, trade, or share your personal data with third-party advertisers.
+              </Text>
+
+              <Text style={styles.modalSectionTitle}>4. Local Storage & Offline Usage</Text>
+              <Text style={styles.modalSectionText}>
+                Plan_.ed caches your checklists locally on your device for fast access even without an active internet connection. Changes sync with cloud storage automatically once network connectivity is available.
+              </Text>
+
+              <Text style={styles.modalSectionTitle}>5. Notifications & Alarms</Text>
+              <Text style={styles.modalSectionText}>
+                Plan_.ed requests notification permissions strictly to trigger scheduled shopping alarms and errand reminders on your device. You can configure or disable reminder alerts at any time.
+              </Text>
+
+              <Text style={styles.modalSectionTitle}>6. Updates & Inquiries</Text>
+              <Text style={styles.modalSectionText}>
+                We may periodically update these terms to improve security and feature offerings. Continued use of Plan_.ed indicates your acceptance of any updates.
+              </Text>
+            </ScrollView>
+
+            <View style={styles.modalFooter}>
+              <Pressable
+                style={styles.modalAcceptButton}
+                onPress={() => {
+                  setAgreedToTerms(true);
+                  setTermsError('');
+                  setTermsModalVisible(false);
+                }}
+              >
+                <Text style={styles.modalAcceptButtonText}>I Agree & Close</Text>
+              </Pressable>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -302,10 +392,16 @@ const makeStyles = (colors) =>
       left: spacing.md,
       zIndex: 1,
     },
+    checkboxContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      marginTop: spacing.md,
+    },
     checkboxRow: {
       flexDirection: 'row',
       alignItems: 'center',
-      marginTop: spacing.md,
+      flex: 1,
       paddingVertical: 4,
     },
     checkboxLabel: {
@@ -317,10 +413,94 @@ const makeStyles = (colors) =>
     checkboxLabelError: {
       color: colors.error,
     },
+    termsLink: {
+      color: colors.gold || colors.navy,
+      fontWeight: '700',
+      textDecorationLine: 'underline',
+    },
+    infoButton: {
+      padding: 6,
+      marginLeft: 4,
+    },
     termsErrorText: {
       ...typography.small,
       color: colors.error,
       marginTop: 4,
       marginLeft: 4,
+    },
+    modalOverlay: {
+      flex: 1,
+      backgroundColor: 'rgba(0, 0, 0, 0.65)',
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: spacing.md,
+    },
+    modalCard: {
+      width: '100%',
+      maxHeight: '82%',
+      backgroundColor: colors.background || colors.white,
+      borderRadius: 16,
+      overflow: 'hidden',
+      borderWidth: 1,
+      borderColor: colors.border || '#E2E8F0',
+      elevation: 10,
+    },
+    modalHeader: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      paddingHorizontal: spacing.md,
+      paddingVertical: spacing.md,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.border || '#E2E8F0',
+    },
+    modalHeaderTitleRow: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: 8,
+    },
+    modalTitle: {
+      ...typography.h3,
+      color: colors.text,
+      fontWeight: '700',
+      fontSize: 18,
+    },
+    modalCloseButton: {
+      padding: 4,
+    },
+    modalScroll: {
+      maxHeight: 360,
+    },
+    modalScrollContent: {
+      padding: spacing.md,
+    },
+    modalSectionTitle: {
+      ...typography.body,
+      fontWeight: '700',
+      color: colors.text,
+      marginTop: spacing.sm,
+      marginBottom: 4,
+    },
+    modalSectionText: {
+      ...typography.small,
+      color: colors.textSecondary || '#64748B',
+      lineHeight: 20,
+      marginBottom: spacing.xs,
+    },
+    modalFooter: {
+      padding: spacing.md,
+      borderTopWidth: 1,
+      borderTopColor: colors.border || '#E2E8F0',
+    },
+    modalAcceptButton: {
+      backgroundColor: colors.navy,
+      paddingVertical: 12,
+      borderRadius: 10,
+      alignItems: 'center',
+    },
+    modalAcceptButtonText: {
+      ...typography.body,
+      color: colors.white,
+      fontWeight: '700',
     },
   });
