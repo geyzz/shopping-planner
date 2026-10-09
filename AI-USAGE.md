@@ -74,6 +74,18 @@ Taking AI code blindly leads to broken user experiences. Below are three critica
 - **What I did instead**: Identified the JSX prop precedence bug, moved `contentContainerStyle` to appear *after* `{...rest}`, and merged `{ paddingBottom: bottomPadding, flexGrow: 1 }` as the final array element so the cards always scroll safely above the navigation bar.
 - **Commit Link**: [Commit `4937bfb`](https://github.com/geyzz/shopping-planner/commit/4937bfb)
 
+### 4. Terms & Policies Agreement Bypass & Double-Toggle Glitch
+- **What it gave**: In `src/app/auth/signup.jsx`, the AI generated a registration flow where the Terms & Policies checkbox wasn't strictly validated before submitting `signUpWithEmail`, and wrapped the interactive checkbox in nested `Pressable` components.
+- **What was wrong**: Users could create accounts without agreeing to mandatory terms, and clicking the checkbox caused event bubbling between the parent and child Pressable, resulting in a double-toggle glitch that immediately inverted and canceled user selection.
+- **What I did instead**: Added strict frontend validation preventing submission unless `agreedToTerms` is true with an informative alert, eliminated nested pressable conflicts, and introduced a dedicated Terms & Policies info modal.
+- **Commit Link**: [Commit `24845d4`](https://github.com/geyzz/shopping-planner/commit/24845d4)
+
+### 5. Supabase Auth PKCE Email Confirmation Deep Linking Failure
+- **What it gave**: In `src/app/auth/verified.jsx` and `login.jsx`, the AI implemented a legacy token-based confirmation check that expected URL hash fragments (`#access_token=...`) and showed generic error messages upon login failure.
+- **What was wrong**: Modern Supabase email confirmation uses the PKCE flow emitting query parameters (`?code=...`). When users tapped the confirmation link in their email, `verified.jsx` failed to extract the code or exchange it for an active session, leaving newly verified users trapped on the verification screen. Subsequent login attempts also threw confusing generic errors if the email state was pending.
+- **What I did instead**: Refactored `verified.jsx` to parse modern PKCE `code` query parameters using `supabase.auth.exchangeCodeForSession(code)` with an automated redirect to `/screens/home`. In `login.jsx`, added email lowercase normalization and an intuitive 1-tap "Resend Confirmation Email" alert option.
+- **Commit Link**: [Commit `1337761`](https://github.com/geyzz/shopping-planner/commit/1337761)
+
 ---
 
 ## 3. Who Wrote What (30 points)
@@ -92,9 +104,10 @@ To satisfy the 80/20 rule, a significant portion of this project consists of cod
    - **Explanation**: I designed the relational schema connecting malls, shops, item categories, items, and shopping lists in PostgreSQL/Supabase. I curated the real-world shopping directory for local malls in Pampanga (SM City Clark, Marquee Mall, Nepo Mall, Newpoint Mall), associating specific stores and price estimations with items. I also established the currency formatting logic (`₱0,000.00`) to reflect local Philippine Peso standards.
    - **Commits**: [Commit `ef2be58`](https://github.com/geyzz/shopping-planner/commit/ef2be58), [Commit `5e70ae7`](https://github.com/geyzz/shopping-planner/commit/5e70ae7).
 
-3. **Interactive Navigation & State Architecture**:
+3. **Interactive Navigation, Authentication & State Architecture**:
    - **Files**: `src/app/_layout.tsx`, `src/app/auth/*`, `src/theme/ThemeContext.js`.
-   - **Explanation**: I configured the Expo Router file-based navigation, modal sheet interactions, theme provider, and multi-select deletion flows. When features broke or showed jitter under real-device testing, I diagnosed the root causes, tested edge cases, and drove the architectural fixes.
+   - **Explanation**: I configured the Expo Router file-based navigation, modal sheet interactions, theme provider, and multi-select deletion flows. When features broke or showed bugs under real-device testing—such as the double-toggle terms checkbox glitch and Supabase PKCE deep linking code exchange—I diagnosed the root causes and authored the production fixes.
+   - **Commits**: [Commit `24845d4`](https://github.com/geyzz/shopping-planner/commit/24845d4), [Commit `1337761`](https://github.com/geyzz/shopping-planner/commit/1337761).
 
 ---
 
@@ -131,10 +144,12 @@ This structured outline aligns directly with the **Presentation Video (60 points
      - Safe-area layout handling, light/dark theme switching, and Expo Router navigation routes.
 
 3. **Critical Bugs Caught from AI Outputs (45 seconds)**:
-   - Highlight that AI outputs were verified rigorously, presenting three caught issues:
+   - Highlight that AI outputs were verified rigorously, presenting key caught issues:
      - **Scroll Jitter Bug**: Caught the AI attempting to animate layout `height` and `margin` inside a `FlatList`, causing Yoga layout re-measure loops. Refactored to non-layout `opacity` and `scale` for buttery 60 FPS scrolling ([Commit `f176920`](https://github.com/geyzz/shopping-planner/commit/f176920)).
      - **Asset Schema Error**: Caught `.jpg` image paths in `app.json` violating Expo schema validation, correcting them to `.png` format to ensure successful EAS cloud APK builds ([Commit `c4af20e`](https://github.com/geyzz/shopping-planner/commit/c4af20e)).
      - **ListGrid Bottom Padding Overwrite**: Caught JSX prop precedence wiping out bottom padding, ensuring shopping cards never render underneath the floating bottom navigation bar ([Commit `4937bfb`](https://github.com/geyzz/shopping-planner/commit/4937bfb)).
+     - **Terms Double-Toggle & Agreement Bypass**: Caught nested `Pressable` conflict causing checkbox states to invert twice, and missing pre-submission agreement validation ([Commit `24845d4`](https://github.com/geyzz/shopping-planner/commit/24845d4)).
+     - **Supabase PKCE Deep Linking Exchange**: Caught unhandled query parameter `?code=...` exchange preventing newly confirmed email users from logging in on mobile ([Commit `1337761`](https://github.com/geyzz/shopping-planner/commit/1337761)).
 
 4. **The AI-Written Code I Understand Best (45 seconds)**:
    - Walk through the scroll-driven collapsible header interpolation in `src/app/screens/home.jsx` ([Commit `f176920`](https://github.com/geyzz/shopping-planner/commit/f176920)), explaining how `scrollY` drives a 3-stage visual transition between the greeting banner, body search toolbar, and pinned top header action icons.
