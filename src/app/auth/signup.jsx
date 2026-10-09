@@ -118,13 +118,24 @@ export default function SignupPage() {
     }
 
     if (!agreedToTerms) {
-      setTermsError('You must agree to the terms and policies');
+      setTermsError('You must agree to the terms and policies to create an account');
       hasError = true;
     } else {
       setTermsError('');
     }
 
-    if (hasError) return;
+    if (hasError) {
+      if (!agreedToTerms && !trimmedFirst && !trimmedLast && !trimmedEmail && !password) {
+        // all empty, normal inline error
+      } else if (!agreedToTerms && trimmedFirst && trimmedLast && trimmedEmail && password && confirmPassword) {
+        Alert.alert(
+          'Terms and Policies',
+          'Please agree to the terms and policies before proceeding with sign up.',
+          [{ text: 'OK' }]
+        );
+      }
+      return;
+    }
 
     setLoading(true);
     const { data, error } = await supabase.auth.signUp({
@@ -138,14 +149,15 @@ export default function SignupPage() {
     setLoading(false);
 
     if (error) {
+      console.warn('Supabase signUp error:', error);
       const msg = (error.message || '').toLowerCase();
       if (msg.includes('user already') || msg.includes('registered')) {
         setEmailError('An account with this email already exists. Please sign in.');
       } else if (msg.includes('confirmation email') || msg.includes('rate limit') || msg.includes('over_email_send_rate_limit')) {
-        setEmailError('Unable to send verification email. Please try again later.');
+        setEmailError(error.message);
         Alert.alert(
           'Email Delivery Issue',
-          'We were unable to send the confirmation email. If you are testing with Resend, please use your registered Resend account email, or try again in a few minutes.',
+          `${error.message}\n\nPlease check your Supabase Auth Logs or SMTP settings in Supabase Dashboard.`,
           [{ text: 'OK' }]
         );
       } else if (msg.includes('email') || msg.includes('invalid')) {
@@ -258,18 +270,21 @@ export default function SignupPage() {
         <Pressable
           style={styles.checkboxRow}
           onPress={() => {
-            setAgreedToTerms((prev) => !prev);
-            if (termsError) setTermsError('');
+            setAgreedToTerms((prev) => {
+              const next = !prev;
+              if (next) setTermsError('');
+              return next;
+            });
           }}
+          accessibilityRole="checkbox"
+          accessibilityState={{ checked: agreedToTerms }}
         >
-          <Checkbox
-            checked={agreedToTerms}
-            onToggle={() => {
-              setAgreedToTerms((prev) => !prev);
-              if (termsError) setTermsError('');
-            }}
-          />
-          <Text style={styles.checkboxLabel}>Agree to terms and policies</Text>
+          <View pointerEvents="none">
+            <Checkbox checked={agreedToTerms} />
+          </View>
+          <Text style={[styles.checkboxLabel, termsError ? styles.checkboxLabelError : null]}>
+            Agree to terms and policies
+          </Text>
         </Pressable>
         {termsError ? <Text style={styles.termsErrorText}>{termsError}</Text> : null}
       </AuthCard>
@@ -291,6 +306,7 @@ const makeStyles = (colors) =>
       flexDirection: 'row',
       alignItems: 'center',
       marginTop: spacing.md,
+      paddingVertical: 4,
     },
     checkboxLabel: {
       ...typography.small,
@@ -298,9 +314,13 @@ const makeStyles = (colors) =>
       flex: 1,
       marginLeft: spacing.sm,
     },
+    checkboxLabelError: {
+      color: colors.error,
+    },
     termsErrorText: {
       ...typography.small,
       color: colors.error,
       marginTop: 4,
+      marginLeft: 4,
     },
   });
