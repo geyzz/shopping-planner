@@ -72,7 +72,7 @@ export default function SignupPage() {
 
     const trimmedFirst = firstName.trim();
     const trimmedLast = lastName.trim();
-    const trimmedEmail = email.trim();
+    const trimmedEmail = email.trim().toLowerCase();
 
     if (!trimmedFirst) {
       setFirstNameError('First name is required');

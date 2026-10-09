@@ -19,40 +19,85 @@ export default function EmailVerifiedPage() {
   const [hasSession, setHasSession] = useState(false);
 
   useEffect(() => {
+    let mounted = true;
+
+    // Check existing session
     supabase.auth.getSession().then(({ data }) => {
-      if (data?.session) {
+      if (data?.session && mounted) {
         setHasSession(true);
+        router.replace('/screens/home');
       }
     });
 
-    // Check if Supabase passed session tokens in deep link
+    // Listen for auth state change
+    const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
+      if (session && mounted) {
+        setHasSession(true);
+        router.replace('/screens/home');
+      }
+    });
+
+    // Check if Supabase passed session tokens or code in deep link
     const handleUrl = async (url) => {
       if (!url) return;
       try {
-        const hash = url.split('#')[1];
+        // 1. Check query parameters (?code=... or ?token_hash=...)
+        const queryString = url.includes('?') ? url.split('?')[1].split('#')[0] : '';
+        if (queryString) {
+          const queryParams = new URLSearchParams(queryString);
+          const code = queryParams.get('code');
+          if (code) {
+            const { data } = await supabase.auth.exchangeCodeForSession(code);
+            if (data?.session && mounted) {
+              setHasSession(true);
+              router.replace('/screens/home');
+              return;
+            }
+          }
+
+          const tokenHash = queryParams.get('token_hash');
+          const type = queryParams.get('type') || 'signup';
+          if (tokenHash) {
+            const { data } = await supabase.auth.verifyOtp({ token_hash: tokenHash, type });
+            if (data?.session && mounted) {
+              setHasSession(true);
+              router.replace('/screens/home');
+              return;
+            }
+          }
+        }
+
+        // 2. Check hash fragment (#access_token=...&refresh_token=...)
+        const hash = url.includes('#') ? url.split('#')[1] : '';
         if (hash) {
-          const params = new URLSearchParams(hash);
-          const accessToken = params.get('access_token');
-          const refreshToken = params.get('refresh_token');
+          const hashParams = new URLSearchParams(hash);
+          const accessToken = hashParams.get('access_token');
+          const refreshToken = hashParams.get('refresh_token');
           if (accessToken && refreshToken) {
             const { data } = await supabase.auth.setSession({
               access_token: accessToken,
               refresh_token: refreshToken,
             });
-            if (data?.session) {
+            if (data?.session && mounted) {
               setHasSession(true);
+              router.replace('/screens/home');
+              return;
             }
           }
         }
-      } catch {
-        // Fallback to manual login
+      } catch (err) {
+        console.warn('Deep link handling error:', err);
       }
     };
 
     Linking.getInitialURL().then(handleUrl);
     const subscription = Linking.addEventListener('url', (event) => handleUrl(event.url));
-    return () => subscription.remove();
-  }, []);
+    return () => {
+      mounted = false;
+      authListener?.subscription?.unsubscribe();
+      subscription.remove();
+    };
+  }, [router]);
 
   const handleProceed = () => {
     if (hasSession) {
