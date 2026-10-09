@@ -11,6 +11,9 @@ export default function ListGrid({
   bottomPadding = spacing.xl,
   refreshing = false,
   onRefresh,
+  onScroll,
+  scrollEventThrottle = 16,
+  ...rest
 }) {
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
@@ -26,11 +29,14 @@ export default function ListGrid({
       showsVerticalScrollIndicator={false}
       refreshing={refreshing}
       onRefresh={onRefresh}
+      onScroll={onScroll}
+      scrollEventThrottle={scrollEventThrottle}
       ListEmptyComponent={
         <View style={styles.emptyState}>
           <Text style={styles.emptyStateText}>{emptyText}</Text>
         </View>
       }
+      {...rest}
     />
   );
 }

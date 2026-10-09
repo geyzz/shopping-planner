@@ -20,6 +20,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useCallback, useMemo, useRef, useState } from 'react';
 import {
   Alert,
+  Animated,
   Pressable,
   StyleSheet,
   Text,
@@ -64,7 +65,9 @@ export default function HomePage() {
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const insets = useSafeAreaInsets();
   const router = useRouter();
-  const { width: screenWidth } = useWindowDimensions();
+  const { width: screenWidth, height: screenHeight } = useWindowDimensions();
+  const logoHeight = Math.round((screenHeight || 812) * 0.025);
+  const headerHeight = Math.round(logoHeight * 2.1);
 
   const [searchText, setSearchText] = useState('');
   const [showOptionsMenu, setShowOptionsMenu] = useState(false);
@@ -81,16 +84,63 @@ export default function HomePage() {
   const [refreshing, setRefreshing] = useState(false);
 
   const optionsButtonRef = useRef(null);
+  const headerOptionsButtonRef = useRef(null);
   const [menuPos, setMenuPos] = useState({ top: 110, right: 24 });
+  const [isHeaderSearchOpen, setIsHeaderSearchOpen] = useState(false);
+
+  const [scrollY] = useState(() => new Animated.Value(0));
+
+  const handleScroll = useMemo(
+    () =>
+      Animated.event([{ nativeEvent: { contentOffset: { y: scrollY } } }], {
+        useNativeDriver: false,
+      }),
+    [scrollY]
+  );
+
+  const {
+    headerActionWidth,
+    headerActionOpacity,
+    headerActionScale,
+    headerActionMargin,
+  } = useMemo(
+    () => ({
+      headerActionWidth: scrollY.interpolate({
+        inputRange: [30, 80],
+        outputRange: [0, headerHeight],
+        extrapolate: 'clamp',
+      }),
+      headerActionOpacity: scrollY.interpolate({
+        inputRange: [40, 80],
+        outputRange: [0, 1],
+        extrapolate: 'clamp',
+      }),
+      headerActionScale: scrollY.interpolate({
+        inputRange: [30, 80],
+        outputRange: [0.6, 1],
+        extrapolate: 'clamp',
+      }),
+      headerActionMargin: scrollY.interpolate({
+        inputRange: [30, 80],
+        outputRange: [0, spacing.sm],
+        extrapolate: 'clamp',
+      }),
+    }),
+    [scrollY, headerHeight]
+  );
 
   const numOfNotes = notes.length;
 
-  const openOptionsMenu = () => {
-    optionsButtonRef.current?.measureInWindow((x, y, w, h) => {
-      setMenuPos({ top: y + h + 4, right: screenWidth - (x + w) });
-      setShowOptionsMenu(true);
-    });
-  };
+  const openOptionsMenu = useCallback(
+    (targetRef = optionsButtonRef) => {
+      const activeRef = targetRef?.current ? targetRef : optionsButtonRef;
+      activeRef.current?.measureInWindow((x, y, w, h) => {
+        setMenuPos({ top: y + h + 4, right: Math.max(16, screenWidth - (x + w)) });
+        setShowOptionsMenu(true);
+      });
+    },
+    [screenWidth]
+  );
 
   const loadData = useCallback(async () => {
     try {
@@ -160,7 +210,15 @@ export default function HomePage() {
     } catch (err) {
       console.log('Error loading home data:', err);
     }
-  }, []);
+  }, [
+    setAvatarUrl,
+    setName,
+    setNotes,
+    setSelectedIds,
+    setSelectMode,
+    setSortDirection,
+    setSortField,
+  ]);
 
   useFocusEffect(
     useCallback(() => {
@@ -216,12 +274,12 @@ export default function HomePage() {
     AsyncStorage.setItem('home_selected_ids', JSON.stringify([])).catch(() => {});
   };
 
-  const exitSelectMode = () => {
+  const exitSelectMode = useCallback(() => {
     setSelectMode(false);
     setSelectedIds([]);
     AsyncStorage.removeItem('home_select_mode').catch(() => {});
     AsyncStorage.removeItem('home_selected_ids').catch(() => {});
-  };
+  }, [setSelectMode, setSelectedIds]);
 
   const toggleSelected = (id) => {
     setSelectedIds((prev) => {
@@ -234,13 +292,13 @@ export default function HomePage() {
   const allVisibleSelected =
     visibleNotes.length > 0 && visibleNotes.every((n) => selectedIds.includes(n.id));
 
-  const toggleSelectAll = () => {
+  const toggleSelectAll = useCallback(() => {
     const next = allVisibleSelected ? [] : visibleNotes.map((n) => n.id);
     setSelectedIds(next);
     AsyncStorage.setItem('home_selected_ids', JSON.stringify(next)).catch(() => {});
-  };
+  }, [allVisibleSelected, visibleNotes, setSelectedIds]);
 
-  const deleteSelected = () => {
+  const deleteSelected = useCallback(() => {
     if (selectedIds.length === 0) return;
 
     const count = selectedIds.length;
@@ -273,7 +331,7 @@ export default function HomePage() {
         },
       ]
     );
-  };
+  }, [selectedIds, notes, setNotes, exitSelectMode]);
 
   const openSortMenu = () => {
     setShowOptionsMenu(false);
@@ -364,66 +422,172 @@ export default function HomePage() {
     );
   };
 
+  const renderListHeader = useMemo(() => {
+    return (
+      <View style={{ paddingTop: insets.top + spacing.sm + headerHeight + 10 }}>
+        <GreetingBanner name={name} totalCount={numOfNotes} />
+        {selectMode ? (
+          <View style={styles.selectBar}>
+            <Pressable onPress={exitSelectMode} hitSlop={8}>
+              <Text style={styles.selectBarAction}>Cancel</Text>
+            </Pressable>
+
+            <Text style={styles.selectBarCount}>{selectedIds.length} selected</Text>
+
+            <Pressable onPress={toggleSelectAll} hitSlop={8}>
+              <Text style={styles.selectBarAction}>{allVisibleSelected ? 'None' : 'All'}</Text>
+            </Pressable>
+
+            <Pressable
+              onPress={deleteSelected}
+              disabled={selectedIds.length === 0}
+              hitSlop={8}
+              style={[styles.deleteButton, selectedIds.length === 0 && styles.deleteButtonDisabled]}
+            >
+              <Feather name="trash-2" size={18} color={colors.white} />
+            </Pressable>
+          </View>
+        ) : (
+          <View style={styles.toolbarRow}>
+            <View style={styles.searchWrapper}>
+              <SearchBar
+                value={searchText}
+                onChangeText={setSearchText}
+                placeholder="Search"
+                compact
+              />
+            </View>
+
+            <Pressable
+              ref={optionsButtonRef}
+              style={styles.optionsButton}
+              onPress={() => openOptionsMenu(optionsButtonRef)}
+              hitSlop={8}
+            >
+              <Feather name="more-vertical" size={22} color={colors.navy} />
+            </Pressable>
+          </View>
+        )}
+      </View>
+    );
+  }, [
+    insets.top,
+    headerHeight,
+    name,
+    numOfNotes,
+    selectMode,
+    styles,
+    exitSelectMode,
+    selectedIds.length,
+    toggleSelectAll,
+    allVisibleSelected,
+    deleteSelected,
+    colors.white,
+    searchText,
+    colors.navy,
+    openOptionsMenu,
+  ]);
+
   return (
     <View style={styles.screen}>
-      <View style={[styles.headerRow, { marginTop: insets.top + spacing.sm }]}>
-        <View style={styles.logoCard}>
-          <AppLogo />
-        </View>
-        <Pressable
-          style={styles.notifButton}
-          onPress={() => router.push('/screens/notif')}
-          hitSlop={8}
-          accessibilityRole="button"
-          accessibilityLabel="Notifications"
-        >
-          <Feather name="bell" size={20} color={colors.navy} />
-        </Pressable>
-      </View>
+      <ListGrid
+        data={visibleNotes}
+        keyExtractor={(item) => String(item.id)}
+        renderItem={renderNote}
+        emptyText={searchText.trim() ? 'No matching notes' : 'No notes yet'}
+        bottomPadding={Math.max(insets.bottom, spacing.sm) + 150}
+        refreshing={refreshing}
+        onRefresh={handleRefresh}
+        onScroll={handleScroll}
+        scrollEventThrottle={16}
+        ListHeaderComponent={renderListHeader}
+      />
 
-      <GreetingBanner name={name} totalCount={numOfNotes} />
-
-      {selectMode ? (
-        <View style={styles.selectBar}>
-          <Pressable onPress={exitSelectMode} hitSlop={8}>
-            <Text style={styles.selectBarAction}>Cancel</Text>
-          </Pressable>
-
-          <Text style={styles.selectBarCount}>{selectedIds.length} selected</Text>
-
-          <Pressable onPress={toggleSelectAll} hitSlop={8}>
-            <Text style={styles.selectBarAction}>{allVisibleSelected ? 'None' : 'All'}</Text>
-          </Pressable>
-
-          <Pressable
-            onPress={deleteSelected}
-            disabled={selectedIds.length === 0}
-            hitSlop={8}
-            style={[styles.deleteButton, selectedIds.length === 0 && styles.deleteButtonDisabled]}
-          >
-            <Feather name="trash-2" size={18} color={colors.white} />
-          </Pressable>
-        </View>
-      ) : (
-        <View style={styles.toolbarRow}>
-          <View style={styles.searchWrapper}>
-            <SearchBar
-              value={searchText}
-              onChangeText={setSearchText}
-              placeholder="Search"
-              compact
-            />
+      <View style={[styles.headerRow, { paddingTop: insets.top + spacing.sm }]}>
+        {isHeaderSearchOpen ? (
+          <View style={[styles.headerSearchContainer, { height: headerHeight }]}>
+            <View style={styles.headerSearchInputWrapper}>
+              <SearchBar
+                value={searchText}
+                onChangeText={setSearchText}
+                placeholder="Search..."
+                compact
+                autoFocus
+              />
+            </View>
+            <Pressable
+              style={[styles.headerIconButton, { width: headerHeight, height: headerHeight }]}
+              onPress={() => setIsHeaderSearchOpen(false)}
+              hitSlop={8}
+              accessibilityRole="button"
+              accessibilityLabel="Close search"
+            >
+              <Feather name="x" size={Math.round(headerHeight * 0.44)} color={colors.navy} />
+            </Pressable>
           </View>
+        ) : (
+          <>
+            <View style={[styles.logoCard, { height: headerHeight }]}>
+              <AppLogo height={logoHeight} />
+            </View>
 
-          <Pressable
-            ref={optionsButtonRef}
-            style={styles.optionsButton}
-            onPress={openOptionsMenu}
-          >
-            <Feather name="more-vertical" size={22} color={colors.navy} />
-          </Pressable>
-        </View>
-      )}
+            <View style={styles.headerActionsGroup}>
+              <Animated.View
+                style={{
+                  width: headerActionWidth,
+                  height: headerHeight,
+                  opacity: headerActionOpacity,
+                  transform: [{ scale: headerActionScale }],
+                  marginRight: headerActionMargin,
+                  overflow: 'hidden',
+                }}
+              >
+                <Pressable
+                  style={[styles.headerIconButton, { width: headerHeight, height: headerHeight }]}
+                  onPress={() => setIsHeaderSearchOpen(true)}
+                  hitSlop={8}
+                  accessibilityRole="button"
+                  accessibilityLabel="Search"
+                >
+                  <Feather name="search" size={Math.round(headerHeight * 0.42)} color={colors.navy} />
+                </Pressable>
+              </Animated.View>
+
+              <Pressable
+                style={[styles.headerIconButton, { width: headerHeight, height: headerHeight }]}
+                onPress={() => router.push('/screens/notif')}
+                hitSlop={8}
+                accessibilityRole="button"
+                accessibilityLabel="Notifications"
+              >
+                <Feather name="bell" size={Math.round(headerHeight * 0.44)} color={colors.navy} />
+              </Pressable>
+
+              <Animated.View
+                style={{
+                  width: headerActionWidth,
+                  height: headerHeight,
+                  opacity: headerActionOpacity,
+                  transform: [{ scale: headerActionScale }],
+                  marginLeft: headerActionMargin,
+                  overflow: 'hidden',
+                }}
+              >
+                <Pressable
+                  ref={headerOptionsButtonRef}
+                  style={[styles.headerIconButton, { width: headerHeight, height: headerHeight }]}
+                  onPress={() => openOptionsMenu(headerOptionsButtonRef)}
+                  hitSlop={8}
+                  accessibilityRole="button"
+                  accessibilityLabel="Options"
+                >
+                  <Feather name="more-vertical" size={Math.round(headerHeight * 0.44)} color={colors.navy} />
+                </Pressable>
+              </Animated.View>
+            </View>
+          </>
+        )}
+      </View>
 
       <MenuDropdown
         visible={showOptionsMenu}
@@ -472,16 +636,6 @@ export default function HomePage() {
         ]}
       />
 
-      <ListGrid
-        data={visibleNotes}
-        keyExtractor={(item) => String(item.id)}
-        renderItem={renderNote}
-        emptyText={searchText.trim() ? 'No matching notes' : 'No notes yet'}
-        bottomPadding={Math.max(insets.bottom, spacing.sm) + 150}
-        refreshing={refreshing}
-        onRefresh={handleRefresh}
-      />
-
       {!selectMode && (
         <Pressable
           style={[styles.addButton, { bottom: Math.max(insets.bottom, spacing.sm) + spacing.sm + 82 }]}
@@ -508,35 +662,54 @@ const makeStyles = (colors) =>
       paddingHorizontal: spacing.md,
     },
     headerRow: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      zIndex: 10,
+      elevation: 10,
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
+      backgroundColor: colors.background,
+      paddingHorizontal: spacing.md,
+      paddingBottom: 10,
     },
-    logoCard: {
+    headerActionsGroup: {
       flexDirection: 'row',
       alignItems: 'center',
-      justifyContent: 'center',
-      paddingHorizontal: spacing.md + 14,
-      height: 48,
+    },
+    headerIconButton: {
+      borderRadius: borderRadius.full,
       backgroundColor: colors.white,
       borderWidth: 1,
       borderColor: colors.border,
-      borderRadius: borderRadius.full,
+      justifyContent: 'center',
+      alignItems: 'center',
       elevation: 4,
       shadowColor: '#000',
       shadowOpacity: 0.12,
       shadowRadius: 8,
       shadowOffset: { width: 0, height: 3 },
     },
-    notifButton: {
-      width: 48,
-      height: 48,
-      borderRadius: borderRadius.full,
+    headerSearchContainer: {
+      flex: 1,
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    headerSearchInputWrapper: {
+      flex: 1,
+      marginRight: spacing.sm,
+    },
+    logoCard: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingHorizontal: spacing.md + 14,
       backgroundColor: colors.white,
       borderWidth: 1,
       borderColor: colors.border,
-      justifyContent: 'center',
-      alignItems: 'center',
+      borderRadius: borderRadius.full,
       elevation: 4,
       shadowColor: '#000',
       shadowOpacity: 0.12,

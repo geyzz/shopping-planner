@@ -1,11 +1,13 @@
 import { typography } from '@/theme/theme';
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, Animated, Easing, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Animated, Easing, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 
 const BRAND_BG = '#D6CDAC';
 const BRAND_NAVY = '#1B2A4A';
 
 export default function LoadingScreen({ showSpinner = true }) {
+  const { height: screenHeight } = useWindowDimensions();
+  const logoSize = Math.round((screenHeight || 800) * 0.085);
   const [pulse] = useState(() => new Animated.Value(0));
 
   useEffect(() => {
@@ -23,14 +25,14 @@ export default function LoadingScreen({ showSpinner = true }) {
 
   return (
         <View style={styles.screen}>
-            <Animated.Image
-            source={require('../../../assets/images/transparent_logo.png')}
-            style={[styles.logo, { transform: [{ scale }] }]}
-        />
-        <Text style={styles.name}>Plan_.ed</Text>
-        {showSpinner && <ActivityIndicator style={styles.spinner} color={BRAND_NAVY} />}
+      <Animated.Image
+        source={require('../../../assets/images/transparent_logo.png')}
+        style={[styles.logo, { width: logoSize, height: logoSize, transform: [{ scale }] }]}
+      />
+      <Text style={styles.name}>Plan_.ed</Text>
+      {showSpinner && <ActivityIndicator style={styles.spinner} color={BRAND_NAVY} />}
     </View>
-    );
+  );
 }
 
 const styles = StyleSheet.create({
@@ -41,8 +43,6 @@ const styles = StyleSheet.create({
     backgroundColor: BRAND_BG,
   },
   logo: {
-    width: 150,
-    height: 150,
     resizeMode: 'contain',
   },
   name: {

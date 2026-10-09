@@ -10,7 +10,7 @@ import { Feather } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
+import { FlatList, Pressable, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 function isSameDay(a, b) {
@@ -51,6 +51,9 @@ export default function CalendarPage() {
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const insets = useSafeAreaInsets();
+  const { height: screenHeight } = useWindowDimensions();
+  const logoHeight = Math.round((screenHeight || 812) * 0.025);
+  const headerHeight = Math.round(logoHeight * 2.1);
 
   const [searchText, setSearchText] = useState('');
   const [viewDate, setViewDate] = useState(new Date());
@@ -160,17 +163,17 @@ export default function CalendarPage() {
   return (
     <View style={styles.screen}>
       <View style={[styles.headerRow, { marginTop: insets.top + spacing.sm }]}>
-        <View style={styles.logoCard}>
-          <AppLogo />
+        <View style={[styles.logoCard, { height: headerHeight }]}>
+          <AppLogo height={logoHeight} />
         </View>
         <Pressable
-          style={styles.notifButton}
+          style={[styles.notifButton, { width: headerHeight, height: headerHeight }]}
           onPress={() => router.push('/screens/notif')}
           hitSlop={8}
           accessibilityRole="button"
           accessibilityLabel="Notifications"
         >
-          <Feather name="bell" size={20} color={colors.navy} />
+          <Feather name="bell" size={Math.round(headerHeight * 0.44)} color={colors.navy} />
         </Pressable>
       </View>
 
@@ -239,13 +242,13 @@ const makeStyles = (colors) =>
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
+      paddingBottom: 10,
     },
     logoCard: {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
       paddingHorizontal: spacing.md + 14,
-      height: 48,
       backgroundColor: colors.white,
       borderWidth: 1,
       borderColor: colors.border,
@@ -257,8 +260,6 @@ const makeStyles = (colors) =>
       shadowOffset: { width: 0, height: 3 },
     },
     notifButton: {
-      width: 48,
-      height: 48,
       borderRadius: borderRadius.full,
       backgroundColor: colors.white,
       borderWidth: 1,

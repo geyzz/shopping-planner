@@ -36,7 +36,7 @@
         {
           "backgroundColor": "#D6CDAC",
           "image": "./assets/images/transparent_logo.png",
-          "imageWidth": 200,
+          "imageWidth": 72,
           "resizeMode": "contain"
         }
       ],
