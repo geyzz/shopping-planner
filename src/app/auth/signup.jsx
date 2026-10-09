@@ -7,7 +7,7 @@ import { spacing, typography } from '@/theme/theme';
 import { Feather } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useMemo, useState } from 'react';
-import { Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { Alert, Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 
 const isValidEmail = (val) => {
   const trimmed = (val ?? '').trim();
@@ -127,11 +127,12 @@ export default function SignupPage() {
     if (hasError) return;
 
     setLoading(true);
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email: trimmedEmail,
       password,
       options: {
         data: { first_name: trimmedFirst, last_name: trimmedLast },
+        emailRedirectTo: 'planed://auth/verified',
       },
     });
     setLoading(false);
@@ -148,7 +149,20 @@ export default function SignupPage() {
       return;
     }
 
-    router.replace('/auth/login');
+    if (data?.session) {
+      router.replace('/screens/home');
+    } else {
+      Alert.alert(
+        'Check Your Email',
+        `A verification link has been sent to ${trimmedEmail}. Please check your email and click the confirmation link to activate your account.`,
+        [
+          {
+            text: 'OK',
+            onPress: () => router.replace('/auth/login'),
+          },
+        ]
+      );
+    }
   };
 
   return (
