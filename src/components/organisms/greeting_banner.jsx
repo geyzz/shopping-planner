@@ -3,12 +3,12 @@ import { borderRadius, spacing, typography } from '@/theme/theme';
 import { useMemo } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function GreetingBanner({ name, totalCount }) {
+export default function GreetingBanner({ name, totalCount, style }) {
   const { colors } = useAppTheme();
   const styles = useMemo(() => makeStyles(colors), [colors]);
 
   return (
-    <View style={styles.greetingRow}>
+    <View style={[styles.greetingRow, style]}>
       <Text style={styles.helloText}>Hello, {name || 'there'} 👋</Text>
       <Text style={styles.subtitleText}>
         You have {totalCount} {totalCount === 1 ? 'list' : 'lists'}

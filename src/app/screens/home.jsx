@@ -108,6 +108,10 @@ export default function HomePage() {
     toolbarMarginTop,
     toolbarMarginBottom,
     toolbarScale,
+    bannerOpacity,
+    bannerHeight,
+    bannerMarginTop,
+    bannerScale,
   } = useMemo(
     () => ({
       headerActionWidth: scrollY.interpolate({
@@ -128,6 +132,26 @@ export default function HomePage() {
       headerActionMargin: scrollY.interpolate({
         inputRange: [20, 60],
         outputRange: [0, spacing.sm],
+        extrapolate: 'clamp',
+      }),
+      bannerOpacity: scrollY.interpolate({
+        inputRange: [5, 45],
+        outputRange: [1, 0],
+        extrapolate: 'clamp',
+      }),
+      bannerHeight: scrollY.interpolate({
+        inputRange: [10, 60],
+        outputRange: [110, 0],
+        extrapolate: 'clamp',
+      }),
+      bannerMarginTop: scrollY.interpolate({
+        inputRange: [10, 60],
+        outputRange: [spacing.md, 0],
+        extrapolate: 'clamp',
+      }),
+      bannerScale: scrollY.interpolate({
+        inputRange: [5, 45],
+        outputRange: [1, 0.85],
         extrapolate: 'clamp',
       }),
       toolbarOpacity: scrollY.interpolate({
@@ -455,7 +479,17 @@ export default function HomePage() {
   const renderListHeader = useMemo(() => {
     return (
       <View style={{ paddingTop: insets.top + spacing.sm + headerHeight + 10 }}>
-        <GreetingBanner name={name} totalCount={numOfNotes} />
+        <Animated.View
+          style={{
+            opacity: bannerOpacity,
+            maxHeight: bannerHeight,
+            marginTop: bannerMarginTop,
+            transform: [{ scale: bannerScale }],
+            overflow: 'hidden',
+          }}
+        >
+          <GreetingBanner name={name} totalCount={numOfNotes} style={{ marginTop: 0 }} />
+        </Animated.View>
         {selectMode ? (
           <View style={styles.selectBar}>
             <Pressable onPress={exitSelectMode} hitSlop={8}>
@@ -533,6 +567,10 @@ export default function HomePage() {
     toolbarMarginTop,
     toolbarMarginBottom,
     toolbarScale,
+    bannerOpacity,
+    bannerHeight,
+    bannerMarginTop,
+    bannerScale,
   ]);
 
   return (
