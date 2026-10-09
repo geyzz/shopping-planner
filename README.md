@@ -1,7 +1,7 @@
 # Plan_.ed
 
 <p align="center">
-  <img src="./assets/images/plan_ed-logo.jpg" alt="Plan_.ed Logo" width="120" />
+  <img src="./assets/images/plan_ed_banner.png" alt="Plan_.ed Logo" width="400" />
 </p>
 
 A mall-connected shopping and errand planner mobile application built with React Native and Expo.
